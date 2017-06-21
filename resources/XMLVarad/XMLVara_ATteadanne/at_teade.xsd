@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:at="http://www.ametlikudteadaanded.ee/xsd/2013-09-09/teadaanne.xsd"
+  targetNamespace="http://www.ametlikudteadaanded.ee/xsd/2013-09-09/teadaanne.xsd">
+    <xs:complexType name="Teadaanne">
+        <xs:sequence>
+            <xs:element name="version" type="xs:integer">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande XML-vormingu versioon</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="id" type="xs:integer">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande identifikaator AT infosüsteemis</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="uri" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande unikaalne uri</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="liik" type="at:Loendielement">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande liik</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="mall" type="at:Mall">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande liigi mall</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="oiguslik_alus_omastav" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande avaldamise õiguslik alus</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="oigusliku_aluse_viide" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">õigusliku aluse veebiviide</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="eesmark" type="at:Loendielement">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande avaldamise eesmärk</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="andmeandja" type="at:Andmeandja">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande avaldanud andmeandja</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="andmeandja_kontaktandmed" type="at:Kontaktandmed">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande avaldanud andmeandja kontaktandmed</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="avaldaja" type="at:Avaldaja">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande avaldaja kontaktandmed</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="adressaat" type="at:Adressaat" minOccurs="0">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande adressaat</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="puudutatud_isik" type="at:Adressaat" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande puudutatud isikud</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="mojupiirkond" type="at:Loendielement" minOccurs="0">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande mõjupiirkond teadaande avaldamise hetkel kehtiva EHAK klassifikaatori versiooni alusel</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="avaldamise_kpv" type="xs:date">
+                <xs:annotation><xs:documentation xml:lang="et">Määratud avaldamise kuupäev</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="arhiveerimise_kpv" type="xs:date">
+                <xs:annotation><xs:documentation xml:lang="et">Määratud arhiveerimise kuupäev</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="kinnitatud_sisu" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande avaldatud sisu HTML kujul CDATA ümbrises</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="sisendid" type="at:Sisendiloend">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande sisendid algkujul väli-väärtus paaridena</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="failid" type="at:Faililoend">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaandega seotud failid</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Andmeandja">
+        <xs:sequence>
+            <xs:element name="kood" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Andmeandja registrikood</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="nimi" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Andmeandja nimi</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Kontaktandmed">
+        <xs:sequence>
+            <xs:element name="telefon" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Kontakt-telefon</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="epost" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Kontakt-eposti aadress</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Avaldaja">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer">
+                <xs:annotation><xs:documentation xml:lang="et">Avaldaja identifikaator AT infosüsteemis</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="nimi" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Avaldaja nimi</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="ametikoht" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Ametikoht</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="telefon" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Kontakt-telefon</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="epost" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Kontakt-eposti aadress</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Mall">
+        <xs:sequence>
+            <xs:element name="kood" type="xs:integer">
+                <xs:annotation><xs:documentation xml:lang="et">Malli identifikaator</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="nimi" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Malli inimloetav nimetus</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="versioon" type="xs:integer">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaandes kasutatud malli versioon</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Adressaat">
+        <xs:sequence>
+            <xs:element name="liik" type="at:Loendielement">
+                <xs:annotation><xs:documentation xml:lang="et">Adressaadi liik</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="kood" type="xs:string" minOccurs="0">
+                <xs:annotation><xs:documentation xml:lang="et">Isikukood</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="koodi_riik" type="xs:string" minOccurs="0">
+                <xs:annotation><xs:documentation xml:lang="et">Isikukoodi riik ISO 3166-1 alpha-3 koodina</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="synniaeg" type="xs:date" minOccurs="0">
+                <xs:annotation><xs:documentation xml:lang="et">Sünniaeg</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="nimi" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Perekonnanimi või ärinimi</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="eesnimi" type="xs:string" minOccurs="0">
+                <xs:annotation><xs:documentation xml:lang="et">Eesnimi</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Sisendiloend">
+        <xs:sequence>
+            <xs:element name="sisendirida" type="at:Sisendirida" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaande sisend-andmeväli</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Sisendirida">
+        <xs:sequence>
+            <xs:element name="nimi" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaandme sisend-andmevälja nimi</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="tyyp" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaandme sisend-andmevälja tüüp</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="vaartus" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaandme sisend-andmevälja väärtus</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="objekti_id" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">ADS adrId, kui sisendiks on aadress ja andmed on olemas</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Faililoend">
+        <xs:sequence>
+            <xs:element name="failirida" type="at:Failirida" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation><xs:documentation xml:lang="et">Teadaandega seotud failid</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Failirida">
+        <xs:sequence>
+            <xs:element name="nimi" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Faili nimi</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="rasi" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Faili räsi ja algoritm</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="uri" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Faili unikaalne uri</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Loendielement">
+        <xs:sequence>
+            <xs:element name="kood" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Loendi elemendi identifikaator/kood</xs:documentation></xs:annotation>
+            </xs:element>
+            <xs:element name="nimi" type="xs:string">
+                <xs:annotation><xs:documentation xml:lang="et">Loendi elemendi inimloetav nimetus</xs:documentation></xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="teadaanne" type="at:Teadaanne"></xs:element>
+</xs:schema>

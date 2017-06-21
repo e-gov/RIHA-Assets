@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Kuldar (Rahvusarhiiv) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ametikoht">
+		<xs:annotation>
+			<xs:documentation>Ametikohta kirjeldavad metaandmed</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ametinimetus" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Ameti ametlik nimetus</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="asendaja" type="xs:IDREF" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Viide ametit asendava ameti kirjeldusele</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="asendatav" type="xs:IDREF" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Viide ameti poolt asendatava ameti kirjeldusele</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ametIsik" type="xs:IDREF" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Ametit täitev isik</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ametGrupp" type="xs:IDREF" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Ameti kuuluvus gruppi(desse)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ametikohtAadress" type="xs:IDREF" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Viide ameti aadressandmetele</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

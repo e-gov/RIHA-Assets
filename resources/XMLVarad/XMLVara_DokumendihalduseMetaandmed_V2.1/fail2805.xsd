@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Kuldar (Rahvusarhiiv) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="fail">
+		<xs:annotation>
+			<xs:documentation>Faili metaandmed</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:annotation>
+					<xs:documentation>Dokumendi või selle komponendi moodustava faili maht</xs:documentation>
+				</xs:annotation>
+				<xs:element name="failDokument" type="xs:IDREF" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Seos faili ja dokumendi vahel</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="failNimi" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Dokumendi või selle komponendi moodustava faili nimi</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="failVorming">
+					<xs:annotation>
+						<xs:documentation>Dokumendi või selle komponendi moodustava faili vorming</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="failVormingVersioon" type="xs:string" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="failSuurus" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Dokumendi või selle komponendi moodustava faili maht</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:positiveInteger">
+								<xs:attribute name="yhik" use="optional" default="B">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="b"/>
+											<xs:enumeration value="B"/>
+											<xs:enumeration value="kB"/>
+											<xs:enumeration value="MB"/>
+											<xs:enumeration value="GB"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="pysivus">
+					<xs:annotation>
+						<xs:documentation>Failist moodustatud räsi</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="vaartus" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Faili püsivust mingi algoritmi järgi kontrolllida võimaldav arv (nn. kontrollsumma)</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="algoritm" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Kontrollsumma loomiseks ja kontrollimiseks kasutatav algoritm</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="rasiKuupaev" type="KuupaevTyyp">
+								<xs:annotation>
+									<xs:documentation>Kontrollsumma loomise kuupäev ja aeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tarkvara" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Dokumendi või selle komponendi moodustava faili kasutamiseks vajaliku tarkvara nimetus</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="tarkvaraVersioon" type="xs:string" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="kodeering" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Tekstifailis kasutusel olev kodeering või märgikooditabel</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="DTDSidestus" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Struktureeritud tekstile omistatud dokumendi tüübi definitsioon või XML skeem</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="struktuurijaotused" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Struktureeritud teksti loogilised jaotised</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="KuupaevTyyp">
+		<xs:annotation>
+			<xs:documentation>Kuupäeva tüüp</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime">
+				<xs:attribute name="kodeerimisskeem" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="EVS8"/>
+							<xs:enumeration value="ISO8601"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Kuldar (Rahvusarhiiv) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="tegevus">
+		<xs:annotation>
+			<xs:documentation>Dokumendihaldustegevuste kirjeldamise metaandmed</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="tegevusNimetus" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Tegevuse üheselt arusaadav nimi</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="tegevusTyyp">
+					<xs:annotation>
+						<xs:documentation>Tegevuse tüübi kirjeldus</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="loomine"/>
+							<xs:enumeration value="allkirjastamine"/>
+							<xs:enumeration value="registreerimine"/>
+							<xs:enumeration value="saamine"/>
+							<xs:enumeration value="saatmine"/>
+							<xs:enumeration value="eraldamine"/>
+							<xs:enumeration value="hävitamine"/>
+							<xs:enumeration value="salvestamine"/>
+							<xs:enumeration value="avamine"/>
+							<xs:enumeration value="sulgemine"/>
+							<xs:enumeration value="muutmine"/>
+							<xs:enumeration value="kooskõlastamine"/>
+							<xs:enumeration value="säilitustähtaja muutmine"/>
+							<xs:enumeration value="säilitustähtaja märkimine"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="tegevusTeostaja">
+					<xs:annotation>
+						<xs:documentation>Viide tegevuse teostajale</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="teostajaNimi" type="xs:IDREF">
+								<xs:annotation>
+									<xs:documentation>Viide tegevuse teostaja (ametikoha) kirjeldusele</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="teostajaRoll" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Teostaja roll tegevuse teostamisel</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tegevusObjekt">
+					<xs:annotation>
+						<xs:documentation>Objekt, millega tegevust teostatakse</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="tegevusObjektIdentifikaator" type="xs:IDREF">
+								<xs:annotation>
+									<xs:documentation>Viide tegevuse objekti kirjeldusele</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="tegevusObjektTasand" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Tegevuse objekti tasand</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tegevusKuupaev" type="KuupaevTyyp">
+					<xs:annotation>
+						<xs:documentation>Tegevuse teostamise kuupäev ja aeg</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="tegevusTulem" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Tegevuse lõpptulemuse kirjeldus</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="KuupaevTyyp">
+		<xs:annotation>
+			<xs:documentation>Kuupäeva tüüp</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime">
+				<xs:attribute name="kodeerimisskeem" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="EVS8"/>
+							<xs:enumeration value="ISO8601"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>
