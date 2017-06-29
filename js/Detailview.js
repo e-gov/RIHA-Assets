@@ -1,15 +1,10 @@
-/**
- * Created by janarp on 21/06/17.
- */
 $(document).ready(function () {
     $('#detail').hide();
     var template = $('#main-row-template').html();
     var tBody = $('#xml-resources');
     var id = "";
     $.getJSON('js/xmlVara.json', function (data) {
-        console.log(data);
         data.forEach(function (resource, index) {
-            console.log(resource.Name_est);
             var newRow = $(template);
 
             newRow.find('.name_and_version').text(resource.Name_est + " " + resource.Version).attr("id", index);
