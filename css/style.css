@@ -1,0 +1,30 @@
+#detail-row-template > tr{
+    padding: 15px;
+    background-color: #1ade51;
+}
+
+#resources-head {
+    border-top: white solid 40px; 
+    border-left: white solid 40px; 
+    border-right: white solid 40px; 
+    background-color: #023cc1; 
+    color: white;
+}
+#xml-resources {
+    border-bottom: white solid 40px; 
+    border-left: white solid 40px; 
+    border-right: white solid 40px; 
+    background-color: white
+}
+#detail{
+    padding-top: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+#files{
+    padding-top: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
