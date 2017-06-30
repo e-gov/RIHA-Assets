@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RIHA XML Varamu</title>
     <link  rel="shortcut icon" href="https://www.ria.ee/extensions/ria_2011/images/favicon.png">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bower_components/select2/dist/css/select2.min.css">
@@ -14,6 +15,16 @@
     <link rel="stylesheet" href="css/bower_components/datatables/media/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/bower_components/build/app.css">
+
+    <!-- Include script -->
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#headerInclude").load("header.html #header");
+            $("#footerInclude").load("footer.html #footer");
+        });
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
@@ -23,19 +34,7 @@
 
 <body>
     <div id="wrap">
-        <header id="header">
-            <div class="nav-overlay"></div>
-            <div class="header-bottom">
-                <nav class="navbar  navbar-toggleable-xl">
-                    <div class="container">
-                        <a class="navbar-brand" href="index.html"><img src="css/images/base/RIHA.png" width="100%" height="100%" alt="Logo"></a>
-                       <span></span>
-                   </button>
-                    </div>
-                </nav>
-            </div>
-        </header>
-
+        <div id="headerInclude" />
     <main id="content" class="container" style="background-image: url('css/images/bg.png')">
         <div class="container-fluid my-1" style="width: 80%; padding: 30px">
             <h1 style="color: white; font-size: 60px;">RIHA XML Varamu</h1>
@@ -146,64 +145,9 @@
             </div>
         </div>
     </main>
+        <div id="footerInclude" />
 
-        <footer id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 col-12">
-                        <div class="block">
-                            <p class="head">Kontakt</p>
-                            <ul class="contacts-list list-unstyled">
-                                <li>
-                                    <div class="item-single">
-                                        <span class="fa fa-map-marker"></span>
-                                        <div class="body">
-                                            <span class="title">Aadress</span>
-                                            <div class="content">Pärnu mnt.</div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-single">
-                                        <span class="fa fa-envelope"></span>
-                                        <div class="body">
-                                            <span class="title">Kasutajatugi</span>
-                                            <div class="content"><a href="mailto:help@ria.ee">help@ria.ee</a></div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item-single">
-                                        <span class="fa fa-phone"></span>
-                                        <div class="body">
-                                            <span class="title">Üldtelefon</span>
-                                            <div class="content">663 0200</div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-12">
-                        <div class="block">
-                            <p class="head">Abiinfo &amp; lingid</p>
-                            <ul class="links-list list-unstyled">
-                                <li><a href="#">Korduma kippuvad küsimused</a></li>
-                                <li><a href="https://www.ria.ee/ee/index.html">Riigi Infosüsteemi Amet</a></li>
-                                <li><a href="https://riha.eesti.ee/riha/main">Riigi Infosüsteemi Haldussüsteem</a></li>
-                                <li><a href="help.html">Abi1</a></li>
-                                <li><a href="https://moodle.ria.ee/pluginfile.php/382/mod_resource/content/2/juhis_dokumendiliigi_xml_andmekirjelduse_koostamiseks.pdf">Abi2</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="logo pl-md-3 text-center text-md-left mt-md-0 mt-3">
-                            <img src="css/images/base/logo2.png" alt="Logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+
     </div>
     <script src="css/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="css/bower_components/jquery-ui/jquery-ui.min.js"></script>
