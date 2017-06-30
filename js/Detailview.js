@@ -3,10 +3,11 @@ $(document).ready(function () {
     var template = $('#main-row-template').html();
     var tBody = $('#xml-resources');
     var id = "";
+    var url = window.location.hostname;
     $.getJSON('js/xmlVara.json', function (data) {
         data.forEach(function (resource, index) {
             var newRow = $(template);
-
+            
             newRow.find('.name_and_version').text(resource.Name_est + " " + resource.Version).attr("id", index);
             newRow.find('.published').text(resource.Published);
             newRow.find('.status').text(resource.Status);
@@ -50,16 +51,26 @@ $(document).ready(function () {
             $('#files').show();
             var filesArray = id.Files;
             var fileName = id.Name_est;
-            $('#files-content').append("<h3>"+fileName+"</h3>");
+            $('#files-content').append("<h3>" + fileName + "</h3>");
 
             for (var i = 0; i < filesArray.length; i++) {
-                if(id.Version.length >3 || id.Version.length == 0){
-                    $('#files-content').append('<a href="./resources/XMLVarad/XMLVara_'+fileName+'/'+filesArray[i]+'" download>'+filesArray[i]+"</a><br><br>");
-                } else{
-                    $('#files-content').append('<a href="./resources/XMLVarad/XMLVara_'+fileName+'_V'+id.Version+'/'+filesArray[i]+'" download>'+filesArray[i]+"</a><br><br>");
+                if (id.Version.length > 3 ||  id.Version.length == 0) {
+                    $('#files-content').append('<a href="./resources/XMLVarad/XMLVara_' + fileName + '/' + filesArray[i] + '" download>' + filesArray[i] + "</a><br>");
+                    $('#files-content').append(
+                        '<details><summary>URL</summary><p>'+url+'/resources/XMLVarad/XMLVara_' + fileName + '/' + filesArray[i] +'</p></details>'
+                        );
+                    $('#files-content').append('<br>');
+                    $('summary').css('cursor','pointer');
+                } else {
+                    $('#files-content').append('<a href="./resources/XMLVarad/XMLVara_' + fileName + '_V' + id.Version + '/' + filesArray[i] + '" download>' + filesArray[i] + "</a><br>");
+                    $('#files-content').append(
+                        '<details><summary>URL</summary><p>'+url+'/resources/XMLVarad/XMLVara_' + fileName + '_V' + id.Version + '/' + filesArray[i] +'</p></details>'
+                        );
+                    $('#files-content').append('<br>');
+                    $('summary').css('cursor','pointer');
                 }
             }
-            
+
         });
 
         $('.name_and_version').css("color", "green").hover(function () {
@@ -74,17 +85,13 @@ $(document).ready(function () {
         $('#detail tr').remove();
         $('#detail').hide();
         $('#files').hide();
-        $('#files-content a').remove();
-        $('#files-content br').remove();
-        $('#files-content h3').remove();
+        $('#files-content').empty();
         $('.table-responsive').show();
     });
     $('.dataButton').on('click', function (event) {
         $('.table-responsive').hide();
         $('#files').hide();
-        $('#files-content a').remove();
-        $('#files-content br').remove();
-        $('#files-content h3').remove();
+        $('#files-content').empty();
         $('#detail').show();
     });
 
