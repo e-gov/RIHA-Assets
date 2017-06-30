@@ -1,0 +1,99 @@
+{
+    "XMLVara_ATteadanne": [
+        "at_teade.xml",
+        "at_teade.xsd"
+    ],
+    "XMLVara_DokumendihalduseMetaandmed_V2.1": [
+        "aadress2805.xsd",
+        "ametikoht2805.xsd",
+        "asutus2805.xsd",
+        "dokumendihalduse_metaandmete_loend_vr_2.1.pdf",
+        "dokument2805.xsd",
+        "fail2805.xsd",
+        "funktsioon2805.xsd",
+        "grupp2805.xsd",
+        "isik2805.xsd",
+        "juurdepaas2805.xsd",
+        "liigitusskeem2805.xsd",
+        "liigitusyksus2805.xsd",
+        "RK_meta_mudel_ver_5.0.pdf",
+        "tegevus2805.xsd",
+        "volitus2805.xsd"
+    ],
+    "XMLVara_DokumendihalduseMetaandmed_V3.0": [
+        "Dokumendihalduse_metaandmed_dokument_vers3.pdf",
+        "Dokumendihalduse_metaandmed_dokument_vers3.xsd",
+        "Dokumendihalduse_metaandmed_fail_vers3.pdf",
+        "Dokumendihalduse_metaandmed_fail_vers3.xsd",
+        "Dokumendihalduse_metaandmed_isik_aadress_kontakt_vers3.pdf",
+        "Dokumendihalduse_metaandmed_isik_aadress_kontakt_vers3.xsd",
+        "Dokumendihalduse_metaandmed_juurdepaas_vers3.pdf",
+        "Dokumendihalduse_metaandmed_juurdepaas_vers3.xsd",
+        "Dokumendihalduse_metaandmed_liigitusskeem_vers3.pdf",
+        "Dokumendihalduse_metaandmed_liigitusskeem_vers3.xsd",
+        "Dokumendihalduse_metaandmed_liigitusyksus_vers3.pdf",
+        "Dokumendihalduse_metaandmed_liigitusyksus_vers3.xsd",
+        "Dokumendihalduse_metaandmed_seos_vers3.pdf",
+        "Dokumendihalduse_metaandmed_seos_vers3.xsd",
+        "Dokumendihalduse_metaandmed_tegevus_vers3.pdf",
+        "Dokumendihalduse_metaandmed_tegevus_vers3.xsd",
+        "Dokumendihalduse_metaandmed_ver3_andmekirjeldus_parandused1.pdf",
+        "Dokumendihalduse_metaandmed_vers3_lahteylesanne.pdf",
+        "Records_management_metadata_EN.pdf",
+        "Ülevaade skeemidest.pdf"
+    ],
+    "XMLVara_Eesti_hea_tava_taksonoomia": [
+        "et-gaap-(2011).zip"
+    ],
+    "XMLVara_Elektroonilise_andmevahetuse metaandmete_loend_V1.0": [
+        "dhl-meta-automatic.xsd",
+        "dhl-meta-manual.xsd",
+        "dhl.xsd"
+    ],
+    "XMLVara_Elektroonilise_andmevahetuse metaandmete_loend_V2.1": [
+        "Dvk_kapsel_vers_2_1_eng_est.xsd",
+        "Dvk_kapsel_vers_2_1_n2ide1.xml",
+        "Dvk_kapsel_vers_2_1_n2ide2.xml",
+        "Dvk_kapsel_vers_2_1_n2ide3.xml",
+        "Elektroonilise_andmevahetuse_metaandmete_loendi_kirjeldus_2.1.pdf",
+        "uus_vs_vana_kapsel.ods"
+    ],
+    "XMLVara_Kiri_(teabenõue_märgukiri_ selgitustaotus)_V1.0": [
+        "dokumendiliigi kiri andmekirjeldus.pdf",
+        "dokumendiliik_kiri_n2ide1.xml",
+        "dokumendiliik_kiri_n2ide2.xml",
+        "dokumendiliik_kiri.xsd",
+        "kirja näidis nr 1.pdf",
+        "kirja näidis nr 2.pdf",
+        "lähteülesanne.pdf"
+    ],
+    "XMLVara_Oigusakt": [
+        "Dokumendiliigi määratluseta konteinermalli andmekirjeldus.pdf",
+        "Dokumendiliigi maarus andmekirjeldus.pdf",
+        "Dokumendiliigi muutmismaarus andmekirjeldus.pdf",
+        "Dokumendiliigi muutmisseadus andmekirjeldus.pdf",
+        "Dokumendiliigi Riigikogu otsus andmekirjeldus.pdf",
+        "Dokumendiliigi seadus andmekirjeldus.pdf",
+        "Dokumendiliigi üksikakt (otsus, korraldus, käskkiri, ettekirjutus, muu) andmekirjeldus.pdf",
+        "eelnou_naide.xml",
+        "juurakt_1_10.02.2010.xsd",
+        "konteiner_1_8.09.2010.xsd",
+        "maarus_1_10.02.2010.xsd",
+        "Määruse väljakuva xmlist.pdf",
+        "muutmismaarus_1_10.02.2010.xsd",
+        "Muutmismääruse väljakuva.pdf",
+        "muutmisseadus_1_10.02.2010.xsd",
+        "Muutmisseaduse väljakuva.pdf",
+        "Õigusakti xml skeemi märgendloend.pdf",
+        "Oigusakti_PDF_stiilid_VexPros.xsl",
+        "Riigikogu otsuse väljakuva.pdf",
+        "riigikoguotsus_1_10.02.2010.xsd",
+        "Seaduse väljakuva tyviseaduse skeemi alusel koostatud xmlist.pdf",
+        "Stiilifailide juhend.pdf",
+        "tyviseadus_1_10.02.2010.xsd",
+        "Üksikakti väljakuva xmlist.pdf",
+        "XML dokumendi näidised koos stiilide xsl kuvadega.pdf",
+        "xsl.zip",
+        "yksikakt_1_10.02.2010.xsd"
+    ]
+}
