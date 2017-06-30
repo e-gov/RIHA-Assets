@@ -3,7 +3,8 @@ $(document).ready(function () {
     var template = $('#main-row-template').html();
     var tBody = $('#xml-resources');
     var id = "";
-    var url = window.location.hostname;
+    var url = 'https://'+window.location.hostname;
+  
     $.getJSON('js/xmlVara.json', function (data) {
         data.forEach(function (resource, index) {
             var newRow = $(template);
@@ -52,17 +53,18 @@ $(document).ready(function () {
             var filesArray = id.Files;
             var fileName = id.Name_est;
             $('#files-content').append("<h3>" + fileName + "</h3>");
-
             for (var i = 0; i < filesArray.length; i++) {
                 if (id.Version.length > 3 ||  id.Version.length == 0) {
-                    $('#files-content').append('<a href="./resources/XMLVarad/XMLVara_' + fileName + '/' + filesArray[i] + '" download>' + filesArray[i] + "</a><br>");
+                    var fileUrl = './resources/XMLVarad/XMLVara_'+ fileName + '/' + filesArray[i];
+                    $('#files-content').append('<a href="'+fileUrl+'" download>' + filesArray[i] + "</a><br>");
                     $('#files-content').append(
                         '<details><summary>URL</summary><p>'+url+'/resources/XMLVarad/XMLVara_' + fileName + '/' + filesArray[i] +'</p></details>'
                         );
                     $('#files-content').append('<br>');
                     $('summary').css('cursor','pointer');
                 } else {
-                    $('#files-content').append('<a href="./resources/XMLVarad/XMLVara_' + fileName + '_V' + id.Version + '/' + filesArray[i] + '" download>' + filesArray[i] + "</a><br>");
+                    var fileUrlWithVersion = './resources/XMLVarad/XMLVara_'+ fileName + '_V' + id.Version + '/' + filesArray[i];
+                    $('#files-content').append('<a href="'+fileUrlWithVersion+'" download>' + filesArray[i] + "</a><br>");
                     $('#files-content').append(
                         '<details><summary>URL</summary><p>'+url+'/resources/XMLVarad/XMLVara_' + fileName + '_V' + id.Version + '/' + filesArray[i] +'</p></details>'
                         );
