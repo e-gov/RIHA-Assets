@@ -55,18 +55,20 @@ $(document).ready(function () {
             $('#files-content').append("<h3>" + fileName + "</h3>");
             for (var i = 0; i < filesArray.length; i++) {
                 if (id.Version.length > 3 ||  id.Version.length == 0) {
-                    var fileUrl = './resources/XMLVarad/XMLVara_'+ fileName + '/' + filesArray[i];
-                    $('#files-content').append('<a href="'+fileUrl+'" download>' + filesArray[i] + "</a><br>");
+                    var fileUrl = '/resources/XMLVarad/XMLVara_'+ fileName + '/' + filesArray[i];
+                    var fileUrlUnderscore = fileUrl.replace(/\s/g, "_");
+                    $('#files-content').append('<a href="'+'.'+fileUrlUnderscore+'" download>' + filesArray[i] + "</a><br>");
                     $('#files-content').append(
-                        '<details><summary>URL</summary><p>'+url+'/resources/XMLVarad/XMLVara_' + fileName + '/' + filesArray[i] +'</p></details>'
+                        '<details><summary>URL</summary><p>'+url+fileUrlUnderscore +'</p></details>'
                         );
                     $('#files-content').append('<br>');
                     $('summary').css('cursor','pointer');
                 } else {
-                    var fileUrlWithVersion = './resources/XMLVarad/XMLVara_'+ fileName + '_V' + id.Version + '/' + filesArray[i];
-                    $('#files-content').append('<a href="'+fileUrlWithVersion+'" download>' + filesArray[i] + "</a><br>");
+                    var fileUrlWithVersion = '/resources/XMLVarad/XMLVara_'+ fileName + '_V' + id.Version + '/' + filesArray[i];
+                    var fileUrlWithVersionUnderscore = fileUrlWithVersion.replace(/\s/g, "_");
+                    $('#files-content').append('<a href="'+'.'+fileUrlWithVersionUnderscore+'" download>' + filesArray[i] + "</a><br>");
                     $('#files-content').append(
-                        '<details><summary>URL</summary><p>'+url+'/resources/XMLVarad/XMLVara_' + fileName + '_V' + id.Version + '/' + filesArray[i] +'</p></details>'
+                        '<details><summary>URL</summary><p>'+url+fileUrlWithVersionUnderscore +'</p></details>'
                         );
                     $('#files-content').append('<br>');
                     $('summary').css('cursor','pointer');
