@@ -3,7 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RIHA XML Varamu</title>
     <link rel="shortcut icon" href="https://www.ria.ee/extensions/ria_2011/images/favicon.png">
@@ -29,7 +29,7 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
-    <script src="js/Detailview.js"></script>
+    <?php include 'js/Detailview.php';?>
 </head>
 
 <body>
