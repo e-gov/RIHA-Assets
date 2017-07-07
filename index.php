@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="css/bower_components/build/app.css">
 
     <!-- Include script -->
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript">
+    <!--script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script-- type="text/javascript">
         $(function () {
             $("#headerInclude").load("header.html #header");
             $("#footerInclude").load("footer.html #footer");
         });
-    </script>
+    </script-->
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -34,7 +34,8 @@
 
 <body>
     <div id="wrap">
-        <div id="headerInclude" /></div>
+        <?php include 'header.html';?>
+        <!--div id="headerInclude" /></div-->
     <main id="content" class="container" style="background-image: url('css/images/bg.png')">
         <div class="container-fluid my-1" style="width: 80%; padding: 30px">
             <h1 style="color: white; font-size: 60px;">RIHA XML Varamu</h1>
@@ -144,11 +145,11 @@
             </div>
         </div>
     </main>
-    <div id="footerInclude" /></div>
-
+    <?php include 'footer.html';?>
+    <!--div id="footerInclude" /></div-->
 
     </div>
-    <script src="css/bower_components/jquery/dist/jquery.min.js"></script>
+    <!--script src="css/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="css/bower_components/jquery-ui/jquery-ui.min.js"></script>
     <script src="css/bower_components/tether/dist/js/tether.min.js"></script>
     <script src="css/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -156,7 +157,7 @@
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="css/bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
     <script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
-    <script src="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script- src="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script-->
 </body>
 
 </html>
