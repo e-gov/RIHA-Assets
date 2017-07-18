@@ -28,3 +28,10 @@
     padding-right: 5%;
     padding-bottom: 5%;
 }
+
+#new-resource{
+    padding-top: 2%;
+}
+.add-form > div{
+                padding: 5px;
+             }
