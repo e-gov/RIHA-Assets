@@ -1,6 +1,5 @@
 # RIHA XML Varamu
 
-A collection of all XML resources that users can see detailed information about.
 Kogumik kõikidest XML varamutest, mille kohta saavad kasutajad näha lisainfot ning allalaadida varamute faile.
 
 ## Vajalikud Tehnoloogiad
@@ -17,6 +16,7 @@ resources/XMLVarad/
 ```
 
 Tee 'XMLVarad' kausta uus kaust, mille nimi on: XMLVara_ + varamu nimi.
+
 **TÄHTIS:** Vaata, et kaustanimes kõik tühikud oleks asendatud alamkriipsuga '_'.
 
 ```
@@ -24,10 +24,12 @@ Kui XML varamu nimi on näiteks: AT teadaanne, siis selle varamu kausta nimi ole
 ```
 
 Kui uue varamu kaust on valmis, siis kausta sisu struktuur jaguneb kaheks sõltuvalt, kas varamul on mitu erinevat versiooni või mitte.
+
 **TÄHTIS:** ka failide puhul on tähtis, et tühikuid ei oleks.
+
 *Näidete puhul on varamu nimeks AT teadaanne.*
 
-Kui kaustal on ainult üks versioon:
+Kui varamul on ainult üks versioon:
 
 ```
 * XMLVaramu_AT_teadaanne
@@ -38,7 +40,7 @@ Kui kaustal on ainult üks versioon:
     * varamu.json
 ```
 
-Kui kaustal on näiteks kaks versiooni:
+Kui varamul on näiteks kaks versiooni:
 
 ```
 * XMLVaramu_AT_teadaanne
