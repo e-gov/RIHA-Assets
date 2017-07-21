@@ -103,10 +103,6 @@
                                 <td id="stored"></td>
                             </tr>
                             <tr>
-                                <th>Litsents:</th>
-                                <td id="licence"></td>
-                            </tr>
-                            <tr>
                                 <th>Vara liik:</th>
                                 <td id="resource_type"></td>
                             </tr>

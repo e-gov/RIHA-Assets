@@ -4,8 +4,12 @@ Kogumik kõikidest XML varamutest, mille kohta saavad kasutajad näha lisainfot 
 
 ## Vajalikud Tehnoloogiad
 
-- PHP
-- Internet
+- PHP (Töötab versioonil 7.1.6)
+
+## Veebserverisse paigaldamine
+
+Esiteks peab navigeerima veebiserveri kausta ning sealt leidma kausta nimega 'htdocs'.
+Siis tõsta kõik XMLVaramu failid kausta 'htdocs' ja ongi paigaldatud.
 
 ## Uute Varamute Lisamine
 
@@ -29,7 +33,7 @@ Kui uue varamu kaust on valmis, siis kausta sisu struktuur jaguneb kaheks sõltu
 
 *Näidete puhul on varamu nimeks AT teadaanne.*
 
-Kui varamul on ainult üks versioon:
+Kui kaustal on ainult üks versioon:
 
 ```
 * XMLVaramu_AT_teadaanne
@@ -40,7 +44,7 @@ Kui varamul on ainult üks versioon:
     * varamu.json
 ```
 
-Kui varamul on näiteks kaks versiooni:
+Kui kaustal on näiteks kaks versiooni:
 
 ```
 * XMLVaramu_AT_teadaanne
@@ -60,8 +64,8 @@ Kui varamul on näiteks kaks versiooni:
 
 Lisa nende skeemide järgi vajalikud failid uue varamu kausta. Küsimuste korral tasub vaadata juba olemas olevate varamute kaustasid.
 
-## Autorid (kas vaja?)
+## Autorid
 
-* **Janar Peterson** - *Varamute tabel ja varamute andmete saamine, uute varamute lisamine* - RIA praktikant
-* **Raimond Roosalu** - *Frontend (päised ja jalused), abilehtede valmistamine* - RIA praktikant
-* **Taavi Meinberg** - *PHP'ga kaustade ja failide otsimine ja kuvamine, tabelite ja versioonide vahel navigeerimine* - RIA praktikant
+* **Janar Peterson** - RIA praktikant
+* **Raimond Roosalu** - RIA praktikant
+* **Taavi Meinberg** - RIA praktikant

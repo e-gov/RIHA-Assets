@@ -53,6 +53,7 @@ $(document).ready(function () {
         var resourceName = "";
         var resourceVersion = "";
         var usedNames = [];
+
         //show only repeating names' latest version
         data.forEach(function (resource, index) {
             var newRow = $(template);
@@ -72,6 +73,7 @@ $(document).ready(function () {
             }
             $('#files').hide();
         });
+        
         //go through all again, but show only non-duplicates
         data.forEach(function (resource, index) {
             var newRow = $(template);
@@ -90,7 +92,7 @@ $(document).ready(function () {
             var temp = $('#detail-row-template').html();
             var dtbody = $('#detail-tbody');
             var currentName = resource.Name_est;
-            var currentVersion = resource.Version
+            var currentVersion = resource.Version;
             var newRow = $(temp);
             if(usedNames.includes(resource.Name_est)){
                 data.forEach(function (resource, index) {
@@ -143,8 +145,6 @@ $(document).ready(function () {
 
             $('#detail-tbody th').css('white-space', 'nowrap');
         });
-
-        
 
         $('.fileButton').on('click', function (event) {
             $('#files-content').empty();
