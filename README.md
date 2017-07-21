@@ -36,30 +36,34 @@ Kui uue varamu kaust on valmis, siis kausta sisu struktuur jaguneb kaheks sõltu
 Kui kaustal on ainult üks versioon:
 
 ```
-* XMLVaramu_AT_teadaanne
-    * failid
-        * fail.xml
-        * fail2.xsd
-        * fail3.pdf
-    * varamu.json
+* resources
+    * XMLVarad
+        * XMLVara_AT_teadaanne
+            * failid
+                * fail.xml
+                * fail2.xsd
+                * fail3.pdf
+            * varamu.json
 ```
 
 Kui kaustal on näiteks kaks versiooni:
 
 ```
-* XMLVaramu_AT_teadaanne
-    * V1.0
-        * failid
-            * fail.xml
-            * fail2.xsd
-            * fail3.pdf
-        * varamu.json
-    * V2.3
-        * failid
-            * fail.xml
-            * fail2.xsd
-            * fail3.pdf
-        * varamu.json
+* resources
+    * XMLVarad
+        * XMLVara_AT_teadaanne
+            * V1.0
+                * failid
+                    * fail.xml
+                    * fail2.xsd
+                    * fail3.pdf
+                * varamu.json
+            * V2.1
+                * failid
+                    * fail.xml
+                    * fail2.xsd
+                    * fail3.pdf
+                * varamu.json
 ```
 
 Lisa nende skeemide järgi vajalikud failid uue varamu kausta. Küsimuste korral tasub vaadata juba olemas olevate varamute kaustasid.
