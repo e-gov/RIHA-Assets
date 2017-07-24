@@ -40,12 +40,13 @@
 <main id="new-resource">
     <div class="container">
         <h2>Uus XML vara</h2>
-        <form class="form-horizontal" action="" enctype="multipart/form-data">
+        <form class="form-horizontal" data-toggle="validator" role="form">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Name_est">Nimetus, eesti keeles</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Name_est" placeholder="Eestikeelne nimetus"
-                           name="Name_est">
+                    <input type="text" class="form-control" id="Name_est" placeholder="Eestikeelne nimetus" data-error="jou"
+                           name="Name_est" required>
+                    <div class="help-block with-errors"></div>
                 </div>
             </div>
             <div class="form-group">
@@ -98,20 +99,16 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Resource_type">Vara liik</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Resource_type" name="Resource_type">
+                    <select id="Resource_type" class="form-control" name="Resource_type">
+                        <option>Standardsed metaandmed</option>
+                        <option>Dokumendiliigi XML andmekirjeldus</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Owner">Haldaja</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Owner" name="Owner">
-                </div>
-            </div>
-            //
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="Field">Valdkond</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Field" name="Field">
                 </div>
             </div>
             <div class="form-group">
@@ -139,6 +136,7 @@
 </main>
 <script>
     $('form').submit(function (event) {
+        $(this).validate();
         console.log($(this).serializeObject());
         var data = $(this).serializeObject();
         var filename = "varamu.json";
