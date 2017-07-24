@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/bower_components/datatables/media/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/bower_components/build/app.css">
-    <link rel="stylesheet" href="css/dropzone.css">
+
 
     <!-- Include script -->
     <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -30,7 +30,7 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
-    <script src="js/dropzone.js"></script>
+    <script src="js/jquery.serialize-object.min.js"></script>
 </head>
 
 <body>
@@ -42,109 +42,95 @@
         <h2>Uus XML vara</h2>
         <form class="form-horizontal" action="" enctype="multipart/form-data">
             <div class="form-group">
-                <label class="control-label col-sm-2" for="name-est">Nimetus, eesti keeles</label>
+                <label class="control-label col-sm-2" for="Name_est">Nimetus, eesti keeles</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name-est" placeholder="Eestikeelne nimetus"
-                           name="name-est">
+                    <input type="text" class="form-control" id="Name_est" placeholder="Eestikeelne nimetus"
+                           name="Name_est">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="name-eng">Nimetus, inglise keeles</label>
+                <label class="control-label col-sm-2" for="Name_eng">Nimetus, inglise keeles</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name-eng" placeholder="Inglisekeelne nimetus"
-                           name="name-eng">
+                    <input type="text" class="form-control" id="Name_eng" placeholder="Inglisekeelne nimetus"
+                           name="Name_eng">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="version">Versioon</label>
+                <label class="control-label col-sm-2" for="Version">Versioon</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="version" placeholder="Versiooni number" name="version">
+                    <input type="text" class="form-control" id="Version" placeholder="Versiooni number" name="Version">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="start-date">Kehtiv alates</label>
+                <label class="control-label col-sm-2" for="Start_date">Kehtiv alates</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control" id="start-date" placeholder="Kehtivuse algus kuupäev"
-                           name="start-date">
+                    <input type="date" class="form-control" id="Start_date" placeholder="Kehtivuse algus kuupäev"
+                           name="Start_date">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="end-date">Kehtiv kuni</label>
+                <label class="control-label col-sm-2" for="End_date">Kehtiv kuni</label>
                 <div class="col-sm-10">
-                    <input type="date" class="form-control" id="end-date" placeholder="Kehtivuse algus kuupäev"
-                           name="end-date">
+                    <input type="date" class="form-control" id="End_date" placeholder="Kehtivuse algus kuupäev"
+                           name="End_date">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="description-est">Kirjeldus, eesti keeles</label>
+                <label class="control-label col-sm-2" for="Description_est">Kirjeldus, eesti keeles</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" rows="4" id="description-est"></textarea>
+                    <textarea class="form-control" rows="4" id="Description_est" name="Description_est"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="description-eng">Kirjeldus, inglise keeles</label>
+                <label class="control-label col-sm-2" for="Description_eng">Kirjeldus, inglise keeles</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" rows="4" id="description-eng"></textarea>
+                    <textarea class="form-control" rows="4" id="Description_eng" name="Description_eng"></textarea>
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="stored-until">Säilitus tähtaeg</label>
+                <label class="control-label col-sm-2" for="Stored_until">Säilitus tähtaeg</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="stored-until" placeholder="Säilitus aja pikkus"
-                           name="stored-until">
+                    <input type="text" class="form-control" id="Stored_until" placeholder="Säilitus aja pikkus"
+                           name="Stored_until">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Resource_type">Vara liik</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Resource_type" name="Resource_type">
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="status">Staatus</label>
+                <label class="control-label col-sm-2" for="Owner">Haldaja</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="status"
-                           name="status">
+                    <input type="text" class="form-control" id="Owner" name="Owner">
+                </div>
+            </div>
+            //
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="Field">Valdkond</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Field" name="Field">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2">Publitseeritud</label>
                 <div class="col-sm-10">
-                    <label class="radio-inline"><input type="radio" name="optradio" value="jah"> Jah</label>
-                    <label class="radio-inline"><input type="radio" name="optradio" value="ei"> Ei</label>
+                    <label class="radio-inline"><input type="radio" name="Published" value="jah"> Jah</label>
+                    <label class="radio-inline"><input type="radio" name="Published" value="ei"> Ei</label>
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2" for="licence">Litsents</label>
+                <label class="control-label col-sm-2" for="Status">Staatus</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="licence" placeholder="" name="licence">
+                    <input type="text" class="form-control" id="Status"
+                           name="Status">
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="resource-type">Vara liik</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="resource-type" name="resource-type">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="owner">Haldaja</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="owner" name="owner">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="field">Valdkond</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="field" name="field">
-                </div>
-            </div>
-            <div class="form-group" id="drop">
-                <div class="dropzone" id="dropfile">
-                    <script>
-                        Dropzone.autoDiscover = false;
-                            $("div#dropfile").dropzone({ url: "/file/post" });
-                        $('#dropfile').width('40%');
-                    </script>
-                </div>
-            </div>
-
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary" style="font-size: 20px">Järgmine</button>
+                    <button type="submit" class="btn btn-primary" style="font-size: 20px">Genereeri</button>
                 </div>
             </div>
         </form>
@@ -153,14 +139,31 @@
 </main>
 <script>
     $('form').submit(function (event) {
-        console.log($(this).serializeArray());
-        var data = $(this).serializeArray();
-        var myString = 'newData='+JSON.stringify(data);  //converts json to string and prepends the POST variable name
+        console.log($(this).serializeObject());
+        var data = $(this).serializeObject();
+        var filename = "varamu.json";
+
+
+        var saveData = (function () {
+            var a = document.createElement("a");
+            document.body.appendChild(a);
+            a.style = "display: none";
+            return function (data, fileName) {
+                var json = JSON.stringify(data),
+                    blob = new Blob([json], {type: "octet/stream"}),
+                    url = window.URL.createObjectURL(blob);
+                a.href = url;
+                a.download = fileName;
+                a.click();
+                window.URL.revokeObjectURL(url);
+            };
+        }());
+
+
         $.ajax({
-            type: "POST",
-            url: "js/scripts/buildJson.php", //the name and location of your php file
-            data: myString,      //add the converted json string to a document.
-            success: function() {alert('sucess');} //just to make sure it got to this point.
+            success: function() {
+                saveData(data, filename);
+            } //just to make sure it got to this point.
         });
         return false;
     });
