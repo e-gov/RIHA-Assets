@@ -38,83 +38,113 @@
     <div id="headerInclude"/>
 </div>
 <main id="new-resource">
+    <div id="instruction">
+        <h2>Uue vara lisamine</h2>
+        <p>Uue xml vara lisamiseks tuleb sisestada all olevasse vormi kõik vajalikud andmed ja vajutada nupule <b>"Genereeri"</b>.
+            See järel salvestatakse automaatselt teie
+            arvutisse uue vara andmeid sisaldav <b>varamu.json</b> fail. Palun saata salvestatud fail koos kõikide vara
+            lisa failidega aadressile <a href="mailto:help@ria.ee">help@ria.ee</a></p>
+    </div>
     <div class="container">
-        <h2>Uus XML vara</h2>
-        <form class="form-horizontal" data-toggle="validator" role="form">
+        <form class="form-horizontal">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Name_est">Nimetus, eesti keeles</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Name_est" placeholder="Eestikeelne nimetus" data-error="jou"
-                           name="Name_est" required>
-                    <div class="help-block with-errors"></div>
+                    <input type="text" class="form-control" id="Name_est" placeholder="Eestikeelne nimetus"
+                           name="Name_est" required
+                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                           oninput="setCustomValidity('')">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Name_eng">Nimetus, inglise keeles</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Name_eng" placeholder="Inglisekeelne nimetus"
-                           name="Name_eng">
+                           name="Name_eng" required
+                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                           oninput="setCustomValidity('')">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Version">Versioon</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Version" placeholder="Versiooni number" name="Version">
+                    <input type="text" class="form-control" id="Version" placeholder="Versiooni number" name="Version"
+                           required oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                           oninput="setCustomValidity('')">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Start_date">Kehtiv alates</label>
                 <div class="col-sm-10">
                     <input type="date" class="form-control" id="Start_date" placeholder="Kehtivuse algus kuupäev"
-                           name="Start_date">
+                           name="Start_date" required
+                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                           oninput="setCustomValidity('')">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="End_date">Kehtiv kuni</label>
                 <div class="col-sm-10">
                     <input type="date" class="form-control" id="End_date" placeholder="Kehtivuse algus kuupäev"
-                           name="End_date">
+                           name="End_date" required
+                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                           oninput="setCustomValidity('')">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Description_est">Kirjeldus, eesti keeles</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" rows="4" id="Description_est" name="Description_est"></textarea>
+                    <textarea class="form-control" rows="4" id="Description_est" name="Description_est"
+                              required oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                              oninput="setCustomValidity('')"></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Description_eng">Kirjeldus, inglise keeles</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" rows="4" id="Description_eng" name="Description_eng"></textarea>
+                    <textarea class="form-control" rows="4" id="Description_eng" name="Description_eng"
+                              required oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                              oninput="setCustomValidity('')"></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Stored_until">Säilitus tähtaeg</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Stored_until" placeholder="Säilitus aja pikkus"
-                           name="Stored_until">
+                           name="Stored_until" required
+                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                           oninput="setCustomValidity('')">
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Resource_type">Vara liik</label>
                 <div class="col-sm-10">
-                    <select id="Resource_type" class="form-control" name="Resource_type">
+                    <select id="Resource_type" class="form-control" name="Resource_type" required
+                            oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                            oninput="setCustomValidity('')">
                         <option>Standardsed metaandmed</option>
                         <option>Dokumendiliigi XML andmekirjeldus</option>
+                        <option>XBRL taksonoomia</option>
+                        <option>Andmevahetuse konteiner</option>
+                        <option>Standardelement</option>
+                        <option>Rahvusvaheline standard</option>
+                        <option>Klassifikaatori XML vorming</option>
                     </select>
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Owner">Haldaja</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Owner" name="Owner">
+                    <input type="text" class="form-control" id="Owner" name="Owner" required
+                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                           oninput="setCustomValidity('')">
                 </div>
             </div>
             <div class="form-group">
                 <label class="control-label col-sm-2">Publitseeritud</label>
                 <div class="col-sm-10">
-                    <label class="radio-inline"><input type="radio" name="Published" value="jah"> Jah</label>
+                    <label class="radio-inline"><input type="radio" name="Published" value="jah" checked="checked"> Jah</label>
                     <label class="radio-inline"><input type="radio" name="Published" value="ei"> Ei</label>
                 </div>
             </div>
@@ -122,7 +152,9 @@
                 <label class="control-label col-sm-2" for="Status">Staatus</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Status"
-                           name="Status">
+                           name="Status" required
+                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
+                           oninput="setCustomValidity('')">
                 </div>
             </div>
             <div class="form-group">
@@ -135,8 +167,9 @@
 
 </main>
 <script>
-    $('form').submit(function (event) {
-        $(this).validate();
+    $('form').submit(function () {
+
+
         console.log($(this).serializeObject());
         var data = $(this).serializeObject();
         var filename = "varamu.json";
@@ -159,7 +192,7 @@
 
 
         $.ajax({
-            success: function() {
+            success: function () {
                 saveData(data, filename);
             } //just to make sure it got to this point.
         });
