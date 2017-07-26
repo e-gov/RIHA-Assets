@@ -40,7 +40,6 @@
                 <thead id="resources-head">
                 <tr>
                     <th>Nimi ja Versioon</th>
-                    <th>Publitseeritud</th>
                     <th>Staatus</th>
                     <th>Vara liik</th>
                 </tr>
@@ -50,7 +49,6 @@
                 <script id="main-row-template" type="text/x-custom-template">
                     <tr>
                         <td class="name_and_version"></td>
-                        <td class="published"></td>
                         <td class="status"></td>
                         <td class="resource_type"></td>
                     </tr>
@@ -104,20 +102,12 @@
                         <td id="des_eng"></td>
                     </tr>
                     <tr>
-                        <th>Säilitus tähtaeg:</th>
-                        <td id="stored"></td>
-                    </tr>
-                    <tr>
                         <th>Vara liik:</th>
                         <td id="resource_type"></td>
                     </tr>
                     <tr>
                         <th>Haldaja:</th>
                         <td id="owner"></td>
-                    </tr>
-                    <tr>
-                        <th>Valdkond:</th>
-                        <td id="field"></td>
                     </tr>
                 </script>
                 </tbody>

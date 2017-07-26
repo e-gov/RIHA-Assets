@@ -60,7 +60,6 @@ $(document).ready(function () {
             if(resourceName == resource.Name_est){
                 if(parseInt(resource.Version, 10) > parseInt(resourceVersion, 10)){
                     newRow.find('.name_and_version').text(resource.Name_est).attr("id", index);
-                    newRow.find('.published').text(resource.Published);
                     newRow.find('.status').text(resource.Status);
                     newRow.find('.resource_type').text(resource.Resource_type);
                     resourceName = resource.Name_est;
@@ -79,7 +78,6 @@ $(document).ready(function () {
             var newRow = $(template);
                 if(!usedNames.includes(resource.Name_est)){
                     newRow.find('.name_and_version').text(resource.Name_est).attr("id", index);
-                    newRow.find('.published').text(resource.Published);
                     newRow.find('.status').text(resource.Status);
                     newRow.find('.resource_type').text(resource.Resource_type);
                     tBody.append(newRow);
@@ -132,10 +130,8 @@ $(document).ready(function () {
             newRow.find('#end_date').text(resource.End_date);
             newRow.find('#des_est').text(resource.Description_est);
             newRow.find('#des_eng').text(resource.Description_eng);
-            newRow.find('#stored').text(resource.Stored_until);
             newRow.find('#resource_type').text(resource.Resource_type);
             newRow.find('#owner').text(resource.Owner);
-            newRow.find('#field').text(resource.Field);
 
             dtbody.append(newRow);
 

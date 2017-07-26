@@ -7,18 +7,11 @@
     "End_date": "",
     "Description_est": "Ametlike Teataannete universiaalne XML skeem",
     "Description_eng": "Judicial official announcements schema",
-    "Stored_until": "Alatine",
     "Resource_type": [
       "Standardsed metaandmed",
       "Dokumendiliigi XML andmekirjeldus"
     ],
     "Owner": "Justiitsministeerium",
-    "Field": [
-      "Ametlikud teadaanded",
-      "Riigi infosüsteem"
-    ],
-    "Published": "Jah",
-    "RIHA_URL": "https://riha.eesti.ee/riha/main/xml/at_teadaanne",
     "Status": "Ettepanek sisestamisel"
   }
 ]

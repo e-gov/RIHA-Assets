@@ -50,7 +50,8 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Name_est">Nimetus, eesti keeles</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Name_est" placeholder="Eestikeelne nimetus"
+                    <input type="text" class="form-control" id="Name_est"
+                           placeholder="XML vara ametlik nimetus eesti keeles"
                            name="Name_est" required
                            oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
                            oninput="setCustomValidity('')">
@@ -59,7 +60,8 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Name_eng">Nimetus, inglise keeles</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Name_eng" placeholder="Inglisekeelne nimetus"
+                    <input type="text" class="form-control" id="Name_eng"
+                           placeholder="XML vara ametlik nimetus inglise keeles"
                            name="Name_eng" required
                            oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
                            oninput="setCustomValidity('')">
@@ -68,7 +70,8 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Version">Versioon</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Version" placeholder="Versiooni number" name="Version"
+                    <input type="text" class="form-control" id="Version" placeholder="Versiooni tähis, näiteks 3.1"
+                           name="Version"
                            required oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
                            oninput="setCustomValidity('')">
                 </div>
@@ -82,13 +85,11 @@
                            oninput="setCustomValidity('')">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="display: none">
                 <label class="control-label col-sm-2" for="End_date">Kehtiv kuni</label>
                 <div class="col-sm-10">
                     <input type="date" class="form-control" id="End_date" placeholder="Kehtivuse algus kuupäev"
-                           name="End_date" required
-                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
-                           oninput="setCustomValidity('')">
+                           name="End_date">
                 </div>
             </div>
             <div class="form-group">
@@ -96,7 +97,8 @@
                 <div class="col-sm-10">
                     <textarea class="form-control" rows="4" id="Description_est" name="Description_est"
                               required oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
-                              oninput="setCustomValidity('')"></textarea>
+                              oninput="setCustomValidity('')"
+                              placeholder="Eestikeelne kirjeldus, kellele ja miks on XML vara loodud"></textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -104,16 +106,8 @@
                 <div class="col-sm-10">
                     <textarea class="form-control" rows="4" id="Description_eng" name="Description_eng"
                               required oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
-                              oninput="setCustomValidity('')"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2" for="Stored_until">Säilitus tähtaeg</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Stored_until" placeholder="Säilitus aja pikkus"
-                           name="Stored_until" required
-                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
-                           oninput="setCustomValidity('')">
+                              oninput="setCustomValidity('')"
+                              placeholder="Ingliskeelne kirjeldus, kellele ja miks on XML vara loodud"></textarea>
                 </div>
             </div>
 
@@ -136,25 +130,17 @@
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Owner">Haldaja</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="Owner" name="Owner" required
+                    <input type="text" class="form-control" id="Owner" name="Owner"
+                           placeholder="Asutus, kes on vastutav XML vara arendamise ja RIHAs kirjeldamise eest" required
                            oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
                            oninput="setCustomValidity('')">
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Publitseeritud</label>
-                <div class="col-sm-10">
-                    <label class="radio-inline"><input type="radio" name="Published" value="jah" checked="checked"> Jah</label>
-                    <label class="radio-inline"><input type="radio" name="Published" value="ei"> Ei</label>
-                </div>
-            </div>
-            <div class="form-group">
+            <div class="form-group" style="display: none">
                 <label class="control-label col-sm-2" for="Status">Staatus</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="Status"
-                           name="Status" required
-                           oninvalid="this.setCustomValidity('Kõik väljad peavad olema täidetud!')"
-                           oninput="setCustomValidity('')">
+                           name="Status">
                 </div>
             </div>
             <div class="form-group">
