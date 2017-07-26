@@ -3,19 +3,7 @@
     background-color: #1ade51;
 }
 
-#resources-head {
-    border-top: white solid 40px; 
-    border-left: white solid 40px; 
-    border-right: white solid 40px; 
-    background-color: #023cc1; 
-    color: white;
-}
-#xml-resources {
-    border-bottom: white solid 40px; 
-    border-left: white solid 40px; 
-    border-right: white solid 40px; 
-    background-color: white
-}
+
 #detail{
     padding-top: 0%;
     padding-left: 5%;
@@ -27,18 +15,4 @@
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
-}
-
-#new-resource{
-    padding-top: 2%;
-}
-#instruction{
-    text-align: left;
-    font-size: 18px;
-    padding: 5%;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-#instruction > h2{
-    color: #003eff;
 }

@@ -10740,11 +10740,7 @@ mark {
     margin-bottom: 25px
 }
 
-.table thead th {
-    line-height: 20px;
-    font-size: 14px;
-    font-weight: bold
-}
+
 
 .table thead th .fa {
     margin-left: 8px
@@ -10755,12 +10751,7 @@ mark {
     border-right: 1px solid #edf0f5
 }
 
-.table tbody tr td {
-    line-height: 20px;
-    padding-top: 9px;
-    padding-bottom: 10px;
-    font-size: 14px
-}
+
 
 .table tbody tr td a:not(.btn) {
     text-decoration: underline
@@ -11410,9 +11401,6 @@ table.dataTable {
     border-collapse: collapse !important
 }
 
-table.dataTable thead th {
-    padding-right: 10px !important
-}
 
 table.dataTable thead th:before {
     display: none !important
@@ -12485,8 +12473,8 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child::befor
     }
 
     #header .header-bottom .navbar .navbar-brand img {
-        width: 140px;
-        height: 24px
+        width: 70%;
+        height: 70%
     }
 
     #header .header-bottom .navbar > .container {
