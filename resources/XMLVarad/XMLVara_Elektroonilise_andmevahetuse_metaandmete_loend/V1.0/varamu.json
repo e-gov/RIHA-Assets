@@ -8,7 +8,6 @@
         "Description_est": "Metaandmed, mida saadetakse dokumendi edastamisel DVK kaudu, lihtsustamaks elektroonilist suhtlust dokumendihaldussüsteemide ja teiste infosüsteemide vahel.",
         "Description_eng": "Metadata is transmitted via document exchange centre to simplify digital interaction between document management systems and other information systems.",
         "Stored_until": "Määratakse hiljem",
-        "Licence": "",
         "Resource_type": [
             "Standardsed_metaandmed",
             "Andmevahetuse_konteiner"

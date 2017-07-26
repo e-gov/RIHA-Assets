@@ -17,25 +17,18 @@
     <link rel="stylesheet" href="css/bower_components/build/app.css">
 
     <!-- Include script -->
-    <!--script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script-- type="text/javascript">
-        $(function () {
-            $("#headerInclude").load("header.html #header");
-            $("#footerInclude").load("footer.html #footer");
-        });
-    </script-->
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
     <?php include 'js/Detailview.php';?>
+    <?php include 'header.html';?>
 </head>
 
 <body>
     <div id="wrap">
-        <?php include 'header.html';?>
-        <!--div id="headerInclude" /></div-->
+        <div id="headerInclude" /></div>
     <main id="content" class="container" style="background-image: url('css/images/bg.png')">
         <div class="container-fluid my-1" style="width: 80%; padding: 30px">
             <h1 style="color: white; font-size: 60px;">RIHA XML Varamu</h1>
@@ -110,10 +103,6 @@
                                 <td id="stored"></td>
                             </tr>
                             <tr>
-                                <th>Litsents:</th>
-                                <td id="licence"></td>
-                            </tr>
-                            <tr>
                                 <th>Vara liik:</th>
                                 <td id="resource_type"></td>
                             </tr>
@@ -146,10 +135,7 @@
         </div>
     </main>
     <?php include 'footer.html';?>
-    <!--div id="footerInclude" /></div-->
-
-    </div>
-    <!--script src="css/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="css/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="css/bower_components/jquery-ui/jquery-ui.min.js"></script>
     <script src="css/bower_components/tether/dist/js/tether.min.js"></script>
     <script src="css/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -157,7 +143,7 @@
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="css/bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
     <script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
-    <script- src="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script-->
+    <script src="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 </body>
 
 </html>
