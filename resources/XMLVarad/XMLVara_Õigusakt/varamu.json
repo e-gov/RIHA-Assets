@@ -7,15 +7,8 @@
     "End_date": "",
     "Description_est": "Skeemid XML struktuuriga õigusaktide koostamiseks ja avaldamiseks Riigi Teatajas.",
     "Description_eng": "XML schemas for creating and publishing legal acts in Riigi Teataja",
-    "Stored_until": "Alatine",
-    "Licence": "Kasutamine ei ole piiratud",
     "Resource_type": "Dokumendiliigi XML andmekirjeldus",
     "Owner": "Justiitsministeerium",
-    "Field": [
-      "Õigus, vabadus ja turvalisus"
-    ],
-    "Published": "Jah",
-    "RIHA_URL": "https://riha.eesti.ee/riha/main/xml/oigusakt",
     "Status": "Registreeritud"
   }
 ]

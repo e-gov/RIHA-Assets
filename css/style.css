@@ -28,3 +28,17 @@
     padding-right: 5%;
     padding-bottom: 5%;
 }
+
+#new-resource{
+    padding-top: 2%;
+}
+#instruction{
+    text-align: left;
+    font-size: 18px;
+    padding: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+#instruction > h2{
+    color: #003eff;
+}

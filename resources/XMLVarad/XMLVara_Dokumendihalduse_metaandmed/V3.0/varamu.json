@@ -7,16 +7,8 @@
         "End_date": "",
         "Description_est": "Dokumendihalduse metaandmete loend ja skeemid on mõeldud rakendamiseks eelkõige Eesti avaliku sektori asutustes, kuid sobivad kasutamiseks ka teistes organisatsioonides. Eesmärgiks on ühtlustada metaandmeid erinevates dokumente haldavates süsteemides, et: 1) tagada dokumentide, nende konteksti ja haldamise ajaloo nõuetekohane kirjeldamine, 2) edendada elektroonilist dokumendivahetust, 3) ühtlustada dokumentide avalikustamisel kasutatavaid metaandmeid, 4) võimaldada statistilist aruandlust, 5) lihtsustada dokumendiliikide andmekirjelduste koostamist ning 6) lihtsustada dokumentide üleandmist Rahvusarhiivi. Metaandmete loendis on elementidele lisatud viited sama tähendusega elementidele, mida sisaldavad mõned teiste riikide või rahvusvahelised metaandmemudelid. Versioonis 3.0 on võetud arvesse uute ja uuendatud õigusaktide nõudeid ja vahepealseid rahvusvahelisi arenguid.",
         "Description_eng": "The Records Management Metadata set (the XML schemas and the list of elements) is designed to be applied primarily in the public sector agencies of Estonia, but is also suitable for other organisations. The objective of application of the metadata set is to harmonise the metadata in various systems managing documents and records in order to: 1) ensure proper describing of records, their context, and their management through time, 2) enhance electronic exchange of documents and records, 3) harmonise the metadata used in the disclosure of records, 4) enable statistical reporting, 5) simplify the development of data descriptions for record types, and 6) simplify the transfer of records to the National Archives. The list of metadata elements contains references to equivalent elements found in some foreign or international metadata models. In version 3.0, the requirements of new and amended legislative acts and international developments have been taken into account.",
-        "Stored_until": "Määratakse hiljem",
-        "Licence": "Kasutamine ei ole piiratud",
         "Resource_type": "Standardsed metaandmed",
         "Owner": "Majandus- ja Kommunikatsiooniministeerium",
-        "Field": [
-            "Avalik haldus",
-            "Riigi infosüsteem"
-        ],
-        "Published": "Jah",
-        "RIHA_URL": "https://riha.eesti.ee/riha/main/xml/dokumendihalduse_metaandmed/1",
         "Status": "Registreeritud"
     }
 ]

@@ -7,19 +7,11 @@
         "End_date": "",
         "Description_est": "Metaandmed, mida saadetakse dokumendi edastamisel DVK kaudu, lihtsustamaks elektroonilist suhtlust dokumendihaldussüsteemide ja teiste infosüsteemide vahel.",
         "Description_eng": "Metadata, that is transmitted via Document Exchange Centre to simplify digital interaction between document management systems and other information systems.",
-        "Stored_until": "Määratakse hiljem",
-        "Licence": "",
         "Resource_type": [
             "Standardsed metaandmed",
             "Andmevahetuse konteiner"
         ],
         "Owner": "Riigi Infosüsteemi Amet",
-        "Field": [
-            "Avalik haldus",
-            "Riigi infosüsteem"
-        ],
-        "Published": "Jah",
-        "RIHA_URL": "https://riha.eesti.ee/riha/main/xml/elektroonilise_andmevahetuse_metaandmete_loend/1",
         "Status": "Registreeritud"
     }
 ]

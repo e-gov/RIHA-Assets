@@ -7,16 +7,8 @@
         "End_date": "",
         "Description_est": "Dokumendiliigi „kiri“ andmekirjeldus koos XML skeemidega. Rakendamiseks avaliku sektori asutustes ja teabeväravas eesti.ee ning soovitavalt ka erasektori organisatsioonides. Andmekirjeldus on kooskõlas Eesti standardiga EVS 882:-1 „INFORMATSIOON JA DOKUMENTATSIOON. Dokumendielemendid ja vorminõuded. Osa 1. Kiri“ ja kohaldatav Eesti õigusaktides nimetatud kirja alaliikidele (teabenõue, selgitustaotlus, märgukiri jm). Potentsiaalselt kasutatav rahvusvahelises kirjavahetuses.",
         "Description_eng": "Data description of and XML schemas for the document/record type “letter”. To be applied in the public sector agencies of Estonia and the State Portal eesti.ee, but recommended also for private sector organisations. Harmonised with Estonian standard EVS 882:1-2013 and applicable also for various sub-types of letters, described in the Estonian legislation (“request for information”, “informational letter”, “request for explanation”, etc.). Potentially usable with international correspondence.",
-        "Stored_until": "Määratakse hiljem",
-        "Licence": "Kasutamine ei ole piiratud",
         "Resource_type": "Dokumendiliigi XML andmekirjeldus",
         "Owner": "Majandus- ja Kommunikatsiooniministeerium",
-        "Field": [
-            "Avalik haldus",
-            "Riigi infosüsteem"
-        ],
-        "Published": "Jah",
-        "RIHA_URL": "https://riha.eesti.ee/riha/main/xml/kiri_teabenoue_margukiri_selgitustaotus",
         "Status": "Ettepanek sisestamisel"
     }
 ]
