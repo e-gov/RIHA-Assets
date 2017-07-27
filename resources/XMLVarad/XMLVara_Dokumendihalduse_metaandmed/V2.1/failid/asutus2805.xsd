@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Kuldar (Rahvusarhiiv) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="asutus">
+		<xs:annotation>
+			<xs:documentation>Asutuse metaandmed</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="asutusNimi">
+					<xs:annotation>
+						<xs:documentation>Asutuse nimi </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="asutusAmetlikNimi" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Asutuse ametlik nimi</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="asutusAlternatiivneNimi" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Asutuse muud kasutatavad nimed</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="asutusAadress" type="xs:IDREF" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Viide asutuse aadressi kirjeldusele</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="asutusSeos" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Asutuse seoste kirjeldus teiste asutustega</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="seotudAsutus" type="xs:IDREF">
+								<xs:annotation>
+									<xs:documentation>Viide seotud asutuse kirjeldusele</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="asutusSeosTyyp">
+								<xs:annotation>
+									<xs:documentation>Asutustevahelise seose tüüp</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="contains"/>
+										<xs:enumeration value="isPartOf"/>
+										<xs:enumeration value="controls"/>
+										<xs:enumeration value="isControlledBy"/>
+										<xs:enumeration value="precedes"/>
+										<xs:enumeration value="succeeds"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="asutusSeosAeg" type="KuupaevTyyp">
+								<xs:annotation>
+									<xs:documentation>Seose tekkimise kuupäev ja aeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="asutusSeosKirjeldus" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Vabatekstiline täiendus seose tüübile</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="asutusPiirdaatumid" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Asutuse loomise ja lõpetamise aeg</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence minOccurs="0">
+							<xs:element name="asutusKuupaevLoomine" type="KuupaevTyyp" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Asutuse loomise kuupäev</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="asutusKuupaevSulgemine" type="KuupaevTyyp" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Asutuse sulgemise / lõpetamise kuupäev</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="asutusVolitus" type="xs:IDREF" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Viide asutusega seotud volituste metaandmetele </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="KuupaevTyyp">
+		<xs:annotation>
+			<xs:documentation>Kuupäeva tüüp</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime">
+				<xs:attribute name="kodeerimisskeem" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="EVS8"/>
+							<xs:enumeration value="ISO8601"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,14 @@
+[
+    {
+        "Name_est": "Eesti hea tava taksonoomia",
+        "Name_eng": "Estonia's GAAP taxanomy",
+        "Version": "2011-01-01",
+        "Start_date": "01.01.2011",
+        "End_date": "",
+        "Description_est": "Majandusaasta aruande taksonoomia. Taksonoomia põhineb laiendataval rahandusalaste andmete aruandluskeele (eXtensible Business Reporting Language) standardil 2.1 (edaspidi XBRL) ja standardi laiendusel nimega Dimensions 1.0. Taksonoomia sisaldab bilansi, kasumiaruande, koondkasumiaruande, rahavoogude aruande, omakapitali liikumise aruande, raamatupidamise aastaaruande lisade ja majandusaasta aruandega koos esitatavate dokumentide elemente ning vorme.",
+        "Description_eng": "",
+        "Resource_type": "XBRL taksonoomia",
+        "Owner": "XBRL taksonoomia",
+        "Status": "Ettepanek sisestamisel"
+    }
+]

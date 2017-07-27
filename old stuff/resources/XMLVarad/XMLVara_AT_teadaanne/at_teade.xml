@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<at:teadaanne xmlns:at="http://www.ametlikudteadaanded.ee/xsd/2014-06-01/teadaanne.xsd">
+  <version>1</version>
+  <teate_number>2149170</teate_number>
+  <id>2149187</id>
+  <url>https://preliveatis.rik.ee/ee/Andmeandja%20Test/advoktatuur/advokaadi-kutsetegevuse-taastamine/2015/2/9/2149170</url>
+  <liik>
+    <kood>14</kood>
+    <nimi>Advokaadi kutsetegevuse taastamise teade</nimi>
+  </liik>
+  <mall>
+    <kood>15</kood>
+    <nimi>Advokaadi kutsetegevuse taastamise teade (AdvS § 35 lg 6)</nimi>
+  </mall>
+  <oiguslik_alus_omastav>advokatuuriseaduse (AdvS) § 35 lõike 6</oiguslik_alus_omastav>
+  <oigusliku_aluse_viide>https://www.riigiteataja.ee/akt/121062014050#para35</oigusliku_aluse_viide>
+  <eesmark>
+    <kood>TY</kood>
+    <nimi>teavitada üldsust</nimi>
+  </eesmark>
+  <andmeandja>
+    <kood>75001750</kood>
+    <nimi>Andmeandja Test</nimi>
+  </andmeandja>
+  <andmeandja_kontaktandmed>
+    <telefon>56657899</telefon>
+    <epost>test_andmeandja_epost@post.ee</epost>
+  </andmeandja_kontaktandmed>
+  <avaldaja>
+    <id>7</id>
+    <nimi>Ando Leesment</nimi>
+    <ametikoht>Administraator</ametikoht>
+    <telefon/>
+    <epost/>
+  </avaldaja>
+  <puudutatud_isik>
+    <liik>
+      <kood>F</kood>
+      <nimi>Füüsiline isik</nimi>
+    </liik>
+    <kood>39105186038</kood>
+    <koodi_riik>EST</koodi_riik>
+    <synniaeg/>
+    <nimi>RIKTEST</nimi>
+    <eesnimi>ANDO</eesnimi>
+  </puudutatud_isik>
+  <avaldamise_kpv>09.02.2015</avaldamise_kpv>
+  <arhiveerimise_kpv>10.02.2045</arhiveerimise_kpv>
+  <kinnitatud_sisu>
+                            &lt;div class="announcement-header"&gt;Advokaadi kutsetegevuse taastamise teade&lt;/div&gt;
+                            &lt;div class="announcement-date"&gt;
+                                Avaldamise algus: 09.02.2015&lt;br&gt;
+                                Avaldamise lõpp: 10.02.2045
+                            &lt;/div&gt;
+                            &lt;div class="announcement-body"&gt;
+                                &lt;div style="text-align: justify;"&gt;Andmeandja Test&amp;nbsp;avaldab teadaande&amp;nbsp;&lt;a href="https://www.riigiteataja.ee/akt/121062014050#para35" target="_blank"&gt;advokatuuriseaduse (AdvS) § 35 lõike 6&lt;/a&gt; alusel.&lt;br /&gt;&#13;
+&lt;br /&gt;&#13;
+Andmeandja Test&amp;nbsp;taastab&amp;nbsp;juhatuse&amp;nbsp;otsusega&amp;nbsp;advokaadi,&amp;nbsp;ANDO RIKTEST (isikukood 39105186038), kutsetegevuse&amp;nbsp;õiguse alates&amp;nbsp;05.02.2015.&lt;/div&gt;&#13;
+
+                            &lt;/div&gt;
+                            
+                            
+                            &lt;div class="announcement-provider"&gt;Andmeandja Test&lt;br&gt;Telefon: 56657899&lt;br&gt;E-post: testat@info.ee&lt;/div&gt;
+                            
+                            &lt;div class="announcement-number"&gt;Teadaande number 2149170.&lt;/div&gt;
+                                </kinnitatud_sisu>
+  <sisendid>
+    <sisendirida>
+      <nimi>juhatuse_voi_advokatuuri</nimi>
+      <tyyp>text1</tyyp>
+      <vaartus>juhatuse</vaartus>
+      <objekti_id></objekti_id>
+    </sisendirida>
+    <sisendirida>
+      <nimi>advokaadi</nimi>
+      <tyyp>text1</tyyp>
+      <vaartus>advokaadi</vaartus>
+      <objekti_id></objekti_id>
+    </sisendirida>
+    <sisendirida>
+      <nimi>taastamise_kuupaev</nimi>
+      <tyyp>date</tyyp>
+      <vaartus>05.02.2015</vaartus>
+      <objekti_id></objekti_id>
+    </sisendirida>
+  </sisendid>
+  <failid/>
+</at:teadaanne>

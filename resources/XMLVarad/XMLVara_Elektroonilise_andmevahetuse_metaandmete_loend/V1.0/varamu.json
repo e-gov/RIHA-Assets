@@ -1,0 +1,17 @@
+[
+    {
+        "Name_est": "Elektroonilise andmevahetuse metaandmete loend",
+        "Name_eng": "List of digital data exchange metadat",
+        "Version": "1.0",
+        "Start_date": "31.08.2008",
+        "End_date": "31.12.2018",
+        "Description_est": "Metaandmed, mida saadetakse dokumendi edastamisel DVK kaudu, lihtsustamaks elektroonilist suhtlust dokumendihaldussüsteemide ja teiste infosüsteemide vahel.",
+        "Description_eng": "Metadata is transmitted via document exchange centre to simplify digital interaction between document management systems and other information systems.",
+        "Resource_type": [
+            "Standardsed_metaandmed",
+            "Andmevahetuse_konteiner"
+        ],
+        "Owner": "Riigi Infosüsteemi Amet",
+        "Status": "Lõpetatud"
+    }
+]

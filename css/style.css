@@ -1,0 +1,18 @@
+#detail-row-template > tr{
+    padding: 15px;
+    background-color: #1ade51;
+}
+
+
+#detail{
+    padding-top: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+#files{
+    padding-top: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Kiri xmlns="http://www.riik.ee/schemas/kiri/">
+  <AdressaatDokumentKuupaev>Teie 12.12.2012</AdressaatDokumentKuupaev>
+  <Adressaat>
+    <AdressaatIsik>Andres Kallas</AdressaatIsik>
+    <AdressaatOrganisatsioon>Saare Maavalitsus</AdressaatOrganisatsioon>
+    <AdressaatOrganisatsioonStruktuuriyksus>Arengu- ja planeeringuosakond</AdressaatOrganisatsioonStruktuuriyksus>
+    <AdressaatMarge>Teadmiseks: Rahvusarhiiv</AdressaatMarge>
+  </Adressaat>
+  <Allkirjastaja>
+    <AllkiriMarge>(allkirjastatud digitaalselt)</AllkiriMarge>
+    <AllkirjastajaNimi>Kati Kobar</AllkirjastajaNimi>
+    <AllkirjastajaAmetinimetus>osakonnajuhataja</AllkirjastajaAmetinimetus>
+    <AllkirjastajaOrganisatsioonStruktuuriyksus>haldusosakond</AllkirjastajaOrganisatsioonStruktuuriyksus>
+  </Allkirjastaja>
+  <Autor>
+    <AutorOrganisatsioon>MINISTEERIUM</AutorOrganisatsioon>
+  </Autor>
+  <AutorAadress>
+    <AutorOrganisatsioonRegistrikood>Registrikood 80203639</AutorOrganisatsioonRegistrikood>
+    <AutorEpost>E-post info@ministeerium.ee</AutorEpost>
+    <AutorPostiaadress>
+      <Omavalitsusyksus>TALLINN</Omavalitsusyksus>
+      <Liikluspind>Pärnu mnt</Liikluspind>
+      <Aadressinumber>158</Aadressinumber>
+      <Postiindeks>15007</Postiindeks>
+    </AutorPostiaadress>
+  </AutorAadress>
+  <AutorKontaktandmed>
+    <Veebileht>www.ministeerium.ee</Veebileht>
+    <Telefon>Telefon 750 0502</Telefon>
+    <Faks>Faks 750 0500</Faks>
+    <AutorLogo>https://www.mkm.ee/logo.jpg</AutorLogo>
+  </AutorKontaktandmed>
+  <Dokumendiliik>Kiri</Dokumendiliik>
+  <Sisu>
+    <Poordumine>Lugupeetud härra Kallas</Poordumine>
+    <SisuLoik>Vastuseks Teie järelpärimisele 12.12.2012 edastame Teile ministeeriumi kasutuses olevad andmed, täiendava info saamiseks, soovitame Teil pöörduda Rahvusarhiivi poole.</SisuLoik>
+    <Loputervitus>Lugupidamisega</Loputervitus>
+  </Sisu>
+  <Juurdepaas>
+    <JuurdepaasTingimusMarge>ASUTUSESISESEKS KASUTAMISEKS</JuurdepaasTingimusMarge>
+    <JuurdepaasuPiirang>
+      <PiirangAlgus>Märge tehtud: 20.01.2013</PiirangAlgus>
+      <PiirangLopptahtaeg>Piirang kehtib kuni:20.01.2018</PiirangLopptahtaeg>
+      <PiirangAlus>Alus: AvTS § 35 lg 2 p 1</PiirangAlus>
+      <PiirangLoppSyndmus>või kuni otsuse vastuvõtmiseni.</PiirangLoppSyndmus>
+      <PiirangKehtetuAlates>Piirang on kehtetu alates: 22.09.2013</PiirangKehtetuAlates>
+      <Teabevaldaja>Teabevaldaja: Ministeerium</Teabevaldaja>
+    </JuurdepaasuPiirang>
+  </Juurdepaas>
+  <Koostaja>
+    <KoostajaNimi>Mati Mustikas</KoostajaNimi>
+    <Telefon>656 2222</Telefon>
+    <Epost>Mati.Mustikas@ministeerium.ee</Epost>
+  </Koostaja>
+  <DokumentKuupaev>Meie 20.01.2013</DokumentKuupaev>
+  <Lisad>
+    <LisaNimi>Lisa: Väljavõte andmetest,</LisaNimi>
+    <FailNimi>valjavote</FailNimi>
+    <FailVorming>.pdf</FailVorming>
+  </Lisad>
+  <DokumentPealkiri>Vastus järelpärimisele</DokumentPealkiri>
+  <Seosviit>nr 2-1/333</Seosviit>
+  <DokumentViit>nr 1.1-2/4512</DokumentViit>
+</Kiri>
