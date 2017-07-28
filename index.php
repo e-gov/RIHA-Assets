@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="https://www.ria.ee/extensions/ria_2011/images/favicon.png">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="mobileview.css">
+    <link rel="stylesheet" href="css/mobileview.css">
     <link rel="stylesheet" href="css/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bower_components/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="css/bower_components/jquery-ui/themes/base/jquery-ui.min.css">
