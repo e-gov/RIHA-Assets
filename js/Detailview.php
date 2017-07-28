@@ -84,6 +84,8 @@ $(document).ready(function () {
                 }
         });
 
+
+
         $('.name_and_version').click(function (event) {
             var resource = data[event.target.id];
             id = resource;
