@@ -29,32 +29,39 @@
 
 <body>
 <main id="content" class="container" style="background-image: url('css/images/bg.png')">
-    <div class="container-fluid my-1" >
+    <div class="container-fluid my-1">
         <h1 id="title">RIHA XML Varamu</h1>
-        <div class="table-responsive">
-            <table id="xml-resources-table" class="table table-striped table-bordered dataTable" cellspacing="0"
-                   width="50%">
+        <div class="container">
 
-                <thead id="resources-head">
-                <tr>
-                    <th>Nimi ja Versioon</th>
-                    <th>Staatus</th>
-                    <th>Vara liik</th>
-                </tr>
-                </thead>
-
-                <tbody id="xml-resources">
-                <script id="main-row-template" type="text/x-custom-template">
+            <div class="table-responsive">
+                <table id="xml-resources-table" class="table table-striped table-bordered dataTable" cellspacing="0"
+                       width="50%">
+                    <p id="def"></p>
+                    <thead id="resources-head" >
+                    <p style="color: white; font-size: large">XML vara on RIHA registriobjekt, mis sisaldab vara põhiosaks olevat XML
+                    skeemi, seotud dokumente ja metaandmeid. RIHA XML varamus registreeritakse ainult kasutuses olevad
+                        varad.</p>
                     <tr>
-                        <td class="name_and_version"></td>
-                        <td class="status"></td>
-                        <td class="resource_type"></td>
+                        <th>Nimi</th>
+                        <th>Staatus</th>
+                        <th>Vara liik</th>
                     </tr>
-                </script>
+                    </thead>
 
-                </tbody>
-            </table>
+                    <tbody id="xml-resources">
+                    <script id="main-row-template" type="text/x-custom-template">
+                        <tr>
+                            <td class="name_and_version"></td>
+                            <td class="status"></td>
+                            <td class="resource_type"></td>
+                        </tr>
+                    </script>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
+
         <div id="detail">
             <div class="menubar" style="text-align:center;">
                 <br>
@@ -81,7 +88,7 @@
                     <tr>
                         <th>Nimetus, inglise keeles:</th>
                     </tr>
-                    <tr>    
+                    <tr>
                         <td id="name_eng"></td>
                     </tr>
 
@@ -102,28 +109,28 @@
                     <tr>
                         <th>Kehtiv kuni:</th>
                     </tr>
-                    <tr>    
+                    <tr>
                         <td id="end_date"></td>
                     </tr>
 
-                    <tr>                        
+                    <tr>
                         <th>Kirjeldus, eesti keeles:</th>
                     </tr>
-                    <tr>    
+                    <tr>
                         <td id="des_est"></td>
                     </tr>
 
                     <tr>
                         <th>Kirjeldus, inglise keeles:</th>
                     </tr>
-                    <tr>    
+                    <tr>
                         <td id="des_eng"></td>
                     </tr>
 
                     <tr>
                         <th>Vara liik:</th>
                     </tr>
-                    <tr>    
+                    <tr>
                         <td id="resource_type"></td>
                     </tr>
 

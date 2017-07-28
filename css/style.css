@@ -1,21 +1,34 @@
-#detail{
+#detail {
     padding-top: 0%;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
 }
-#files{
+
+#files {
     padding-top: 0%;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
 }
-#instruction{
+
+#instruction {
     padding: 1%;
     padding-top: 5%;
     margin-right: 25%;
     padding-bottom: 3%;
 }
-#instruction > h2{
+
+#instruction > h2 {
     text-align: center;
+}
+
+#def {
+    margin-top: 5%;
+    background-color: white;
+    margin-right: 2%;
+    margin-left: 4%;
+}
+.table-responsive{
+    background: none;
 }
