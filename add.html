@@ -162,7 +162,7 @@
         console.log($(this).serializeObject());
         var data = $(this).serializeObject();
         var json = JSON.stringify(data);
-        var blob = new Blob([json], {type: "application/json"});
+        var blob = new Blob([json], {type: "octet/stream"});
 
         formData.append("varamu", blob);
 
