@@ -42,6 +42,9 @@
     #detail-tbody {
         font-size: 12px;
     }
+    #detail-table{
+        table-layout: fixed 
+    }
     .my-1{
         padding-bottom: 15px
     }
@@ -92,6 +95,9 @@
     }
     #detail-tbody {
         font-size: 15px;
+    }
+    #detail-table{
+        table-layout: fixed 
     }
     .my-1{
         padding-bottom: 20px
@@ -144,6 +150,9 @@
     #detail-tbody {
         font-size: 16px;
     }
+    #detail-table{
+        table-layout: fixed 
+    }
     .my-1{
         padding-bottom: 20px
     }
@@ -178,6 +187,9 @@
         border-left: white solid 40px;
         border-right: white solid 40px;
         background-color: white
+    }
+    #detail-table{
+        table-layout: fixed 
     }
     .my-1{
         width: 80%; 
