@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/bower_components/build/app.css">
 
-    <!-- Include script -->
-
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
