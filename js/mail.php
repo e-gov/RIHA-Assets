@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: janarp
- * Date: 31/07/17
- * Time: 15:32
- */
+
+var_dump($_HTTP_POST_FILES);
+
+
+?>

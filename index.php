@@ -30,7 +30,7 @@
 <body>
 <main id="content" class="container" style="background-image: url('css/images/bg.png')">
     <div class="container-fluid my-1">
-        <h1 id="title">RIHA XML Varamu</h1>
+        <h1 id="title">RIHA XML varamu</h1>
         <div class="container">
             <p style="color: white; font-size: large">XML vara on RIHA registriobjekt, mis sisaldab vara põhiosaks olevat XML
                 skeemi, seotud dokumente ja metaandmeid. RIHA XML varamus registreeritakse ainult kasutuses olevad

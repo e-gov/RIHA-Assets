@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Lisa uus</title>
+    <title>RIHA XML varamu - Lisa uus</title>
     <link rel="shortcut icon" href="https://www.ria.ee/extensions/ria_2011/images/favicon.png">
 
     <!-- Bootstrap CSS -->
@@ -18,7 +18,7 @@
 
 
     <!-- Include script -->
-    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
     <script type="text/javascript">
         $(function () {
             $("#headerInclude").load("header.html #header");
@@ -39,13 +39,14 @@
 </div>
 <main id="new-resource">
     <div class="container">
-    <div id="instruction">
-        <h2>Uue vara lisamine</h2>
-        <p>Uue xml vara lisamiseks tuleb sisestada all olevasse vormi kõik vajalikud andmed ja vajutada nupule <b>"Genereeri"</b>.
-            Seejärel salvestatakse automaatselt Teie
-            arvutisse uue vara andmeid sisaldav <b>varamu.json</b> fail. Palun saata salvestatud fail koos kõikide vara
-            lisa failidega aadressile <a href="mailto:help@ria.ee">help@ria.ee</a></p>
-    </div>
+        <div id="instruction">
+            <h2>Uue vara lisamine</h2>
+            <p>Uue xml vara lisamiseks tuleb sisestada all olevasse vormi kõik vajalikud andmed ja vajutada nupule <b>"Genereeri"</b>.
+                Seejärel salvestatakse automaatselt Teie
+                arvutisse uue vara andmeid sisaldav <b>varamu.json</b> fail. Palun saata salvestatud fail koos kõikide
+                vara
+                lisa failidega aadressile <a href="mailto:help@ria.ee">help@ria.ee</a></p>
+        </div>
         <form class="form-horizontal">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="Name_est">Nimetus, eesti keeles</label>
@@ -158,41 +159,31 @@
         var formData = new FormData();
 
 
-
         console.log($(this).serializeObject());
         var data = $(this).serializeObject();
+
         var json = JSON.stringify(data);
-        var blob = new Blob([json], {type: "octet/stream"});
-
-        formData.append("varamu", blob);
-
-
-
-            /*
-
-                    var saveData = (function () {
-                        var a = document.createElement("a");
-                        document.body.appendChild(a);
-                        a.style = "display: none";
-                        return function (data, fileName) {
-                            var json = JSON.stringify(data),
-                                blob = new Blob([json], {type: "octet/stream"}),
-                                url = window.URL.createObjectURL(blob);
-                            a.href = url;
-                            a.download = fileName;
-                            a.click();
-                            window.URL.revokeObjectURL(url);
-                        };
-                    }());
-            */
 
 
         $.ajax({
-            success: function () {
-                var request = new XMLHttpRequest();
-                request.open("POST", "js/mail.php");
-                request.send(formData);
-            } //just to make sure it got to this point.
+            url: "js/mail.php",
+            type: "post",
+            data: {
+                "Name_est": "Eestikeelne nimetus",
+                "Name_eng": "dddd",
+                "Version": "77",
+                "Start_date": "0005-05-05",
+                "End_date": "",
+                "Description_est": "yye",
+                "Description_eng": "fff",
+                "Resource_type": "Standardsed metaandmed",
+                "Owner": "hhh",
+                "Status": ""
+            }, // important
+            processData: false, // important
+            contentType: 'application/json', // important!
+            success: function (res) {
+            }
         });
         return false;
     });
