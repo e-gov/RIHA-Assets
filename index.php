@@ -32,13 +32,13 @@
     <div class="container-fluid my-1">
         <h1 id="title" style="font-weight: bold;">RIHA XML Varamu</h1>
         <div class="container">
-            <p style="color: white; font-size: large">XML vara on RIHA registriobjekt, mis sisaldab vara põhiosaks olevat XML
+
+            <div class="table-responsive">
+                <table id="xml-resources-table" class="table table-striped table-bordered dataTable" cellspacing="0" width="50%">
+                    <p id="def"></p>
+                    <p id="description">XML vara on RIHA registriobjekt, mis sisaldab vara põhiosaks olevat XML
                 skeemi, seotud dokumente ja metaandmeid. RIHA XML varamus registreeritakse ainult kasutuses olevad
                 varad.</p>
-            <div class="table-responsive">
-                <table id="xml-resources-table" class="table table-striped table-bordered dataTable" cellspacing="0"
-                       width="50%">
-                    <p id="def"></p>
                     <thead id="resources-head" >
 
                     <tr>
