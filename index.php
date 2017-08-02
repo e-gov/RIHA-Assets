@@ -22,13 +22,19 @@
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
     <?php include 'js/Detailview.php'; ?>
-    <?php include 'header.html'; ?>
-</head>
+    <script type="text/javascript">
+        $(function () {
+            $("#headerInclude").load("header.html #header");
+            $("#footerInclude").load("footer.html #footer");
+        });
+    </script></head>
 
 <body>
+<div id="headerInclude">
+</div>
 <main id="content" class="container" style="background-image: url('css/images/bg.png')">
     <div class="container-fluid my-1">
-        <h1 id="title" style="font-weight: bold;">RIHA XML Varamu</h1>
+        <h1 id="title">RIHA XML varamu</h1>
         <div class="container">
 
             <div class="table-responsive">
@@ -162,16 +168,9 @@
         </div>
     </div>
 </main>
-<?php include 'footer.html'; ?>
-<script src="css/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="css/bower_components/jquery-ui/jquery-ui.min.js"></script>
-<script src="css/bower_components/tether/dist/js/tether.min.js"></script>
-<script src="css/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="css/bower_components/select2/dist/js/select2.min.js"></script>
-<script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
-<script src="css/bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
-<script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
-<script src="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+<div id="footerInclude">
+</div>
+
 </body>
 
 </html>
