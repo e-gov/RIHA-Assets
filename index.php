@@ -41,8 +41,8 @@
                 <table id="xml-resources-table" class="table table-striped table-bordered dataTable" cellspacing="0" width="50%">
                     <p id="def"></p>
                     <p id="description">XML vara on RIHA registriobjekt, mis sisaldab vara põhiosaks olevat XML
-                skeemi, seotud dokumente ja metaandmeid. RIHA XML varamus registreeritakse ainult kasutuses olevad
-                varad.</p>
+                    skeemi, seotud dokumente ja metaandmeid. RIHA XML varamus registreeritakse ainult kasutuses olevad
+                    varad.</p>
                     <thead id="resources-head" >
 
                     <tr>
