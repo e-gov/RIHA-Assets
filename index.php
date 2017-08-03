@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RIHA XML Varamu</title>
-    <link rel="shortcut icon" href="https://www.ria.ee/extensions/ria_2011/images/favicon.png">
+    <link rel="shortcut icon" href="css/images/favicon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/mobileview.css">
