@@ -21,6 +21,7 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/Detailview.js"></script>
     <?php include 'js/Detailview.php'; ?>
     <script type="text/javascript">
         $(function () {
@@ -38,8 +39,7 @@
         <div class="container">
 
             <div class="table-responsive">
-                <table id="xml-resources-table" class="table table-striped table-bordered dataTable" cellspacing="0" width="50%">
-                    <p id="def"></p>
+                <table id="xml-resources-table" class="table table-striped table-bordered table-hover dt-responsive dataTable " cellspacing="0" width="50%">
                     <p id="description">XML vara on RIHA registriobjekt, mis sisaldab vara põhiosaks olevat XML
                     skeemi, seotud dokumente ja metaandmeid. RIHA XML varamus registreeritakse ainult kasutuses olevad
                     varad.</p>
@@ -55,7 +55,7 @@
                     <tbody id="xml-resources">
                     <script id="main-row-template" type="text/x-custom-template">
                         <tr>
-                            <td class="name_and_version"></td>
+                            <td><a  class="name_and_version"></a></td>
                             <td class="status"></td>
                             <td class="resource_type"></td>
                         </tr>
@@ -171,6 +171,15 @@
 <div id="footerInclude">
 </div>
 
+<script src="css/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="css/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="css/bower_components/tether/dist/js/tether.min.js"></script>
+<script src="css/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="css/bower_components/select2/dist/js/select2.min.js"></script>
+<script src="css/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="css/bower_components/datatables-responsive/js/dataTables.responsive.js"></script>
+<script src="css/bower_components/datatables/media/js/dataTables.bootstrap4.min.js"></script>
+<script src="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 </body>
 
 </html>

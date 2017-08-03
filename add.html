@@ -146,7 +146,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary" style="font-size: 20px">Genereeri</button>
+                    <button type="submit" class="btn btn-primary" style="font-size: 20px">Saada andmed</button>
                 </div>
             </div>
         </form>
@@ -156,33 +156,26 @@
 <script>
     $('form').submit(function () {
 
-        var formData = new FormData();
-
 
         console.log($(this).serializeObject());
         var data = $(this).serializeObject();
 
         var json = JSON.stringify(data);
+        console.log(json);
 
 
         $.ajax({
-            url: "js/mail.php",
+            url: "http://10.0.24.47:8080/save",
             type: "post",
-            data: {
-                "Name_est": "Eestikeelne nimetus",
-                "Name_eng": "dddd",
-                "Version": "77",
-                "Start_date": "0005-05-05",
-                "End_date": "",
-                "Description_est": "yye",
-                "Description_eng": "fff",
-                "Resource_type": "Standardsed metaandmed",
-                "Owner": "hhh",
-                "Status": ""
-            }, // important
-            processData: false, // important
+            data: json,
             contentType: 'application/json', // important!
-            success: function (res) {
+            crossDomain: true,
+
+            success: function () {
+                $('#new-resource').hide();
+            },
+            error: function () {
+                alert("Saatmine ebaõnnestus");
             }
         });
         return false;
