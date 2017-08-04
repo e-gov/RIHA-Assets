@@ -170,11 +170,11 @@ fclose($fp);
                 $('summary').css('cursor', 'pointer');
             });
 
-            $('.name_and_version').css("color", "green").hover(function () {
-                $(this).css("cursor", "pointer");
-                $(this).css("color", "#023cc1");
+            $('.name_and_version').css("color", "#023cc1").hover(function () {
+                $(this).css("cursor", 'pointer');
+                $(this).css("color", "black");
             }, function () {
-                $(this).css("color", "green");
+                $(this).css("color", "#023cc1");
             });
         });
 

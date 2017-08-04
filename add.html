@@ -38,14 +38,13 @@
     <div id="headerInclude"/>
 </div>
 <main id="new-resource">
-    <div class="container">
+    <div class="container formpage">
         <div id="instruction">
             <h2>Uue vara lisamine</h2>
-            <p>Uue xml vara lisamiseks tuleb sisestada all olevasse vormi kõik vajalikud andmed ja vajutada nupule <b>"Genereeri"</b>.
-                Seejärel salvestatakse automaatselt Teie
-                arvutisse uue vara andmeid sisaldav <b>varamu.json</b> fail. Palun saata salvestatud fail koos kõikide
-                vara
-                lisa failidega aadressile <a href="mailto:help@ria.ee">help@ria.ee</a></p>
+            <p>Uue XML vara lisamiseks tuleb sisestada all olevasse vormi kõik vajalikud andmed ja vajutada nupule <b>"Saada andmed"</b>.
+                Pärast andmete saatmist palume Teil saata teavitav kiri uue vara lisamisest aadressile
+                <a href="mailto:help@ria.ee">help@ria.ee</a>. </br>
+                Teavitava kirjaga palume manusena kaasa saata ka kõik XML vara lisadokumendid.</p>
         </div>
         <form class="form-horizontal">
             <div class="form-group">
@@ -146,43 +145,43 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" class="btn btn-primary" style="font-size: 20px">Genereeri</button>
+                    <button type="submit" class="btn btn-primary" style="font-size: 20px">Saada andmed</button>
                 </div>
             </div>
         </form>
+    </div>
+    <div class="successpage" style="display: none">
+        <h2>Uue XML vara andmed saadeti ära</h2>
+        <p>Palume järgmiseks teavitav kiri koos lisadokumentidega aadressile
+            <a href="mailto:help@ria.ee">help@ria.ee</a> saata. </p>
     </div>
 
 </main>
 <script>
     $('form').submit(function () {
 
-        var formData = new FormData();
-
 
         console.log($(this).serializeObject());
         var data = $(this).serializeObject();
 
         var json = JSON.stringify(data);
+        console.log(json);
 
 
         $.ajax({
-            url: "js/mail.php",
+            url: "http://10.0.24.47:8080/save",
             type: "post",
-            data: {
-                "Name_est": "Eestikeelne nimetus",
-                "Name_eng": "dddd",
-                "Version": "77",
-                "Start_date": "0005-05-05",
-                "End_date": "",
-                "Description_est": "yye",
-                "Description_eng": "fff",
-                "Resource_type": "Standardsed metaandmed",
-                "Owner": "hhh",
-                "Status": ""
-            }, // important
-            processData: false, // important
+            data: json,
             contentType: 'application/json', // important!
-            success: function (res) {
+            crossDomain: true,
+
+            success: function () {
+                $('.formpage').hide();
+                $('.successpage').show();
+            },
+            error: function () {
+                alert("Saatmine ebaõnnestus");
+
             }
         });
         return false;
