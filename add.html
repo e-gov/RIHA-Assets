@@ -38,14 +38,13 @@
     <div id="headerInclude"/>
 </div>
 <main id="new-resource">
-    <div class="container">
+    <div class="container formpage">
         <div id="instruction">
             <h2>Uue vara lisamine</h2>
-            <p>Uue xml vara lisamiseks tuleb sisestada all olevasse vormi kõik vajalikud andmed ja vajutada nupule <b>"Genereeri"</b>.
-                Seejärel salvestatakse automaatselt Teie
-                arvutisse uue vara andmeid sisaldav <b>varamu.json</b> fail. Palun saata salvestatud fail koos kõikide
-                vara
-                lisa failidega aadressile <a href="mailto:help@ria.ee">help@ria.ee</a></p>
+            <p>Uue XML vara lisamiseks tuleb sisestada all olevasse vormi kõik vajalikud andmed ja vajutada nupule <b>"Saada andmed"</b>.
+                Pärast andmete saatmist palume Teil saata teavitav kiri uue vara lisamisest aadressile
+                <a href="mailto:help@ria.ee">help@ria.ee</a>. </br>
+                Teavitava kirjaga palume manusena kaasa saata ka kõik XML vara lisadokumendid.</p>
         </div>
         <form class="form-horizontal">
             <div class="form-group">
@@ -151,6 +150,11 @@
             </div>
         </form>
     </div>
+    <div class="successpage" style="display: none">
+        <h2>Uue XML vara andmed saadeti ära</h2>
+        <p>Palume järgmiseks teavitav kiri koos lisadokumentidega aadressile
+            <a href="mailto:help@ria.ee">help@ria.ee</a> saata. </p>
+    </div>
 
 </main>
 <script>
@@ -172,10 +176,12 @@
             crossDomain: true,
 
             success: function () {
-                $('#new-resource').hide();
+                $('.formpage').hide();
+                $('.successpage').show();
             },
             error: function () {
                 alert("Saatmine ebaõnnestus");
+
             }
         });
         return false;
