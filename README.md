@@ -30,6 +30,46 @@ RIA haldur saab:
 
 ![](docs/Architecture.PNG)
 
+## Vara kirjeldamine
+
+Vara kirjeldatakse järgmiselt:
+
+```
+[
+    {
+    "Name_est": "Õigusakt",
+    "Name_eng": "Basic Act",
+    "Version": "10.02.2010",
+    "Start_date": "",
+    "End_date": "",
+    "Description_est": "Skeemid XML struktuuriga õigusaktide koostamiseks ja avaldamiseks Riigi Teatajas.",
+    "Description_eng": "XML schemas for creating and publishing legal acts in Riigi Teataja",
+    "Resource_type": "Dokumendiliigi XML andmekirjeldus",
+    "Owner": "Justiitsministeerium",
+    "Status": "Registreeritud"
+  }
+]
+```
+
+- vara ametlik nimetus eesti keeles
+- vara ametlik nimetus inglise keeles
+- versiooni tähis
+- kehtivuse alguskuupäev
+- kehtivuse lõpukuupäev
+- vara kirjeldus eesti keeles
+- vara kirjeldus inglise keeles
+- vara liik
+  - standardsed metaandmed
+  - dokumendiliigi XML andmekirjeldus
+  - XBRL taksonoomia
+  - andmevahetuse konteiner
+  - standardelement
+  - rahvusvaheline standard
+  - klassifikaatori XML vorming
+- haldaja (asutus, kes vastutab XML vara arendamise ja RIHAs kirjeldamise eest)
+- staatus
+  - registreeritud (tulevikus võib kasutusele võtta ka muid staatusi).
+
 ## Vajalikud tehnoloogiad
 
 - PHP (Töötab versioonil 7.1.6)
@@ -40,7 +80,7 @@ RIA haldur saab:
 Esiteks peab navigeerima veebiserveri kausta ning sealt leidma kausta `htdocs`.
 Siis tõsta kõik XMLVaramu failid kausta `htdocs` ja ongi paigaldatud.
 
-## Uute varamute Lisamine
+## Uute varade Lisamine
 
 Ava veebiserveri kaust ning navigeeri `XMLVarad` kausta:
 
