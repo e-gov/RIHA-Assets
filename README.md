@@ -1,14 +1,29 @@
 # RIHA XML varamu
 
-RIHA XML varamu on veebirakendus, mille kaudu tehakse avalikult kättesaadavaks asutustevahelises dokumendivahetuses kasutatavad XML varad (metaandmete andmekirjeldused). Kasutaja saab:
-
-- sirvida varasid
-- alla laadida varade faile
-- esitada taotluse uue vara lisamiseks.
+RIHA XML varamu on veebirakendus, mille kaudu tehakse avalikult kättesaadavaks asutustevahelises dokumendivahetuses kasutatavad XML varad (metaandmete andmekirjeldused).
 
 ## Varamust lähemalt
 
 RIHA XML varamu ülesandeks on kontrollida ja säilitada dokumendiliigi ning metaandmete andmekirjeldusi, mida edastatakse [asutustevahelise dokumendivahetuslahenduse (DVK/DHX)](https://www.ria.ee/ee/dokumendivahetus-dhx.html) kaudu. Kui andmekirjeldus on koostatud ja kooskõlastatud [vastavalt nõuetele](https://mkm.ee/sites/default/files/juhis_dokumendiliigi_xml_andmekirjelduse_koostamiseks.pdf), siis lähtutakse sellest seda liiki dokumentide koostamisel mistahes vormingus. Asutuse loodud dokumendi elementide koosseis lähtub vastava dokumendiliigi andmekirjeldusest, kui see on RIHAs registreeritud. Sellist liiki dokumendi ja selle veebivormide koostamisel võetakse aluseks andmekirjeldus. Dokument hoitakse alal koos dokumenti, selle seoseid ja haldamise ajalugu kirjeldavate metaandmetega. Dokumendi metaandmed peavad olema kooskõlas RIHAs registreeritud dokumendihalduse metaandmeloendi ja dokumendiliigi andmekirjeldusega. Otseste avalike teenuste osutamiseks vajaliku teabe kindlaksmääramist, jagamist ja vahetamist koordineeriv asutus on [Majandus- ja Kommunikatsiooniministeerium](https://www.mkm.ee/et/tegevused-eesmargid/infouhiskond/dokumendihaldusest-infohalduseni) ning RIHA XML varamu tegutseb [teenuste korraldamise ja teabehalduse alustel](https://www.riigiteataja.ee/akt/131052017007?leiaKehtiv).
+
+## Kasutuslood
+
+Kasutaja (varadega tutvuja, nende kasutaja) saab:
+
+- sirvida varasid
+- alla laadida varade faile.
+
+Vara omanik saab:
+
+- esitada taotluse uue vara lisamiseks.
+
+RIA haldur saab:
+
+- lisada uue vara või täiendada olemasolevat, lisades vara faile RIA taristu failisüsteemi.
+
+## Arhitektuur
+
+![](docs/Arhitektuur.PNG)
 
 ## Vajalikud tehnoloogiad
 
