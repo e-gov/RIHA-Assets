@@ -78,7 +78,13 @@ Vara kirjeldatakse järgmiselt:
 ## Veebiserverisse paigaldamine
 
 Esiteks peab navigeerima veebiserveri kausta ning sealt leidma kausta `htdocs`.
-Siis tõsta kõik XMLVaramu failid kausta `htdocs` ja ongi paigaldatud.
+Siis tõsta kõik XMLVaramu failid kausta `htdocs`, seejärel luua samasse kausta fail nimega '.htaccess'.
+Faili sisu:
+'''
+ErrorDocument 404 /404.html
+
+Redirect Detailview.php /404.html
+'''
 
 ## Uute varade Lisamine
 
