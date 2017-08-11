@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>RIHA XML varamu</title>
-    <link rel="shortcut icon" href="css/images/favicon.png">
+    <link rel="shortcut icon" href="css/bower_components/images/favicon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/mobileview.css">
@@ -28,12 +28,13 @@
             $("#headerInclude").load("header.html #header");
             $("#footerInclude").load("footer.html #footer");
         });
-    </script></head>
+    </script>
+</head>
 
 <body>
 <div id="headerInclude">
 </div>
-<main id="content" class="container" style="background-image: url('css/images/bg.png')">
+<main id="content" class="container" style="background-image: url('css/bower_components/images/bg.png')">
     <div class="container-fluid my-1">
         <h1 id="title">RIHA XML varamu</h1>
         <div class="container">
