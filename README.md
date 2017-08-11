@@ -79,13 +79,30 @@ Vara kirjeldatakse järgmiselt:
 
 Esiteks peab navigeerima veebiserveri kausta ning sealt leidma kausta `htdocs`.
 Siis tõsta kõik XMLVaramu failid kausta `htdocs`, seejärel luua samasse kausta fail nimega `.htaccess`.
+
 Faili sisu:
 ```
 ErrorDocument 404 /404.html
 
 Redirect Detailview.php /404.html
 ```
+`.htaccess`-i kasutamiseks tuleb veidi apache conf-i muuta järgides järgnevaid juhiseid.
 
+`cd /etc/apache2/sites-enabled`
+`sudo vim 000-default.conf`
+
+Faili tuleb lisada:
+
+```
+<Directory /var/www/>
+ Options Indexes FollowSymLinks MultiViews
+ AllowOverride All
+ Order allow,deny
+ allow from all
+</Directory>
+
+```
+Pärast apache restarti on rakendus edukalt paigaltatud.
 ## Uute varade Lisamine
 
 Ava veebiserveri kaust ning navigeeri `XMLVarad` kausta:
