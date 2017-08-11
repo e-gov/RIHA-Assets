@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>RIHA XML Varamu</title>
+    <title>RIHA XML varamu</title>
     <link rel="shortcut icon" href="css/bower_components/images/favicon.png">
 
     <!-- Bootstrap CSS -->
