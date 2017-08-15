@@ -28,6 +28,7 @@
             $("#headerInclude").load("header.html #header");
             $("#footerInclude").load("footer.html #footer");
         });
+
     </script>
 </head>
 
