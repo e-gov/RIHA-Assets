@@ -1,52 +1,72 @@
 <?php
 $iti = new RecursiveDirectoryIterator(getcwd() . '/resources/XMLVarad');
-$numberOfJsonFiles = 0;
-$currentFileNumber = 0;
-foreach (new RecursiveIteratorIterator($iti) as $file) {
+$fileArray = array();
+$recursiveIti = new RecursiveIteratorIterator($iti);
+// https://www.w3schools.com/php/php_file_create.asp says fopen creates file if not found.
+// Might not need seperate check since it gets created automagically?
+// Hard to test because XAMPP and localhost is a permission nightmare :(
+
+$fp = fopen(getcwd() . '/resources/XMLVarad/varamuteKogumik.json', 'a');
+// after opening check if exists if not show error file
+if(!file_exists(getcwd() . '/resources/XMLVarad/varamuteKogumik.json')){
+    //Place 'show error file' here
+}
+$fileContent = file_get_contents(getcwd() . "/resources/XMLVarad/varamuteKogumik.json");
+
+
+foreach ($recursiveIti as $file) {
     if (strpos($file, 'varamu.json') !== false) {
-        $numberOfJsonFiles++;
+        array_push($fileArray,$file);
+        @$numberOfJsonFiles++;
     }
 }
-$fp = fopen(getcwd() . '/resources/XMLVarad/varamuteKogumik.json', 'a');
-file_put_contents(getcwd() . "/resources/XMLVarad/varamuteKogumik.json", "");
-fwrite($fp, '[');
-foreach (new RecursiveIteratorIterator($iti) as $file) {
+
+@$resourceString .= '[';
+
+foreach ($fileArray as $file){
     if (strpos($file, 'varamu.json') !== false) {
         $string = file_get_contents($file);
         $json_a = json_decode($string, true);
-
-        foreach ($json_a as $person_a) {
-            $currentFileNumber++;
+        foreach ($json_a as $asset) {
+            @$currentFileNumber++;
             if ($currentFileNumber == $numberOfJsonFiles) {
-                fwrite($fp, json_encode($person_a));
+                $resourceString .= json_encode($asset);
             } else {
-                fwrite($fp, json_encode($person_a) . ',');
+                $resourceString .= json_encode($asset) . ',';
             }
         }
     }
 }
-fwrite($fp, ']');
-fclose($fp);
+
+$resourceString .= ']';
+
+writeToFile($fileContent, $resourceString);
+
+function writeToFile($existingContent, $string){
+    if($existingContent != $string){
+        file_put_contents(getcwd() . "/resources/XMLVarad/varamuteKogumik.json", "");
+        fwrite($fp, $string);
+        fclose($fp);
+    }
+}
 ?>
+
 <script type='text/javascript'>
     $(document).ready(function () {
         var filesArrayPHP = [];
         <?php
-        $it = new RecursiveDirectoryIterator(getcwd() . "/resources/XMLVarad");
-        foreach (new RecursiveIteratorIterator($it) as $file) {
+        foreach ($recursiveIti as $file) {
             if (substr($file, -1) != ".." && substr($file, -1) != "." && strpos($file, '.DS_Store') == false) {
-                echo 'filesArrayPHP.push("' . $file . '");';
+                $correctFilePath = substr($file, strpos($file, '/resources'));
+                echo 'filesArrayPHP.push("' . $correctFilePath . '");';
             }
         }
-
-
         ?>
         $('#detail').hide();
         var template = $('#main-row-template').html();
         var tBody = $('#xml-resources');
         var id = "";
         var url = 'https://' + window.location.hostname;
-
 
         $.getJSON('resources/XMLVarad/varamuteKogumik.json', function (data) {
             var resourceName = "";
@@ -138,7 +158,6 @@ fclose($fp);
                 $('.table-responsive').hide();
                 $('#detail').show().css("background-color", "white");
                 $('#files').hide();
-
                 $('#detail-tbody th').css('white-space', 'nowrap');
             });
 
@@ -154,16 +173,15 @@ fclose($fp);
                 $('#files-content').append("<h3>" + fileName + "</h3>");
                 for (var index = 0; index < filesArrayPHP.length; index++) {
                     var filePath = replaceAllSpecialChars(filesArrayPHP[index]);
-                    var adjustedURL = reworkFilePath(filePath);
                     if (filePath.indexOf(directoryName) >= 0 && filePath.indexOf(directoryVersion) >= 0 && !filePath.includes('varamu.json')) {
-                        $('#files-content').append('<a href="' + '.' + adjustedURL + '" download>' + findFileName(filePath, directoryName + '_V' + directoryVersion) + "</a><br>");
+                        $('#files-content').append('<a href="' + '.' + filePath + '" download>' + findFileName(filePath, directoryName + '_V' + directoryVersion) + "</a><br>");
                         $('#files-content').append(
-                            '<details><summary>URL</summary><p>' + url + adjustedURL.replace('.', '') + '</p></details><br>'
+                            '<details><summary>URL</summary><p>' + url + filePath.replace('.', '') + '</p></details><br>'
                         );
                     } else if (filePath.indexOf(directoryName) >= 0 && (directoryVersion.length > 3 || directoryVersion.length == 0) && !filePath.includes('varamu.json')) {
-                        $('#files-content').append('<a href="' + '.' + adjustedURL + '" download>' + findFileName(filePath, directoryName) + "</a><br>");
+                        $('#files-content').append('<a href="' + '.' + filePath + '" download>' + findFileName(filePath, directoryName) + "</a><br>");
                         $('#files-content').append(
-                            '<details><summary>URL</summary><p>' + url + adjustedURL.replace('.', '') + '</p></details><br>'
+                            '<details><summary>URL</summary><p>' + url + filePath.replace('.', '') + '</p></details><br>'
                         );
                     }
                 }
@@ -202,9 +220,6 @@ fclose($fp);
         result3 = result2.replace(/Ü/g, "Ü");
         result4 = result3.replace(/õ/g, "õ");
         return result4;
-    }
-    function reworkFilePath(filepath) {
-        return '.' + filepath.substring(filepath.indexOf('/resources/'));
     }
 
     function findFileName(filepath, parentDirectory) {

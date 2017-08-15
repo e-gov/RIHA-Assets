@@ -4,3 +4,4 @@
 $('#xml-resources-table').DataTable( {
     responsive: true
 } );
+

@@ -1,0 +1,17 @@
+TÄHTAEG: 11.08!
+
+7 - TEHTUD.     muuta person_a muutuja nimi – ümbernimetada 
+
+9.   detailView.php-st peaks JS osa välja tõstma – lihtne (ei ole, või teen valesti.. )
+
+10 - TEHTUD.  täispathid filesarrayphp-s? Muuta PHP-s, et tagastataks relative pathi ja kaotada reworkFilePath funktsioon JSis ja seda mitte kasutada 
+
+11 - TEHTUD.  new RecursiveIteratorIterator($iti) järgmised asendada nimekirja array koostamisega/kasutamisega
+
+12 - TEHTUD.  salvestamine teha ühe korraga ja lukustada fail enne seda – kirjutada ainult siis kui sisu on muutunud, lukustada pole sel ajal vaja
+
+13 - POLE VAJA.  milleks json_decode ja json_encode? – pole vaja, kasutada kohe file_get_contents()
+
+14 - TEHTUD.  lisada errorhandlingut (kas failid on loetavad/kirjutatavad, jne) – failisüsteemile peaks lisama errorhandlingu, muul juhul kasutada @ märki
+
+18 - EI JÕUA.  replaceAllSpecialChars on natuke eksitava nimega funktsioon. Mis juhtub seal funktsioonis mittekirjeldatud täpitähtedega? – ilmselt mingi teek olemas selle jaoks, et töötaks platvormiüleselt
