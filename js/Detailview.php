@@ -334,6 +334,7 @@ fclose($fp);
 
 
     function replaceAllSpecialChars(string) {
+        return string;
         result = string.replace(/Õ/g, "Õ");
         result2 = result.replace(/ä/g, "ä");
         result3 = result2.replace(/Ü/g, "Ü");
