@@ -2,15 +2,13 @@
 $iti = new RecursiveDirectoryIterator(getcwd() . '/resources/XMLVarad');
 $fileArray = array();
 $recursiveIti = new RecursiveIteratorIterator($iti);
-// https://www.w3schools.com/php/php_file_create.asp says fopen creates file if not found.
-// Might not need seperate check since it gets created automagically?
-// Hard to test because XAMPP and localhost is a permission nightmare :(
-
 $fp = fopen(getcwd() . '/resources/XMLVarad/varamuteKogumik.json', 'a');
-// after opening check if exists if not show error file
+
 if(!file_exists(getcwd() . '/resources/XMLVarad/varamuteKogumik.json')){
-    //Place 'show error file' here
+    header("Location: 404.html");
+    exit();
 }
+
 $fileContent = file_get_contents(getcwd() . "/resources/XMLVarad/varamuteKogumik.json");
 
 
@@ -43,10 +41,15 @@ $resourceString .= ']';
 writeToFile($fileContent, $resourceString);
 
 function writeToFile($existingContent, $string){
-    if($existingContent != $string){
+    if($existingContent != $string && flock($fp, LOCK_EX)){
         file_put_contents(getcwd() . "/resources/XMLVarad/varamuteKogumik.json", "");
         fwrite($fp, $string);
+        flock($fp, LOCK_UN);
         fclose($fp);
+    } else {
+        //can't open lock
+        header("Location: 404.html");
+        exit();
     }
 }
 ?>
@@ -57,8 +60,10 @@ function writeToFile($existingContent, $string){
         <?php
         foreach ($recursiveIti as $file) {
             if (substr($file, -1) != ".." && substr($file, -1) != "." && strpos($file, '.DS_Store') == false) {
-                $correctFilePath = substr($file, strpos($file, '/resources'));
-                echo 'filesArrayPHP.push("' . $correctFilePath . '");';
+                $filePath = substr($file, strpos($file, '/resources'));
+                $correctFilePath = str_replace('\\',"/",$filePath);
+                $correctEncoding = mb_convert_encoding($correctFilePath, 'UTF-8', mb_detect_encoding($correctFilePath));
+                echo 'filesArrayPHP.push("' . $correctEncoding . '");';
             }
         }
         ?>
@@ -172,7 +177,7 @@ function writeToFile($existingContent, $string){
                 var directoryVersion = id.Version;
                 $('#files-content').append("<h3>" + fileName + "</h3>");
                 for (var index = 0; index < filesArrayPHP.length; index++) {
-                    var filePath = replaceAllSpecialChars(filesArrayPHP[index]);
+                    var filePath = filesArrayPHP[index]
                     if (filePath.indexOf(directoryName) >= 0 && filePath.indexOf(directoryVersion) >= 0 && !filePath.includes('varamu.json')) {
                         $('#files-content').append('<a href="' + '.' + filePath + '" download>' + findFileName(filePath, directoryName + '_V' + directoryVersion) + "</a><br>");
                         $('#files-content').append(
@@ -219,7 +224,7 @@ function writeToFile($existingContent, $string){
         result2 = result.replace(/ä/g, "ä");
         result3 = result2.replace(/Ü/g, "Ü");
         result4 = result3.replace(/õ/g, "õ");
-        return result4;
+        return string;
     }
 
     function findFileName(filepath, parentDirectory) {
