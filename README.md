@@ -73,6 +73,8 @@ Vara kirjeldatakse järgmiselt:
 ## Vajalikud tehnoloogiad
 
 - PHP (Töötab versioonil 7.1.6)
+- Python 3.x.x
+- Mikroveebiraamistik Bottle
 - rakendus kasutab tehnoloogiaid: Bootstrap 4, Chart.js, jQuery, Datatables.
 
 ## Veebiserverisse paigaldamine
@@ -103,7 +105,7 @@ Faili tuleb lisada:
 
 ```
 Pärast apache restarti on rakendus edukalt paigaltatud.
-## Uute varade Lisamine
+## Uute varade lisamine
 
 Ava veebiserveri kaust ning navigeeri `XMLVarad` kausta:
 
@@ -158,6 +160,26 @@ Kui kaustal on näiteks kaks versiooni:
 ```
 
 Lisa nende skeemide järgi vajalikud failid uue varamu kausta. Küsimuste korral tasub vaadata juba olemas olevate varamute kaustasid.
+
+## REST API paigaldamine ja konfigureerimine
+
+RIHA XML varamu rakendab kasutusloos "uue vara taotluse esitamine" mikroteenust taotluse salvestamiseks.
+Mikroteenuse paigaldamiseks on kõige otstarbekam rakendada Pythoni paketihaldurit pip. Debian/Ubuntu operatsioonisüsteemil tuleb pip installeerimiseks käivitada:
+```
+sudo apt-get install python-pip
+```
+Paketihalduriga installeerime mikroveebiraamistiku Bottle:
+```
+pip install bottle
+```
+Mikroteenuse skript asub /API kaustas. Seal paiknev fail nimega XML-API.py tuleb asetada failisüsteemis kausta, kuhu on skripti vahendusel võimalik faile maha salvestada. Skripti käivitatakse käsuga:
+```
+python3 XML-API.py 
+```
+Skriptis saab konfigureerida mikroteenust käitava masina host IP-d ja porti:
+```
+app.run(host='localhost', port=8080)
+```
 
 ## Autorid
 
