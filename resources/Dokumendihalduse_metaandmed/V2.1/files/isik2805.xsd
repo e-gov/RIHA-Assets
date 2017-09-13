@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Kuldar (Rahvusarhiiv) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="isik">
+		<xs:annotation>
+			<xs:documentation>Isiku metaandmed</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="eesnimi" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Isiku eesnimi</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="perekonnanimi" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Isiku perekonnanimi</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="isikukood" type="xs:positiveInteger" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Isiku isikukood</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="isikAllkiri" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Digitaalse allkirja avalik võti</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="isikAadress" type="xs:IDREF" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Isiku kontaktandmed</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

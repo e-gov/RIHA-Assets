@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kirjeldus: Dokumendihalduse metaandmete loendi juurdepääsu plokki kajastav XML skeem -->
+<!-- Skeemi aluseks on dokumendihalduse metaandmete loendi versioon 3.0 -->
+<xs:schema xmlns="http://xmlr.eesti.ee/xml/schemas/Dokumendihalduse_metaandmed/2013/vers3/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlr.eesti.ee/xml/schemas/Dokumendihalduse_metaandmed/2013/vers3/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Juurdepaas" type="JuurdepaasType">
+		<xs:annotation>
+			<xs:documentation>Juurdepääsutingimusi kirjeldavad metaandmeelemendid</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="JuurdepaasType">
+		<xs:annotation>
+			<xs:documentation>Juurdepääsutingimusi kirjeldavate elementide komplekstüüp</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="JuurdepaasTingimusMarge" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Sarjale, toimikule/asjale või dokumendile antud juurdepääsutingimuse kirjeldus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="JuurdepaasPiirang" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Sarjale, toimikule/asjale või dokumendile omistatud juurdepääsupiirangu kirjeldus</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PiirangAlgus" type="xs:dateTime">
+							<xs:annotation>
+								<xs:documentation>Juurdepääsupiirangu märke tegemise kuupäev (märke vormistamise kuupäev)</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PiirangLopptahtaeg" type="xs:dateTime">
+							<xs:annotation>
+								<xs:documentation>Juurdepääsupiirangu lõppemise maksimaalne kuupäev ja kellaaeg</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PiirangKestus" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Juurdepääsupiirangu kehtivuse kestus aastates või kuudes</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PiirangAlus" type="xs:string" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Õigusakt või muu põhjus mille alusel piirang on seatud</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PiirangLoppSyndmus" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Sündmus, mille toimumisel piirang lõppeb enne maksimaalset lõpptähtaega</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PiirangKehtetuAlates" type="xs:dateTime" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Dokumendi juurdepääsupiirangu kehtivuse lõppkuupäev</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Teabevaldaja" type="xs:string" minOccurs="1">
+							<xs:annotation>
+								<xs:documentation>Juurdepääsupiirangu (esmaselt) kehtestanud asutuse nimi</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute name="piirangIdentifikaator" type="xs:ID" use="required">
+						<xs:annotation>
+							<xs:documentation>Juurdepääsupiirangu unikaalne identifikaator</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Intellektuaalomand" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Intellektuaalomandi õigused dokumendi sisu suhtes</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="IntellektuaalomandiMarge" type="xs:boolean" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Info intellektuaalomandi kaitse vajaduse olemasolu kohta</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="IntellektuaalomandiTahtaeg" type="xs:dateTime">
+							<xs:annotation>
+								<xs:documentation>Intellektuaalomandi kaitse piirangu lõpptähtaeg</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="IntellektuaalomandiOmanik" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>Intellektuaalomandi omaniku nimi või viide omaniku kirjeldusele</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReprodutseerimineKeelatud" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Märge dokumendi sisu taasesitamise keelamise kohta</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="juurdepaasTingimusGuid" type="xs:ID" use="required">
+			<xs:annotation>
+				<xs:documentation>Juurdepääsutingimuste unikaalne identifikaator</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Kuldar (Rahvusarhiiv) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="grupp">
+		<xs:annotation>
+			<xs:documentation>Grupi metaandmed</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="gruppNimi">
+					<xs:annotation>
+						<xs:documentation>Grupi nimi</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="gruppAmetlikNimi" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Grupi ametlik nimi</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="gruppAlternatiivneNimi" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Grupi muud kasutatavad nimed</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="gruppAadress" type="xs:IDREF" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Viide grupi aadressi kirjeldusele</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="gruppAsutus" type="xs:IDREF">
+					<xs:annotation>
+						<xs:documentation>Viide asutuse kirjeldusele, mille osaks grupp on</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="gruppTasand" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Grupi tasand asutuse gruppide hierarhias või struktuuris</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="gruppSeos" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Grupi seoste kirjeldus teiste gruppidega</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="seotudGrupp" type="xs:IDREF">
+								<xs:annotation>
+									<xs:documentation>Viide seotud grupi kirjeldusele</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="gruppSeosTyyp">
+								<xs:annotation>
+									<xs:documentation>Gruppidevahelise seose tüüp</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="contains"/>
+										<xs:enumeration value="isPartOf"/>
+										<xs:enumeration value="controls"/>
+										<xs:enumeration value="isControlledBy"/>
+										<xs:enumeration value="succeeds"/>
+										<xs:enumeration value="precedes"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="gruppSeosAeg" type="KuupaevTyyp">
+								<xs:annotation>
+									<xs:documentation>Seose tekkimise kuupäev ja aeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="gruppSeosKirjeldus" type="xs:string" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Vabatekstiline täiendus seose tüübile</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="gruppPiirdaatumid" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Grupi loomise ja lõpetamise aeg</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="gruppKuupaevLoomine" type="KuupaevTyyp" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Grupi loomise kuupäev ja aeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="gruppKuupaevSulgemine" type="KuupaevTyyp" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation>Grupi sulgemise / lõpetamise kuupäev ja aeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="KuupaevTyyp">
+		<xs:annotation>
+			<xs:documentation>Kuupäeva tüüp</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime">
+				<xs:attribute name="kodeerimisskeem" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="EVS8"/>
+							<xs:enumeration value="ISO8601"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>

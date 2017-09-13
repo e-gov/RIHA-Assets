@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Kuldar (Rahvusarhiiv) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="juurdepaas">
+		<xs:annotation>
+			<xs:documentation>Juurdepääsu metaandmed</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="juurdepaasPiirang" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Sarjale, toimikule või dokumendile omistatud kasutusõiguste piirang </xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="piirang" type="xs:boolean">
+								<xs:annotation>
+									<xs:documentation>Märge juurdepääsupiirangu olemasolu kohta</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="piirangAlgus" type="KuupaevTyyp">
+								<xs:annotation>
+									<xs:documentation>Juurdepääsupiirangu alguse kuupäev ja aeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="piirangLopp" type="KuupaevTyyp">
+								<xs:annotation>
+									<xs:documentation>Juurdepääsupiirangu lõppemise kuupäev ja aeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="piirangAlus" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Õigusakt või muu põhjus, mille alusel piirang seatakse</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="turvaklass" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Dokumendile või liigitusüksusele omistatud turvaklass või turvainformatsioon, mis on seotud kindlate kasutajagruppidega </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="turvaklassMuutmine" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Turvaklassi muutmise kirjeldus</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="turvaklassMuutminePohjus" type="xs:string" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Märge turvaklassi muutmise põhjuse kohta</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="turvaklassMuutmineKuupaev" type="KuupaevTyyp">
+								<xs:annotation>
+									<xs:documentation>Turvaklassi muutmise kuupäev ja aeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="eelmineTurvaklass" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Turvaklassi eelmine väärtus</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="IPR" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Intellektuaalomandi õigused dokumendi sisu suhtes</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IPRTahtaeg" type="KuupaevTyyp">
+								<xs:annotation>
+									<xs:documentation>Intellektuaalomandi lõpptähtaeg</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="IPROmanik" type="xs:string">
+								<xs:annotation>
+									<xs:documentation>Intellektuaalomandi omaniku nimi või viide omaniku kirjeldusele</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="reprodutseerimineKeelatud" type="xs:boolean" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Märge dokumendi sisu taasesitamise keelamise kohta</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="juurdepaasObjekt" type="xs:IDREF" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Viide tasandile või objektile, millele juurdepääsupiirangut rakendatakse</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="ID" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="KuupaevTyyp">
+		<xs:annotation>
+			<xs:documentation>Kuupäeva tüüp</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:dateTime">
+				<xs:attribute name="kodeerimisskeem" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="EVS8"/>
+							<xs:enumeration value="ISO8601"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>
