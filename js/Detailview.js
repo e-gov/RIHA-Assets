@@ -125,7 +125,7 @@ return filepath.substring(filepath.indexOf('/files/') + ('/files/').length);
 function getListOfFileNames(name, files) {
 var t = '<table class="content"><tbody><tr><td><h2>' + name + '</h2></td></tr></tbody></table><ul>';
     for (var index = 0; index < files.length; index++) {
-    t += '<li><a href="' + '.' + files[index] + '">' + findFileName(files[index]) + '</a></li>';
+    t += '<li><a href="' + files[index] + '">' + findFileName(files[index]) + '</a></li>';
     }
 t += '</ul>';
 return t;
