@@ -79,8 +79,13 @@ Vara kirjeldatakse järgmiselt:
 
 ## Veebiserverisse paigaldamine
 
-Esiteks peab navigeerima veebiserveri kausta ning sealt leidma kausta `htdocs`.
-Siis tõsta kõik XMLVaramu failid kausta `htdocs`, seejärel luua samasse kausta fail nimega `.htaccess`.
+Paigalda veebiserver:
+```
+apt install apache2 libapache2-mod-php php-mbstring
+```
+
+Navigeeri veebiserveri kausta ning otsi kausta `htdocs`.
+Tõsta kõik XMLVaramu failid kausta `htdocs`, seejärel loo samasse kausta fail nimega `.htaccess`.
 
 Faili sisu:
 ```
