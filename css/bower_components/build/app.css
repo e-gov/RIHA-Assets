@@ -9539,7 +9539,7 @@ select::-ms-expand {
     right: -100px;
     height: 500px;
     background-color: #023cc1;
-    background-image: url(../images/data/intro-bg.png);
+    background-image: url(/assets/images/data/intro-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
