@@ -22,3 +22,7 @@ p {
 table.content th, .table.content td, .table.content tbody tr {
     padding: 0;
 }
+
+p a:not(.btn):hover {
+    text-decoration: underline;
+}
