@@ -91,7 +91,7 @@ return $file;
     </header>
     <section class="col card p-3">
         <div class="my-1">
-            <p id="description" class="table-view">RIHA XML varamu ülesandeks on kontrollida ja säilitada dokumendiliigi ning metaandmete andmekirjeldusi, mida edastatakse <a href="https://www.ria.ee/ee/dokumendivahetus-dhx.html">asutustevahelise dokumendivahetuslahenduse (DVK/DHX)</a> kaudu. <a href="Abi/XML-varamu.html">Loe lähemalt RIHA abimaterjalidest</a></p>
+            <p id="description" class="table-view">RIHA XML varamu ülesandeks on kontrollida ja säilitada dokumendiliigi ning metaandmete andmekirjeldusi, mida edastatakse <a href="https://www.ria.ee/ee/dokumendivahetus-dhx.html">asutustevahelise dokumendivahetuslahenduse (DVK/DHX)</a> kaudu. <a href="https://abi.riha.ee/XML-varamu">Loe lähemalt RIHA abikeskusest</a></p>
             <div>
                 <table cellspacing="0" class="table table-striped table-bordered dataTable table-view" id="xml-resources-table" width="100%">
                     <thead class="thead-default">
