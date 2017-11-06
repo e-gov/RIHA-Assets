@@ -427,10 +427,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DecMetadata">
+        <xs:element name="DecMetadata" minOccurs="0">
           <xs:annotation>
-            <xs:documentation xml:lang="en">Metadata automatically added by DEC</xs:documentation>
-            <xs:documentation xml:lang="est">DVK poolt automaatselt lisatavad metaandmed</xs:documentation>
+            <xs:documentation xml:lang="en">Metadata automatically added by DEC central server. Deprecated after closing of DEC central server and implementation of DHX</xs:documentation>
+            <xs:documentation xml:lang="est">DVK keskserveri poolt automaatselt lisatavad metaandmed. Ebavajalik pärast DVK keskserveri sulgemist ning DHX-le üleminekut</xs:documentation>
           </xs:annotation>
           <xs:complexType>
             <xs:sequence>
