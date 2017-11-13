@@ -59,7 +59,7 @@
       "resources/Dokumendihalduse_metaandmed/V3.0/files/Dokumendihalduse_metaandmed_ver3_andmekirjeldus_parandused1.pdf",
       "resources/Dokumendihalduse_metaandmed/V3.0/files/Dokumendihalduse_metaandmed_vers3_lahteylesanne.pdf",
       "resources/Dokumendihalduse_metaandmed/V3.0/files/Records_management_metadata_EN.pdf",
-      "resources/Dokumendihalduse_metaandmed/V3.0/files/?levaade_skeemidest.pdf"
+      "resources/Dokumendihalduse_metaandmed/V3.0/files/Ülevaade_skeemidest.pdf"
     ]
   },
   {
@@ -120,30 +120,30 @@
       "resources/Oigusakt/files/Dokumendiliigi_maarus_andmekirjeldus.pdf",
       "resources/Oigusakt/files/Dokumendiliigi_muutmismaarus_andmekirjeldus.pdf",
       "resources/Oigusakt/files/Dokumendiliigi_muutmisseadus_andmekirjeldus.pdf",
-      "resources/Oigusakt/files/Dokumendiliigi_m??ratluseta_konteinermalli_andmekirjeldus.pdf",
+      "resources/Oigusakt/files/Dokumendiliigi_määratluseta_konteinermalli_andmekirjeldus.pdf",
       "resources/Oigusakt/files/Dokumendiliigi_Riigikogu_otsus_andmekirjeldus.pdf",
       "resources/Oigusakt/files/Dokumendiliigi_seadus_andmekirjeldus.pdf",
-      "resources/Oigusakt/files/Dokumendiliigi_yksikakt_(otsus_korraldus_k?skkiri_ettekirjutus_muu)_andmekirjeldus.pdf",
+      "resources/Oigusakt/files/Dokumendiliigi_yksikakt_(otsus_korraldus_käskkiri_ettekirjutus_muu)_andmekirjeldus.pdf",
       "resources/Oigusakt/files/eelnou_naide.xml",
       "resources/Oigusakt/files/juurakt_1_10.02.2010.xsd",
       "resources/Oigusakt/files/konteiner_1_8.09.2010.xsd",
       "resources/Oigusakt/files/maarus_1_10.02.2010.xsd",
       "resources/Oigusakt/files/muutmismaarus_1_10.02.2010.xsd",
-      "resources/Oigusakt/files/Muutmism??ruse_v?ljakuva.pdf",
-      "resources/Oigusakt/files/Muutmisseaduse_v?ljakuva.pdf",
+      "resources/Oigusakt/files/Muutmismääruse_väljakuva.pdf",
+      "resources/Oigusakt/files/Muutmisseaduse_väljakuva.pdf",
       "resources/Oigusakt/files/muutmisseadus_1_10.02.2010.xsd",
-      "resources/Oigusakt/files/M??ruse_v?ljakuva_xmlist.pdf",
+      "resources/Oigusakt/files/Määruse_väljakuva_xmlist.pdf",
       "resources/Oigusakt/files/Oigusakti_PDF_stiilid_VexPros.xsl",
       "resources/Oigusakt/files/riigikoguotsus_1_10.02.2010.xsd",
-      "resources/Oigusakt/files/Riigikogu_otsuse_v?ljakuva.pdf",
-      "resources/Oigusakt/files/Seaduse_v?ljakuva_tyviseaduse_skeemi_alusel_koostatud_xmlist.pdf",
+      "resources/Oigusakt/files/Riigikogu_otsuse_väljakuva.pdf",
+      "resources/Oigusakt/files/Seaduse_väljakuva_tyviseaduse_skeemi_alusel_koostatud_xmlist.pdf",
       "resources/Oigusakt/files/Stiilifailide_juhend.pdf",
       "resources/Oigusakt/files/tyviseadus_1_10.02.2010.xsd",
-      "resources/Oigusakt/files/XML_dokumendi_n?idised_koos_stiilide_xsl_kuvadega.pdf",
+      "resources/Oigusakt/files/XML_dokumendi_näidised_koos_stiilide_xsl_kuvadega.pdf",
       "resources/Oigusakt/files/xsl.zip",
       "resources/Oigusakt/files/yksikakt_1_10.02.2010.xsd",
-      "resources/Oigusakt/files/?igusakti_xml_skeemi_m?rgendloend.pdf",
-      "resources/Oigusakt/files/?ksikakti_v?ljakuva_xmlist.pdf"
+      "resources/Oigusakt/files/Õigusakti_xml_skeemi_märgendloend.pdf",
+      "resources/Oigusakt/files/Õksikakti_väljakuva_xmlist.pdf"
     ]
   }
 ]
