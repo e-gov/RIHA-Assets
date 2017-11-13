@@ -29,3 +29,15 @@ p a:not(.btn):hover {
 
 p a:not(.btn) {
     border-bottom: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
