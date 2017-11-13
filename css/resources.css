@@ -26,3 +26,6 @@ table.content th, .table.content td, .table.content tbody tr {
 p a:not(.btn):hover {
     text-decoration: underline;
 }
+
+p a:not(.btn) {
+    border-bottom: none;
