@@ -106,27 +106,6 @@
     ]
   },
   {
-    "Name_est": "Kiri (teabenõue märgukiri selgitustaotus)",
-    "Name_eng": "Letter(request for informatsion, informational letter, request for explanation)",
-    "Version": "1.0",
-    "Start_date": "",
-    "End_date": "",
-    "Description_est": "Dokumendiliigi „kiri“ andmekirjeldus koos XML skeemidega. Rakendamiseks avaliku sektori asutustes ja teabeväravas eesti.ee ning soovitavalt ka erasektori organisatsioonides. Andmekirjeldus on kooskõlas Eesti standardiga EVS 882:-1 „INFORMATSIOON JA DOKUMENTATSIOON. Dokumendielemendid ja vorminõuded. Osa 1. Kiri“ ja kohaldatav Eesti õigusaktides nimetatud kirja alaliikidele (teabenõue, selgitustaotlus, märgukiri jm). Potentsiaalselt kasutatav rahvusvahelises kirjavahetuses.",
-    "Description_eng": "Data description of and XML schemas for the document/record type “letter”. To be applied in the public sector agencies of Estonia and the State Portal eesti.ee, but recommended also for private sector organisations. Harmonised with Estonian standard EVS 882:1-2013 and applicable also for various sub-types of letters, described in the Estonian legislation (“request for information”, “informational letter”, “request for explanation”, etc.). Potentially usable with international correspondence.",
-    "Resource_type": "Dokumendiliigi XML andmekirjeldus",
-    "Owner": "Majandus- ja Kommunikatsiooniministeerium",
-    "Status": "Ettepanek sisestamisel",
-    "Files": [
-      "resources/Kiri/V1.0/files/dokumendiliigi_kiri_andmekirjeldus.pdf",
-      "resources/Kiri/V1.0/files/dokumendiliik_kiri.xsd",
-      "resources/Kiri/V1.0/files/dokumendiliik_kiri_n2ide1.xml",
-      "resources/Kiri/V1.0/files/dokumendiliik_kiri_n2ide2.xml",
-      "resources/Kiri/V1.0/files/kirja_n?idis_nr_1.pdf",
-      "resources/Kiri/V1.0/files/kirja_n?idis_nr_2.pdf",
-      "resources/Kiri/V1.0/files/L?hte?lesanne.pdf"
-    ]
-  },
-  {
     "Name_est": "Õigusakt",
     "Name_eng": "Basic Act",
     "Version": "10.02.2010",
