@@ -69,13 +69,6 @@ return $file;
 
     <link rel="stylesheet" href="css/resources.css">
     <script src="css/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $("#headerInclude").load("header.html #header");
-            $("#footerInclude").load("footer.html #footer");
-        });
-
-    </script>
 </head>
 
 <body>
@@ -226,7 +219,7 @@ return $file;
 <script src="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/Detailview.js"></script>
 
-<!-- Google Analytics Tracking Code for test.riha.ee -->
+<!-- Google Analytics Tracking Code for riha.ee -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -234,6 +227,21 @@ return $file;
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-66693747-3', 'auto');
   ga('send', 'pageview');
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#headerInclude").load("header.html #header");
+        $("#footerInclude").load("footer.html #footer", function() {
+            $('.menu-toggle').on('click',function(){
+                if($("#mainmenu").hasClass('collapsing'))
+                    return false;
+                $("body").toggleClass("nav-open");
+                $('#mainmenu').collapse('toggle')
+            })
+        });
+        
+    });
+
 </script>
 </body>
 
