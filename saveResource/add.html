@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="et">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Uue vara lisamine - Riigi infosüsteemi haldussüsteem RIHA</title>
+    <link rel="icon" type="image/png" href="/assets/coat-of-arms-favicon.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-coat-of-arms-favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bower_components/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="css/bower_components/jquery-ui/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/bower_components/datatables/media/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="css/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/bower_components/build/app.css">
+
+    <link rel="stylesheet" href="css/resources.css">
+    <script src="css/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#headerInclude").load("header.html #header");
+            $("#footerInclude").load("footer.html #footer");
+        });
+
+    </script>
+</head>
+
+<body>
+<div id="headerInclude">
+</div>
+<main class="container" id="content">
+    <header class="pagehead" style="background-image:url(/assets/images/data/intro-bg.png)">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-0 mb-md-4">RIHA varamu</h1>
+            </div>
+        </div>
+    </header>
+    <section class="col card p-3">
+        <div class="my-1">
+            <h2>Uue vara lisamine</h2>
+            <p>Uue vara lisamiseks tuleb sisestada all olevasse vormi kõik vajalikud andmed ja vajutada nupule <b>"Saada andmed"</b>.
+                Pärast andmete saatmist palume Teil saata teavitav kiri uue vara lisamisest aadressile
+                <a href="mailto:help@ria.ee">help@ria.ee</a>. <br />
+                Teavitava kirjaga palume manusena kaasa saata ka kõik vara lisadokumendid.</p>
+        </div>
+        <form id="form" class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Nimetus</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name"
+                           placeholder="Vara ametlik nimetus eesti keeles"
+                           name="name" required
+                           oninvalid="this.setCustomValidity('Palun sisesta vara nimetus.')"
+                           oninput="setCustomValidity('')">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="version">Versioon</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="version" placeholder="Versiooni tähis, näiteks 3.1"
+                           name="version"
+                           required oninvalid="this.setCustomValidity('Palun sisesta versiooni tähis')"
+                           oninput="setCustomValidity('')">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="start_date">Kehtiv alates</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="start_date" placeholder="Kehtivuse algus kuupäev"
+                           name="start_date" required
+                           oninvalid="this.setCustomValidity('Palun sisesta kuupäeva, millal vara kehtima hakkab')"
+                           oninput="setCustomValidity('')">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="end_date">Kehtiv kuni</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="end_date" placeholder="Kehtivuse lõpukuupäev"
+                           name="end_date">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="description">Kirjeldus</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="4" id="description" name="description"
+                              required oninvalid="this.setCustomValidity('Palun sisesta vara kirjeldus, kellele ja miks on vara loodud.')"
+                              oninput="setCustomValidity('')"
+                              placeholder="Eestikeelne kirjeldus, kellele ja miks on vara loodud"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="type">Vara liik</label>
+                <div class="col-sm-10">
+                    <select id="type" class="form-control" name="type" required
+                            oninvalid="this.setCustomValidity('Palun vali vara liik')"
+                            oninput="setCustomValidity('')">
+                        <option></option>
+                        <option>Standardsed metaandmed</option>
+                        <option>Dokumendiliigi XML andmekirjeldus</option>
+                        <option>Andmevahetuse konteiner</option>
+                        <option>Klassifikaator</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="owner">Haldaja</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="owner" name="owner"
+                           placeholder="Asutus, kes on vastutav vara arendamise ja RIHAs kirjeldamise eest" required
+                           oninvalid="this.setCustomValidity('Palun sisesta vara haldaja asutus')"
+                           oninput="setCustomValidity('')">
+                </div>
+            </div>
+            <div class="form-group" style="display: none">
+                <label class="control-label col-sm-2" for="status">Staatus</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="status"
+                           name="status">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary" style="font-size: 20px">Saada andmed</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="successpage" style="display: none">
+        <h2>Uue vara andmed saadeti ära</h2>
+        <p>Palume järgmisena saata lisadokumendid aadressile <a href="mailto:help@ria.ee">help@ria.ee</a> koos viitega lisatud varale.</p>
+    </div>
+
+</main>
+<script type="text/javascript">
+$('#form').submit(function(data, event) {
+event.preventDefault();
+/*    if (e.preventDefault) e.preventDefault();
+var elements =  document.forms[0].elements;
+var data = [];
+    for (var i = 0; i < elements.length; i++) {
+    data[] = elements[i].value;
+    } */
+var json = JSON.stringify(data);alert(json);
+$.ajax({
+    url: "https://varamu.riha.ee/save",
+    type: "post",
+    data: json,
+    contentType: 'application/json',
+    crossDomain: true,
+    success: function () {
+        $('.formpage').hide();
+        $('.successpage').show();
+    },
+    error: function () {
+        alert("Saatmine ebaõnnestus. Palun peatselt proovi uuesti. Kui ebaõnnestub mitu korda, siis pöördu help@ria.ee");
+    }
+});
+return false;
+});
+</script>
+<div id="footerInclude"/>
+</div>
+
+<!-- Google Analytics Tracking Code for test.riha.ee -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-66693747-2', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+
+</html>

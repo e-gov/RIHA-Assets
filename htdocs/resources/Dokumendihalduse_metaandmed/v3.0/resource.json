@@ -1,0 +1,10 @@
+{
+    "name": "Dokumendihalduse metaandmed",
+    "version": "3.0",
+    "start_date": "01.02.2013",
+    "end_date": "",
+    "description": "Dokumendihalduse metaandmete loend ja skeemid on mõeldud rakendamiseks eelkõige Eesti avaliku sektori asutustes, kuid sobivad kasutamiseks ka teistes organisatsioonides. Eesmärgiks on ühtlustada metaandmeid erinevates dokumente haldavates süsteemides, et: 1) tagada dokumentide, nende konteksti ja haldamise ajaloo nõuetekohane kirjeldamine, 2) edendada elektroonilist dokumendivahetust, 3) ühtlustada dokumentide avalikustamisel kasutatavaid metaandmeid, 4) võimaldada statistilist aruandlust, 5) lihtsustada dokumendiliikide andmekirjelduste koostamist ning 6) lihtsustada dokumentide üleandmist Rahvusarhiivi. Metaandmete loendis on elementidele lisatud viited sama tähendusega elementidele, mida sisaldavad mõned teiste riikide või rahvusvahelised metaandmemudelid. Versioonis 3.0 on võetud arvesse uute ja uuendatud õigusaktide nõudeid ja vahepealseid rahvusvahelisi arenguid.",
+    "type": "Standardsed metaandmed",
+    "owner": "Majandus- ja Kommunikatsiooniministeerium",
+    "status": "Registreeritud"
+}

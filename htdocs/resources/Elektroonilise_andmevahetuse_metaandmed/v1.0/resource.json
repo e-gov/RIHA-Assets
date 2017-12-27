@@ -1,0 +1,13 @@
+{
+    "name": "Elektroonilise andmevahetuse metaandmete loend",
+    "version": "1.0",
+    "start_date": "31.08.2008",
+    "end_date": "31.12.2016",
+    "description": "Metaandmed, mida saadetakse dokumendi edastamisel DVK kaudu, lihtsustamaks elektroonilist suhtlust dokumendihaldussüsteemide ja teiste infosüsteemide vahel.",
+    "type": [
+        "Standardsed_metaandmed",
+        "Andmevahetuse_konteiner"
+    ],
+    "owner": "Riigi Infosüsteemi Amet",
+    "status": "Lõpetatud"
+}

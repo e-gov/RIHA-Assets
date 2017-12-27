@@ -1,0 +1,96 @@
+.panel-action-heading {
+    margin: -20px -20px 20px -20px;
+    padding: 10px 20px;
+    background-color: #edf0f5;
+    font-size: 1rem;
+    line-height: 30px;
+    padding: 15px 20px;
+    font-weight: bold;
+}
+.col h1 {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #023cc1;
+    word-break: break-word;
+}
+.pagehead h1, .pagehead .h1 {
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+body, p, td, li {
+    font-size: 14px;
+}
+td {
+    line-height: 20px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+}
+.separated-text {
+    line-height: 1.75rem;
+}
+#files li {
+list-style: none;
+}
+#files {
+padding-left: 15px;
+}
+hr.short {
+    width: 25%;
+}
+
+
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    padding-bottom: 14px;
+    margin-bottom: 1.5rem;
+    color: #023cc1;
+}
+label {
+    color: #808080;
+    margin-bottom: .5rem;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.table th, .table td, .table tbody tr {
+    border: none;
+}
+table.content th, .table.content td, .table.content tbody tr {
+    padding: 0;
+}
+
+p a:not(.btn):hover {
+    text-decoration: underline;
+}
+
+p a:not(.btn) {
+    border-bottom: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#content {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+@media only screen and (min-width: 1199px) {
+.navbar-toggleable-xl .navbar-collapse {
+    display: flex;
+    width: 100%;
+}
+}

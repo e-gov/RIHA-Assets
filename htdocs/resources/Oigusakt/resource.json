@@ -1,0 +1,10 @@
+{
+    "name": "Õigusakt",
+    "version": "1",
+    "start_date": "10.02.2010",
+    "end_date": "",
+    "description": "Skeemid XML struktuuriga õigusaktide koostamiseks ja avaldamiseks Riigi Teatajas.",
+    "type": "Dokumendiliigi XML andmekirjeldus",
+    "owner": "Justiitsministeerium",
+    "status": "Registreeritud"
+}
