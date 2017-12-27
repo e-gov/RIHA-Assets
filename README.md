@@ -38,10 +38,10 @@ RIA haldur saab:
 ## Paigaldamine
 
 * Tõsta veebiserveri DocumentRoot kausta kaust `htdocs` **sisu** nii, et selle sisu oleks kättesaadav veebiserveri juurkataloogist.
-* Restardi Apache.
 * Kontrolli, kas:
   * põhikaust töötab, st https://varamu.riha.ee avaneb varamu leht tabeliga, kus erinevad varad ridadena
   * 404 vealeht on korrektne, st https://varamu.riha.ee/404 avaneb kena "Lehekülge ei leitud" teade
+* Vajadusel restardi Apache
 * Valmis!
 
 ## Vara kirjeldamine
