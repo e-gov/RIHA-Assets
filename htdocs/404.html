@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="et">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="/">
     <title>Lehekülge ei leitud - Riigi infosüsteemi haldussüsteem RIHA</title>
     <link rel="icon" type="image/png" href="/assets/coat-of-arms-favicon.png">
     <link rel="apple-touch-icon" href="/assets/apple-touch-coat-of-arms-favicon.png">
@@ -19,18 +19,41 @@
 
     <!-- Include script -->
     <script src="css/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $("#headerInclude").load("header.html #header");
-            $("#footerInclude").load("footer.html #footer");
-        });
-    </script>
 
 </head>
 
 <body>
 <div id="wrap">
-    <div id="headerInclude"/>
+    <header id="header">
+        <div class="header-bottom">
+            <nav class="navbar  navbar-toggleable-xl">
+                <div class="container">
+                    <a class="navbar-brand" href="https://www.riha.ee/Avaleht"/>
+                        <img alt="Riigi infosüsteemi haldussüsteem" height="78" src="/assets/images/base/RIHA.png" width="234">
+                    </a>
+                    <button class="menu-toggle collapsed" type="button">
+                        <span></span>
+                    </button>
+                    <nav class="collapse navbar-collapse" id="mainmenu">
+                        <ul class="navbar-nav mr-0 mr-xl-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.riha.ee/Avaleht">Avaleht</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.riha.ee/Infos%C3%BCsteemid">RIHA kataloog</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://varamu.riha.ee/">RIHA varamu <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://abi.riha.ee/">Abikeskus</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
 </div>
 <main>
     <section class="pagehead error" style="background-image:url(/assets/images/data/intro-bg.png)">
@@ -45,8 +68,45 @@
         </div>
     </section>
 </main>
-<div id="footerInclude"/>
-</div>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-3 col-12">
+                <div class="block">
+                    <p class="head">Kasutajatugi</p>
+                    <ul class="contacts-list list-unstyled">
+                        <li>
+                            <div class="item-single">
+                                <span class="fa fa-envelope"></span>
+                                <div class="body">
+                                    <div class="content">
+                                        <a href="mailto:help@ria.ee">help@ria.ee</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="col-lg-3 col-sm-6 col-md-3 col-12">
+            <div class="block">
+                <p class="head">Abiinfo &amp; lingid</p>
+                <ul class="links-list list-unstyled">
+                <li><a href="https://abi.riha.ee/">Abikeskus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-4 col-12">
+            <a href="https://www.ria.ee/">
+                <img alt="Riigi Infosüsteemi Amet" src="assets/images/base/RIA.png">
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-2 col-12">
+            <img alt="Euroopa Liidu Regionaalarengufond" src="assets/images/base/EL.png">
+        </div>
+        </div>
+    </div>
+</footer>
 
 <!-- Google Analytics Tracking Code for test.riha.ee -->
 <script>
@@ -57,6 +117,16 @@
   ga('create', 'UA-66693747-2', 'auto');
   ga('send', 'pageview');
 </script>
-</body>
+<script type="text/javascript">
+$(function() {
+    $('.menu-toggle').on('click',function(){
+        if($("#mainmenu").hasClass('collapsing'))
+        return false;
+    $("body").toggleClass("nav-open");
+    $('#mainmenu').collapse('toggle')
+    })
+});
+</script>
 
+</body>
 </html>

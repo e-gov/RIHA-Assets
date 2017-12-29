@@ -21,7 +21,35 @@
 </head>
 <body>
 
-<div id="headerInclude"></div>
+<header id="header">
+    <div class="header-bottom">
+        <nav class="navbar  navbar-toggleable-xl">
+            <div class="container">
+                <a class="navbar-brand" href="https://www.riha.ee/Avaleht"/>
+                    <img alt="Riigi infosüsteemi haldussüsteem" height="78" src="/assets/images/base/RIHA.png" width="234"></a>
+                    <button class="menu-toggle collapsed" type="button">
+                        <span></span>
+                    </button>
+                <nav class="collapse navbar-collapse" id="mainmenu">
+                    <ul class="navbar-nav mr-0 mr-xl-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.riha.ee/Avaleht">Avaleht</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.riha.ee/Infos%C3%BCsteemid">RIHA kataloog</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://varamu.riha.ee/">RIHA varamu <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://abi.riha.ee/">Abikeskus</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+</header>
 <main class="container" id="content">
     <div id="table-view">
         <header class="pagehead" style="background-image:url(/assets/images/data/intro-bg.png)">
@@ -122,7 +150,45 @@
         </article>
     </div>
 </main>
-<div id="footerInclude"></div>
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-md-3 col-12">
+                <div class="block">
+                    <p class="head">Kasutajatugi</p>
+                    <ul class="contacts-list list-unstyled">
+                        <li>
+                            <div class="item-single">
+                                <span class="fa fa-envelope"></span>
+                                <div class="body">
+                                    <div class="content">
+                                        <a href="mailto:help@ria.ee">help@ria.ee</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <div class="col-lg-3 col-sm-6 col-md-3 col-12">
+            <div class="block">
+                <p class="head">Abiinfo &amp; lingid</p>
+                <ul class="links-list list-unstyled">
+                <li><a href="https://abi.riha.ee/">Abikeskus</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-4 col-12">
+            <a href="https://www.ria.ee/">
+                <img alt="Riigi Infosüsteemi Amet" src="assets/images/base/RIA.png">
+            </a>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-md-2 col-12">
+            <img alt="Euroopa Liidu Regionaalarengufond" src="assets/images/base/EL.png">
+        </div>
+        </div>
+    </div>
+</footer>
 
 <script src="css/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script src="css/bower_components/tether/dist/js/tether.min.js"></script>
@@ -144,19 +210,14 @@
   ga('send', 'pageview');
 </script>
 <script type="text/javascript">
-    $(function () {
-        $("#headerInclude").load("header.html #header");
-        $("#footerInclude").load("footer.html #footer", function() {
-            $('.menu-toggle').on('click',function(){
-                if($("#mainmenu").hasClass('collapsing'))
-                    return false;
-                $("body").toggleClass("nav-open");
-                $('#mainmenu').collapse('toggle')
-            })
-        });
-        
-    });
-
+$(function() {
+    $('.menu-toggle').on('click',function(){
+        if($("#mainmenu").hasClass('collapsing'))
+        return false;
+    $("body").toggleClass("nav-open");
+    $('#mainmenu').collapse('toggle')
+    })
+});
 </script>
 </body>
 
