@@ -1,0 +1,165 @@
+ltm data-group internal xmlr_eesti_ee_xml_schemas_redirect_list {
+    partition toodang-ria
+    records {
+		    Dokumendihalduse%20metaandmed/2012/v2.1/fail2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/fail2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/isik2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/isik2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/juurdepaas2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/juurdepaas2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/liigitusskeem2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/liigitusskeem2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/liigitusyksus2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/liigitusyksus2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/tegevus2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/tegevus2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/volitus2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/volitus2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/asutus2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/asutus2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/aadress2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/aadress2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/funktsioon2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/funktsioon2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/grupp2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/grupp2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/RK_meta_mudel_ver_5.0.pdf { 
+            data Dokumendihalduse_metaandmed/v2.1/RK_meta_mudel_ver_5.0.pdf
+		    }
+		    Dokumendihalduse%20metaandmed/2012/v2.1/ametikoht2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/ametikoht2805.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/dokument2805.xsd { 
+            data Dokumendihalduse_metaandmed/v2.1/dokument2805.xsd
+        }		
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_liigitusyksus_vers3.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_liigitusyksus_vers3.pdf
+        }
+        Dokumendihalduse%20metaandmed/2013/3.0/Dokumendihalduse_metaandmed_ver3_andmekirjeldus_parandused1.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_ver3_andmekirjeldus_parandused1.pdf
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_liigitusskeem_vers3.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_liigitusskeem_vers3.pdf
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_isik_aadress_kontakt_vers3.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_isik_aadress_kontakt_vers3.pdf
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_liigitusskeem_vers3.xsd { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_liigitusskeem_vers3.xsd
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_tegevus_vers3.xsd { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_tegevus_vers3.xsd
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/%C3%9Clevaade%20skeemidest.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/%C3%9Clevaade%20skeemidest.pdf
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_tegevus_vers3.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_tegevus_vers3.pdf
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_seos_vers3.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_seos_vers3.pdf
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_seos_vers3.xsd { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_seos_vers3.xsd
+        }
+        Dokumendihalduse%20metaandmed/2012/v2.1/dokumendihalduse_metaandmete_loend_vr_2.1.pdf { 
+            data Dokumendihalduse%20metaandmed/2012/v2.1/dokumendihalduse_metaandmete_loend_vr_2.1.pdf
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_liigitusyksus_vers3.xsd { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_liigitusyksus_vers3.xsd
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_isik_aadress_kontakt_vers3.xsd { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_isik_aadress_kontakt_vers3.xsd
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_vers3_lahteylesanne.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_vers3_lahteylesanne.pdf
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_vers3_andmekirjeldus.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_vers3_andmekirjeldus.pdf
+        }	
+        Dokumendihalduse%20metaandmed/2013/3.0/Records_management_metadata_EN.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Records_management_metadata_EN.pdf
+        }		
+		    Dokumendihalduse%20metaandmed/2013/vers3/Dokumendihalduse_metaandmed_juurdepaas_vers3.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_juurdepaas_vers3.pdf
+        }
+        Dokumendihalduse%20metaandmed/2013/vers3/Dokumendihalduse_metaandmed_juurdepaas_vers3.xsd { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_juurdepaas_vers3.xsd
+        }
+        Dokumendihalduse%20metaandmed/2013/vers3/Dokumendihalduse_metaandmed_dokument_vers3.xsd { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_dokument_vers3.xsd
+        }
+        Dokumendihalduse%20metaandmed/2013/vers3/Dokumendihalduse_metaandmed_fail_vers3.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_fail_vers3.pdf
+        }
+        Dokumendihalduse%20metaandmed/2013/vers3/Dokumendihalduse_metaandmed_fail_vers3.xsd { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_fail_vers3.xsd
+        }
+        Dokumendihalduse_metaandmed/2013/vers3/Dokumendihalduse_metaandmed_dokument_vers3.pdf { 
+            data Dokumendihalduse_metaandmed/v3.0/Dokumendihalduse_metaandmed_dokument_vers3.pdf
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2013/1.0/dhl-meta-manual.xsd { 
+            data Elektroonilise_andmevahetuse_metaandmed/v1.0/dhl-meta-manual.xsd
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2013/1.0/dhl-meta-automatic.xsd { 
+            data Elektroonilise_andmevahetuse_metaandmed/v1.0/dhl-meta-automatic.xsd
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2013/1.0/dhl.xsd { 
+            data Elektroonilise_andmevahetuse_metaandmed/v1.0/dhl.xsd
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2014/2.1/uus_vs_vana_kapsel.ods { 
+            data Elektroonilise_andmevahetuse_metaandmed/v2.1/uus_vs_vana_kapsel.ods
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2013/2.1/Elektroonilise_andmevahetuse_metaandmete_loendi_kirjeldus_2.1.pdf { 
+            data Elektroonilise_andmevahetuse_metaandmed/v2.1/Kirjeldus.pdf
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2013/2.1/Dvk_kapsel_vers_2_1_n2ide1.xml { 
+            data Elektroonilise_andmevahetuse_metaandmed/v2.1/Naide1.xml
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2013/2.1/Dvk_kapsel_vers_2_1_eng_est.xsd { 
+            data Elektroonilise_andmevahetuse_metaandmed/v2.1/Kapsel.xsd
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2013/2.1/Dvk_kapsel_vers_2_1_n2ide2.xml { 
+            data Elektroonilise_andmevahetuse_metaandmed/v2.1/Naide2.xml
+        }
+        Elektroonilise%20andmevahetuse%20metaandmete%20loend/2013/2.1/Dvk_kapsel_vers_2_1_n2ide3.xml { 
+            data Elektroonilise_andmevahetuse_metaandmed/v2.1/Naide3.xml
+        }
+        oigusakt/juurakt_1_10.02.2010.xsd { 
+            data Oigusakt/juurakt_1_10.02.2010.xsd
+        }
+        oigusakt/tyviseadus_1_10.02.2010.xsd { 
+            data Oigusakt/tyviseadus_1_10.02.2010.xsd
+        }
+        oigusakt/konteiner_1_8.09.2010.xsd { 
+            data Oigusakt/konteiner_1_8.09.2010.xsd
+        }
+        oigusakt/maarus_1_10.02.2010.xsd { 
+            data Oigusakt/maarus_1_10.02.2010.xsd
+        }
+        oigusakt/muutmismaarus_1_10.02.2010.xsd { 
+            data Oigusakt/muutmismaarus_1_10.02.2010.xsd
+        }
+        oigusakt/muutmisseadus_1_10.02.2010.xsd { 
+            data Oigusakt/muutmisseadus_1_10.02.2010.xsd
+        }
+        oigusakt/riigikoguotsus_1_10.02.2010.xsd { 
+            data Oigusakt/riigikoguotsus_1_10.02.2010.xsd
+        }
+        oigusakt/yksikakt_1_10.02.2010.xsd { 
+            data Oigusakt/yksikakt_1_10.02.2010.xsd
+        }
+    }
+    type string
+}
