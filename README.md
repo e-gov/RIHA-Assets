@@ -116,6 +116,8 @@ Ka failide puhul on tähtis, et tühikuid ja täpitähti ei oleks ning lähtuda 
 
 **TÄHTIS:** Pärast failide lisamist mine oma lokaalse arvutiga lehele `[varamu veebiaadress lokaalses veebserveris]/updateResources/`, millega uuendatakse rakenduse poolt kasutatavat `htdocs/resources/resources.json` faili. Veendu, et rakendus lõpetas töö edukalt ja faili uuendati.
 
+**TÄHTIS:** Kui tegid muudatusi vana RIHA poolt avaldatud failide nimedes/kaustades, siis tuleb paigaldusel uuendada ka [F5 seadistus](redirect.txt).
+
 Uuenda lähtekoodi Githubis ning pärast master harusse commit-i avaldatakse muudatused järgmisel päeval RIHA varamu ametlikul lehel https://varamu.riha.ee
 
 ## REST API paigaldamine
