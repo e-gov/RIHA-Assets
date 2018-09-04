@@ -1,0 +1,10 @@
+{
+    "name": "Dokumendihalduse metaandmed",
+    "version": "4.0",
+    "start_date": "03.09.2018",
+    "end_date": "",
+    "description": "Dokumendihalduse metaandmete loend (alates versioonist 4.0 nimetusega „Dokumendihaldussüsteemi metaandmete loend“) ja skeemid on mõeldud rakendamiseks Eesti avaliku sektori asutustes, kuid sobivad kasutamiseks ka teistes organisatsioonides. Eesmärgiks on ühtlustada eri dokumendihaldussüsteemide metaandmeid, et dokumendid, nende kontekst ja haldamise ajalugu oleks kirjeldatud ja saaks: 1) lihtsustada elektroonilist dokumendivahetust ja dokumentide registreerimist, 3) ühtlustada dokumentide avalikustamisel kasutatavaid metaandmeid, 4) teha statistilist aruandlust ja dokumentide otsinguid, 5) lihtsustada dokumentide üleandmist Rahvusarhiivi ja hävitamist. Loendi versioonis 4.0 on elemente võrreldud arhiivikirjelduse, juurdepääsupiirangu klassifikaatori, DVK/DHX kapsli, aadressiandmete süsteemi ja avaliku dokumendiregistri elementidega.",
+    "type": "Standardsed metaandmed",
+    "owner": "Majandus- ja Kommunikatsiooniministeerium",
+    "status": "Registreeritud"
+}
