@@ -746,6 +746,19 @@ pre code {
     }
 }
 
+@media (min-width: 1400px) {
+    .container {
+        width: 1200px;
+        max-width: 100%
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+        width: 1400px;
+        max-width: 100%
+    }
+}
+
 .container-fluid {
     position: relative;
     margin-left: auto;
