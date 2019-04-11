@@ -105,7 +105,7 @@
           <common:Annotation>
             <common:AnnotationTitle>Kehtivust lõpetava sündmuse kood</common:AnnotationTitle>
             <common:AnnotationType>NOTE</common:AnnotationType>
-            <common:AnnotationText xml:lang="et">420</common:AnnotationText>
+            <common:AnnotationText xml:lang="et">430</common:AnnotationText>
           </common:Annotation>
           <common:Annotation>
             <common:AnnotationTitle>Kirje kehtivuse algus</common:AnnotationTitle>
