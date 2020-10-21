@@ -1,0 +1,21 @@
+<rdf:RDF xmlns="https://riha.eesti.ee/riha/onto/avalikhaldus/2009/r1.2#" xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#" xmlns:release="https://riha.eesti.ee/riha/onto/avalikhaldus/2009/r1.2#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xml:base="https://riha.eesti.ee/riha/onto/avalikhaldus/2009/r1.2">
+<owl:Ontology rdf:about="">
+<rdfs:label xml:lang="et">Avaliku halduse ontoloogia</rdfs:label>
+<rdfs:comment xml:lang="et">kommentaar</rdfs:comment>
+<owl:versionInfo>v3</owl:versionInfo>
+</owl:Ontology>
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/avalikhaldus/2009/r1.2#Amet">
+<rdfs:label xml:lang="et">Amet</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/avalikhaldus/2009/r1.2#Valitsusasutus"/>
+<rdfs:comment xml:lang="et">Amet on seaduses sätestatud ning ministeeriumi valitsemisalas tegutsev valitsusasutus, millel on juhtimisfunktsioon ja mis teostab riiklikku järelevalvet ning kohaldab riiklikku sundi seaduses ettenähtud alustel ja ulatuses.</rdfs:comment>
+</owl:Class>
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/avalikhaldus/2009/r1.2#Inspektsioon">
+<rdfs:label xml:lang="et">Inspektsioon</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/avalikhaldus/2009/r1.2#Valitsusasutus"/>
+<rdfs:comment xml:lang="et">Inspektsioon on seaduses sätestatud ning ministeeriumi valitsemisalas tegutsev valitsusasutus, kui seaduses ei ole ette nähtud teisiti. Inspektsiooni põhiülesanne on teostada riiklikku järelevalvet ning kohaldada riiklikku sundi seaduses ettenähtud alustel ja ulatuses.</rdfs:comment>
+</owl:Class>
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/avalikhaldus/2009/r1.2#Valitsusasutus">
+<rdfs:label xml:lang="et">Valitsusasutus</rdfs:label>
+<rdfs:comment xml:lang="et">Valitsusasutus on riigi eelarvest finantseeritav asutus, millele seadusega või seaduse alusel antud põhiülesandeks on täidesaatva riigivõimu teostamine.</rdfs:comment>
+</owl:Class>
+</rdf:RDF>
