@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY riha "https://riha.eesti.ee/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY r1 "https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#" >
+]>
+
+
+<rdf:RDF xmlns="&riha;riha/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#"
+     xml:base="&riha;riha/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:riha="https://riha.eesti.ee/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:r1="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#">
+    <owl:Ontology rdf:about="">
+        <rdfs:label xml:lang="et"
+            >Geodeetiliste punktide andmekogu ontoloogia</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetiliste punktide andmekogu ontoloogia eesm&#228;rgiks on esitada Maa-ameti geodeesia valdkonna andmeh&#245;ive elemendid teiste Maa-ameti infos&#252;steemi kuuluvate andmekogude rikastamiseks ning riigi infos&#252;steemi semantilise koosv&#245;ime saavutamiseks ja veebiteenuste edastamiseks.</rdfs:comment>
+        <owl:versionInfo xml:lang="et">r1 (2012-01-02)</owl:versionInfo>
+        <owl:imports rdf:resource=""/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark_omab_geotoo -->
+
+    <owl:ObjectProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark_omab_geotoo">
+        <rdfs:label xml:lang="et"
+            >Geodeetiline m&#228;rk omab geodeetilist t&#246;&#246;d</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Iga geodeetiline m&#228;rk on seotud &#252;he v&#245;i mitme geodeetilise t&#246;&#246;ga.</rdfs:comment>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+        <rdfs:range rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark_omistatud_geopunkt -->
+
+    <owl:ObjectProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark_omistatud_geopunkt">
+        <rdfs:label xml:lang="et"
+            >Geodeetilisele m&#228;rgile on omistatud geodeetiline punkt</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Igale geodeetilisele m&#228;rgile on omistatud &#252;ks kindel koordineeritud geodeetiline punkt.</rdfs:comment>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+        <rdfs:range rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt_omab_geotoo -->
+
+    <owl:ObjectProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt_omab_geotoo">
+        <rdfs:label xml:lang="et"
+            >Geodeetiline punkt omab geodeetilist t&#246;&#246;d</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Iga geodeetiline punkt on seotud &#252;he v&#245;i mitme geodeetilise t&#246;&#246;ga.</rdfs:comment>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+        <rdfs:range rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#B_97 -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#B_97">
+        <rdfs:label xml:lang="et"
+            >Punkti geodeetiline laius</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetiline laius on nurk ekvaatori tasapinna ja suvalist punkti l&#228;biva normaali vahel.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#H_BK77 -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#H_BK77">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise punkti normaalk&#245;rgus</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise punkti k&#245;rguse v&#228;&#228;rtus BK77 k&#245;rguss&#252;steemis geoidi pinnast.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#L_97 -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#L_97">
+        <rdfs:label xml:lang="et"
+            >Punkti geodeetiline pikkus</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetiline pikkus on nurk algmeridiaani ja suvalist punkti l&#228;biva meridiaani vahel.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#ehitus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#ehitus">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise m&#228;rgi ehitus</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Andmed geodeetilise m&#228;rgi ehituse kohta, sisaldades nii t&#228;hise kui ka tsentrit&#252;&#252;bi kirjeldust.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#foto -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#foto">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise m&#228;rgi foto</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilisest m&#228;rgist tehtud foto (l&#228;hi&#252;lesv&#245;te m&#228;rgi tsentrist ja foto geodeetilisest m&#228;rgist ning &#252;mbruskonnast).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#g_08 -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#g_08">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise punkti raskuskiirenduse v&#228;&#228;rtus</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise punkti raskuskiirenduse v&#228;&#228;rtus GV_EST08 gravimeetrilises s&#252;steemis.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#gnss -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#gnss">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et"
+            >Geodeetilise m&#228;rgi sobivus GNSS m&#245;&#245;tmisteks</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise m&#228;rgi sobivus GNSS m&#245;&#245;tmiste teostamiseks (sobib/ei sobi).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#h_97 -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#h_97">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise punkti k&#245;rgus ellipsoidist</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise punkti k&#245;rgus ellipsoidist GRS80 LEST97 koordinaatide s&#252;steemis.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#kaitsevoond -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#kaitsevoond">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise m&#228;rgi kaitsev&#246;&#246;nd</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilisele m&#228;rgile omistatud kaitsev&#246;&#246;ndi ulatus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;float"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#kirjeldus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#kirjeldus">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise m&#228;rgi asukoha kirjeldus</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise m&#228;rgi asukoha tekstiline kirjeldus, milles antakse suunised geodeetilise m&#228;rgi asukoha kohta.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#klass -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#klass">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et"
+            >Geodeetilise v&#245;rgu t&#228;psusklass</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise v&#245;rgu t&#228;psusklassi kirjeldus geodeetilise punkti kuuluvuse j&#228;rgi.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#koodnumber -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#koodnumber">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et"
+            >Geodeetilise punkti koodnumber</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilisele punktile omistatud unikaalne koodnumber.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#krokii -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#krokii">
+        <rdfs:label xml:lang="et">Asukoha skeem</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise m&#228;rgi asukoha skeem (krokii).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#liik -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#liik">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise v&#245;rgu liik</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise v&#245;rgu liigi kirjeldus geodeetilise punkti kuuluvuse j&#228;rgi.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#maapind -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#maapind">
+        <rdfs:label xml:lang="et">Maapinna k&#245;rgus</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Maapinna k&#245;rgus geodeetilise m&#228;rgi asukohas (geodeetilise m&#228;rgi tsentrist).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#nimi -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#nimi">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise punkti nimi</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise punkti nimi.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#panoraam -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#panoraam">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise m&#228;rgi panoraam</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise m&#228;rgi horisondi avatuse joonis (panoraam).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#regtoimik_nr -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#regtoimik_nr">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise t&#246;&#246; registritoimiku number</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Registritoimiku number on geodeetilise t&#246;&#246; aruandele omistatud arhiveerimise number.  Registritoimik sisaldab andmekogusse kantavate andmete alusdokumente (aruandeid).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#seisukord -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#seisukord">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et"
+            >Geodeetilise m&#228;rgi seisukord</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise m&#228;rgi seisukorra kirjeldus (s&#228;ilinud, h&#228;vinenud, leidmata, jms).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#too_aeg -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#too_aeg">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise t&#246;&#246; tegemise aeg</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise t&#246;&#246; tegemise aeg (aasta).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#too_nimi -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#too_nimi">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise t&#246;&#246; nimi</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise t&#246;&#246; nimi.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#tsenter_tuup -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#tsenter_tuup">
+        <rdfs:label xml:lang="et"
+            >Geodeetilise m&#228;rgi tsentrit&#252;&#252;p ja tsentrit&#252;&#252;bi joonis</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise m&#228;rgi tsentrit&#252;&#252;p ja selle ehituslikud joonis (tsentrit&#252;&#252;bi joonis).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#x_97 -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#x_97">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et"
+            >Geodeetilise punkti x-koordinaat</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise punkti x-koordinaat LEST97 koordinaatide s&#252;steemis.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#y_97 -->
+
+    <owl:DatatypeProperty rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#y_97">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et"
+            >Geodeetilise punkti y-koordinaat</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetilise punkti y-koordinaat LEST97 koordinaatide s&#252;steemis.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark -->
+
+    <owl:Class rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geomark">
+        <rdfs:label xml:lang="et"
+            >Geodeetiline m&#228;rk</rdfs:label>
+        <owl:disjointWith rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt"/>
+        <owl:disjointWith rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo"/>
+        <rdfs:comment xml:lang="et"
+            >Geodeetiline m&#228;rk on looduses tuvastatava t&#228;hisega,  ta koosneb tsentrist ja t&#228;hisest.  Tsentrim&#228;rgile vastab geodeetiline punkt, mis on koordineeritud vastavalt kehtivale geodeetilisele s&#252;steemile.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt -->
+
+    <owl:Class rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geopunkt">
+        <rdfs:label xml:lang="et"
+            >Geodeetiline punkt</rdfs:label>
+        <owl:disjointWith rdf:resource="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo"/>
+        <rdfs:comment xml:lang="et"
+            >Geodeetiline punkt on kohtkindlalt paigaldatud geodeetilise m&#228;rgi asukoht maapinnal, pinnases v&#245;i ehitisel, millele on arvutatud koordinaadid ning vajaduse korral arvutatud k&#245;rgused ja m&#228;&#228;ratud raskuskiirenduse v&#228;&#228;rtused.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo -->
+
+    <owl:Class rdf:about="&riha;onto/keskkond.geodeesia.riiklikud_ja_kohalikud_geodeetilised_vorgud/2011/r1#geotoo">
+        <rdfs:label xml:lang="et"
+            >Geodeetiline t&#246;&#246;</rdfs:label>
+        <rdfs:comment xml:lang="et"
+            >Geodeetiline t&#246;&#246; on geodeetiliste punktide ja v&#245;rkude rajamine, rekonstrueerimine ja hooldamine ning sellega seotud geodeetiliste andmete t&#246;&#246;tlemine.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
