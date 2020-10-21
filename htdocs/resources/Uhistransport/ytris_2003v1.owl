@@ -1,0 +1,911 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:p1="https://riha.eesti.ee/riha/onto/keskkond.topograafia/2011/r1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1">
+  <owl:Ontology rdf:about="">
+    <rdfs:label xml:lang="en">Public Transport Ontology</rdfs:label>
+    <rdfs:label xml:lang="et">Ühistranspordi ontoloogia</rdfs:label>
+    <rdfs:comment xml:lang="et">&amp;#220;histranspordi infos&amp;#252;steemi kirjeldav ontoloogia</rdfs:comment>
+    <owl:versionInfo xml:lang="et">2013/r1</owl:versionInfo>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniloa_kehtetuks_tunnistamise_taotlus">
+    <rdfs:label xml:lang="et">Liiniloa kehtetuks tunnistamise taotlus</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Taotlus"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">&amp;#220;histranspordiseaduse paragrahv 36 l&amp;#245;ike 9 kohane vedaja taotlus talle 
+varem antud liiniloa kehtetuks tunnistamiseks eesm&amp;#228;rgiga l&amp;#245;petada liiniveo teenuse osutamine antud liinil.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Kommertsliinivedu">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liinivedu"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">&amp;#220;histranspordiseaduse paragrahv 34 l&amp;#245;ikes 6 nimetatud asutuse poolt antud liiniloa v&amp;#245;i tellijaga s&amp;#245;lmitud lepingu (v&amp;#228;lja arvatud avaliku teenindamise leping) alusel korraldatav s&amp;#245;itjatevedu.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Kommertsliinivedu</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Rong">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduk"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">Rong ehk reisirong on vagunitest ja &amp;#252;hest v&amp;#245;i mitmest vedurist v&amp;#245;i 
+mootorvagunist koosnev motoriseeritud veeremi&amp;#252;ksus, mis liigub m&amp;#246;&amp;#246;da r&amp;#246;&amp;#246;paid ning mida kasutatakse s&amp;#245;itjate vedamiseks. Rongina k&amp;#228;sitatakse r&amp;#246;&amp;#246;basbussi.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Rong</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Taotlus">
+    <rdfs:comment xml:lang="et">Vedaja poolt &amp;#252;histranspordiseaduse paragrahv 34 l&amp;#245;ikes 6 nimetatud asutusele esitatud taotlus liiniloa andmiseks, varem antudliiniloa kehtetuks tunnistamiseks v&amp;#245;i liiniloa alusel kinnitatud s&amp;#245;iduplaani kinnitamiseks v&amp;#245;i muutmiseks.</rdfs:comment>
+    <rdfs:label xml:lang="et">Taotlus</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Parvlaev">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduk"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="et">Parvlaev</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#245;itjate vedamiseks ette n&amp;#228;htud vees&amp;#245;iduk. &amp;#220;histranspordi infos&amp;#252;steemis 
+h&amp;#245;lmab m&amp;#245;iste parvlaev ka s&amp;#245;itjate veoks ette n&amp;#228;htud v&amp;#228;ikelaeva.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tariif">
+    <rdfs:label xml:lang="et">Tariif</rdfs:label>
+    <rdfs:comment xml:lang="et">Tariif ehk s&amp;#245;idutraiif on s&amp;#245;idupileti hinna arvutamiseks kasutatav suurus, millega m&amp;#228;&amp;#228;ratakse pileti hind s&amp;#245;ltuvalt s&amp;#245;idu kaugusest v&amp;#245;i tsoonidest millesse kuuluvate peatuste vahel s&amp;#245;itja liigub.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Erijuht">
+    <rdfs:comment xml:lang="et">Erijuht on seotud n&amp;#228;iteks p&amp;#252;hade ajal k&amp;#228;igus oleva s&amp;#245;iduplaaniga, mis erineb tavap&amp;#228;rasest. N&amp;#228;iteks riigip&amp;#252;hade ajal on liin k&amp;#228;igus p&amp;#252;hap&amp;#228;evase graafiku alusel, v&amp;#245;i liin on k&amp;#228;igus koolivaheaegadel kolmap&amp;#228;eval ja reedel.</rdfs:comment>
+    <rdfs:label xml:lang="et">Erijuht</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uksikpilet">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">&amp;#220;ksikpilet on s&amp;#245;idupileti liik mis annab pileti omanikule &amp;#245;iguse s&amp;#245;ita 
+teatud liinil v&amp;#245;i liinidel &amp;#252;hekordselt piletil m&amp;#228;rgitud peatuste vahel.</rdfs:comment>
+    <rdfs:label xml:lang="et">Üksikpilet</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsoonipilet">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">S&amp;#245;idupileti liikide klassifikatsioon vastvalt s&amp;#245;idukordade arvule, v&amp;#245;i 
+s&amp;#245;itude teostamise perioodile, mille jooksul on pileti soetanud s&amp;#245;itjal &amp;#245;igus &amp;#252;histranspordivahendiga &amp;#252;hel v&amp;#245;i mitmel erineval liinil s&amp;#245;ita</rdfs:comment>
+    <rdfs:label xml:lang="et">Tsoonipilet</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Kaugliin">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="et">Kaugliin</rdfs:label>
+    <rdfs:comment xml:lang="et">Kaugliin on regulaarse s&amp;#245;itjateveoteenus liik, mille puhul liini 
+s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud peatused asuvad eri maakondades.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Buss">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduk"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">Teeliikluses s&amp;#245;itjate vedamiseks etten&amp;#228;htud mootors&amp;#245;iduk milles on 
+&amp;#252;ldjuhul lisaks juhikohale rohkem kui kaheksa istekohta ning mis kuulub 
+M&lt;sub&gt;2&lt;/sub&gt;&amp;#160;ja M&lt;sub&gt;3&lt;/sub&gt;&amp;#160;kategooriasse.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Buss</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Noudepeatus">
+    <rdfs:label xml:lang="et">Nõudepeatus</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud peatus, mis on ette n&amp;#228;htud &amp;#252;ksnes kas s&amp;#245;itjate 
+    &amp;#252;hiss&amp;#245;idukisse sisenemiseks v&amp;#245;i &amp;#252;ksens s&amp;#245;itjate &amp;#252;hiss&amp;#245;idukist v&amp;#228;ljumiseks.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Troll">
+    <rdfs:comment xml:lang="et">Troll ehk trollibuss on teeliikluses s&amp;#245;itjate vedamiseks ette n&amp;#228;htud 
+elektrikontaktliiniga &amp;#252;hendatud r&amp;#246;&amp;#246;basteta mootors&amp;#245;iduk, milles on lisaks juhikohale rohkem kui kaheksa istekohta ning mis kuulub M&lt;sub&gt;2&lt;/sub&gt; v&amp;#245;i M&lt;sub&gt;3&lt;/sub&gt; kategooriasse.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Troll</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduk"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin">
+    <rdfs:label xml:lang="et">Liin</rdfs:label>
+    <rdfs:comment xml:lang="et">Liin on s&amp;#245;iduplaanis etten&amp;#228;htud ajavahemikel ning korras avaliku teenindamise lepingu, liiniloa v&amp;#245;i tellijaga s&amp;#245;lmitud lepingu alusel vedaja &amp;#252;hiss&amp;#245;iduki l&amp;#228;bitav liikumistee.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Grupipilet">
+    <rdfs:label xml:lang="et">Grupipilet</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">Sõidupilet, millega saab korraga s&amp;#245;ita mitu inimest.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Veoots">
+    <rdfs:label xml:lang="et">Veoots</rdfs:label>
+    <rdfs:comment xml:lang="et">Veoots (e. v&amp;#228;ljumine, e. reis) on s&amp;#245;iduki liini &amp;#252;ks terviklik s&amp;#245;iduts&amp;#252;kkel 
+    algpunktist (peatusest) l&amp;#245;pp-punkti (peatusse) v&amp;#245;i l&amp;#245;pp-punktist 
+    (peatusest) algpunkti (peatusse).</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Euroopa_Uhenduse_tegevusluba">
+    <rdfs:comment xml:lang="et">Euroopa Parlamendi ja n&amp;#245;ukogu m&amp;#228;&amp;#228;ruse (E&amp;#220;) nr 1073/2009 artikli 4 kohane 
+dokument, mis t&amp;#245;endab selle omaja &amp;#245;igust korraldada tasu eest riigisisest ja rahvusvahelist liinivedu liiniloa v&amp;#245;i lepingu alusel ning riigisisest ja rahvusvahelist juhuvedu.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vedaja"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniluba"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="et">Euroopa &amp;#220;henduse tegevusluba</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Perioodipilet">
+    <rdfs:label xml:lang="et">Perioodipilet</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">Perioodipilet on s&amp;#245;idupileti liik, mis annab pileti omanikule &amp;#245;iguse s&amp;#245;ita kindlal liinil v&amp;#245;i liinidel piletiga m&amp;#228;&amp;#228;ratud aja jooksul piiramata seejuures s&amp;#245;idukordade arvu. (n&amp;#228;iteks tunnipilet, p&amp;#228;evapilet, n&amp;#228;dalapilet, kuupilet, 30 p&amp;#228;eva pilet jne)</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan">
+    <rdfs:label xml:lang="et">Sõiduplaan</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaan on dokument, millega m&amp;#228;&amp;#228;ratakse &amp;#252;hiss&amp;#245;iduki liikumistee, v&amp;#228;ljumisajad (kaugliinidel ka saabumisajad) ning peatused s&amp;#245;itjate sisenemiseks ja v&amp;#228;ljumiseks;</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Avaliku_teenindamise_leping">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liinivedu"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">Vedaja ja riigi v&amp;#245;i kohaliku omavalitsuse (ehk tellija) vahel s&amp;#245;lmitud 
+leping, millega vedajale pannakse kohustus osutada s&amp;#245;itjateveo teenust kindlas piirkonnas leping s&amp;#228;testatud liinidel, mahus ning tingimustel.</rdfs:comment>
+    <rdfs:label xml:lang="et">Avaliku teenindamise leping</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Algpeatus">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">Liini s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud veootsa ehk v&amp;#228;ljumise esimene peatus, mis 
+on ette n&amp;#228;htud s&amp;#245;itjate &amp;#252;hiss&amp;#245;idukisse sisenemiseks.</rdfs:comment>
+    <rdfs:label xml:lang="et">Algpeatus</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsooni_piiriuletustariif">
+    <rdfs:comment xml:lang="et">Tsoonipileti hinnale lisanduv tariif, mis tuleb maksta tsoonipiiri &amp;#252;letamise eest. Piiri&amp;#252;letustariif v&amp;#245;ib s&amp;#245;ltuda &amp;#252;letatavate tsoonipiiride arvust, selliselt et igas j&amp;#228;rgmises tsoonis s&amp;#245;itmine lisab piletihinnale v&amp;#228;ikema piiri&amp;#252;letustariifi.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tariif"/>
+    <rdfs:label xml:lang="et">Tsooni piiriületustariif</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus">
+    <rdfs:label xml:lang="et">Peatus</rdfs:label>
+    <rdfs:comment xml:lang="et">&amp;#220;histranspordi infos&amp;#252;steemi andmekogusesse kantud asukohas paiknev 
+    rajatis, mis on ette n&amp;#228;htud s&amp;#245;itjate &amp;#252;hiss&amp;#245;idukisse sisenemiseks ja/v&amp;#245;i 
+    sellest v&amp;#228;ljumiseks.
+Liiklusm&amp;#228;rgiga 541 t&amp;#228;histatud koht &amp;#252;histranspordi liinil. M&amp;#245;iste h&amp;#245;lmab ka 
+    liiklusm&amp;#228;rgiga t&amp;#228;histamata rongi peatusi/ jaamasid ja parvlaevaliikluse sadamaid.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Rahvusvaheline_kaugliin">
+    <rdfs:label xml:lang="et">Rahvusvaheline kaugliin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+    <rdfs:comment xml:lang="et">Rahvusvaheline kaugliin on teeliikluses teostatava regulaarse 
+s&amp;#245;itjateveoteenuse liik, mille puhul liini s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud peatused asuvad eri riikides.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Eriotstarbeline_liinivedu">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Eriotstarbeline liinivedu</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liinivedu"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">Eriotstarbelise liiniveona k&amp;#228;sitatakse j&amp;#228;rgmisi vedusid: &amp;#8211; t&amp;#246;&amp;#246;liste vedu 
+t&amp;#246;&amp;#246;le ja tagasi; &amp;#8211; &amp;#245;pilaste ja &amp;#252;li&amp;#245;pilaste vedu &amp;#245;ppeasutusse ja tagasi; &amp;#8211; s&amp;#245;jav&amp;#228;elaste ja nende perekondade vedu ajutisse paiknemiskohta ja tagasi. Eriotstarbelise liiniveo v&amp;#245;ib korraldada avaliku teenindamise 
+lepingu alusel v&amp;#245;i kommertsalusel.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnakujunduse_piirkond">
+    <rdfs:label xml:lang="et">Hinnakujunduse piirkond</rdfs:label>
+    <rdfs:comment xml:lang="et">Geograafiline piirkond, mille piires opereerivatel liinidel toimub piletihinna arvutamine &amp;#252;hesuguste hinnaparameetrite (valemi) alusel. Hinnakujunduse piirkonnas on &amp;#252;ldjuhul ketestatud &amp;#252;he s&amp;#245;idukilomeetri tariif v&amp;#245;i jaotatud hinnakujunduse piirkond tsoonideks, mille vahel ja mille siseselt s&amp;#245;itmine on hinnastatud &amp;#252;hesuguste hinnaparameetrite alusel. &amp;#220;ldjuhul kehtib hinnakujunduse piirkonna siseselt &amp;#252;hesugused hinnaparameetrid ainult avalikel liinidel.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Pileti_hind"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liinivedu">
+    <rdfs:label xml:lang="et">Liinivedu</rdfs:label>
+    <rdfs:comment xml:lang="et">Kindlal liikumisteel ning vastavalt s&amp;#245;iduplaanile osutatav tasuline s&amp;#245;itjateveo teenus, mis on oma iseloomult regulaarne ja stabiilne.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vedaja">
+    <rdfs:label xml:lang="et">Vedaja</rdfs:label>
+    <rdfs:comment xml:lang="et">&amp;#220;histransporditeenuse osutamiseks s&amp;#245;itjateveo tegevusluba omav ettev&amp;#245;tja</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lisaveoots">
+    <rdfs:label xml:lang="et">Lisaveoots</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaaniv&amp;#228;line, kuid Tellija soovil v&amp;#245;i koosk&amp;#245;lastatult Tellijaga teostatav veoots - ehk peatustest v&amp;#228;ljumise/saabumise ajad on eelnevalt teada.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnatabel">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Pileti_hind"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">Hinnatabel ehk hinnamaatriks on liini marsruudi peatuste vaheliste 
+s&amp;#245;idupileti hindade s&amp;#252;stemaatiliselt korrastatud kogum, kus &amp;#252;hel teljel on esitatud s&amp;#245;idu algpeatus ja teisel teljel s&amp;#245;idu sihtpeatus ning 
+telgede ristumiskohal on toodud nende peatuse vahelise s&amp;#245;itmiseks 
+kehtetstud piletihind.</rdfs:comment>
+    <rdfs:label xml:lang="et">Hinnatabel</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lennuk">
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduk"/>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="et">Lennuk</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#245;itjate vedamiseks ette n&amp;#228;htud &amp;#245;hus&amp;#245;iduk.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tramm">
+    <rdfs:label xml:lang="et">Tramm</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#245;itjate vedamiseks etten&amp;#228;htud elektrikontaktliiniga &amp;#252;hendatud r&amp;#246;&amp;#246;bastel 
+liikuv s&amp;#245;iduk, mida kasutatakse peamiselt linnaliinidel.</rdfs:comment>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduk"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidusoodustus">
+    <rdfs:label xml:lang="et">Sõidusoodustus</rdfs:label>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Pileti_hind"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="et">S&amp;#245;idusoodustus on teatava kategooria s&amp;#245;itjale seadusega v&amp;#245;i seaduse 
+alusel kehtestatud korras antud &amp;#245;igus: &amp;#160;1)&amp;#160;s&amp;#245;ita &amp;#252;hiss&amp;#245;idukis tasuta v&amp;#245;i osalise tasu eest; &amp;#160;2)&amp;#160;s&amp;#245;ita &amp;#252;hiss&amp;#245;idukis t&amp;#228;ishinna eest ning saada enne v&amp;#245;i hiljem osalist v&amp;#245;i t&amp;#228;ielikku rahalist h&amp;#252;vitist.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduk">
+    <rdfs:label xml:lang="et">Ühissõiduk</rdfs:label>
+    <rdfs:comment xml:lang="et">&amp;#220;histransporditeenuse osutamiseks etten&amp;#228;htud buss, tramm, trollibuss, reisirong, reisiparvlaev, v&amp;#228;ikelaev, &amp;#245;hus&amp;#245;iduk v&amp;#245;i muu mootori j&amp;#245;ul liikuv transpordivahend.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lopp-peatus">
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus"/>
+    <rdfs:label xml:lang="et">Lõpp-peatus</rdfs:label>
+    <rdfs:comment xml:lang="et">Liini s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud veootsa ehk v&amp;#228;ljumise viimane peatus, mis 
+on ette n&amp;#228;htud s&amp;#245;itjate &amp;#252;hiss&amp;#245;idukist v&amp;#228;ljumiseks.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniloa_andmise_taotlus">
+    <rdfs:label xml:lang="et">Liiniloa andmise taotlus</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Taotlus"/>
+    <rdfs:comment xml:lang="et">Taotlus kommertsliiniveo &amp;#245;igust t&amp;#245;endava dokumendi, liiniloa, 
+esmakordseks andmiseks v&amp;#245;i korduvaks andmiseks seoses varem antud dokumendi kehtetuks muuutumisega.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhistranspordiluba">
+    <rdfs:label xml:lang="et">Ühistranspordiluba</rdfs:label>
+    <rdfs:comment xml:lang="et">Tasulise s&amp;#245;itjateveo &amp;#245;igust t&amp;#245;endav dokument, mida anti vedajatele kuni 
+    31.12.2011 kehtinud &amp;#252;histranspordiseaduse&amp;#160;redaktsiooni&amp;#160;&amp;#167;31 kohaselt. 
+Vastvalt &amp;#252;histranspordiseaduse rakendus&amp;#228;stetele kehtib enne 2012. aasta 1. 
+    jaanuari vedajale kehtinud n&amp;#245;uete kohaselt antud &amp;#252;histranspordiluba, loal 
+    v&amp;#245;i s&amp;#245;idukikaardil m&amp;#228;rgitud ajani. 
+&amp;#220;histranspordiluba t&amp;#245;endab vedaja &amp;#245;igust: &amp;#160;1)&amp;#160;korraldada riigisisest juhuvedu; 
+    &amp;#160;2)&amp;#160;taotleda &amp;#245;igust korraldada liinivedu liiniloa v&amp;#245;i lepingu alusel; 
+    &amp;#160;3)&amp;#160;&amp;#160;taotleda &amp;#245;igust korraldada rahvusvahelist vedu.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vedaja"/>
+    <rdfs:subClassOf>
+      <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniluba"/>
+    </rdfs:subClassOf>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vahepeatus">
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud peatus, mis ei ole algpeatus ega l&amp;#245;pp-peatus ning 
+mis on ette n&amp;#228;htud nii s&amp;#245;itjate &amp;#252;hiss&amp;#245;idukisse sisenemiseks kui ka &amp;#252;hiss&amp;#245;idukist v&amp;#228;ljumiseks.</rdfs:comment>
+    <rdfs:label xml:lang="et">Vahepeatus</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Maakonnaliin">
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+    <rdfs:label xml:lang="et">Maakonnaliin</rdfs:label>
+    <rdfs:comment xml:lang="et">Maakonnaliin&amp;#160;on regulaarse s&amp;#245;itjateveoteenus liik, mille puhul liini 
+s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud peatused asuvad &amp;#252;he maakonna piires, kuid suures osas erinevate omavalitsus&amp;#252;ksuse territooriumil.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Avalik_liinivedu">
+    <rdfs:comment xml:lang="et">Liinivedu, mida teostatakse vedaja ja riigi v&amp;#245;i omavalitsus&amp;#252;ksuse vahel 
+s&amp;#245;lmitud lepingu ehk avaliku teenindamise lepingu (ATL) alusel. Avaliku liiniveo teostamise tingimused ja mahu m&amp;#228;&amp;#228;rab liiniveo tellija, kelleks 
+on riik v&amp;#245;i kohalik omavalitsus.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Avalik liinivedu</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liinivedu"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piirkonna_hinnaparameetrid">
+    <rdfs:comment xml:lang="et">Piletihinna arvutamiseks kasutatavad parameetrid, mille alusel on 
+    kalkuleeritakse &amp;#252;hes hinnakujunduse piirkonnas kehtiv s&amp;#245;idupileti hind 
+    vastvalt s&amp;#245;idu kaugusele v&amp;#245;i l&amp;#228;bitavate tsoonide arvule.
+Hinnakujunduse piirkonda iseloomustavate parameetrite v&amp;#228;&amp;#228;rtused l&amp;#228;bi ajaloo. 
+    Parameetriteks on piirkonna minimaalne ja maksimaalne piletihind, Maavanema poolt kehtestatud maksimumtariif, piirkonnas kasutatav tariifi liik jne.</rdfs:comment>
+    <rdfs:label xml:lang="et">Piirkonna hinnaparameetrid</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnakujunduse_piirkond"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet">
+    <rdfs:label xml:lang="et">Sõidupilet</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#252;idupilet on paberkandjal v&amp;#245;i muul kujul, sealhulgas elektroonilisel andmekandjal, dokument, mis t&amp;#245;endab s&amp;#245;itja s&amp;#245;idu&amp;#245;igust.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Korrapilet">
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+    <rdfs:label xml:lang="et">Korrapilet</rdfs:label>
+    <rdfs:comment xml:lang="et">Korrapilet on s&amp;#245;idupileti liik, mis annab pileti omanikule &amp;#245;iguse s&amp;#245;ita kindlal liinil v&amp;#245;i liinidel piletiga m&amp;#228;&amp;#228;ratud arvu kordi. (N&amp;#228;iteks viie, k&amp;#252;mne jne s&amp;#245;idukorra pilet)</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Linnaliin">
+    <rdfs:comment xml:lang="et">Linnaliin&amp;#160;on regulaarse s&amp;#245;itjateveoteenus liik (sh. s&amp;#245;itjatevedu trolli 
+ja trammiga), mille puhul liini s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud peatused asuvad peamiselt &amp;#252;he linna haldusterritooriumil ning mis on kujundatud l&amp;#228;htudes vastava linna elanike liikumisvajadusest.</rdfs:comment>
+    <rdfs:label xml:lang="et">Linnaliin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vallaliin">
+    <rdfs:label xml:lang="et">Vallaliin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+    <rdfs:comment xml:lang="et">Vallaliin&amp;#160;on regulaarse s&amp;#245;itjateveoteenuse liik, mille puhul liini 
+s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud peatused asuvad peamiselt &amp;#252;he valla haldusterritooriumil ning mis on kujundatud l&amp;#228;htudes vastava valla 
+elanike liikumisvajadusest.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Edasi-tagasi_pilet">
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Korrapilet"/>
+    <rdfs:label xml:lang="et">Edasi-tagasi pilet</rdfs:label>
+    <rdfs:comment xml:lang="et">Samade peatuste v&amp;#245;i tsoonide vahel (erinevates suundades) kehtiv mitme (2) korra pilet</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaani_kinnitamise_taotlus">
+    <rdfs:label xml:lang="et">Sõiduplaani kinnitamise taotlus</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Taotlus"/>
+    <rdfs:comment xml:lang="et">Taotlus kehtiva liiniloa alusel teenindatava liini s&amp;#245;iduplaani 
+muutmiseks l&amp;#228;bi uue s&amp;#245;iduplaani kinnitamise. Esmakordselt kinnitatakse liiniloa alusel teenindatava liini s&amp;#245;iduplaan liiniloa andmisel.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Pileti_hind">
+    <rdfs:comment xml:lang="et">S&amp;#245;idu&amp;#245;iguse lunastamise eest makstav rahalises v&amp;#228;&amp;#228;ringus tasu.</rdfs:comment>
+    <rdfs:label xml:lang="et">Pileti hind</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsooni_baastariif">
+    <rdfs:comment xml:lang="et">Tsoonipileti hinda m&amp;#228;&amp;#228;rav baashind ehk miinimumhind, mille eest saab 
+s&amp;#245;ita &amp;#252;he tsooni piires.</rdfs:comment>
+    <rdfs:label xml:lang="et">Tsooni baastariif</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tariif"/>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruut">
+    <rdfs:label xml:lang="et">Marsruut</rdfs:label>
+    <rdfs:comment xml:lang="et">Marsruut on liini teenindava &amp;#252;hiss&amp;#245;iduki liikumistee kirjeldus tema 
+liikumisteel olevate peatuste ning nende vahekauguste alusel.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniluba">
+    <rdfs:comment xml:lang="et">Liiniluba t&amp;#245;endab vedaja &amp;#245;igust korraldada kommertsliinivedu.</rdfs:comment>
+    <rdfs:label xml:lang="et">Liiniluba</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Eriotstarbelise_kommertsliiniveo_leping">
+    <rdfs:label xml:lang="et">Eriotstarbelise kommertsliiniveo leping</rdfs:label>
+    <rdfs:comment xml:lang="et">Vedaja ja tellija s&amp;#245;lmitud eriotstarbelise kommertsliiniveo leping t&amp;#245;endab vedaja &amp;#245;igust korraldada eriotstarbelist kommertsliinivedu &amp;#252;hel v&amp;#245;i mitmel 
+    liinil.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liinivedu"/>
+  </rdfs:Class>
+  <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piletimuugisusteem">
+    <rdfs:label xml:lang="et">Piletimüügisüsteem</rdfs:label>
+    <rdfs:comment xml:lang="et">Tehnikate kogum s&amp;#245;idutasu kogumiseks ja juurdep&amp;#228;&amp;#228;su kontrollimiseks.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduki_mahutavus">
+    <rdfs:comment xml:lang="et">Maksimaalne s&amp;#245;itjate arv, mille vedamiseks on &amp;#252;hiss&amp;#245;iduk tootja poolt 
+konstrueeritud ja ette n&amp;#228;htud.</rdfs:comment>
+    <rdfs:label xml:lang="et">Ühissõiduki mahutavus</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Jalgitav_soiduk">
+    <rdfs:label xml:lang="et">Jälgitav sõiduk</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#245;iduk, mis on varustatud reaalajas andmeid edastava j&amp;#228;lgimisseadmega ning mille kohta kajastatakse registris tema staatust kirjeldavat infot.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidugraafik">
+    <rdfs:comment xml:lang="et">Liinile planeeritud k&amp;#245;ikide s&amp;#245;idukite (j&amp;#228;rjekordade) intervalli ning ekspluatatsiooni- ja nulls&amp;#245;iduaega arvestav t&amp;#246;&amp;#246;re&amp;#382;iim.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+    <rdfs:label xml:lang="et">Sõidugraafik</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnatsoon">
+    <rdfs:comment xml:lang="et">&amp;#220;he hinnakujunduse piirkonna sisene ala, milles paiknevate peatuste vahelisel s&amp;#245;itmisel kehtib &amp;#252;hesugune piletihind. Samuti on defineeritud erinevate tsoonide vahelise s&amp;#245;itmise piletihind. Tsoonide defineerimise eesm&amp;#228;rk on v&amp;#228;hendada piletihinna arvutamisel esinevate erinevate alg- ja l&amp;#245;pppeatuste kombinatsioonide arvu.</rdfs:comment>
+    <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piirkonna_hinnaparameetrid"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnakujunduse_piirkond"/>
+    <rdfs:label xml:lang="et">Hinnatsoon</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Esitatavad_dokumendid">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaani_kinnitamise_taotlus"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniloa_kehtetuks_tunnistamise_taotlus"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniloa_andmise_taotlus"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniluba"/>
+    <rdfs:comment xml:lang="et">&amp;#220;histranspordiseaduse paragrahv 39 l&amp;#245;ikes 4 s&amp;#228;testatud dokumendid, mis vedaja peab liiniloa andjale koos liiniloa andmise taotluse v&amp;#245;i s&amp;#245;iduplaani kinnitamise taotlusega esitama.</rdfs:comment>
+    <rdfs:label xml:lang="et">Esitatavad dokumendid</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tegevusluba">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vedaja"/>
+    <rdfs:comment xml:lang="et">Tasulise s&amp;#245;itjateveo &amp;#245;igust t&amp;#245;endav dokument, mis tuleneb 
+&amp;#252;histranspordiseaduse&amp;#160;&amp;#167; 31&amp;#160;ja Euroopa Parlamendi ja n&amp;#245;ukogu m&amp;#228;&amp;#228;ruse (E&amp;#220;) nr 1073/2009 artiklist 4.</rdfs:comment>
+    <rdfs:label xml:lang="et">Tegevusluba</rdfs:label>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhistranspordiluba"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Euroopa_Uhenduse_tegevusluba"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruudiloik">
+    <rdfs:label xml:lang="et">Marsruudilõik</rdfs:label>
+    <rdfs:comment xml:lang="et">Liini marsruudi &amp;#252;he segmendi ehk l&amp;#245;igu kirjeldus mis on &amp;#220;histranspordi 
+infos&amp;#252;steemis esitatud marsruudil paikneva kahe j&amp;#228;rjestikuse peatuse ning nende vahelise liikumistee ruumikuju kirjeldusena.</rdfs:comment>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Algpeatus"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lopp-peatus"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Noudepeatus"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vahepeatus"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruut"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Kaigusoleku_erijuhtum">
+    <rdfs:comment xml:lang="et">Teatud s&amp;#252;ndmuse v&amp;#245;i t&amp;#228;htp&amp;#228;evaga seotud kuup&amp;#228;ev, mil liini teenindatakse 
+    s&amp;#245;iduplaanis toodud p&amp;#245;hireeglist erinevalt. Paljude liinide k&amp;#228;igusoleku 
+    erijuhtumid kehtivad n&amp;#228;iteks riigip&amp;#252;hadel, mil liini kas erakorraliselt ei 
+    teenindata v&amp;#245;i teenindatakse erakorraliselt lisaks s&amp;#245;iduplaanis toodud 
+    kehtivuse p&amp;#228;evadele. Samuti v&amp;#245;ib olla defineeritud, et k&amp;#228;igusoleku 
+    erijuhtumi p&amp;#228;eval teenindatakse liini selliseid veootsasid (e. v&amp;#228;ljumisi) 
+    mis tavaliselt on k&amp;#228;igus p&amp;#252;hap&amp;#228;evadel.</rdfs:comment>
+    <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Erijuht"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label xml:lang="et">Käigusoleku erijuhtum</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniveo_liik">
+    <rdfs:label xml:lang="et">Liiniveo liik</rdfs:label>
+    <rdfs:comment xml:lang="et">Liiniveo liigitus vastvalt veo teostamise &amp;#245;iguslikule alusele ning eesm&amp;#228;rgile.</rdfs:comment>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Avalik_liinivedu"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Eriotstarbeline_liinivedu"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Kommertsliinivedu"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liinivedu"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniveo_alus">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liinivedu"/>
+    <rdfs:label xml:lang="et">Liiniveo alus</rdfs:label>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Avaliku_teenindamise_leping"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Eriotstarbelise_kommertsliiniveo_leping"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liiniluba"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:comment xml:lang="et">&amp;#220;histranspordiseaduses nimetatud dokument, mis t&amp;#245;endab vedaja &amp;#245;igust 
+teostada liinivedu kindlal liinil.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Pileti_soiduoiguse_liik">
+    <rdfs:comment xml:lang="et">S&amp;#245;idupileti liikide klassifikatsioon vastvalt s&amp;#245;idukordade arvule, v&amp;#245;i 
+s&amp;#245;itude teostamise perioodile, mille jooksul on pileti soetanud s&amp;#245;itjal &amp;#245;igus &amp;#252;histranspordivahendiga &amp;#252;hel v&amp;#245;i mitmel erineval liinil s&amp;#245;ita</rdfs:comment>
+    <rdfs:label xml:lang="et">Pileti sõiduõiguse liik</rdfs:label>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnatabel"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Korrapilet"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Perioodipilet"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsoonipilet"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uksikpilet"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnatabeli_kehtivus">
+    <rdfs:label xml:lang="et">Hinnatabeli kehtivus</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnatabel"/>
+    <rdfs:comment xml:lang="et">Hinnatabelina esitatud s&amp;#245;idupileti hindade kehtivuse algus- ja l&amp;#245;ppkuup&amp;#228;ev. Juhul kui hinnatabelina esitatud s&amp;#245;idupileti hinnad on kehtestatud t&amp;#228;htajatult v&amp;#245;ib olla hinnatabeli kehtivuse l&amp;#245;pu kuup&amp;#228;ev m&amp;#228;&amp;#228;ramata.</rdfs:comment>
+    <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Transpordi_liik">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Buss"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tramm"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lennuk"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Troll"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Parvlaev"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Rong"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:label xml:lang="et">Transpordi liik</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduk"/>
+    <rdfs:comment xml:lang="et">Ühistranspordi teenuse liigitus vastvalt kasutatava ühissõiduki tüübile (buss, tramm, troll, parvlaev, rong, lennuk).</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Umardamise_reegel">
+    <rdfs:comment xml:lang="et">Matemaatiline reegel, mis kirjeldab kuidas peatuste vahelise kauguse ja 
+s&amp;#245;idutariifi alusel arvutatud t&amp;#228;psed s&amp;#245;idupileti hinnad v&amp;#228;&amp;#228;rtused 
+hinnatabeli koostamisel &amp;#252;mardatakse.</rdfs:comment>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsooni_piiriuletustariif"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsooni_baastariif"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:label xml:lang="et">Ümardamise reegel</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnatabel"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liini_liik">
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Kaugliin"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Linnaliin"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Maakonnaliin"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Rahvusvaheline_kaugliin"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vallaliin"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+    <rdfs:label xml:lang="et">Liini liik</rdfs:label>
+    <rdfs:comment xml:lang="et">Liinide klassifikatsioon vastvalt liini s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud peatuste paiknemisele &amp;#252;hes v&amp;#245;i eri riigis v&amp;#245;i haldusterritoriaalses &amp;#252;ksuses.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsoonitariif">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tariif"/>
+    <rdfs:comment xml:lang="et">Piletihinna arvutamiseks kasutatav tariif, mille alusel m&amp;#228;&amp;#228;ratakse s&amp;#245;idu hind mitut &amp;#252;hiss&amp;#245;iduki peatust h&amp;#245;lmava tsooni piires v&amp;#245;i mitme erineva tsooni vahel.</rdfs:comment>
+    <rdfs:label xml:lang="et">Tsoonitariif</rdfs:label>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsooni_baastariif"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tsooni_piiriuletustariif"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Transiitriik">
+    <rdfs:comment xml:lang="et">Riik, mida rahvusvahelise kaugliini liikumistee l&amp;#228;bib, kuid, mis ei ole 
+l&amp;#228;hteriik ega sihtriik.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Rahvusvaheline_kaugliin"/>
+    <rdfs:label xml:lang="et">Transiitriik</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soitjakohtade_arv">
+    <rdfs:label xml:lang="et">Sõitjakohtade arv</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduki_mahutavus"/>
+    <rdfs:comment xml:lang="et">&amp;#220;hiss&amp;#245;iduki mahutavuse s&amp;#252;non&amp;#252;&amp;#252;m. S&amp;#245;itjate vedamiseks ette n&amp;#228;htud istekohtade ja seisukohtade summa.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liini_number">
+    <rdfs:label xml:lang="et">Liini number</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Veoots"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lisaveoots"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:comment xml:lang="et">Liini identifitseerimise kasutatav l&amp;#252;hike numbritest (ja vajadusel t&amp;#228;htem&amp;#228;rkidest) koosnev t&amp;#228;his.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Valjumise_aeg">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label xml:lang="et">Väljumise aeg</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus"/>
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud kellaeg, millal &amp;#252;hiss&amp;#245;iduk kindlaksm&amp;#228;&amp;#228;ratud peatusest s&amp;#245;itu alustab.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduki_staatus">
+    <rdfs:comment xml:lang="et">J&amp;#228;lgitava s&amp;#245;iduki seisund.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Jalgitav_soiduk"/>
+    <rdfs:label xml:lang="et">Sõiduki staatus</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Ajaloik">
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaani kirjeldamiseks kasutatav &amp;#220;histranspordi infos&amp;#252;steemi andmeobjekt, mis seob marsruudil&amp;#245;igu ajam&amp;#245;&amp;#245;tmega. Ajal&amp;#245;iguga defineeritakse marsruudil&amp;#245;igu l&amp;#228;bimise alustamise aeg ehk marsruudil&amp;#245;igu alg-punktist (peatusest) v&amp;#228;ljumise aeg ja marsruudil&amp;#245;igu l&amp;#228;bimise l&amp;#245;pu aeg ehk marsruudil&amp;#245;iku l&amp;#245;pp-punkti (peatusesse) saabumise aeg.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:label xml:lang="et">Ajalõik</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruut"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Teenindav_osapool">
+    <rdfs:label xml:lang="et">Teenindav osapool</rdfs:label>
+    <rdfs:comment xml:lang="et">Vastvalt Euroopa Paralamendi ja n&amp;#245;ukogu m&amp;#228;&amp;#228;rusle (E&amp;#220;) nr 1073/2009 
+artiklile 6 v&amp;#245;ivad vedajad rahvusvahelist kaugliini teenindada &amp;#252;hiselt v&amp;#245;i teostada l&amp;#228;hteriigi p&amp;#228;deva asutuse n&amp;#245;usolekul vedusid allt&amp;#246;&amp;#246;v&amp;#245;tja vahendusel. Rahvusvahelist kaugliinivedu &amp;#252;hiselt teostavad vedajad v&amp;#245;i allhankijana teostavad vedajad loetakse rahvusvahelist kaugliini teenindavateks osapoolteks ning k&amp;#245;ikide teenindavate osapoolte nimed m&amp;#228;rgitakse liini teenindamise &amp;#245;igust t&amp;#245;endavale liiniloale. 
+Rahvusvahelise kaugliiniveo teenindamist juhtivale ettev&amp;#245;ttele antakse liiniloa originaal ning teenindavatele osapooltele liiniloa koopiad.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhistranspordiluba"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Euroopa_Uhenduse_tegevusluba"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lepingu_kehtivus">
+    <rdfs:label xml:lang="et">Lepingu kehtivus</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="et">Avaliku teenindamise lepingu alusel veo teostamise alustamise ja 
+veoteenuse osutamise l&amp;#245;petamise vahele j&amp;#228;&amp;#228;v ajaperiood, mil lepingu alusel s&amp;#245;itjateveo&amp;#160;teenust osutatakse.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Avaliku_teenindamise_leping"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Sihtriik">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Rahvusvaheline_kaugliin"/>
+    <rdfs:comment xml:lang="et">Riik, milles paikneb rahvusvahelise kaugliini s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud ja s&amp;#245;itjate v&amp;#228;ljumiseks ette n&amp;#228;htud viimane peatus ehk l&amp;#245;pp-peatus.</rdfs:comment>
+    <rdfs:label xml:lang="et">Sihtriik</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lahteriik">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Rahvusvaheline_kaugliin"/>
+    <rdfs:label xml:lang="et">Lähteriik</rdfs:label>
+    <rdfs:comment xml:lang="et">Riik, milles paikneb rahvusvahelise kaugliini s&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud ja s&amp;#245;itjate sisenemiseks ette n&amp;#228;htud esimene peatus ehk alg-peatus.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnaparameetri_kehtivus">
+    <rdfs:comment xml:lang="et">Ajaliselt m&amp;#228;&amp;#228;ratud periood, mille jooksul piletihinna arvutamiseks kasutatavad parameetrid kehtivad.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piirkonna_hinnaparameetrid"/>
+    <rdfs:label xml:lang="et">Hinnaparameetri kehtivus</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Saabumise_aeg">
+    <rdfs:label xml:lang="et">Saabumise aeg</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaaniga m&amp;#228;&amp;#228;ratud kellaeg, millal &amp;#252;hiss&amp;#245;iduk kindlaksm&amp;#228;&amp;#228;ratud peatusesse j&amp;#245;uab.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Taotluse_liik">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="et">Vedaja poolt &amp;#252;histranspordiseaduse paragrahv 34 l&amp;#245;ikes 6 nimetatud 
+asutusele esitatud taotluste liigitus vastavalt taotletavale eesm&amp;#228;rgile.</rdfs:comment>
+    <rdfs:label xml:lang="et">Taotluse liik</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Taotlus"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soodustuse_kehtivus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidusoodustus"/>
+    <rdfs:comment xml:lang="et">S&amp;#245;idusoodustuse kehtimise algus- ja l&amp;#245;ppkuup&amp;#228;ev. Juhul kui s&amp;#245;idusoodustus on kehtestatud t&amp;#228;htajatult v&amp;#245;ib olla soodustuse kehtivuse l&amp;#245;pu kuup&amp;#228;ev m&amp;#228;&amp;#228;ramata.</rdfs:comment>
+    <rdfs:label xml:lang="et">Soodustuse kehtivus</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Suund">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="et">Suund on &amp;#220;histranspordi infos&amp;#252;steemi andmeobjekt, mis kirjeldab &amp;#252;he 
+liini erinevate veootsade unikaalsed liikumisteed ning s&amp;#245;itjate sisenemiseks ja v&amp;#228;ljumiseks ette n&amp;#228;htud peatused. Suund on andmeobjekti &amp;quot;marsruut&amp;quot; alam andmeobjekt.</rdfs:comment>
+    <rdfs:label xml:lang="et">Suund</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruut"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liini_nimetus">
+    <rdfs:comment xml:lang="et">Liini identifitseerimiseks kasutatav s&amp;#245;naline tunnus, milles sisaldub &amp;#252;ldjuhul liini algpeatuse v&amp;#245;i sellele vastva asula nimetus, liini l&amp;#245;pp-peatuse v&amp;#245;i sellele vastva asula nimetus ning olulisemate vahepeatuste v&amp;#245;i neile vastvate asulate nimetused.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lisaveoots"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Veoots"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:label xml:lang="et">Liini nimetus</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Maksimumhind">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piirkonna_hinnaparameetrid"/>
+    <rdfs:comment xml:lang="et">S&amp;#245;idupileti k&amp;#245;rgeim hind, mis kehtib juhul, kui s&amp;#245;idu kauguse ja kaugustariifi alusel arvutatuna kujuneks s&amp;#245;idupileti samav&amp;#228;&amp;#228;rseks v&amp;#245;i k&amp;#245;rgemaks kui maksimumhind.</rdfs:comment>
+    <rdfs:label xml:lang="et">Maksimumhind</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Vahepeatuse_labimise_aeg">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaanis toodud kellaaeg, mis on m&amp;#228;&amp;#228;rab nii vahepeatusesse saabumise 
+    kui ka sellest v&amp;#228;ljumise aja. Vahepeatuse l&amp;#228;bimise aja s&amp;#245;iduplaanis 
+    esitamisel l&amp;#228;htutakse eeldusest, et s&amp;#245;itjate sisenemiseks ja v&amp;#228;ljumiseks 
+    kuluv aeg on piisavalt l&amp;#252;hike, mist&amp;#245;ttu ei ole vajalik esitada eraldi 
+    vahepeatusesse saabumise ja v&amp;#228;ljumise aegasid.</rdfs:comment>
+    <rdfs:label xml:lang="et">Vahepeatuse läbimise aeg</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaani_kehtivus">
+    <rdfs:label xml:lang="et">S&amp;#245;iduplaani kehtivus</rdfs:label>
+    <rdfs:comment xml:lang="et">Kuup&amp;#228;ev, millest alates s&amp;#245;iduplaan kehtib. S&amp;#245;iduplaani kehtivuse l&amp;#245;pu m&amp;#228;&amp;#228;rab liini teenindamise &amp;#245;igust t&amp;#245;endava dokumendi (liiniluba, avaliku teenindamise leping v&amp;#245;i eriotstarbelise kommertsliiveo leping) kehtivuse l&amp;#245;pu kuup&amp;#228;ev. Juhul kui samale liinile kinnitatakse enne liini teenindamise &amp;#245;igust t&amp;#245;endava dokumendi kehtivuse l&amp;#245;ppu uus s&amp;#245;iduplaan, siis kehtib varem kinnitatud s&amp;#245;iduplaan hiljem antud s&amp;#245;iduplaani kehtivuse alguseni.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Kaugustariif">
+    <rdfs:label xml:lang="et">Kaugustariif</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:comment xml:lang="et">Piletihinna arvutamiseks kasutatav tariif, millega on m&amp;#228;&amp;#228;ratud &amp;#252;he 
+kilomeetri s&amp;#245;iduhind.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Tariif"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soodustuse_piirkond">
+    <rdfs:label xml:lang="et">Soodustuse piirkond</rdfs:label>
+    <rdfs:comment xml:lang="et">Haldus&amp;#252;ksuste alusel territoriaalselt piiritletud ala, mille piires 
+teenindatavate avalikel liinidel vaadeldav soodustus kehtib. N&amp;#228;iteks v&amp;#245;ib vastvalt &amp;#252;histranspordiseaduse paragrahvile 29 kehtestada s&amp;#245;idusoodustuse &amp;#252;he maakonna piires teenindatavatele avalikele bussiliinidele.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidusoodustus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruudi_geoobjekt">
+    <rdfs:comment xml:lang="et">Marsruudil&amp;#245;igul asuv objekt, milleks v&amp;#245;ib olla &amp;#252;hiss&amp;#245;iduki peatus, 
+ristmik v&amp;#245;i seos tee/t&amp;#228;nava ning asustus&amp;#252;ksusega.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruut"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="et">Marsruudi geoobjekt</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Seisukohtade_arv">
+    <rdfs:comment xml:lang="et">Maksimaalne seisvate s&amp;#245;itjate arv, keda on lubatud lisaks istuvatele s&amp;#245;itjatele &amp;#252;hiss&amp;#245;idukis vedada.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:label xml:lang="et">Seisukohtade arv</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduki_mahutavus"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soodustuse_maar">
+    <rdfs:comment xml:lang="et">V&amp;#228;&amp;#228;rtus, mille v&amp;#245;rra madala tasu eest on soodustatud isikul &amp;#245;igus s&amp;#245;ita &amp;#252;hiss&amp;#245;idukis. Soodustuse m&amp;#228;&amp;#228;r v&amp;#245;ib olla v&amp;#228;ljendatud protsentides s&amp;#245;idupileti t&amp;#228;ishinnast v&amp;#245;i kindla arvv&amp;#228;&amp;#228;rtusena, mis lahutatakse t&amp;#228;ispileti hinnast maha.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidusoodustus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="et">Soodustuse määr</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soodustuse_andja">
+    <rdfs:label xml:lang="et">Soodustuse andja</rdfs:label>
+    <rdfs:comment xml:lang="et">Asutus v&amp;#245;i isik, kes &amp;#252;histranspordiseaduse paragrahvides 29-30 
+s&amp;#228;testatud korras kehtestatab&amp;#160;teatud s&amp;#245;itjate grupile soodustuse saamise &amp;#245;iguse.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidusoodustus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Kaigusoleku_paev">
+    <rdfs:label xml:lang="et">Käigusoleku päev</rdfs:label>
+    <rdfs:comment xml:lang="et">N&amp;#228;dalap&amp;#228;ev, mil liini s&amp;#245;iduplaanis esitatud veootsasid ehk v&amp;#228;ljumisi 
+teenindatakse.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piletimuugi_kolmas_osapool">
+    <rdfs:comment xml:lang="et">S&amp;#245;idupileti m&amp;#252;&amp;#252;giga tegelev osapool kes ei osuta ise &amp;#252;histransporditeenust 
+    vaid vahendab s&amp;#245;itjale vedaja poolt osutatava veoteenuse s&amp;#245;idupileteid.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+    <rdfs:label xml:lang="et">Piletimüügi kolmas osapool</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piletikandja">
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Sõidukaart</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >Paberpilet</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:comment xml:lang="et">F&amp;#252;&amp;#252;siline ese, mis sisaldab kas tr&amp;#252;kitud kujul v&amp;#245;i elektroonilisel kujul salvestatud andmetena infot s&amp;#245;itja s&amp;#245;idu&amp;#245;iguse kohta. Levinumad piletikandjad on paber, ja elektrooniliselt loetav kiipkaart.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidupilet"/>
+    <rdfs:label xml:lang="et">Piletikandja</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruudi_pikkus">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:label xml:lang="et">Marsruudi pikkus</rdfs:label>
+    <rdfs:comment xml:lang="et">Liini liikumistee pikkus</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Marsruut"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lepingu_maht">
+    <rdfs:label xml:lang="et">Lepingu maht</rdfs:label>
+    <rdfs:comment xml:lang="et">Lepingu maht avaliku teenindamise lepingu alusel selle kehtivuse jooksul 
+teostatav summarne liinil&amp;#228;bis&amp;#245;it.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Avaliku_teenindamise_leping"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soodustatud_isik">
+    <rdfs:comment xml:lang="et">Isik kellel on teatus sotsiaalsesse, demograafilisse vms gruppi kuuluvuse t&amp;#245;ttu &amp;#245;igus soodustust saada.</rdfs:comment>
+    <rdfs:label xml:lang="et">Soodustatud isik</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidusoodustus"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Miinimumhind">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piirkonna_hinnaparameetrid"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="et">Miinimumhind</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#245;idupileti madalaim hind, mis kehtib juhul, kui s&amp;#245;idu kauguse ja kaugustariifi alusel arvutatuna kujuneks s&amp;#245;idupileti hind v&amp;#228;iksemaks kui miinimumhind. Tsoonitariifiga hinnakujundus korral vastab miinimumhinnale tsooni baastariif.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Pileti_liik">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Hinnatabel"/>
+    <rdfs:label xml:lang="et">Pileti liik</rdfs:label>
+    <rdfs:comment xml:lang="et">Pileti liik, mille hinda s&amp;#245;idupileti hinnatabelis esitatud v&amp;#228;&amp;#228;rtused kirjeldavad.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Jarjekord">
+    <rdfs:comment xml:lang="et">J&amp;#228;rjekord on liini erinevate veootsade ehk v&amp;#228;ljumiste teenindamise ajalise j&amp;#228;rgnevuse kirjeldus. J&amp;#228;rjekord vastab &amp;#252;he s&amp;#245;iduki s&amp;#245;idugraafikuj&amp;#228;rgsele p&amp;#228;evasele t&amp;#246;&amp;#246;korraldusele liinil. Erandkorras v&amp;#245;ib &amp;#252;ks j&amp;#228;rjekord h&amp;#245;lmata erinevate liinide ajaliselt teineteisele j&amp;#228;rgnevate veootsasid.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Liin"/>
+          <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidugraafik"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="et">Järjekord</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Baashind">
+    <rdfs:label xml:lang="et">Baashind</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Pileti_hind"/>
+    <rdfs:comment xml:lang="et">Kaugus-  v&amp;#245;i tsoonitariifi alusel arvutatud &amp;#252;ksikpileti t&amp;#228;ishind (ilma soodustuseta). Hind koos k&amp;#228;ibemaksuga. Maakonnaliinidel on baashinnaks &amp;#252;ldjuhul &amp;#252;hiss&amp;#245;idukist ostetud pilet.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Istekohtade_arv">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:label xml:lang="et">Istekohtade arv</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Uhissoiduki_mahutavus"/>
+    <rdfs:comment xml:lang="et">S&amp;#245;itjate vedamiseks ette n&amp;#228;htud istekohtade arv &amp;#252;hiss&amp;#245;idukis.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Muugipunkt">
+    <rdfs:comment xml:lang="et">Piletite m&amp;#252;&amp;#252;giks kasutatav kindlal aadressil asuv kiosk, pood, postkontor jmt v&amp;#245;i iseteenindamisega piletim&amp;#252;&amp;#252;giautomaat.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piletimuugisusteem"/>
+    <rdfs:label xml:lang="et">Müügipunkt</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Kaigusoleku_perioodilisus">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soiduplaan"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="et">Käigusoleku perioodilisus</rdfs:label>
+    <rdfs:comment xml:lang="et">K&amp;#228;igusoleku perioodilisus m&amp;#228;&amp;#228;rab liini s&amp;#245;iduplaanis esitatud veootsade 
+ehk v&amp;#228;ljumiste teenindamise teatud kindal ajavahemikul aasta siseselt. 
+N&amp;#228;iteks v&amp;#245;ib k&amp;#228;igusoleku perioodilisus olla kirjeldatud kujul &amp;quot;Liin on k&amp;#228;igus perioodil 01.06 - 31.08&amp;quot;.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Muugikanal">
+    <rdfs:comment xml:lang="et">&amp;#220;hele juriidilisele isikule kuuluv ja tehniliselt identset lahendust omav m&amp;#252;&amp;#252;gipunktide grupp.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="et">Müügikanal</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Piletimuugisusteem"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soodustuse_nimetus">
+    <rdfs:comment xml:lang="et">Tekstiline tunnus, mida kasutatakse erinevate s&amp;#245;idusoodutuste 
+eristamiseks ning mis kirjeldab l&amp;#252;hidalt, millisesse s&amp;#245;itjate gruppi kuuluvatel soodustatud isikutel on &amp;#245;igus soodustust saada.</rdfs:comment>
+    <rdfs:label xml:lang="et">Soodustuse nimetus</rdfs:label>
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Soidusoodustus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Seisuaeg">
+    <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Peatus"/>
+    <rdfs:label xml:lang="et">Seisuaeg</rdfs:label>
+    <rdfs:comment xml:lang="et">S&amp;#245;iduplaanis toodud vahepeatusesse saabumise aja ja vahepeatusest 
+v&amp;#228;ljumise aja vahe, mis on ette n&amp;#228;htud s&amp;#245;itjate sisenemiseks, s&amp;#245;itjate v&amp;#228;ljumiseks, s&amp;#245;idupiletite m&amp;#252;&amp;#252;miseks ja muudeks toiminguteks, milleks 
+kokku kulub nii palju aega, et p&amp;#245;hjendatud on saabumise aja ja v&amp;#228;ljumise 
+aja eraldi v&amp;#228;lja toomine s&amp;#245;iduplaanis.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Arvutatud_staatus">
+    <rdfs:comment xml:lang="et">Veootsa staatus, mis on arvutatud s&amp;#245;iduki tegeliku asukoha ning s&amp;#245;iduplaani v&amp;#245;rdlemisel.</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Lisaveoots"/>
+          <rdfs:Class rdf:about="https://riha.eesti.ee/riha/onto/transport.yhistransport/2013/r1/Veoots"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:label xml:lang="et">Arvutatud staatus</rdfs:label>
+  </owl:DatatypeProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4.5, Build 608)  http://protege.stanford.edu -->
