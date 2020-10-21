@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/"
+     xml:base="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1">
+        <rdfs:label xml:lang="et">Geomeetriaontoloogia</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiobjektide üldiseid geomeetrilisi omadusi kirjeldav ontoloogia.</rdfs:comment>
+        <owl:versionInfo xml:lang="et">Versioon 0.2 (25.05.2012).</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pinna_sisepiir -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pinna_sisepiir">
+        <rdfs:label xml:lang="et">Pinna sisepiir</rdfs:label>
+        <rdfs:comment xml:lang="et">Pinna sisepiiri defineeriv ringpiir.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pind"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ringpiir"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pinna_valispiir -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pinna_valispiir">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Pinna välispiir</rdfs:label>
+        <rdfs:comment xml:lang="et">Pindobjekti välisserva defineeriv ringpiir.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pind"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ringpiir"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Joon -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Joon">
+        <rdfs:label xml:lang="et">Joon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ruumikuju"/>
+        <rdfs:comment xml:lang="et">Joon on ruumiobjekt, mis annab edasi üht mõõdet, koosneb järjestatud punktide jadast.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Orienteerimata_joon -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Orienteerimata_joon">
+        <rdfs:label xml:lang="et">Orienteerimata joon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Joon"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Orienteeritud_joon"/>
+        <rdfs:comment xml:lang="et">Joon, mille suund pole reaalsuse kirjeldamiseks oluline.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Orienteeritud_joon -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Orienteeritud_joon">
+        <rdfs:label xml:lang="et">Orienteeritud joon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Joon"/>
+        <rdfs:comment xml:lang="et">Joon, mille suund on reaalsuse kirjeldamisel oluline.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pind -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pind">
+        <rdfs:label xml:lang="et">Pindobjekt (polügoon, ala)</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ruumikuju"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pinna_sisepiir"/>
+                <owl:onClass rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ringpiir"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pinna_valispiir"/>
+                <owl:onClass rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ringpiir"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="et">Pind on kahemõõtmeline geomeetriline objekt (polügoon), mis võib sisaldada auke.Pinna sise- ja välispiirideks on ringpiirid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Punkt -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Punkt">
+        <rdfs:label xml:lang="et">Punkt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ruumikuju"/>
+        <rdfs:comment xml:lang="et">Objekt, mis annab edasi asukohainfot, kuid mitte dimensioone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ringpiir -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ringpiir">
+        <rdfs:label xml:lang="et">Ringpiir</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Joon"/>
+        <rdfs:comment xml:lang="et">Joon, mis ei lõiku iseendaga ja mille alg- ja lõpp-punkt asuvad samas kohas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ruumikuju -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Ruumikuju">
+        <rdfs:label xml:lang="et">Üldine ruumiobjekt</rdfs:label>
+        <rdfs:comment xml:lang="et">Üldist ruumilist paiknemist kirjeldav objekt.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Joon"/>
+            <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Pind"/>
+            <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Punkt"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
