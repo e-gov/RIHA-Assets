@@ -1,0 +1,10 @@
+  {
+    "name": "Riikide ja territooriumide klassifikaator",
+    "version": "2013v2",
+    "start_date": "13.03.2019",
+    "end_date": "",
+    "description": "Igale riigile ja territooriumile on omistatud kahe- ja kolmekohalised tähtkoodid ning kolmekohaline numberkood. Selgitustes on esitatud geograafiliselt lahus seisvate alade loend.",
+    "type": "Klassifikaator",
+    "owner": "Statistikaamet",
+    "status": "Kehtestatud"
+}
