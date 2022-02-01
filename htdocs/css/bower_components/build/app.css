@@ -746,6 +746,19 @@ pre code {
     }
 }
 
+@media (min-width: 1400px) {
+    .container {
+        width: 1200px;
+        max-width: 100%
+    }
+}
+@media (min-width: 1600px) {
+    .container {
+        width: 1400px;
+        max-width: 100%
+    }
+}
+
 .container-fluid {
     position: relative;
     margin-left: auto;
@@ -9533,8 +9546,8 @@ select::-ms-expand {
     content: "";
     position: absolute;
     top: 0px;
-    left: -100px;
-    right: -100px;
+    left: -40px;
+    right: -40px;
     height: 500px;
     background-color: #023cc1;
     background-image: url(/assets/images/data/intro-bg.png);
@@ -12118,13 +12131,6 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child::befor
 
 .menu-toggle {
     display: none
-}
-
-@media only screen and (max-width: 1320px) {
-    .pagehead:before {
-        left: -40px;
-        right: -40px
-    }
 }
 
 @media only screen and (max-width: 1199px) {

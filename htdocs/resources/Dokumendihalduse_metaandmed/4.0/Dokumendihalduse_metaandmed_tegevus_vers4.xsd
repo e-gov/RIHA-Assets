@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kirjeldus: Dokumendihalduse metaandmete loendi tegevuste plokki kajastav XML skeem -->
+<!-- Skeemi aluseks on dokumendihalduse metaandmete loendi versioon 4.0 -->
+<xs:schema xmlns="http://xmlr.eesti.ee/xml/schemas/Dokumendihalduse_metaandmed/2018/vers4/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlr.eesti.ee/xml/schemas/Dokumendihalduse_metaandmed/2018/vers4/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Tegevus" type="TegevusType">
+		<xs:annotation>
+			<xs:documentation>Tegevuse metaandmeelemendid</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="TegevusType">
+		<xs:annotation>
+			<xs:documentation>Tegevust kirjeldavaid elemente sisaldav komplekstüüp</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TegevusTyyp" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Tegevuse üheselt arusaadav nimetus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TegevusTeostaja">
+				<xs:annotation>
+					<xs:documentation>Viide tegevuse teostajale</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TeostajaIsik" type="xs:IDREF">
+							<xs:annotation>
+								<xs:documentation>Viide tegevuse teostajale </xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TeostajaRoll" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>Teostaja roll tegevuse teostamisel</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="TegevusObjektId" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Objekti, millega tegevust teostatakse, identifikaator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TegevusKuupaev" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Tegevuse teostamise kuupäev ja kellaaeg</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TegevusTulem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Tegevuse lõpptulemuse kirjeldus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="tegevusGuid" type="xs:ID" use="required">
+			<xs:annotation>
+				<xs:documentation>Tegevuse unikaalne identifikaator</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

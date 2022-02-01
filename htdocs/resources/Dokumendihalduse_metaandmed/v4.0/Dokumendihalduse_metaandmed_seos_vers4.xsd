@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kirjeldus: Dokumendihalduse metaandmete loendi seoste plokki kajastav XML skeem -->
+<!-- Skeemi aluseks on dokumendihalduse metaandmete loendi versioon 4.0 -->
+<xs:schema xmlns="http://xmlr.eesti.ee/xml/schemas/Dokumendihalduse_metaandmed/2018/vers4/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlr.eesti.ee/xml/schemas/Dokumendihalduse_metaandmed/2018/vers4/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Seos" type="SeosType">
+		<xs:annotation>
+			<xs:documentation>Seoseid kirjeldavad metaandmeelemendid</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="SeosType">
+		<xs:annotation>
+			<xs:documentation>Seoseid kirjeldavaid elemente sisaldav komplekstüüp</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SeosAlgobjektId" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Seost algatava objekti identifikaator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SeosLoppobjektId" type="xs:IDREF">
+				<xs:annotation>
+					<xs:documentation>Seose teiseks osapooleks oleva objekti identifikaator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SeosTyyp" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Seotud objektide omavahelise suhte tüüp</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SeosKirjeldus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Seotud objektide omavahelise suhte detailsem kirjeldus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="seosGuid" type="xs:ID" use="required">
+			<xs:annotation>
+				<xs:documentation>Seose unikaalne identifikaator</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

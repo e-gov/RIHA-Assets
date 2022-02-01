@@ -1,0 +1,10 @@
+  {
+    "name": "Märkide registreerimisel kasutatav kaupade ja teenuste rahvusvaheline klassifikatsioon (Nizza klassifikatsioon)",
+    "version": "11v2020",
+    "start_date": "1.01.2020",
+    "end_date": "",
+    "description": "Registreerimistaotlust täites tuleb ära märkida, milliste kaupade või teenuste osas kaubamärgile õiguskaitset soovitakse. Tuleb ka esitada loetelu kauba- või teenusklassidest, mille alla kaup/teenus kuulub. Kaupade ja teenuste klassifitseerimine võimaldab taotlust võrrelda eelnevate kaubamärgitaotluste ja -registreeringutega, millega on kaitset soovitud samasugustele või sarnastele kaupadele ja teenustele. Et registreerimist lihtsustada, on kõik kaubad ja teenused jagatud klassidesse rahvusvahelise süsteemi järgi, mida kutsutakse Nizza klassifikatsiooniks.",
+    "type": "Klassifikaator",
+    "owner": "Patendiamet",
+    "status": "Kehtestatud"
+}

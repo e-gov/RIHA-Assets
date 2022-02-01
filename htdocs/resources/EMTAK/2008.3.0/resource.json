@@ -1,0 +1,10 @@
+  {
+    "name": "Eesti majanduse tegevusalade klassifikaator (EMTAK)",
+    "version": "2008.3.0",
+    "start_date": "01.01.2016",
+    "end_date": "",
+    "description": "EMTAK 2008 on välja töötatud Euroopa Ühenduse majandustegevusalade statistilise klassifikaatori NACE Rev.2 alusel. Täiendused kasutusel infosüsteemis (otsingus) aadressil https://emtak.rik.ee/EMTAK/pages/klassifikaatorOtsing.jspx",
+    "type": "Klassifikaator",
+    "owner": "Registrite ja Infosüsteemide Keskus",
+    "status": "Kehtestatud"
+}

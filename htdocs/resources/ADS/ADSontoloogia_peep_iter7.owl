@@ -1,0 +1,1579 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY r1 "https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/" >
+    <!ENTITY r2 "https://riha.eesti.ee/riha/onto/infoyhiskond.riigi_infosysteem/2012/r1/" >
+]>
+
+
+<rdf:RDF xmlns="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/"
+     xml:base="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:r1="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/"
+     xmlns:r2="https://riha.eesti.ee/riha/onto/infoyhiskond.riigi_infosysteem/2012/r1/">
+    <owl:Ontology rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1">
+        <rdfs:label xml:lang="et">Aadressiandmete ontoloogia</rdfs:label>
+        <rdfs:comment xml:lang="et">Ontoloogia eesmأ¤rgiks on esitada Aadressiandmete sأ¼steemi poolt hأµivatud valdkonna ontoloogia riigi IS semantilise koosvأµime saavutamiseks veebiteenuste kirjelduste semantilise rikastamise abil nimetatud ontoloogia mأµistetega</rdfs:comment>
+        <owl:versionInfo xml:lang="et">Versioon 1.1. (22.05.2012)</owl:versionInfo>
+        <owl:imports rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.riigi_infosysteem/2012/r1"/>
+        <owl:imports rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadress_omab_eelmist_versiooni_Aadressist -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadress_omab_eelmist_versiooni_Aadressist">
+        <rdfs:label xml:lang="et">Aadressi eelmine versioon</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti andmete muutmiseks on 2 vأµimalust: olemasoleva versiooni andmete parandamine ja uue versiooni loomine. Versiooniparandamisega saab tأ¤psustada kuju ja muuta أµiguslikku alust. Nime ega aadressi versiooniparandusega muuta ei saa. Nime ja aadressi muutmiseks tuleb alati objekti versioonida.
+
+Normaliseeritud aadressi salvestamise tأ¶أ¶voog:
+1.	Esitatud aadressiandmete alusel moodustatakse kood-aadress ning otsitakse baasist, kas leidub sellise koodiga aadressi. 
+1.1.	Kui leiti ja aadressi viimane versioon on kehtiv, siis vأµrreldakse selle tasemeid. 
+1.1.1.	Kui kأµik komponendi versioonid on samad, siis seostatakse aadressiobjekti versioon leitud aadressi kehtiva versiooniga. 
+1.1.2.	Kui mأµni komponent erineb, siis luuakse samast aadressist uus kehtiv versioon, senikehtinud versioon muudetakse kehtetuks ning seostatakse aadressiobjekti versioon loodud versiooniga. (أœlejأ¤أ¤nud seosed, mis أ¤sja kehtetuks muudetud aadressi versioonil olid, jأ¤أ¤vad puutumata ja ootavad pأ¤ritoluregistri initsiatiivi)
+1.1.3.	Logitakse aadressi muutmise sأ¼ndmus.
+1.2.	Kui leiti ja aadressi viimane versioon on kehtetu, siis luuakse samast aadressist uus kehtiv versioon (aadressi taastamine) ning seostatakse aadressiobjekti versioon loodud kehtiva aadressi versiooniga.
+1.2.1.	Logitakse aadressi muutmise sأ¼ndmus.
+1.3.	Kui ei leitud koodi alusel aadressi, siis luuakse tأ¤iesti uus kehtiv aadress ning seostatakse objekt sellega.
+1.3.1.	Logitakse aadressi lisamise sأ¼ndmus
+
+Kehtetu objektiversiooni aadressi seoste tأ¼histamine
+1.	Aadressiobjekti versiooni kehtetuks muutmisel muudetakse kehtetuks ka selle versiooni seosed aadressiga. أœhtlasi kontrollitakse sama aadressi teisi seoseid.
+1.1.	Kui tأ¼histatakse seos kehtetu aadressi versiooniga, 
+1.1.1.	siis tأ¤iendavaid muudatusi pole vaja ja sأ¼ndmust ei logita.
+1.2.	Kui tأ¼histatakse seos kehtiva aadressi versiooniga, 
+1.2.1.	siis logitakse objektilt aadressi eemaldamise sأ¼ndmus
+1.2.2.	tuleb uurida, kas sellel aadressi versioonil on veel seoseid.
+1.2.2.1.	Kui ei ole, siis tأ¼histatakse aadress ja logitakse aadressi tأ¼histamise sأ¼ndmus.</rdfs:comment>
+        <owl:inverseOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadress_omab_jargmist_versiooni_Aadressist"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadress_omab_jargmist_versiooni_Aadressist -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadress_omab_jargmist_versiooni_Aadressist">
+        <rdfs:label xml:lang="et">Aadressi jأ¤rgnev versioon</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti andmete muutmiseks on 2 vأµimalust: olemasoleva versiooni andmete parandamine ja uue versiooni loomine. Versiooniparandamisega saab tأ¤psustada kuju ja muuta أµiguslikku alust. Nime ega aadressi versiooniparandusega muuta ei saa. Nime ja aadressi muutmiseks tuleb alati objekti versioonida.
+
+Normaliseeritud aadressi salvestamise tأ¶أ¶voog:
+1.	Esitatud aadressiandmete alusel moodustatakse kood-aadress ning otsitakse baasist, kas leidub sellise koodiga aadressi. 
+1.1.	Kui leiti ja aadressi viimane versioon on kehtiv, siis vأµrreldakse selle tasemeid. 
+1.1.1.	Kui kأµik komponendi versioonid on samad, siis seostatakse aadressiobjekti versioon leitud aadressi kehtiva versiooniga. 
+1.1.2.	Kui mأµni komponent erineb, siis luuakse samast aadressist uus kehtiv versioon, senikehtinud versioon muudetakse kehtetuks ning seostatakse aadressiobjekti versioon loodud versiooniga. (أœlejأ¤أ¤nud seosed, mis أ¤sja kehtetuks muudetud aadressi versioonil olid, jأ¤أ¤vad puutumata ja ootavad pأ¤ritoluregistri initsiatiivi)
+1.1.3.	Logitakse aadressi muutmise sأ¼ndmus.
+1.2.	Kui leiti ja aadressi viimane versioon on kehtetu, siis luuakse samast aadressist uus kehtiv versioon (aadressi taastamine) ning seostatakse aadressiobjekti versioon loodud kehtiva aadressi versiooniga.
+1.2.1.	Logitakse aadressi muutmise sأ¼ndmus.
+1.3.	Kui ei leitud koodi alusel aadressi, siis luuakse tأ¤iesti uus kehtiv aadress ning seostatakse objekt sellega.
+1.3.1.	Logitakse aadressi lisamise sأ¼ndmus
+
+Kehtetu objektiversiooni aadressi seoste tأ¼histamine
+1.	Aadressiobjekti versiooni kehtetuks muutmisel muudetakse kehtetuks ka selle versiooni seosed aadressiga. أœhtlasi kontrollitakse sama aadressi teisi seoseid.
+1.1.	Kui tأ¼histatakse seos kehtetu aadressi versiooniga, 
+1.1.1.	siis tأ¤iendavaid muudatusi pole vaja ja sأ¼ndmust ei logita.
+1.2.	Kui tأ¼histatakse seos kehtiva aadressi versiooniga, 
+1.2.1.	siis logitakse objektilt aadressi eemaldamise sأ¼ndmus
+1.2.2.	tuleb uurida, kas sellel aadressi versioonil on veel seoseid.
+1.2.2.1.	Kui ei ole, siis tأ¼histatakse aadress ja logitakse aadressi tأ¼histamise sأ¼ndmus.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendil_on_Tase -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendil_on_Tase">
+        <rdfs:label xml:lang="et">Aadressikomponendi tase</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressikomponendid jaotuvad 8 tasandile. Kأµik komponendid v.a 1. tasandi komponendid omavad seost mingi teise komponendiga, mille alla ta kuulub. Nii moodustavad komponendid omavahel hierarhilise, puu-kujulise struktuuri.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressikomponent"/>
+        <owl:inverseOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_tase_omab_Aadressikomponenti"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_omab_eelmist_versiooni_Aadressi_komponendist -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_omab_eelmist_versiooni_Aadressi_komponendist">
+        <rdfs:label xml:lang="et">Aadressikomponendi eelnev versioon</rdfs:label>
+        <rdfs:comment xml:lang="et">1 â€“ 5 tasandi komponendid versioonitakse, kui أ¼ks initsialiseeriv aadressiobjekt muudab tema nime. Ahelreaktsioonina muutuvad kأµik aadressid, mis sisaldavad muutunud komponenti. Samuti muutub komponent kehtetuks kui أ¼ks teda initsialiseeriv objekt muutub kehtetuks. Ahelreaktsioonina muutuvad kehtetuks kأµik seda komponenti sisaldavad aadressid.
+
+6 â€“ 8 tasandi komponente ei versioonita, kui muutub أ¼ks teda initsialiseeriv objekt, vaid vأ¤أ¤rtuse muutumisel luuakse alati uus komponent, samuti luuakse uus aadress ning muutunud objekt seotakse uue aadressiga. أœhtlasi saab sellest objektist uue komponendi initsialiseeriv objekt ja vana komponenti ta enam ei initsialiseeri. Kui vanale komponendile rohkem enam initsialiseerivaid objekte ei jأ¤أ¤nud, siis muutub ta kehtetuks. Kui jأ¤i, siis jأ¤أ¤b ka vana kehtivaks ning samuti jأ¤أ¤vad kehtivaks kأµik seda komponenti sisaldavad aadressid.</rdfs:comment>
+        <owl:inverseOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_omab_jargmist_versiooni_Aadressi_komponendist"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_omab_jargmist_versiooni_Aadressi_komponendist -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_omab_jargmist_versiooni_Aadressi_komponendist">
+        <rdfs:label xml:lang="et">Aadressikomponendi jأ¤rgmine versioon</rdfs:label>
+        <rdfs:comment xml:lang="et">1 â€“ 5 tasandi komponendid versioonitakse, kui أ¼ks initsialiseeriv aadressiobjekt muudab tema nime. Ahelreaktsioonina muutuvad kأµik aadressid, mis sisaldavad muutunud komponenti. Samuti muutub komponent kehtetuks kui أ¼ks teda initsialiseeriv objekt muutub kehtetuks. Ahelreaktsioonina muutuvad kehtetuks kأµik seda komponenti sisaldavad aadressid.
+
+6 â€“ 8 tasandi komponente ei versioonita, kui muutub أ¼ks teda initsialiseeriv objekt, vaid vأ¤أ¤rtuse muutumisel luuakse alati uus komponent, samuti luuakse uus aadress ning muutunud objekt seotakse uue aadressiga. أœhtlasi saab sellest objektist uue komponendi initsialiseeriv objekt ja vana komponenti ta enam ei initsialiseeri. Kui vanale komponendile rohkem enam initsialiseerivaid objekte ei jأ¤أ¤nud, siis muutub ta kehtetuks. Kui jأ¤i, siis jأ¤أ¤b ka vana kehtivaks ning samuti jأ¤أ¤vad kehtivaks kأµik seda komponenti sisaldavad aadressid.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_omab_ylemkomponenti -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_omab_ylemkomponenti">
+        <rdfs:label xml:lang="et">Aadressikomponendi  أ¼lemkomponent</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressikomponendil vأµib olla  أ¼lemkomponent. Komponendi nimi peab olema oma tasandil أ¼lemkomponendi piires unikaalne.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Koha-aadress -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Koha-aadress">
+        <rdfs:label xml:lang="et">Aadressiobjekti koha-aadress</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobejkt omab koha-aadressi. Igal aadressiobjektil vأµib olla أ¼ks vأµi mutu koha-aadressi. Mitmel objektil vأµib olla sama koha-aadress. Kui objektil on samaaegselt mitu koha-aadressi, siis on tegu paralleelaadressidega.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+        <owl:inverseOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha-aadress_kuulub_Aadressiobjektile"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Objekti_tsentroid -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Objekti_tsentroid">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Aadressiobjekti tsentroid</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjekt omab objekti tsentroidi. Igal objektil saab olla ainult أ¼ks tsentroid.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Paritoluregistrit -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Paritoluregistrit">
+        <rdfs:label xml:lang="et">Aadressiobjekti pأ¤ritoluregister</rdfs:label>
+        <rdfs:comment xml:lang="et">Kui objektil on pأ¤ritoluregister, st selline register, kus objekti andmeid tegelikult hallatakse, siis tuleb seostamiseks lisada objektile ka tunnus pأ¤ritoluregistris. Tunnus on vajalik objekti hilisemaks samastamiseks andmete muutumise korral. See tunnus pole siiski kohustuslik, sest mitteametlik objekt vأµib pأ¤ritoluregistrist puududa vأµi pole teada, kas ta on seal esindatud.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+        <rdfs:range rdf:resource="&r2;Register"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Ruumiaadress -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Ruumiaadress">
+        <rdfs:label xml:lang="et">Aadressiobjekti ruumiaadress</rdfs:label>
+        <rdfs:comment xml:lang="et">Juhul kui aadressiobjektil on ruumikuju olemas, siis on tal ka ruumiaadress. أœhel objektil vأµib olla mitu ruumiaadressi, igale ruumiaadressile lisatakse osakaalu protsent.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Ruumikuju -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_Ruumikuju">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Aadressiobjekti ruumikuju</rdfs:label>
+        <rdfs:comment xml:lang="et">Enamusel Aadressiobjektidest on olemas ruumikuju (geomeetria). Juhul kui pأ¤ritoluregister (nأ¤iteks Ehitisregister) ei ole seda esitanud, siis vأµib see ka puududa. Ruumikujuks vأµib olla kas punkt, joon vأµi pind.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+        <rdfs:range rdf:resource="&r1;Ruumikuju"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_eelmist_versiooni_Aadressiobjektist -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_eelmist_versiooni_Aadressiobjektist">
+        <rdfs:label xml:lang="et">Aadressiobjekti eelnev versioon</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjekt versioonitakse alati kui tema andmed on muutunud ning esitatakse kehtivad andmed. Eelnevalt on sأ¼steemist leitud aadressiobjekti kehtiv versioon (Adob_liik ja Orig_tunnus alusel).
+Erandiks on muutmine versiooniparandusena, mida kأ¤sitletakse sأ¼steemis eraldi.
+Andmete muutumisel lisatakse uus kirje tabelisse AADRESS_OBJEKTID. Id â€“ sأ¼steem genereerib uue versiooninumbri. Adob_liik, ADS_OID, Orig_tunnus â€“ peavad olema tingimata samad, mis eelmisel versioonil. Vأµrreldakse esitatud andmetega ning erinevuse korral antakse viga.</rdfs:comment>
+        <owl:inverseOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_jargmist_versiooni_Aadressiobjektist"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_jargmist_versiooni_Aadressiobjektist -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt_omab_jargmist_versiooni_Aadressiobjektist">
+        <rdfs:label xml:lang="et">Aadressiobjekti jأ¤rgnev versioon</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjekt versioonitakse alati kui tema andmed on muutunud ning esitatakse kehtivad andmed. Eelnevalt on sأ¼steemist leitud aadressiobjekti kehtiv versioon (Adob_liik ja Orig_tunnus alusel).
+Erandiks on muutmine versiooniparandusena, mida kأ¤sitletakse sأ¼steemis eraldi.
+
+Andmete muutumisel lisatakse uus kirje tabelisse AADRESS_OBJEKTID. Id â€“ sأ¼steem genereerib uue versiooninumbri. Adob_liik, ADS_OID, Orig_tunnus â€“ peavad olema tingimata samad, mis eelmisel versioonil. Vأµrreldakse esitatud andmetega ning erinevuse korral antakse viga.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt_omab_Punktruumikuju -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt_omab_Punktruumikuju">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Aadressipunkti ruumikuju</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressipunkt on aadressiobjekti sees olev punkti kujuline ruumikuju. Valdavalt langeb aadressipunkt ja objekti ruumikuju tsentroid omavahel kokku, kuid see ei tarvitse nii olla. Mأµningatel juhutdel soovitakse neid eristada (nأ¤iteks on vaja teada pigem hoone peasissekأ¤iku kui tema tsentroidi). Sellisel juhul saab aadressipunkti pagutada hoone sissekأ¤igu lأ¤hedusse samas kui tentroid jأ¤أ¤b hoone keskele.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt"/>
+        <rdfs:range rdf:resource="&r1;Punkt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha-aadress_koosneb_Aadressi_komponent -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha-aadress_koosneb_Aadressi_komponent">
+        <rdfs:label xml:lang="et">Koha-aadress koosneb aadressi komponent</rdfs:label>
+        <rdfs:comment xml:lang="et">Koha-aadress koosneb aadressi komponentidest.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha-aadress_kuulub_Aadressiobjektile -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha-aadress_kuulub_Aadressiobjektile">
+        <rdfs:label xml:lang="et">Koha-aadress kuulub aadressiobjekti juurde.</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjekt omab koha-aadressi. Igal aadressiobjektil vأµib olla أ¼ks vأµi mutu koha-aadressi. Mitmel objektil vأµib olla sama koha-aadress. Kui objektil on samaaegselt mitu koha-aadressi, siis on tegu paralleelaadressidega.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha-aadress_omab_Aadressipunkt -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha-aadress_omab_Aadressipunkt">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Koha-aadressi aadressipunkt</rdfs:label>
+        <rdfs:comment xml:lang="et">Koha-aadress vأµib olla omistatud mitmele aadressiobjektile, igal ruumikuju omaval objektil on olemas aadressipunkt (langeb kokku objekti tsentroidiga). Igale koha-aadressile omistatakse ainult أ¼ks nn esindusaadressipunkt, see vأµetakse esimese objketi andmete juurest. Punkt vأ¤ljendatakse tأ¤isarvuliste x ja y koordinaatidega.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_tase_omab_Aadressikomponenti -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_tase_omab_Aadressikomponenti">
+        <rdfs:label xml:lang="et">Aadressi komponendi tasemega seotud aadressikomponet.</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressikomponendid jaotuvad 8 tasandile. Kأµik komponendid v.a 1. tasandi komponendid omavad seost mingi teise komponendiga, mille alla ta kuulub. Nii moodustavad komponendid omavahel hierarhilise, puu-kujulise struktuuri.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressikomponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/MAaadress_koosneb_MAkomponent_ja_Komponent -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/MAaadress_koosneb_MAkomponent_ja_Komponent">
+        <rdfs:label xml:lang="et">MA aadress koosneb mitteametlikest ja ametlikest aadressikomponentidest</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametlik aadress_koosneb mitteametlikest ja ametlikest aadressikomponentidest. Kui vأ¤hemalt أ¼ks aadressikomponentidest on mitteametlik siis on tegu mitteametliku aadressiga.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_koha_aadress"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+                    <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/MAaadressiobjekt_omab_MAaadress_ja_Koha-aadress -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/MAaadressiobjekt_omab_MAaadress_ja_Koha-aadress">
+        <rdfs:label xml:lang="et">MA aadressiobjekt vأµib omada mitteametlikke aadresse ja ametlikke koha-aadresse</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametlik aadressiobjekt vأµib omada nii mitteametlikke aadresse kui ka ametlikke koha-aadresse</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+                    <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_koha_aadress"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_viib_labi_Menetlust -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_viib_labi_Menetlust">
+        <rdfs:label xml:lang="et">Menetleja poolt lأ¤biviidav menetlus.</rdfs:label>
+        <rdfs:comment xml:lang="et">Menetlusprotsessi saab algatada kas kasutaja vأµi automaat, vastava arenduse korral on vأµimalik, et menetlusprotsess algatatakse pأ¤ritoluregistri kaudu. Protsessis osalevad aadressiobjektid, st menetletakse aadressiobjekte.
+Kui olemasolev objekt vأµetakse menetlusse, siis tekib temast uus versioon (v.a topoloogia korrastamise toimingus). Paralleelselt vأµib objekt osaleda mitmes eri liiki menetluses. Versioonid kirjutatakse pأµhisأ¼steemi menetluste jأµustamise jأ¤rjekorras.
+Objekt saab tekkida korraga ainult 1 menetluses, st pأµhisأ¼steemis mitte-eksisteerivat objekti saab korraga menetleda ainult 1 protsess.
+Menetluses saavad osaleda 5 liiki objektid: katastriأ¼ksused, elamud, mitteelamud, eluruumid ja mitteeluruumid. Kأµigi teiste objektide muudatused esitatakse otse pأµhisأ¼steemi ilma menetlust lأ¤bimata, aga eelloetletud liike ilma menetluseta muuta ei saa.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja"/>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlusel_on_Menetleja -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlusel_on_Menetleja">
+        <rdfs:label xml:lang="et">Menetluse menetleja.</rdfs:label>
+        <rdfs:comment xml:lang="et">Iga menetluse puhul on teada menetleja organisatsioon. Menetlusse saab lisada ainult selle organisatsiooni tأ¶أ¶piirkonnas olevaid objekte.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja"/>
+        <owl:inverseOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_viib_labi_Menetlust"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_objekt_omab_Ruumikuju -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_objekt_omab_Ruumikuju">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku objekti ruumikuju.</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametlikul aadressiobjektil on ruumikuju alati olemas. Ilma ruumikujuta mitteametlike aadresiobjekte ei tekitata. Ruumikujuks vأµib olla kas punkt, joon vأµi pind.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt"/>
+        <rdfs:range rdf:resource="&r1;Ruumikuju"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Tsentroid_omab_Punktruumikuju -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Tsentroid_omab_Punktruumikuju">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Tsentroidi ruumikuju</rdfs:label>
+        <rdfs:comment xml:lang="et">Tsentroid on aadressiobjekti ruumikuju sees olev punkti kujuline ruumikuju.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid"/>
+        <rdfs:range rdf:resource="&r1;Punkt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Kuju_moodustusviis -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Kuju_moodustusviis">
+        <rdfs:label xml:lang="et">Kuju moodustusviis</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumikuju moodustamise viis. D â€“ digitud; K â€“ kaardistatud; M â€“ mأµأµdistatud.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/X-koordinaat -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/X-koordinaat">
+        <rdfs:label xml:lang="et">X koordinaat</rdfs:label>
+        <rdfs:comment xml:lang="et">Punkti asukoht XY-koordinaadistiku X teljel.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Punkt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Y-koordinaat -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Y-koordinaat">
+        <rdfs:label xml:lang="et">Y koordinaat</rdfs:label>
+        <rdfs:comment xml:lang="et">Punkti asukoht XY-koordinaadistiku Y teljel.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/Punkt"/>
+    </owl:DatatypeProperty>
+    
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadress_tekstina -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadress_tekstina">
+        <rdfs:label xml:lang="et">Aadress tekstina</rdfs:label>
+        <rdfs:comment xml:lang="et">Koha-aadressi normaliseerimata osa tekstilisel kujul.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_identifikaator -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_identifikaator">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Aadressi identifikaator</rdfs:label>
+        <rdfs:comment xml:lang="et">Koha-aadressi unikaalne tunnus</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Jargnevuse_tuvastamise_meetod -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Jargnevuse_tuvastamise_meetod">
+        <rdfs:label xml:lang="et">Jأ¤rgnevuse tuvastamise meetod</rdfs:label>
+        <rdfs:comment xml:lang="et">Meetod, millega aadresside jأ¤rgnevus on tuvastatud.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Kohanimi -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Kohanimi">
+        <rdfs:label xml:lang="et">Kohanimi</rdfs:label>
+        <rdfs:comment xml:lang="et">Mأ¤rge kas tegemist on kohanimega.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_identifikaator -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_identifikaator">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Komponendi identifikaator</rdfs:label>
+        <rdfs:comment xml:lang="et">Komponendi versiooni unikaalne number, muutub komponendi versioonimisel.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_kehtestamise_aeg -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_kehtestamise_aeg">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Komponendi kehtestamise aeg</rdfs:label>
+        <rdfs:comment xml:lang="et">Versiooni kehtima hakkamise aeg ADS sأ¼steemis.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_kehtetuks_muutumise_aeg -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_kehtetuks_muutumise_aeg">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Komponendi kehtetuks muutumise aeg</rdfs:label>
+        <rdfs:comment xml:lang="et">Komponendi versiooni kehtetuks muutumise aeg. Versioon muutub kehtetuks, kui tekib uus versioon vأµi kui muutub kehtetuks viimane komponendiga seotud initsialiseeriva aadressiobjekti seos</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_kood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_kood">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Komponendi kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Kood identifitseerib komponenti kehtivate komponendi versioonide hulgas ja on unikaalne tasandi piires, koosneb 4 sأ¼mbolist 32-sأ¼steemis. Ei muutu komponendi versioonimisel.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_nimetus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_nimetus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Komponendi nimetus</rdfs:label>
+        <rdfs:comment xml:lang="et">Komponendi tekstiline vأµi numbriline nimi koos liigisأµna lأ¼hendiga kui liigisأµna on olemas. Komponendi tase+nimetus on unikaalne sama أ¼lemkomponendi piires</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_nimetus_liigiga -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_nimetus_liigiga">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Komponendi nimetus liigiga</rdfs:label>
+        <rdfs:comment xml:lang="et">Komponendi nimi koos liigisأµnaga pikalt vأ¤lja kirjutatult. Liigisأµna vأµi selle lأ¼hendi puudumisel on vأµrdne nimetusega.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_synonyym -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_synonyym">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Komponendi sأ¼nonأ¼أ¼m</rdfs:label>
+        <rdfs:comment xml:lang="et">Komponendi alternatiivsed nimed.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_tase -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponendi_tase">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Komponendi tase</rdfs:label>
+        <rdfs:comment xml:lang="et">Viit komponendi hierarhilisele tasemele (1-8).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koodaadress -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koodaadress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Koodaadress</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressi komponentide koodidest moodustatud 33 kohaline aadressi أ¼heselt identifitseeriv tunnus kus igale komponendi tasemele vastab kindel arv kohti. Neli viimast kohta on versiooni number.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Lahiaadress -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Lahiaadress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Lأ¤hiaadress</rdfs:label>
+        <rdfs:comment xml:lang="et">Koha-aadressi haldus- ja asustusأ¼ksusest tأ¤psem osa. Kأµik lأ¤hiaadressid ADSis on normaliseeritud kujul.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_epost -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_epost">
+        <rdfs:label xml:lang="et">Menetleja e-posti aadress</rdfs:label>
+        <rdfs:comment xml:lang="et">E-postiaadress, millega saab kontakteeruda menetlejaga.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_isikukood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_isikukood">
+        <rdfs:label xml:lang="et">Menetleja isikukood</rdfs:label>
+        <rdfs:comment xml:lang="et">Andmeid menetleva kasutaja isikukood.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Peale Rahvastikuregistri ontoloogia publitseerimist teha menetleja seal defineeritud isiku alamklassiks ning kasutada annotatsioonides selle kasutaja isikukoodi (siinne mأ¤rkida kui &quot;deprecated&quot;).</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_nimi -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_nimi">
+        <rdfs:label xml:lang="et">Menetleja nimi</rdfs:label>
+        <rdfs:comment xml:lang="et">Andmeid menetleva kasutaja tأ¤isnimi.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Peale Rahvastikuregistri ontoloogia publitseerimist teha menetleja seal defineeritud isiku alamklassiks ning kasutada annotatsioonides selle kasutaja tأ¤isnime (siinne mأ¤rkida kui &quot;deprecated&quot;).</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_telefon -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja_telefon">
+        <rdfs:label xml:lang="et">Menetleja telefon</rdfs:label>
+        <rdfs:comment xml:lang="et">Telefoninumber, millega saab kontakteeruda menetlejaga.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_algataja_liik -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_algataja_liik">
+        <rdfs:label xml:lang="et">Menetluse algataja liik</rdfs:label>
+        <rdfs:comment xml:lang="et">Menetluse algataja, tehniline vأ¤li K-kasutaja, X- x-tee, A - ADS sأ¼steem automaatselt.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_joustamise_aeg -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_joustamise_aeg">
+        <rdfs:comment xml:lang="et">Kui puudub, siis pole menetluse jأµustamine أµnnestunud.</rdfs:comment>
+        <rdfs:label xml:lang="et">Menetluse jأµustamise aeg</rdfs:label>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_liik -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_liik">
+        <rdfs:label xml:lang="et">Menetluse liik</rdfs:label>
+        <rdfs:comment xml:lang="et">1.	Menetluse objektide hulgas peab olema vأ¤hemalt 1 objekt, vastasel korral menetluse loomine ebaأµnnestub. Samuti ei tohi olla enam objekte kui sأ¼steemis lubatud.
+2.	Loodava menetluse liik on vaikimisi andmete muutmine, juhul kui teenuse sisendis ei ole mأ¤rgitud, et tegemist on parandamise menetlusega. Sel juhul on loodava menetluse liik andmete parandamine. ADS sأ¼steem otsib menetlusi, mis oleks loodud x-tee kaudu ja mis oleks sama liiki ja kus esitatud objektid on pooleli menetlemisel.
+2.1.	Kui أ¼htegi sellist menetlust ei leitud, siis luuakse uus menetlus. 
+2.2.	Kui leiti tأ¤pselt 1 selline menetlus, siis muudetakse olemasolevat. Olemasolevast menetlusest eemaldatakse kأµik sinna lisatud objektid, sest x-tee kaudu laekub objektide tأ¤ielik uus seis. NB! X-tee kaudu andmete esitamisel ei kirjutata mitte kunagi أ¼le kasutajaliidese kaudu loodud menetlust.
+2.3.	Kui leidub enam kui 1 selline menetlus, siis on tegemist veaga ja menetluse loomine x-tee kaudu ebaأµnnestub. (Nأ¤iteks kui esitatakse mitu objekti ja 1 neist on muutmisel أ¼hes, teine teises menetluses.) Kasutaja peab ADS kasutajaliidese kaudu olukorra parandama. Seejأ¤rel saab x-tee kaudu esitamise teostada vأµi siis polegi seda enam vaja teha, sest kasutaja on juba ADS liidese kaudu objektid menetlenud.
+3.	Esitatud objektid lisatakse menetlusse. Objekti menetlusse lisamisel kontrollitakse, et objekt poleks muutmisel teises samaliigilises menetluses, mis pole x-tee kaudu loodud. Kui ikkagi on, siis on viga ja menetluse loomine x-tee kaudu ebaأµnnestub.
+</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_lyhikirjeldus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_lyhikirjeldus">
+        <rdfs:label xml:lang="et">Menetluse lأ¼hikirjeldus</rdfs:label>
+        <rdfs:comment xml:lang="et">Menetluse lأ¼hikirjeldus.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_markused -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_markused">
+        <rdfs:label xml:lang="et">Menetluse mأ¤rkused</rdfs:label>
+        <rdfs:comment xml:lang="et">Menetluse kohta tehtud mأ¤rkused.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_number -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_number">
+        <rdfs:label xml:lang="et">Menetluse number</rdfs:label>
+        <rdfs:comment xml:lang="et">Menetluse identifitseerimiseks ja kasutamiseks vأ¤ljastatud identifikaator.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_oiguslik_alus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_oiguslik_alus">
+        <rdfs:label xml:lang="et">Menetluse أµiguslik alus</rdfs:label>
+        <rdfs:comment xml:lang="et">Menetluse أµiguslik alus.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_oiguslik_kuupaev -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_oiguslik_kuupaev">
+        <rdfs:label xml:lang="et">Menetluse أµiguslik kuupأ¤ev</rdfs:label>
+        <rdfs:comment xml:lang="et">Menetluse أµiguslik kuupأ¤ev.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_komponendi_tase -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_komponendi_tase">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametlik komponendi tase</rdfs:label>
+        <rdfs:comment xml:lang="et">Viit mitteametliku komponendi hierarhilisele tasemele. Komponendi tasemeid on  8.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_lahiaadress -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_lahiaadress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametlik lأ¤hiaadress</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku koha-aadressi haldus- ja asustusأ¼ksusest tأ¤psem osa. Kأµik lأ¤hiaadressid on normaliseeritud kujul.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_koha_aadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_taisaadress -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_taisaadress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametlik tأ¤isaadress</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku koha-aadressi tekstiline tأ¤iskirje. Tأ¤isaadress sisaldab kأµiki paralleelaadresse pikal optimeerimata kujul. Optimeeritud tأ¤isaadress esitab korduvad komponendid أ¼hekordselt.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_koha_aadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_aadressi_identifikaator -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_aadressi_identifikaator">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku aadressi identifikaator</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku aadressi unikaalne tunnus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_koha_aadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_komponendi_identifikaator -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_komponendi_identifikaator">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku komponendi identifikaator</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku komponendi unikaalne number.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_komponendi_kehtivus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_komponendi_kehtivus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku komponendi kehtivus</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku komponendi kehtetuks muutumise kuupأ¤ev.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_komponendi_nimetus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_komponendi_nimetus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku komponendi nimetus</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku komponendi tekstiline vأµi numbriline nimi. Komponendi tase+nimetus on unikaalne sama أ¼lemkomponendi piires.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_ID -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_ID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku objekti ID</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku objekti unikaalne tunnus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_kontroll -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_kontroll">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku objekti kontroll</rdfs:label>
+        <rdfs:comment xml:lang="et">Tunnus mis omistatakse objektile juhul kui objekti mitteametlikud aadressid on arvutatud ruumiaadressi alusel ja vajavad tأ¤psustamist.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_kuju_erinevus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_kuju_erinevus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku objekti kuju erinevus</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku objekti kuju ning ametliku ja mitteametliku kuju erinevuse protsent أ¼mardatuna tأ¤isarvuks.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_liik -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_liik">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku objekti liik</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjektid on liigitatud vastavalt objektide olemusele, igale liigile rakenduvad erinevad أ¤rireeglid. Mitteametlike objektide liike hallatakse ADS-i vastavas klassifikaatoris. Mitteametlike objektide liigid ei lange kokku ametlike liikidega, kuid liigil vأµib olla paralleel ametlikul kihil.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_paritolu -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametliku_objekti_paritolu">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku objekti pأ¤ritolu</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitteametliku objekti andmete pأ¤ritolu kirjeldav tekst.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_kehtestamise_kuupaev -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_kehtestamise_kuupaev">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti kehtestamise kuupأ¤ev</rdfs:label>
+        <rdfs:comment xml:lang="et">Esimese objekti versiooni andmete ADS sأ¼steemi laekumise kuupأ¤ev, mis أ¼htlasi on objekti versiooni ADS jaoks kehtima hakkamise kuupأ¤ev.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_kehtetuks_muutmise_kuupaev -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_kehtetuks_muutmise_kuupaev">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti kehtetuks muutmise kuupأ¤ev</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti viimase versiooni kehtetuks muutmise kuupأ¤ev ilma uue versiooni andmeteta.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_kood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_kood">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti kood</rdfs:label>
+        <rdfs:comment xml:lang="et">ADS-i poolt hallatav aadressiobjekti identifikaator (ADS_OID), identifitseerib objekti أ¼le kأµikide liikide.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_lahiaadress -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_lahiaadress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti lأ¤hiaadress</rdfs:label>
+        <rdfs:comment xml:lang="et">Kehtiv lأ¤hiaadress tekstilisel kujul sisaldades kأµiki paralleelaadresse.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_liik -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_liik">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti liik</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjektid on liigitatud vastavalt objektide olemusele, igale liigile rakenduvad erinevad أ¤rireeglid. Objektide liike hallatakse ADS-i vastavas klassifikaatoris. Liigid on nأ¤iteks: maakond, omavalitsus, asustusأ¼ksus, linnaosa, liikluspind, vأ¤ikekoht, maaأ¼ksus, nimeobjekt, elamu, mitteelamu, hooneosa  jm.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_oiguslik_alus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_oiguslik_alus">
+        <rdfs:label xml:lang="et">أ•igusliku aluse kirjeldus</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti operatsiooniga seotud أµigusliku aluse tekstiline kirjeldus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_oigusliku_aluse_kuupaev -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_oigusliku_aluse_kuupaev">
+        <rdfs:label xml:lang="et">أ•igusliku aluse kuupأ¤ev</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti operatsiooniga seotud أµigusliku aluse kuupأ¤ev.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_taisaadress -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_taisaadress">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti tأ¤isaadress</rdfs:label>
+        <rdfs:comment xml:lang="et">ADSis on kأµik aadressid normaliseeritud kujul. Normaliseeritud aadresstekstis komponentide nimed viiakse tأ¤pselt vastvusse ametlike komponentide nimetustega, jأ¤rjestatud أ¼ldisemast tأ¤psema suunas ja eraldatud kirjavahemأ¤rkidega vastavalt reeglitele jne. Reaalselt saab korrektselt lأµpuni normaliseeritud aadressitekstist tأ¤isaadress. Aga tأ¤isaadressiks saab teda nimetada alles siis, kui see aadress on registreeritud.
+
+Tuleb teha vahet tأ¤isaadressi ja optimeeritud tأ¤isaadressi vahel. Kui objektil on enam kui أ¼ks aadress (esinevad paralleelaadressid), siis optimeeritud tأ¤isaadress sisaldab korduvaid elemente ainult أ¼ks kord.
+Nأ¤iteks kui objektil on sellised kolm aadressi:
+&quot;Harju maakond, Tallinna linn, Kesklinna linnaosa, Sأ¼gise tn 2&quot;
+&quot;Harju maakond, Tallinna linn, Kesklinna linnaosa, Tehnika tn 1&quot;
+&quot;Harju maakond, Tallinna linn, Kesklinna linnaosa, Toompuiestee 29&quot;
+siis selle objekti tأ¤isaadress oleks
+&quot;Harju maakond, Tallinna linn, Kesklinna linnaosa, Sأ¼gise tn 2 // Harju maakond, Tallinna linn, Kesklinna linnaosa, Tehnika tn 1 // Harju maakond, Tallinna linn, Kesklinna linnaosa, Toompuiestee 29&quot;
+Praktiliseks kasutamiseks on selline tekst liiga pikk ja kohmakas, seepأ¤rast optimeeritakse see أ¤ra. Optimeeritud tأ¤isaadress on
+&quot;Harju maakond, Tallinna linn, Kesklinna linnaosa, Sأ¼gise tn 2 // Tehnika tn 1 // Toompuiestee 29&quot; </rdfs:comment>
+        <rdfs:comment xml:lang="et">Kehtiv tأ¤isaadress tekstilisel kujul sisaldades kأµiki paralleelaadresse.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_versiooni_algus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_versiooni_algus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti kehtestamise kuupأ¤ev</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti versiooni jأµustumise kuupأ¤ev.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_versiooni_kood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_versiooni_kood">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti versiooni kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjekti versiooni identifikaator (tunnus), unikaalne vأµtmevأ¤li (Adob_id).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_versiooni_lopp -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_versiooni_lopp">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti versiooni lأµpp</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti versiooni sulgemise kuupأ¤ev.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_versiooni_olek -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_versiooni_olek">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Objekti versiooni olek</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti versiooni kehtivusinfo (K-kehtiv, V-vananenud, T-tأ¼histatud).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Paritoluregistri_objekti_kood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Paritoluregistri_objekti_kood">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Pأ¤ritoluregistri objekti kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti identifikaator vأµi tunnus originaalregistris.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Pyhendusnimi -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Pyhendusnimi">
+        <rdfs:label xml:lang="et">Pأ¼hendusnimi</rdfs:label>
+        <rdfs:comment xml:lang="et"> Mأ¤rgend, kas komponendi puhul on tegemist pأ¼hendusnimega.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_identifikaator -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_identifikaator">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mitteametliku aadressi identifikaator</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiaadressi unikaalne tunnus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_kehtivuse_algus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_kehtivuse_algus">
+        <rdfs:label xml:lang="et">Ruumiaadressi kehtivuse algus</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiaadressi kehtivuse alguse kuupأ¤ev.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_kehtivuse_lopp -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_kehtivuse_lopp">
+        <rdfs:label xml:lang="et">Ruumiaadressi kehtivuse lأµpp</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiaadressi kehtivuse lأµpukuupأ¤ev.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_kood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_kood">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Ruumiaadressi kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiaadressi kood koosneb 9 kohast, see on koodaadressi analoog milles esinevad ainult esimesed أ¼heksa kohta.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_tekst -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadressi_tekst">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Ruumiaadressi tekst</rdfs:label>
+        <rdfs:comment xml:lang="et">Tekst, mis koosneb haldus- ning asustusأ¼ksuste nimedest koos liigisأµnadega.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Seos_objektiga -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Seos_objektiga">
+        <rdfs:label xml:lang="et">Seos objektiga</rdfs:label>
+        <rdfs:comment xml:lang="et">I - aadress on objektile lisatud; D - aadress on objektilt eemaldatud; U - aadressi koordinaadid on muudetud; null - pأµhisأ¼steemis registreeritud aadress on objekti juures muutmata
+</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Viit_mitteametlikule_ylemkomponendile -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Viit_mitteametlikule_ylemkomponendile">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Viit mitteametlikule أ¼lemkomponendile</rdfs:label>
+        <rdfs:comment xml:lang="et">Viit mitteametlikule أ¼lemkomponendile. Puudub ainult 1. taseme komponentide puhul.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ylemkomponendi_kood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ylemkomponendi_kood">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">أœlemkomponendi kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Viit أ¼lemkomponendi koodile.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ylemkomponendi_tase -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ylemkomponendi_tase">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">أœlemkomponendi tase</rdfs:label>
+        <rdfs:comment xml:lang="et">Viit أ¼lemkomponendi tasemele.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase">
+        <rdfs:label xml:lang="et">Aadressikomponendi tase</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressikomponent"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+        <rdfs:comment xml:lang="et">Aadressikomponendid jaotuvad 8 tasandile. Kأµik komponendid v.a 1. tasandi komponendid omavad seost mingi teise komponendiga, mille alla ta kuulub. Nii moodustavad komponendid omavahel hierarhilise, puu-kujulise struktuuri.
+
+Tase	Nimetus	Vأµimalikud أ¼lemtasemed
+1	maakond	
+2	omavalitsus	1
+3	asustusأ¼ksus	2
+4	vأ¤ikekoht	2, 3
+5	liikluspind	2, 3, 4
+6	nimetus	2, 3, 4
+7	aadressinumber	4, 5, 6
+8	korterinumber	6, 7</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_1 -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_1">
+        <rdfs:label xml:lang="et">Maakonna nimi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_2"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_3"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_4"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_5"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_6"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_7"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8"/>
+        <rdfs:comment xml:lang="et">Komponendi hierarhiline tase 1 on maakonna nimi.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_2 -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_2">
+        <rdfs:label xml:lang="et">Omavalitsuse nimi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_3"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_4"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_5"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_6"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_7"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8"/>
+        <rdfs:comment xml:lang="et">Komponendi hierarhiline tase 2 on omavalitsuse nimi (vald vأµi linn).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_3 -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_3">
+        <rdfs:label xml:lang="et">Linnaosa vأµi asustusأ¼ksuse nimi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_4"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_5"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_6"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_7"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8"/>
+        <rdfs:comment xml:lang="et">Komponendi hierarhiline tase 3 on linnaosa vأµi asustusأ¼ksuse nimi (kأ¼la, alev, alevik, vallasisene linn).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_4 -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_4">
+        <rdfs:label xml:lang="et">Vأ¤ikekoha nimi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_5"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_6"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_7"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8"/>
+        <rdfs:comment xml:lang="et">Komponendi hierarhiline tase 4 on vأ¤ikekoha nimi (nt aiandusأ¼histu, suvilaأ¼histu vmt).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_5 -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_5">
+        <rdfs:label xml:lang="et">Liikluspinna nimi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_6"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_7"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8"/>
+        <rdfs:comment xml:lang="et">Komponendi hierarhiline tase 5 on liikluspinna nimi (nt tأ¤nav, tee, maantee, puiestee vmt).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_6 -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_6">
+        <rdfs:label xml:lang="et">Objekti nimi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_7"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8"/>
+        <rdfs:comment xml:lang="et">Komponendi hierarhiline tase 6 on objekti nimi (nأ¤iteks maaأ¼ksuse, talu, hoone, kohanimeobjekti vmt nimi).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_7 -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_7">
+        <rdfs:label xml:lang="et">Maaأ¼ksuse vأµi hoone erilisand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8"/>
+        <rdfs:comment xml:lang="et">Komponendi hierarhiline tase 7 on maaأ¼ksuse vأµi hoone erilisand (krundinumber, majanumber).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8 -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_8">
+        <rdfs:label xml:lang="et">Maaأ¼ksuse vأµi hooneosa erilisand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponendi_tase"/>
+        <rdfs:comment xml:lang="et">Komponendi hierarhiline tase 8 on maaأ¼ksuse vأµi hooneosa erilisand (korteri vأµi muu hooneosa number).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressikomponent -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressikomponent">
+        <rdfs:label xml:lang="et">Aadressikomponent</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+        <rdfs:comment xml:lang="et">Aadressi struktuurne osa. Aadress koosneb komponentidest. Komponentide tasandeid on 8. Iga tase on sisuliselt klassifikaator. Aadressikomponendid jagunevad ametlikeks ning mitteametlikeks. ADSi kontekstis tأ¤histatakse terminiga aadressi komponent ametlikku aadressi komponenti.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt">
+        <rdfs:label xml:lang="et">Aadressiobjekt</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+        <rdfs:comment xml:lang="et">Maaga seotud objekt, millele on mأ¤أ¤ratud koha-aadress vأµi millele koha-aadressi esitamise nأµue tuleneb أµigusaktist. Aadressiobjektil on alati olemas أ¼ks konkreetne ruumikuju ning temaga on alati seotud أ¼ks vأµi mitu aadressi. Aadressiobjektid jagunevad ametlikeks ning mitteametlikeks. ADSi kontekstis tأ¤histatakse terminiga objekt ametlikku aadressiobjekti.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekti_liikide_klassifikaator -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekti_liikide_klassifikaator">
+        <rdfs:label xml:lang="et">Aadressiobjekti liikide klassifikaator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid"/>
+        <rdfs:comment xml:lang="et">Aadressiobjektide klassifikaatoris mأ¤أ¤ratakse:
+- Objektiliigi poolt initsialiseeritavate tasandite numbrid
+- Kuju vأµib olla joon
+- Kuvamise jأ¤rjekord
+- Objektiliigi kehtetuks muutmise aeg. Kui tأ¤idetud, siis on objektiliik kehtetu ja enam sأ¼steemi seda liiki objekte registreerida ei saa.
+- Objektiliigi iseloomustus
+- Aadressobjekti liigi kood
+- Maksimaalne tasand, milleni selle objektiliigi aadress normaliseeritud kujul vأµib ulatuda
+- Minimaalne tasand, milleni selle objektiliigi aadress normaliseeritud kujul peab ulatuma
+- Aadressobjekti liigi nimetus
+- Andmete pأ¤ritoluregistri haldaja kood
+- Kas kuju vأµib olla pind
+- Kas kuju vأµib olla punkt
+- Kas objektiliigil on (T) unikaalaadressi nأµue vأµi mitte (F)
+.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressipunkt">
+        <rdfs:label xml:lang="et">Aadressipunkt</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+        <rdfs:comment xml:lang="et">Aadressi ruumilist asukohta vأ¤ljendav punkt. Peab asuma أ¼he aadressiobjekti ruumikuju ala sees vأµi joone peal, punktobjekti korral vastavas punktis millel on seos selle koha-aadressiga.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Aadressipunkt asub objekti tsentroidis, kui andmeesitaja ei ole seda tأ¤psustanud.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressikomponent">
+        <rdfs:label xml:lang="et">Aadressikomponent</rdfs:label>
+        <rdfs:label xml:lang="et">Ametlik aadressikomponent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressikomponent"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent"/>
+        <rdfs:comment xml:lang="et">Aadressi struktuurne osa. Aadress koosneb komponentidest. Komponentide tasandeid on 8. Iga tase on sisuliselt klassifikaator. ADSi kontekstis tأ¤histatakse terminiga aadressikomponent ametlikku aadressikomponenti.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_aadressiobjekt">
+        <rdfs:label xml:lang="et">Aadressiobjekt</rdfs:label>
+        <rdfs:label xml:lang="et">Ametlik aadressiobjekt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt"/>
+        <rdfs:comment xml:lang="et">Maaga seotud objekt, millele on mأ¤أ¤ratud koha-aadress vأµi millele koha-aadressi esitamise nأµue tuleneb أµigusaktist. Aadressiobjektil on alati olemas أ¼ks konkreetne ruumikuju ning temaga on alati seotud أ¼ks vأµi mitu aadressi. ADSi kontekstis tأ¤histatakse terminitega objekt ja aadressiobjekt ametlikku aadressiobjekti.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress">
+        <rdfs:label xml:lang="et">Ametlik koha-aadress</rdfs:label>
+        <rdfs:label xml:lang="et">Koha-aadress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_koha_aadress"/>
+        <rdfs:comment xml:lang="et">Koha-aadress on lأ¤hedane postiaadressi mأµistele, mida kasutatakse kirjade aadresseerimisel. Samas on oluline tأ¤hele panna, et postiaadress sisaldab kohustusliku osana ka postiindeksit, koha-aadressis seda pole. Postiaadress vأµib teatud juhtudel piirduda postkastiga, nأ¤iteks &quot;Rapla maakond, Kaiu vald, Vahatu kأ¼la, pk 14&quot;, aga koha-aadress peab sisaldama asukoha nimetust vأµimalikult tأ¤pselt.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Objekti asukohta kirjeldav tekst. Koha-aadress on territooriumi haldusjaotuse hierarhiast ja ametlikest kohanimedest lأ¤htuv aadressiobjekti tekstilis-numbriline kirje. ADSi kontekstis peetakse koha-aadressi all silmas ametlikku koha-aadressi.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Andmeesitajate_klassifikaator -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Andmeesitajate_klassifikaator">
+        <rdfs:label xml:lang="et">Andmeesitajate klassifikaator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid"/>
+        <rdfs:comment xml:lang="et">Klassid moodustatakse jأ¤rgnevate atribuutide alusel:
+
+1) esitaja kood
+2) esitaja nimi
+3) esitaja organisatsiooni registrikood
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid">
+        <rdfs:label xml:lang="et">ADSi klassifikaatorid.</rdfs:label>
+        <rdfs:comment xml:lang="et">ADSi klassifikaatorite jaotus.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress">
+        <rdfs:label xml:lang="et">Koha-aadress</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+        <rdfs:comment xml:lang="et">Objekti asukohta kirjeldav tekst. Koha-aadress on territooriumi haldusjaotuse hierarhiast ja ametlikest kohanimedest lأ¤htuv aadressiobjekti tekstilis-numbriline kirje. Koha-aadressid jagunevad ametlikeks ning mitteametlikeks. ADSi kontekstis peetakse koha-aadressi all silmas ametlikku koha-aadressi.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponentide_tasandite_klassifikaator -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Komponentide_tasandite_klassifikaator">
+        <rdfs:label xml:lang="et">Komponentide tasandite klassifikaator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid"/>
+        <rdfs:comment xml:lang="et">Klassifikaatoris mأ¤أ¤ratakse:
+1) taseme nimetus,
+2) taseme number,
+3) vأµimalikud أ¼lem-tasemed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetleja">
+        <rdfs:label xml:lang="et">Menetleja</rdfs:label>
+        <rdfs:comment xml:lang="et">Isik, kes protsessi algatab, lأ¤bi viib vأµi jأµustab. Menetlejaks saab olla kas registreeritud kasutaja vأµi sأ¼steem ise (automaat).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetlus">
+        <rdfs:label xml:lang="et">Menetlus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="et">أœhes menetlusprotsessis osalevate objektide ja nendega seotud andmete kogum. Menetlusprotsess on tegevuste jada, mille tulemusena tekivad vأµi muutuvad pأµhisأ¼steemis olevad aadressid, aadressiobjektid vأµi objekti ja aadressi vahelised seosed. أœks protsess muudab loogiliselt seotud aadresse.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_liikide_joustamist_takistavad_vead -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_liikide_joustamist_takistavad_vead">
+        <rdfs:label xml:lang="et">Menetluse liikide jأµustamist takistavad vead</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid"/>
+        <rdfs:comment xml:lang="et">Klasside moodustamisel kasutatakse jأ¤rgnevaid atribuute:
+1) Menetluse liigi kood
+2) Jأµustamist takistava vea kood
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_liikide_klassifikaator -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Menetluse_liikide_klassifikaator">
+        <rdfs:label xml:lang="et">Menetluse liikide klassifikaator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid"/>
+        <rdfs:comment xml:lang="et">Liikide klassifikaatoris mأ¤أ¤ratakse:
+1) kas menetlust saab kasutaja algatada,
+2) menetluse liigi kood,
+3) menetluse liigi nimetus,
+4) Menetluse pأµhitأ¼أ¼bi kood: P-parandamine, M-muutmine, T-topoloogia, A-automaatne muudatus
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressikomponent">
+        <rdfs:label xml:lang="et">Mitteametlik aadressikomponent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressikomponent"/>
+        <rdfs:comment xml:lang="et">Mitteametlik komponent on ilma أµigusliku aluseta aadressi osa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_aadressiobjekt">
+        <rdfs:label xml:lang="et">Mitteametlik aadressiobjekt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressiobjekt"/>
+        <rdfs:comment xml:lang="et">Aadressiobjekt millel on vأ¤hemalt أ¼ks mitteametlik aadress ja selline aadressiobjekt mis ei oma vastet ametlikul ADS-i kihil.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_koha_aadress -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlik_koha_aadress">
+        <rdfs:label xml:lang="et">Mitteametlik aadress</rdfs:label>
+        <rdfs:label xml:lang="et">Mitteametlik koha-aadress</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Koha_aadress"/>
+        <rdfs:comment xml:lang="et">Mitteametlik on selline koha-aadress, mille mingil osal puudub أµiguslik alus. Mitteametlik aadress sisaldab vأ¤hemalt أ¼ht mitteametlikku komponenti.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlike_objektiliikide_klassifikaator -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Mitteametlike_objektiliikide_klassifikaator">
+        <rdfs:label xml:lang="et">Mitteametlike objektiliikide klassifikaator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid"/>
+        <rdfs:comment xml:lang="et">Klassifikaator defineeritakse klassid jأ¤rgnevate atribuutidega:
+1) Seotud ametlikud liigid, loetelu eraldatud komadega
+2) Mitteametliku liigi kood
+3) Mitteametliku liigi nimi
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Objekti_tsentroid">
+        <rdfs:label xml:lang="et">Aadressiobjekti tsentroid</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress"/>
+        <rdfs:comment xml:lang="et">Aadressiobjekti iseloomustav punkt, mis asub ruumikuju ala sees vأµi joone peal, punktobjekti korral vastavas punktis, tأ¤psusaste mأ¤أ¤ratakse أ¤rireeglitega.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ruumiaadress">
+        <rdfs:label xml:lang="et">Ruumiaadress</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjekti arvutuslik (analأ¼أ¼tiline) aadress, mis saadakse aadressiobjekti ruumikujude ja haldus- ning asustusأ¼ksuste ruumikujude analأ¼أ¼simisel. Ruumiaadress koosneb haldus- ning asustusأ¼ksuste nimedest koos liigisأµnadega ning vastavatest ruumilise osakaalu protsentidest 0,01% tأ¤psusega.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Veateadete_klassifikaator -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Veateadete_klassifikaator">
+        <rdfs:label xml:lang="et">Veateadete klassifikaator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Klassifikaatorid"/>
+        <rdfs:comment xml:lang="et">Klassifikaator mأ¤أ¤ratakse:
+1) Vea kood
+2) Kas kasutatakse menetluses (1) vأµi ei kasutata menetluses (nul)
+3) Veateade
+4) Tأ¼histamise tase: null vأµi 0 - probleemi ei saa tأ¼histada; 1 - saab tأ¼histada eriأµigustega; saab tأ¼histada tavaأµigustega
+5) Tأ¼أ¼p - K-komponendi viga, A-aadressi viga, N-normaliseerimise viga
+</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->

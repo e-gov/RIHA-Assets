@@ -1,0 +1,1450 @@
+<rdf:RDF xmlns="https://riha.eesti.ee/riha/onto/ravikindlustus/2008/r2#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:fragment_dokument="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/" xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:r1="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#" xmlns:r12="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#" xml:base="https://riha.eesti.ee/riha/onto/ravikindlustus/2008/r2">
+<owl:Ontology rdf:about="">
+<rdfs:label xml:lang="et">ravikindlustuse andmekogu</rdfs:label>
+<rdfs:comment xml:lang="et">Tervishoiukulude katmise süsteem kindlustatud isiku haiguste ennetamise ja ravi, ravimite ja meditsiiniliste abivahendite ostmise rahastamiseks ning ajutise töövõimetuse hüvitiste ja muude hüvitiste maksmiseks Ravikindlustuse Seaduses sätestatud tingimustel ja korra</rdfs:comment>
+<owl:versionInfo>v2</owl:versionInfo>
+</owl:Ontology>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#abiarsti_nimistu_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#abiarsti_nimistu_koosneb">
+<rdfs:label xml:lang="et">abiarsti nimistu koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">seos füüsilise isiku ja abiarstiteenust pakkuva nimistu vahel</rdfs:comment>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu_koosneb"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#moodustab_abiarstinimistu  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#moodustab_abiarstinimistu">
+<rdfs:label xml:lang="et">moodustab abiarstinimistu</rdfs:label>
+<rdfs:comment xml:lang="et">füüsilise isiku ja abiarstiteenust pakkuva arsti vaheline seos, moodustab abiarstinimistu</rdfs:comment>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#abiarsti_nimistu_koosneb"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_nimistu"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#moodustab_perearstinimistu  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#moodustab_perearstinimistu">
+<rdfs:label xml:lang="et">moodustab perearstinimistu</rdfs:label>
+<rdfs:comment xml:lang="et">füüsilise isiku ja perearstiteenust pakkuva arsti vaheline seos moodustab perearstinimistu</rdfs:comment>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#perearsti_nimistu_koosneb"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_nimistu"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#moodustab_toovoimetushyvitise  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#moodustab_toovoimetushyvitise">
+<rdfs:label xml:lang="et">moodustab töövõimetushüvitise</rdfs:label>
+<rdfs:comment xml:lang="et">isiku ja seaduse objekti komponendid moodustavad töövõimetushüvitise</rdfs:comment>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#toovoimetushyvitis_koosneb"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#on_kindlustaja  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#on_kindlustaja">
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustus"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#on_kindlustatu  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#on_kindlustatu">
+<rdfs:comment xml:lang="et">Isik, kellele ravikindlustus rakendub. Ehk juriidiliselt: Isik, kelle eest sotsiaalmaksu maksja on kohustatud maksma sotsiaalmaksu või kes iseenda eest maksab sotsiaalmaksu sotsiaalmaksuseaduses sätestatud korras, suuruses ja tähtaegadel, samuti nende isikutega ravikindlustuse seaduse alusel või nimetatud seaduse § 22 lõikes 1 nimetatud lepingu alusel võrdsustatud isik või Euroopa Nõukogu määruse nr 1408/71 alusel ravikindlustuse kindlustuskaitse saanud isik</rdfs:comment>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustus"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#perearsti_nimistu_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#perearsti_nimistu_koosneb">
+<rdfs:label xml:lang="et">perearsti nimistu koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">seosperearsti nimistusse kuuluva füüsilise isiku ja perestiteenust pakkuva arsti vahel</rdfs:comment>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu_koosneb"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#ravikindlustus_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#ravikindlustus_koosneb">
+<rdfs:label xml:lang="et">ravikindlustus koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">seos kindlustatud isiku ja kindlustaja vahel</rdfs:comment>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustuse_staatus"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustusliik"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#peatumise_kehtivuse_algus"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#peatumise_kehtivuse_lopp"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustus"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_kehtivuse_algus"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_kehtivuse_lopp"/>
+<rdfs:range>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#on_kindlustaja"/>
+<owl:onClass rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+</owl:Restriction>
+</rdfs:range>
+<rdfs:range>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#on_kindlustatu"/>
+<owl:onClass rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+</owl:Restriction>
+</rdfs:range>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#toovoimetushyvitis_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#toovoimetushyvitis_koosneb">
+<rdfs:label xml:lang="et">töövõimetushüvitis koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">seos füüsilise isiku ja seadusest tuleneva hüvitise vahel</rdfs:comment>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maksu_ja_tolliameti_info"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooinspektsiooni_info"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetuse_hyvitis"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusleht"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_staatus"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik_koosneb">
+<rdfs:label xml:lang="et">füüsiline isik koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">on seos isiku ja kindlustaja vahelistes tegevustes</rdfs:comment>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustatus"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#eesnimi"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik_koosneb"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isikukood"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustatuse_lopp"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kontaktandmed"/>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_fyysilise_isiku"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perenimi"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#synnikuupaev"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik_koosneb">
+<rdfs:label xml:lang="et">isik koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">isik kellel on haigekassaga mingil seadusest tuleneval asjaolul kokkupuudet.</rdfs:comment>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb"/>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_isiku"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidiline_isik_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidiline_isik_koosneb">
+<rdfs:label xml:lang="et">juriidiline isik koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">on seos kindlustaja ja kindlustatu vahele.</rdfs:comment>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik_koosneb"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidiline_isik"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidilise_isiku_nimi"/>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_juriidilise_isiku"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#registrikood"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_fyysilise_isiku  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_fyysilise_isiku">
+<rdfs:label xml:lang="et">moodustab füüsilise isikui</rdfs:label>
+<rdfs:comment xml:lang="et">isik ja kindlustaja moodustavad füüsilise isiku</rdfs:comment>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#eesnimi"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isikukood"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kontaktandmed"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_isiku"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perenimi"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#synnikuupaev"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_isiku  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_isiku">
+<rdfs:label xml:lang="et">moodustab isiku</rdfs:label>
+<rdfs:comment xml:lang="et">Haigekassa sedustega mingil põhjusel seotud , moodustab isiku</rdfs:comment>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_juriidilise_isiku  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_juriidilise_isiku">
+<rdfs:label xml:lang="et">moodustab juriidilise isiku</rdfs:label>
+<rdfs:comment xml:lang="et">juriidilise isiku moodustab kindlustaja ja kindlustatu soes</rdfs:comment>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidiline_isik"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidilise_isiku_nimi"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_isiku"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#registrikood"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_nimistu  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_nimistu">
+<rdfs:label xml:lang="et">moodustab nimistu</rdfs:label>
+<rdfs:comment xml:lang="et">füüsise isiku ja teenust pakkuva arsti seos, moodustab nimistu</rdfs:comment>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#abiarst"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#abiarsti_nimistu"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asendusarst"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#patsient"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearst"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearsti_nimistu"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pereode"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#seose_tyyp_nimistusse_maaramisel"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_toovoimetuslehe  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_toovoimetuslehe">
+<rdfs:label xml:lang="et">moodustab töövõimetushüvitise</rdfs:label>
+<rdfs:comment xml:lang="et">töövõimetuslet ja tema komponenid moodustavad töövõimetuslehe</rdfs:comment>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kergem_too"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusleht"/>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusleht_koosneb"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu_koosneb">
+<rdfs:label xml:lang="et">nimistu koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">seos füüsise isiku ja teenust pakkuva arsti vahel</rdfs:comment>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#abiarst"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#abiarsti_nimistu"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asendusarst"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb"/>
+<owl:inverseOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#moodustab_nimistu"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#patsient"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearst"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearsti_nimistu"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pereode"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#seose_tyyp_nimistusse_maaramisel"/>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_alus_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_alus_koosneb">
+<rdfs:label xml:lang="et">ravikindlustusalus koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">seos dokumendi esitamise kohustusest andmeedastaja poolt ja ravikindlustuse aluse komponentide vahel.</rdfs:comment>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustusaluse_kande_tyyp"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#andmeedastaja"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustaja"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_alus"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_aluse_algus"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_aluse_lopp"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_peatumise_aluse_algus"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_peatumise_aluse_lopp"/>
+<rdfs:range>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#on_kindlustatu"/>
+<owl:onClass rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+</owl:Restriction>
+</rdfs:range>
+</owl:ObjectProperty>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusleht_koosneb  -->
+<owl:ObjectProperty rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusleht_koosneb">
+<rdfs:label xml:lang="et">töövõimetusleht koosneb</rdfs:label>
+<rdfs:comment xml:lang="et">seos töövõimetuslehe ja selle komponentide vahel</rdfs:comment>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#ravi_eiramine"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tervishoiuteenuse_osutaja"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_aek_otsus_tyyp"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_kergem_too_tyyp"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_lopetamise_otsus_tyyp"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_puudub_oigus_tyyp"/>
+<rdfs:subPropertyOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#koosneb"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maksu_ja_tolliameti_info"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#patsient"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooinspektsiooni_info"/>
+<rdfs:domain rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusleht"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_liik"/>
+<rdfs:range rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_nr"/>
+</owl:ObjectProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#dokument"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#hyvitise_taotlus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#hyvitise_taotlus">
+<rdfs:label xml:lang="et">hüvitise taotlus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#sissetulevad_dokumendid"/>
+<rdfs:comment xml:lang="et">kindlustatud isiku taotlus hüvitisele, kasutatud teenuse eest, vastavalt seaduses määratud korrale.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustatus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustatus">
+<rdfs:label xml:lang="et">kindlustatus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus"/>
+<rdfs:comment xml:lang="et">Ravikindlustuse olemasolu või puudumine mingil määratud ajahetkel. Tagantjärgi mittemuudetav suurus.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustatuse_omandusega_seotud_tyyp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustatuse_omandusega_seotud_tyyp">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustusaluse_kande_tyyp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustusaluse_kande_tyyp">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustuse_staatus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#kindlustuse_staatus">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#ravi_eiramine  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#ravi_eiramine">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#sissetulevad_dokumendid  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#sissetulevad_dokumendid">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#dokument"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tech_thing  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tech_thing">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tervishoiuteenuse_osutaja  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tervishoiuteenuse_osutaja">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tv_perioodi_tyyp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tv_perioodi_tyyp">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_aek_otsus_tyyp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_aek_otsus_tyyp">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_kergem_too_tyyp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_kergem_too_tyyp">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_lopetamise_otsus_tyyp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_lopetamise_otsus_tyyp">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_puudub_oigus_tyyp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tvl_puudub_oigus_tyyp">
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#abiarst  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#abiarst">
+<rdfs:label xml:lang="et">abiarst</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdfs:comment xml:lang="et">Ravikindlustuse seaduse alusel sõlmitavas üldarstiabi rahastamise lepingus kokkulepitud juhul (nimistus suuruse alusel) lisaks perearstile nimistut teenindav arst</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#abiarsti_nimistu  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#abiarsti_nimistu">
+<rdfs:label xml:lang="et">abiarsti nimistu</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu"/>
+<rdfs:comment xml:lang="et">Perearsti nimistu sees eraldi registreeritud abiarsti poolt teenindamisele kuuluvate isikute loetelu eesmärgiga teeninduspiirkonnas maavanema poolt avada uus nimistu. Isik võetakse nimistusse esitatud avalduse alusel või maavanema määramise kohaselt.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#aeg">
+<rdfs:label xml:lang="et">aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#andmeedastaja  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#andmeedastaja">
+<rdfs:label xml:lang="et">andmeedastaja</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdfs:comment xml:lang="et">Juriidiline või füüsiline isik, kes on kohustatud esitama kindlustuskaitse tekkimise, lõppemise ja peatamisega seotud dokumendid/andmed (nt tööandja, Haridusministeerium, Sotsiaalkindlustusamet jne).</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arsti_reg_toendi_nr  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arsti_reg_toendi_nr">
+<rdfs:label xml:lang="et">arsti reg. tõendi nr</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Tervishoiutöötajate riiklikusse registrisse kantud arsti registreerimistõend annab õiguse osutada tervishoiuteenuseid erialal, mille osutajana ta on registreeritud. Nimetatud registrisse kantakse ka töökohta puudutavad andmed.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arvestatud_sotsmaks  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arvestatud_sotsmaks">
+<rdfs:label xml:lang="et">arvestatud sotsiaalmaks</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa"/>
+<rdfs:comment xml:lang="et">Süsteemi poolt töövõimetuslehe alusel Maksu- ja Tolliametist saadud arvestatud sotsiaalmaksu summa</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arvutatud_suurused  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arvutatud_suurused">
+<rdfs:label xml:lang="et">arvutatud suurused</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#menetluses_dokumendid"/>
+<rdfs:comment xml:lang="et">Töövõimetuslehele muudest lähteandmetest arvutatud karakteristikud</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asendusarst  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asendusarst">
+<rdfs:label xml:lang="et">asendusarst</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdfs:comment xml:lang="et">Perearsti ajutisel äraolekul maavanema poolt kinnitatud perearsti nimistut teenindav arst</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asula_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asula_kood">
+<rdfs:label xml:lang="et">asula kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ehak"/>
+<rdfs:comment xml:lang="et">Neljakohaline kood</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asula_nimi  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asula_nimi">
+<rdfs:label xml:lang="et">asula nimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#avalduse_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#avalduse_aeg">
+<rdfs:label xml:lang="et">avalduse aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Perearsti nimistuga liitumise kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#diagnoosi_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#diagnoosi_kood">
+<rdfs:label xml:lang="et">diagnoosi kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Arstlikku otsust (haiguse olemuse ja haige seisundi kohta) iseloomustav tähe ja numbriga tähis vastavalt rahvusvahelises haiguste ja tervisega seotud probleemide statistilise klassifikatsiooni kümnendale väljaandele</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#dokument  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#dokument">
+<rdfs:label xml:lang="et">dokument</rdfs:label>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#e_vorm  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#e_vorm">
+<rdfs:label xml:lang="et">e-vorm</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#menetluses_dokumendid"/>
+<rdfs:comment xml:lang="et">Euroopa Liidus kasutatavad vormikohased tõendid, millega määratakse isiku õigused saada teises liikmesriigis erinevaid sotsiaalkindlustushüvitisi</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#e_vormi_nr  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#e_vormi_nr">
+<rdfs:label xml:lang="et">e-vormi nr</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Euroopa Liidus, Euroopa Majanduspiirkonnas ja Šveitsis kasutatava ühtse vormikohase tõendi number, mis näitab antud vormi eesmärki/tegevust.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#e_vormi_tyyp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#e_vormi_tyyp">
+<rdfs:label xml:lang="et">e-vormi tüüp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Euroopa Liidus, Euroopa Majanduspiirkonnas ja Šveitsis kasutatava vormikohase tõendi tüüp, mille numbriga määratakse isiku õigused saada teises liikmesriigis erinevaid sotsiaalkindlustushüvitisi.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#eesnimi  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#eesnimi">
+<rdfs:label xml:lang="et">eesnimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Füüsilise isiku eesnimi, nimed</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ehak  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ehak">
+<rdfs:label xml:lang="et">ehak</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress"/>
+<rdfs:comment xml:lang="et">Eesti Haldus-ja asutusjaotuse klassifikaator</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ei_ole_pysiva_toovoimetuse_pohjustaja  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ei_ole_pysiva_toovoimetuse_pohjustaja">
+<rdfs:label xml:lang="et">ei ole püsiva töövõimetuse põhjustaja</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus"/>
+<rdfs:comment xml:lang="et">Antud TVLi töövõimetuse põhjus ei ole püsiva töövõimetuse põhjustaja, tekitaja</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#element_name  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#element_name">
+<rdfs:label xml:lang="et">element name</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Vigase kande välja tunnus/viide,teate kirjeldus</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#email  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#email">
+<rdfs:label xml:lang="et">e-mail</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kontaktandmed"/>
+<rdfs:comment xml:lang="et">Elektroonse posti aadress</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#esm_jarg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#esm_jarg">
+<rdfs:label xml:lang="et">esmane järg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus"/>
+<rdfs:comment xml:lang="et">Järglehele märgitud esmase tvl'I number (termin: TVLNumber)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#esmase_tvl_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#esmase_tvl_algus">
+<rdfs:label xml:lang="et">esmase tvl algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Järgnevana väljakirjutatud töövõimetuslehele märgitakse esmase töövõimetuslehe töövabastuse alguskuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg">
+<rdfs:label xml:lang="et">fikseeritud aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#aeg"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik">
+<rdfs:label xml:lang="et">fyysiline isik</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdfs:comment xml:lang="et">Eesti alaline elanik või tähtajalise elamisloa või elamisõiguse alusel Eestis elav füüsiline isik. Identifitseeritav isikukoodi järgi. Euroopa Liidu liikmesriigi diplomaatilise passiga Eestis kindlustatud isikule genereeritakse Eesti isikukoodile sarnanev ravikindlustuskood, mida kasutatakse isikukoodina (välja arvatud isiku andmete kontroll Rahvastikuregistris). Ärigeristris või mittetulundusühingute ja sihtasutuste registris registreeritud juriidiline isik või riigi- ja kohaliku omavalitsuse asutuste riiklikus registris registreeritud avalik õiguslik juriidiline isik või riigi- ja kohaliku omavalitsuse asutus, mis on identifitseeritav registrikoodi järgi.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#garantiiaeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#garantiiaeg">
+<rdfs:label xml:lang="et">garantiiaeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Ajavahemik, mis jääb ravikindlustuse lõppemise aluse või ravikindlustuse peatumise aluse ja kindlustuskaitse kehtivuse lõppemise või peatumise vahele. Ajavahemiku pikkus on kehtestatud ravikindlustuse seadusega ja arvutatakse kindlustuskaitse peatumise või lõppemise kande tegemise kuupäeva, ravikindlustuse lõppemise aluse või ravikindlustuse peatumise aluse ja kindlustusliigi alusel.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk">
+<rdfs:label xml:lang="et">hulk</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus"/>
+<rdfs:comment xml:lang="et">Kogus või kogu mahtu määravsuurus.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitamise_perioodi_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitamise_perioodi_algus">
+<rdfs:label xml:lang="et">hüvitamise perioodi algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Ajutise töövõimetuse hüvitise maksmise alguskuupäev, milleks on töövõimetuslehele märgitud töövabastuse alguskuupäev, v.a esmasena väljakirjutatud haiguslehe korral (mil hüvitamise perioodi aluguseks on töövabastuse teine päev) ning kui kindlustatul puudub õigus ajutise töövõimetuse hüvitisele</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitamise_perioodi_lopp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitamise_perioodi_lopp">
+<rdfs:label xml:lang="et">hüvitamise perioodi lõpp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+<rdfs:comment xml:lang="et">Töövõimetusjuhtumi viimane hüvitatav kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitatud_paevi  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitatud_paevi">
+<rdfs:label xml:lang="et">hüvitatud päevi</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Päevade arv, mil kindlustatule maksti töövõimetuslehe alusel ajutise töövõimetuse hüvitist</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitatud_summa  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitatud_summa">
+<rdfs:label xml:lang="et">hüvitatud summa</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa"/>
+<rdfs:comment xml:lang="et">Süsteemi poolt töövõimetuslehe alusel kindlustatule makstud summa</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood">
+<rdfs:label xml:lang="et">identifitseeriv kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kood"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#indeks  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#indeks">
+<rdfs:label xml:lang="et">indeks</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress"/>
+<rdfs:comment xml:lang="et">Postiasutuse numbriühend, mille järgi sorteeritakse postisaadetisi; kirjutatakse postiasutuse asukohaasula nime ette ja on olenevalt riigi suurusest hrl nelja- kuni kuuekohaline [ENE]</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#info_kannete_arv  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#info_kannete_arv">
+<rdfs:label xml:lang="et">info kannete arv</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Informatiivse teatega positiivselt töödeldud kannete arv( hulk)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik">
+<rdfs:label xml:lang="et">isik</rdfs:label>
+<rdfs:comment xml:lang="et">Iga isik kellega ravikindlustuse alal on ehk'ga seos</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isikukood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isikukood">
+<rdfs:label xml:lang="et">isikukood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">On riigi poolt kodanikele ning alaliselt või tähtajalise elamisloa või elamisõiguse alusel riigis elavatele isikutele omistatav unikaalne numbrikombinatsioon. Isikukoodid moodustatakse eri riikides erinevalt</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidiline_isik  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidiline_isik">
+<rdfs:label xml:lang="et">juriidiline isik</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdfs:comment xml:lang="et">Tööandja õigusi omav juriidilise isiku struktuuriüksus või teovõimeline füüsiline isik, samuti füüsilise isikuga võlaõigusliku lepingu sõlminud isik, kui on täidetud ravikindlustuse seaduse § 5 lõike 2 punktis 4 ja 5 sätestatud tingimused.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidilise_isiku_nimi  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidilise_isiku_nimi">
+<rdfs:label xml:lang="et">juriidilise isiku nimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Äriregistris või riigi- ja kohaliku omavalitsuse asutuste riiklikus registris või mittetulundusühingute ja sihtasutuste registris märgitud juriidilise isiku või riigi- või kohaliku asutuse nimi</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kande_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kande_aeg">
+<rdfs:label xml:lang="et">kande aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Kindlustusaluse muudatuse kande tegemise aeg andmeedastaja juures</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kergem_too  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kergem_too">
+<rdfs:label xml:lang="et">kergem töö</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#menetluses_dokumendid"/>
+<rdfs:comment xml:lang="et">Arsti otsuse alusel kindlustatud isiku töö- või teenustuskohustuse ajutine kergendamine või ajutiselt teisele tööle üle viimine. Kui kergemat tööd või teist tööd anda ei ole ja Tööinspektsioon seda ka tuvastab, siis isik vabastatakse ajutiselt tööst.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustaja  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustaja">
+<rdfs:label xml:lang="et">kindlustaja</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdfs:comment xml:lang="et">Subjekt, kelle kaudu tekib füüsilisel isikul õigus ravikindlustuse kindlustuskaitselele: füüsiline isik, juriidiline isik, FIE või riik, kui kindlustuse subjektiks on riikidevaheline leping või muu seadusest tulenev olu (nt tööandja, FIE, hooldatav, Tartu Ülikool, Eesti…).</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustatuse_lopp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustatuse_lopp">
+<rdfs:label xml:lang="et">kindlustatuse lõpp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+<rdfs:comment xml:lang="et">Hinnaguline kuupäev, milleni käesoleval hetkel kehtivate andmete järgi isiku ravikindlustus viimast päeva kehtida võiks.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustusliik  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustusliik">
+<rdfs:label xml:lang="et">kindlustusliik</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Eesti Haigekassa poolt määratletud ravikindlustuse kindlustuskaitset iseloomustav numbriline kodeering.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood">
+<rdfs:label xml:lang="et">klassifitseeriv kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kood"/>
+<rdfs:comment xml:lang="et">Klassifikaatoriga määratud loendist üks võimalik identifikaator. Eelnevalt piiritletud väärtuste loend. Näiteks kindlustusliikide loend.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kontaktandmed  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kontaktandmed">
+<rdfs:label xml:lang="et">kontaktandmed</rdfs:label>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kood">
+<rdfs:label xml:lang="et">kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus"/>
+<rdfs:comment xml:lang="et">Reeglipärane vastavus tähistajate ja tähistatute vahel</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kooskolastus_nr  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kooskolastus_nr">
+<rdfs:label xml:lang="et">kooskõlastus nr</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Tööst vabastamise kooskõlastuse number Tööinspektsioonis</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#korter  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#korter">
+<rdfs:label xml:lang="et">korter</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress"/>
+<rdfs:comment xml:lang="et">Korteri number</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maakonna_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maakonna_kood">
+<rdfs:label xml:lang="et">maakonna kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ehak"/>
+<rdfs:comment xml:lang="et">Kahekohaline kood</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maja  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maja">
+<rdfs:label xml:lang="et">maja</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress"/>
+<rdfs:comment xml:lang="et">Maja number</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maks_lopp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maks_lopp">
+<rdfs:label xml:lang="et">maks lõpp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+<rdfs:comment xml:lang="et">Hüvitusperioodi lõpukuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makse_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makse_algus">
+<rdfs:label xml:lang="et">makse algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Hüvitusperioodi alguskuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makstud_paevi  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makstud_paevi">
+<rdfs:label xml:lang="et">makstud päevi</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Süsteemi poolt lehele arvutatud päevade arv</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makstud_sotsmaks  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makstud_sotsmaks">
+<rdfs:label xml:lang="et">makstud sotsmaks</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa"/>
+<rdfs:comment xml:lang="et">Süsteemi poolt töövõimetuslehe alusel Maksu- ja Tolliametist saadud makstud sotsiaalmaksu summa</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maksu_ja_tolliameti_info  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maksu_ja_tolliameti_info">
+<rdfs:label xml:lang="et">maksu ja tolliameti info</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+<rdfs:comment xml:lang="et">Kindlustatu eelmise kalendriaasta sotsiaalmaksuga maksustatav tulu</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#menetluses_dokumendid  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#menetluses_dokumendid">
+<rdfs:label xml:lang="et">menetluses dokumendid</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#dokument"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#muudatuste_arv  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#muudatuste_arv">
+<rdfs:label xml:lang="et">muudatuste arv</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">::Kirjeldab IT teenuste ontoloogia</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi">
+<rdfs:label xml:lang="et">nimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu">
+<rdfs:label xml:lang="et">nimistu</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdfs:comment xml:lang="et">Perearsti teenindamisele kuuluvate isikute loetelu. Isik võetakse nimistusse perearstile esitatud avalduse alusel või maavanema määramise kohaselt</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistus_alates  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistus_alates">
+<rdfs:label xml:lang="et">nimistus alates</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Kuupäev, millest alates isik kuulub perearsti nimistusse</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistus_kuni  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistus_kuni">
+<rdfs:label xml:lang="et">nimistus kuni</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+<rdfs:comment xml:lang="et">Kuupäev, millal patsient kuulub viimast päeva antud nimistusse.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ok_kannete_arv  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ok_kannete_arv">
+<rdfs:label xml:lang="et">ok kannete arv</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Korrektselt töödeldud kannete arv( hulk)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ooteaeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ooteaeg">
+<rdfs:label xml:lang="et">ooteaeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Ajavahemik, mis jääb ravikindlustuse tekkimise aluse või kindlustuskaitse tekkimise kande tegemise ja kindlustuskaitse kehtima hakkamise vahele ja mis arvutatakse kindlustuskaitse tekkimise kande tegemise kuupäeva, ravikindlustuse tekkimise aluse ja kindlustusliigi alusel. Ajavahemiku pikkus on kehtestatud ravikindlustuse seadusega.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#paeva_summa  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#paeva_summa">
+<rdfs:label xml:lang="et">päeva summa</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa"/>
+<rdfs:comment xml:lang="et">Süsteemi poolt töövõimetuslehe alusel arvutatud ühe kalendripäeva eest arvutatud summa.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#paeva_tulu  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#paeva_tulu">
+<rdfs:label xml:lang="et">päeva tulu</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa"/>
+<rdfs:comment xml:lang="et">Kalendripäeva keskmine tulu arvutatakse, lähtudes Maksu- ja Tolliameti esitatud sotsiaalmaksu maksmist puudutavatest andmetest ja käesoleva seaduse § 5 lõike 2 punktides 1, 2, 4 ja 5 ning lõikes 3 nimetatud isikute esitatud hüvitise saamise õigust tõendavatest andmetest</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pahade_kannete_arv  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pahade_kannete_arv">
+<rdfs:label xml:lang="et">pahade kannete arv</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Töötlemisel vea saanud kannete arv (hulk)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pakkide_arv  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pakkide_arv">
+<rdfs:label xml:lang="et">pakkide arv</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Tervishoiuteenuse osutaja poolt esitatud failide arv</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pangakonto  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pangakonto">
+<rdfs:label xml:lang="et">pangakonto</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Füüsilise või juriidilise isiku panga konto</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pangakonto_omanik  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pangakonto_omanik">
+<rdfs:label xml:lang="et">pangakonto omanik</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Pangakontot omav füüsiline isik või juriidiline isik</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#patsient  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#patsient">
+<rdfs:label xml:lang="et">patsient</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdfs:comment xml:lang="et">Arstiabi saav haige</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#peatumise_kehtivuse_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#peatumise_kehtivuse_algus">
+<rdfs:label xml:lang="et">peatumise kehtivuse algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Kindlustusaluse kehivuse peatamise kehtima hakkamise aeg, mida arvutatakse peatamise aluse alguse ja garantiiaja pikkuse (konstant) järgi (lihtsustatult, kui dokumendid esitatakse EHKsse õigeaegselt) Teine variant: Kuupäev, millal peatub kindlustatu ravikindlustuse kindlustuskaitse ning mida arvutatakse ravikindlustuse peatumise aluse alguse ja garantiiaja pikkuse (konstant) järgi või milleks on kande tegemise kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#peatumise_kehtivuse_lopp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#peatumise_kehtivuse_lopp">
+<rdfs:label xml:lang="et">peatumise kehtivuse lõpp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+<rdfs:comment xml:lang="et">Kuupäev, millal kindlustatu kindlustuskaitse kehtivuse peatumine lõppes ning näitab kindlustukaitse peatumise viimast kuupäeva.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearst  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearst">
+<rdfs:label xml:lang="et">perearst</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdfs:comment xml:lang="et">Maavanema poolt kinnitatud nimistu alusel üldarstiabi osutav eriarst</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearst_alates  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearst_alates">
+<rdfs:label xml:lang="et">perearst alates</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Nimistusse võtmiseks perearstile kindlustatu avalduse esitamise kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearsti_nimistu  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearsti_nimistu">
+<rdfs:label xml:lang="et">perearsti nimistu</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu"/>
+<rdfs:comment xml:lang="et">Perearsti teenindamisele kuuluvate isikute loetelu. Isik võetakse nimistusse perearstile esitatud avalduse alusel või maavanema määramisel</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perenimi  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perenimi">
+<rdfs:label xml:lang="et">perenimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Füüsilise isiku perekonnanimi, nimed</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pereode  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pereode">
+<rdfs:label xml:lang="et">pereõde</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdfs:comment xml:lang="et">Koos perearstiga töötav tervishoiutöötaja</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus">
+<rdfs:label xml:lang="et">perioodi algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#aeg"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp">
+<rdfs:label xml:lang="et">perioodi lõpp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#aeg"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#piirkonna_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#piirkonna_kood">
+<rdfs:label xml:lang="et">piirkonna kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Eesti Haigekassa piirkondliku osakonna pädevust iseloomustav maakondade grupp, millised kuuluvad antud piirkondliku osakonda. Kindlustatud isiku kindlustatus on määratud alati ühes kindlustatud isiku poolt valitud piirkondlikus osakonnas ning see ei ole seotud juriidilise isiku või kindlustaja tegevuskohaga või asukohaga</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress">
+<rdfs:label xml:lang="et">posti aadress</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kontaktandmed"/>
+<rdfs:comment xml:lang="et">Aadress, kuhu saadetakse paberkandjal post</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#puudub_oigus_hyvitisele  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#puudub_oigus_hyvitisele">
+<rdfs:label xml:lang="et">puudub õigus hüvitisele</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#menetluses_dokumendid"/>
+<rdfs:comment xml:lang="et">Sotsiaalministri määrusega kehtestatud loendist, märgib tööandja põhjuse, miks puudub isikul õigus ajutise töövõimetuse hüvitisele mingil perioodil</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#puudub_oigus_hyvitisele_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#puudub_oigus_hyvitisele_kood">
+<rdfs:label xml:lang="et">puudub õigus hüvitisele kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Numbriliselt väljandatud põhjus, miks kindlustatud isikul puudub «Ravikindlustuse seaduse» § 60 lõigetest 2 või 4 või § 61 lõikest 2 tulenevalt õigus saada ajutise töövõimetuse hüvitist</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravi_eiramise_pohjus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravi_eiramise_pohjus">
+<rdfs:label xml:lang="et">ravi eiramise põhjus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Arsti otsus, et patsient eirab tema poolt määratud ravi, mille tõttu tervenemine on takistatud</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustus">
+<rdfs:label xml:lang="et">ravikindlustus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#menetluses_dokumendid"/>
+<rdfs:comment xml:lang="et">Ravikindlustus on tervishoiukulude katmise süsteem kindlustatud isiku haiguste ennetamise ja ravi, ravimite ja meditsiiniseadmete ostmise rahastamiseks ning ajutise töövõimetuse hüvitiste ja muude hüvitiste maksmiseks ravikindlustuse seaduses sätestatud tingimustel ja korras</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_alus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_alus">
+<rdfs:label xml:lang="et">ravikindlustuse alus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#sissetulevad_dokumendid"/>
+<rdfs:comment xml:lang="et">Ravikindlustuse kindlustuskaitse tekkimist, peatumist või lõppemist põhjustav sündmus, toiming, nähtus või dokument, mil juriidilisel isikul, kindlustajal, andmeedastajal tekib kohustus esitada haigekassale andmed kooskõlas ravikindlustuse seadusega. Näiteks töölepingu sõlmimine, kõrgkooli õppima asumine, füüsilisest isikust ettevõtjana registreerimine, riikliku pensioni määramine jne. (ravikindlustuse tekkimise alus, ravikindlustuse peatumise alus ja ravikindlustuse lõppemise alus)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_aluse_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_aluse_algus">
+<rdfs:label xml:lang="et">ravikindlustuse aluse algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Kuupäev, millal toimus ravikindlustuse kindlustuskaitse tekkimise alust põhjustav sündmus, toiming, nähtus või dokument (nt tööle asumise kuupäev, kooli immatrikuleerimise aeg, riiklik pensioni määramise kuupäev jne)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_aluse_lopp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_aluse_lopp">
+<rdfs:label xml:lang="et">ravikindlustuse aluse lõpp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+<rdfs:comment xml:lang="et">Kuupäev, millal ravikindlustuse aluse kehtivus lõppes. ei ole kindlustuse lõpp ega ka kindlustatuse lõpp või: Kuupäev, millal toimus ravikindlustuse kindlustuskaitse lõppemise alust põhjustav sündmus, toiming, nähtus või dokument (nt töölepingu lõpetamise kuupäev, kooli lõpetamise kuupäev jne)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_kehtivuse_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_kehtivuse_algus">
+<rdfs:label xml:lang="et">ravikindlustuse kehtivuse algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Kindlustatu ravikindlustuse kindlustuskaitse tekkimise kuupäev, mida arvutatakse ravikindlustuse aluse alguse, ooteaja pikkuse ja andmete edastamise kuupäeva järgi</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_kehtivuse_lopp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_kehtivuse_lopp">
+<rdfs:label xml:lang="et">ravikindlustuse kehtivuse lõpp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+<rdfs:comment xml:lang="et">Kuupäev, millal kindlustatul lõpeb ravikindlustuse kindlustuskaitse ning see arvutatakse ravikindlustuse aluse lõpu ja garantiiaja pikkuse (konstant) järgi või selleks on kande tagamise kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_peatumise_aluse_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_peatumise_aluse_algus">
+<rdfs:label xml:lang="et">ravikindlustuse peatumise aluse algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdfs:comment xml:lang="et">Kuupäev, millal toimus ravikindlustuse kindlustuskaitse peatumise alust põhjustav sündmus (nt akadeemilise puhkuse alguse kuupäev, töösuhte peatumise kuupäev)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_peatumise_aluse_lopp  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_peatumise_aluse_lopp">
+<rdfs:label xml:lang="et">ravikindlustuse peatumise aluse lõpp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+<rdfs:comment xml:lang="et">aeg, millal kindlustusealuse kehtivuse peatamine lõppes või teine variant: Kuupäev, millal toimus ravikindlustuse kindlustuskaitse peatumise lõppemist põhjustav sündmus, näiteks palgata puhkuse lõppemine jne.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustusliigi_nimetus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustusliigi_nimetus">
+<rdfs:label xml:lang="et">ravikindlustusliigi_nimetus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Eesti Haigekassa poolt määratletud ravikindlustuse kindlustuskaitset iseloomustava numbrilise kodeeringu (kindlustusliik) sõnaline nimetus.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#raviliigi_nimetus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#raviliigi_nimetus">
+<rdfs:label xml:lang="et">raviliigi nimetus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Ravi liikide loendis toodud raviliigi tähelise väljenduse sõnaline nimetus</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#raviliik  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#raviliik">
+<rdfs:label xml:lang="et">raviliik</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Ravi liikide loendis toodud raviliigi täheline väljendus</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#reaalne_kuutasu  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#reaalne_kuutasu">
+<rdfs:label xml:lang="et">reaalne kuutasu</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa"/>
+<rdfs:comment xml:lang="et">Põhipalgast arvutatud kuutasu töövabastuse alguspäevale eelnenud päeval</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#registreerimise_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#registreerimise_aeg">
+<rdfs:label xml:lang="et">registreerimise aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Registreerimise kuupäev, dokumendi HK-sse laekumise kuupäev.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#registrikood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#registrikood">
+<rdfs:label xml:lang="et">registrikood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Äriregistri või riigi- ja kohaliku omavalitsuse asutuste riikliku registri või mittetulundusühingute ja sihtasutuste registri poolt antav kood</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#riik  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#riik">
+<rdfs:label xml:lang="et">riik</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress"/>
+<rdfs:comment xml:lang="et">Statistika ameti klassifikaatorile</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#seose_tyyp_nimistusse_maaramisel  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#seose_tyyp_nimistusse_maaramisel">
+<rdfs:label xml:lang="et">Seosetüüp nimistusse määaramisel</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Seosetüüp näitab, mis liiki seosega on tegemist grupi ja isikute vahel või isiku ja organisatsiooni vahel; grupid on perearsti nimistu, maavalitsus, EHK piirkondlik osakond; Võimalikud: - ZARST4 - patsiendi ja perearsti nimistu seos - ZARST6 - patsiendi ja abiarsti nimistu seos</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ska_suunamise_otsuse_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ska_suunamise_otsuse_aeg">
+<rdfs:label xml:lang="et">ska suunamise otsuse aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Töövõimetuslehele arsti poolt märgitud Sotsiaalkindlustusametisse suunamise või otsuse kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus"/>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#sugu  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#sugu">
+<rdfs:label xml:lang="et">sugu</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Inimese sugu määrav väärtus</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa">
+<rdfs:label xml:lang="et">summa</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#synnikuupaev  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#synnikuupaev">
+<rdfs:label xml:lang="et">sünnikuupäev</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Sünniaeg</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#synnituse_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#synnituse_aeg">
+<rdfs:label xml:lang="et">sünnituse aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Arsti poolt sünnituslehele märgitav eeldatav sünnitamise kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tanav_voi_talu  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tanav_voi_talu">
+<rdfs:label xml:lang="et">tänav või talu</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress"/>
+<rdfs:comment xml:lang="et">Tänavat või talu iseloomustav nimi</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tasu_kergemal_tool  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tasu_kergemal_tool">
+<rdfs:label xml:lang="et">tasu kergemal tööl</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#summa"/>
+<rdfs:comment xml:lang="et">Tööandja poolt töövõimetuslehele märgitud kindlustatu töötasu summa kergemale tööle üleviimise perioodil</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#teated  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#teated">
+<rdfs:label xml:lang="et">teated</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tech_thing"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tegevusala  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tegevusala">
+<rdfs:label xml:lang="et">tegevusala</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus"/>
+<rdfs:comment xml:lang="et">Tegevusala, kus tööõnnetus juhtus</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#telefon  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#telefon">
+<rdfs:label xml:lang="et">telefon</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kontaktandmed"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tervishoiuteenuse_osutaja_nimi  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tervishoiuteenuse_osutaja_nimi">
+<rdfs:label xml:lang="et">tervishoiuteenuse osutaja nimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Äriregistis või mittetulundusühingute ja sihtasutuste registris märgitud tervishoiuteenuse osutaja nimi</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tervishoiutootaja_eriala  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tervishoiutootaja_eriala">
+<rdfs:label xml:lang="et">Tervishoiutöötaja eriala</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Tervishoiutöötajate riiklikusse registrisse kantud arsti/muu tervishoiutöötaja eriala, millel isikule on antud õigus tervishoiuteenuseid osutada.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus">
+<rdfs:label xml:lang="et">tõeväärtus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus"/>
+<rdfs:comment xml:lang="et"/>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tohib_teisele_taotleda_serti_erk_kaarti  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tohib_teisele_taotleda_serti_erk_kaarti">
+<rdfs:label xml:lang="et">tohib teisele taotleda serti erk kaarti</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus"/>
+<rdfs:comment xml:lang="et">Teisele isikule tohib Euroopa ravikindlustuskaardi või selle asendustertifikaadi väljastamist taotleda isiku seaduslik esindaja</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooandja_poolt_esitatud_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooandja_poolt_esitatud_aeg">
+<rdfs:label xml:lang="et">tööandja poolt esitatud aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Tööandja poolt esitadud hüvitamise aeg</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooinspektsiooni_info  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooinspektsiooni_info">
+<rdfs:label xml:lang="et">tööinspektsiooni info</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#fragment_dokument/sektsioon"/>
+<rdfs:comment xml:lang="et">Tööõnnetuse- ja kutsehaigestumise raportite ning kergema tööga seotud kooskõlastuste andmed</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_aeg">
+<rdfs:label xml:lang="et">tööõnnetuse aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Tööinspektsioonist saadud tööõnnetuse või kutsehaigestumise kuupäev.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_raporti_nr_ja_kutsehaigestumise_raporti_nr  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_raporti_nr_ja_kutsehaigestumise_raporti_nr">
+<rdfs:label xml:lang="et">tööõnnetuse raporti nr ja kutsehaigestumise raporti nr</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Tööõnnetuste ja kutsehaigestumiste ning tööst põhjustatud haigestumiste andmekogus (peab Tööinspektsioon) registreeritud tööõnnetuste ja kutsehaigestumiste kohta koostatud raporti number</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_voi_kutsehaigestumise_raport  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_voi_kutsehaigestumise_raport">
+<rdfs:label xml:lang="et">tööõnnetuse või kutsehaigestumise raport</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus"/>
+<rdfs:comment xml:lang="et">lisatakse TVL- le juhul, kui töövabastuse põhjuseks on tööõnnetus või kutsehaigestumine.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetuse_hyvitis  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetuse_hyvitis">
+<rdfs:label xml:lang="et">ajutise töövõimetuse hüvitis</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#menetluses_dokumendid"/>
+<rdfs:comment xml:lang="et">On rahaline kompensatsioon, mida haigekassa maksab töövõimetuslehe alusel kindlustatud isikule, kellel jääb töö- või teenistuskohustustest või majandus- või kutsetegevusest ajutise vabastuse tõttu saamata isikustatud sotsiaalmaksuga maksustatav tulu.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusjuhtumi_algus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusjuhtumi_algus">
+<rdfs:label xml:lang="et">töövõimetusjuhtumi algus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Juhtumi piires esmase TVL algus</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetuslehe_liigi_nimetus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetuslehe_liigi_nimetus">
+<rdfs:label xml:lang="et">töövõimetuslehe liigi nimetus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdfs:comment xml:lang="et">Töövõimetuslehe liigi nimetus, mis iseloomustab tööst vabastuse üldist põhjust (haigusleht, hooldusleht, lapsendamisleht, sünnitusleht)</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusleht  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusleht">
+<rdfs:label xml:lang="et">töövõimetusleht</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#sissetulevad_dokumendid"/>
+<rdfs:comment xml:lang="et">Töövõimetusleht on kindlustatud isiku ajutist töövõimetust ja töö- või teenistuskohustuse täitmisest vabastatust tõendav dokument, mille väljastab kindlustatud isikule teda raviv arst või hambaarst.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tv_paevade_arv  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tv_paevade_arv">
+<rdfs:label xml:lang="et">tv päevade arv</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hulk"/>
+<rdfs:comment xml:lang="et">Süsteemi poolt töövõimetuslehele arvutatud töövabastuspäevade arv</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tv_pohjus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tv_pohjus">
+<rdfs:label xml:lang="et">tvl tööst vabastamise põhjus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Ajutise töövõimetuse tõttu tööst vabastuse põhjuste loendis toodud põhjuse numbriline väljandus</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_aek_pikendamise_otsus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_aek_pikendamise_otsus">
+<rdfs:label xml:lang="et">tvl aek pikendamise otsus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toevaartus"/>
+<rdfs:comment xml:lang="et">AEKi positiivse otsuse, pikendada töövõimetusjuhtumit, märge TVLil</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_alguse_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_alguse_aeg">
+<rdfs:label xml:lang="et">tvl lehe alguse aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">TVL alguse kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_liik  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_liik">
+<rdfs:label xml:lang="et">tvl liik</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Töövõimetuslehe igale liigile antud tunnus</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_lopetamise_otsus_type  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_lopetamise_otsus_type">
+<rdfs:label xml:lang="et">tvl lõpetamise otsustüüp</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Töövõimetuslehe lõpetamise otsuse põhjuste loendis toodud põhjuse numbriline väljandus. Töövõimetuslehe lõpetamine ei tähenda alati isiku tööst vabastuse lõppemist.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_lopetamise_otsuse_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_lopetamise_otsuse_aeg">
+<rdfs:label xml:lang="et">tvl lõpetamise otsuse aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Töövõimetuslehele arsti poolt märgitud tööle asumise kuupäev</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_nr  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_nr">
+<rdfs:label xml:lang="et">tvl nr</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#identifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Töövõimetuslehe järjekorranumber on kuni kaheksakohaline arv, mis on ühe tervishoiuteenuse osutaja väljaantud töövõimetuslehtede puhul kolme aasta jooksul unikaalne.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_staatus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_staatus">
+<rdfs:label xml:lang="et">staatus tvl</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#klassifitseeriv_kood"/>
+<rdfs:comment xml:lang="et">Töövõimetuslehe haigekassas menetlemise etapi sõnaline väljendus.</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#valisriigi_padev_asutus  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#valisriigi_padev_asutus">
+<rdfs:label xml:lang="et">välisriigi pädev asutus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidiline_isik"/>
+<rdfs:comment xml:lang="et">Asutus, kus E-vormi taotlev/omav isik on hüvitise taotlemise ajal kindlustatud või asutus, kellelt sel isikul on praegu või tulevikus õigus saada hüvitisi, kui tema või tema pereliige elavad asutuse asukohajärgse liikmesriigi territooriumil</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#valla_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#valla_kood">
+<rdfs:label xml:lang="et">valla kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ehak"/>
+<rdfs:comment xml:lang="et">Kolmekohaline kood</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#veateate_kood  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#veateate_kood">
+<rdfs:label xml:lang="et">veateate kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tech_thing"/>
+<rdfs:comment xml:lang="et">Viga iseloomustav kood</rdfs:comment>
+</owl:Class>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#viimase_kande_aeg  -->
+<owl:Class rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#viimase_kande_aeg">
+<rdfs:label xml:lang="et">viimase kande aeg</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdfs:comment xml:lang="et">Viimane muudatus</rdfs:comment>
+</owl:Class>
+<!--  http://www.w3.org/2002/07/owl#Thing  -->
+<owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#eesti_kindlustatuga_vordsustatud_isik  -->
+<r12:kindlustatuse_omandusega_seotud_tyyp rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#eesti_kindlustatuga_vordsustatud_isik">
+<rdfs:label xml:lang="et">eesti kindlustatuga võrdsustatud isik</rdfs:label>
+<rdfs:comment xml:lang="et">Euroopa Liidu (...) liikmesriigis kehtiva kindlustuse kujutis Kindlustatute Registris, mille kohaselt osutatud teenuste tasu on kindlustavast välisriigist sissenõutav.</rdfs:comment>
+</r12:kindlustatuse_omandusega_seotud_tyyp>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tootaja  -->
+<r12:kindlustatuse_omandusega_seotud_tyyp rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#tootaja">
+<rdfs:label xml:lang="et">töötaja</rdfs:label>
+<rdfs:comment xml:lang="et">on võimalus soodustustele, mis on määratud kindlustatud töötajale.</rdfs:comment>
+</r12:kindlustatuse_omandusega_seotud_tyyp>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#toovoimetuspensionarina_kindlustatud  -->
+<r12:kindlustatuse_omandusega_seotud_tyyp rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#toovoimetuspensionarina_kindlustatud">
+<rdfs:label xml:lang="et">töövõimetuspensionärina kindlustatud</rdfs:label>
+<rdfs:comment xml:lang="et">on võimalus soodustustele, mis on määratud töövõimetuspensionäridele.</rdfs:comment>
+</r12:kindlustatuse_omandusega_seotud_tyyp>
+<!--  http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#vanaduspensionarina_kindlustatud  -->
+<r12:kindlustatuse_omandusega_seotud_tyyp rdf:about="http://riha.eesti.ee/riha/onto/ravikindlustus/2008/r1#vanaduspensionarina_kindlustatud">
+<rdfs:label xml:lang="et">vanaduspensionärina kindlustatud</rdfs:label>
+<rdfs:comment xml:lang="et">on võimalus soodustusele, mis on määratud vanaduspensionärina kindlustatule.</rdfs:comment>
+</r12:kindlustatuse_omandusega_seotud_tyyp>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E001  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E001">
+<rdfs:label xml:lang="et">E001</rdfs:label>
+<rdfs:comment xml:lang="et">Asutuste vahelise infovahetuse blankett.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E101  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E101">
+<rdfs:label xml:lang="et">E101</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnitus rakendatava seadusandluse kohta. Vormi edastab EHK’le Sotsiaalkindlustusamet ja VS osakond väljastab selle alusel isikule vormi E 106.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E104  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E104">
+<rdfs:label xml:lang="et">E104</rdfs:label>
+<rdfs:comment xml:lang="et">Tõend kindlustusperioodide, töötamis- või elamisperioodide liitmise kohta.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E106  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E106">
+<rdfs:label xml:lang="et">E106</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnitus väljaspool pädevat liikmesriiki elava isiku õiguse kohta saada mitterahalisi hüvitisi haiguse, raseduse ja sünnituse korral.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E107  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E107">
+<rdfs:label xml:lang="et">E107</rdfs:label>
+<rdfs:comment xml:lang="et">Avaldus tõendi saamiseks mitterahaliste hüvitiste saamise kohta.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E108  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E108">
+<rdfs:label xml:lang="et">E108</rdfs:label>
+<rdfs:comment xml:lang="et">Teatis mitterahaliste haigus- , rasedus- ja sünnitushüvitiste saamise õiguse peatamise või äravõtmise kohta.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E109  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E109">
+<rdfs:label xml:lang="et">E109</rdfs:label>
+<rdfs:comment xml:lang="et">Tõend töötaja pereliikmete registreerimiseks ja nimekirjade uuendamiseks.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E112  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E112">
+<rdfs:label xml:lang="et">E112</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnitus haigus-, rasedus- või sünnitushüvitiste saamise õiguse säilimise kohta.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E121  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E121">
+<rdfs:label xml:lang="et">E121</rdfs:label>
+<rdfs:comment xml:lang="et">Tõend pensionäri ja tema pereliikmete registreerimiseks ja nimekirjade uuendamiseks.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E126  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#E126">
+<rdfs:label xml:lang="et">E126</rdfs:label>
+<rdfs:comment xml:lang="et">Mitterahaliste hüvitiste kompenseerimismäärad.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#EHIC  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#EHIC">
+<rdfs:label xml:lang="et">Asendussertifikaat</rdfs:label>
+<rdfs:comment xml:lang="et">Euroopa ravikindlustuskaarti asendav paberkandjal dokument, mis annab kindlustatud isikule õiguse saada vajaminevat arstiabi ajutisel viibimisel Euroopa Liidu ja Majanduspiirkonna riikides ning Šveitsis sealsete inimestega võrdsetel tingimustel.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#IVF  -->
+<r12:hyvitise_taotlus rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#IVF">
+<rdfs:label xml:lang="et">KehavaliseViljastamiseRavimihyvitis</rdfs:label>
+<rdfs:comment xml:lang="et">Summa, mida haigekassa maksab kuni 40-aastasele (k.a) kindlustatud naisele kehavälise viljastamise protseduuriga seonduvate, ambulatoorseks raviks vajalike, ravimite loetellu kuuluvatele retseptiravimite (toimeainete loetelu fikseeritud) eest tehtud kulutuste katteks. Hüvitise maksimaalse suuruse kehtestab sotsiaalminister määrusega ühe läbitud viljastamise protseduuri kohta. Hüvitiste maksmiseks vahendite saamiseks esitab haigekassa arve Sotsiaalministeeriumile.</rdfs:comment>
+</r12:hyvitise_taotlus>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#REPL  -->
+<r1:e_vorm rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#REPL">
+<rdfs:label xml:lang="et">EuroopaRavikindlustusKaart</rdfs:label>
+<rdfs:comment xml:lang="et">Ravikindlustust tõendav plastikkaart, mis annab kindlustatud isikule õiguse saada vajaminevat arstiabi ajutisel viibimisel Euroopa Liidu ja Majanduspiirkonna riikides ning Šveitsis sealsete inimestega võrdsetel tingimustel.</rdfs:comment>
+</r1:e_vorm>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#TRH  -->
+<r12:hyvitise_taotlus rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#TRH">
+<rdfs:label xml:lang="et">täiendav ravimihüvitis</rdfs:label>
+<rdfs:comment xml:lang="et">Summa, mida haigekassa hüvitab kindlustatule, juhul kui kindlustatu poolt kalendriaasta jooksul ambulatoorseks raviks vajalike ja ravimite loetelusse kantud ravimite eest tasutud summad ulatuvad vahemikku 6000 kuni 20 000 krooni</rdfs:comment>
+</r12:hyvitise_taotlus>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#Viga  -->
+<r1:teated rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#Viga">
+<rdfs:label xml:lang="et">viga</rdfs:label>
+<rdfs:comment xml:lang="et">Olukord, kus esitatavad andmed ei ole kooskõlas kehtivate tingimuste ja nõuetega või kokkulepitud tingimuste ja nõuetega</rdfs:comment>
+</r1:teated>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hambaproteeside_hyvitis  -->
+<r12:hyvitise_taotlus rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hambaproteeside_hyvitis">
+<rdfs:label xml:lang="et">hambaproteeside hüvitis</rdfs:label>
+<rdfs:comment xml:lang="et">Summa, mida haigekassa hüvitab riikliku pensionikindlustuse seaduse alusel määratud töövõimetuspensioni või vanaduspensioni saavale kindlustatule ja üle 63-aastasele kindlustatule üks kord kolme aasta jooksul hambaproteeside eest tasutud summast.Hüvitatava summa maksimaalse suuruse kehtestab sotsiaalminister määrusega.</rdfs:comment>
+</r12:hyvitise_taotlus>
+<!--  http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hambaravi_hyvitis  -->
+<r12:hyvitise_taotlus rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hambaravi_hyvitis">
+<rdfs:label xml:lang="et">hambarav hüvitis</rdfs:label>
+<rdfs:comment xml:lang="et">Summa, mida haigekassa hüvitab vähemalt 19 aastasele kindlustatule ühe kalendriaasta jooksul hambaraviteenuse eest tasutud summast. Hüvitatava summa maksimaalse suuruse kehtestab sotsiaalminister määrusega.</rdfs:comment>
+</r12:hyvitise_taotlus>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#garantiiaeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitatud_paevi"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#info_kannete_arv"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makstud_paevi"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#muudatuste_arv"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ok_kannete_arv"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ooteaeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pahade_kannete_arv"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pakkide_arv"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tv_paevade_arv"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arvutatud_suurused"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#dokument"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isik"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kergem_too"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kontaktandmed"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kood"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maksu_ja_tolliameti_info"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimi"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistu"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#puudub_oigus_hyvitisele"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#skalaarne_suurus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooinspektsiooni_info"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetuse_hyvitis"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#andmeedastaja"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fyysiline_isik"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidiline_isik"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustaja"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arvestatud_sotsmaks"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitatud_summa"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makstud_sotsmaks"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#paeva_summa"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#paeva_tulu"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#reaalne_kuutasu"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tasu_kergemal_tool"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#esmase_tvl_algus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitamise_perioodi_algus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#makse_algus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistus_alates"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#peatumise_kehtivuse_algus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perearst_alates"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_aluse_algus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_kehtivuse_algus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_peatumise_aluse_algus"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ei_ole_pysiva_toovoimetuse_pohjustaja"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#esm_jarg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tegevusala"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_voi_kutsehaigestumise_raport"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_aek_pikendamise_otsus"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#hyvitamise_perioodi_lopp"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustatuse_lopp"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maks_lopp"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#nimistus_kuni"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#peatumise_kehtivuse_lopp"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_aluse_lopp"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_kehtivuse_lopp"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustuse_peatumise_aluse_lopp"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#arsti_reg_toendi_nr"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#e_vormi_nr"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#isikukood"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pangakonto"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#registrikood"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_raporti_nr_ja_kutsehaigestumise_raporti_nr"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_nr"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#email"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#posti_aadress"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#telefon"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#eesnimi"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#element_name"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#juriidilise_isiku_nimi"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#pangakonto_omanik"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perenimi"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravikindlustusliigi_nimetus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#raviliigi_nimetus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tervishoiuteenuse_osutaja_nimi"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetuslehe_liigi_nimetus"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#diagnoosi_kood"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#e_vormi_tyyp"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kindlustusliik"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kooskolastus_nr"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#piirkonna_kood"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#puudub_oigus_hyvitisele_kood"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ravi_eiramise_pohjus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#raviliik"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#seose_tyyp_nimistusse_maaramisel"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tervishoiutootaja_eriala"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tohib_teisele_taotleda_serti_erk_kaarti"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tv_pohjus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_liik"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_lopetamise_otsus_type"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_staatus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#veateate_kood"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asula_kood"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maakonna_kood"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#valla_kood"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#fikseeritud_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_algus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#perioodi_lopp"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#avalduse_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#kande_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#registreerimise_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ska_suunamise_otsuse_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#synnikuupaev"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#synnituse_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooandja_poolt_esitatud_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tooonnetuse_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#toovoimetusjuhtumi_algus"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_alguse_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tvl_lopetamise_otsuse_aeg"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#viimase_kande_aeg"/>
+</owl:members>
+</rdf:Description>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+<owl:members rdf:parseType="Collection">
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#asula_nimi"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#ehak"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#indeks"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#korter"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#maja"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#riik"/>
+<rdf:Description rdf:about="http://riha.eesti.ee/riha/onto/toohoivejasotsiaalkysimused/ravikindlustus/2008/r1#tanav_voi_talu"/>
+</owl:members>
+</rdf:Description>
+</rdf:RDF>

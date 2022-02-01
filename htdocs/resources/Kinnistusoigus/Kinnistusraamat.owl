@@ -1,0 +1,974 @@
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2010/4/Ontology1274341618515.owl#" xmlns:v1="https://riha.eesti.ee/riha/onto/kinnistusoigus/2010/v1#" xmlns:kinnistusraamat2="file:/C:/Documents%20and%20Settings/katre.oja/Desktop/www.riha.ee/kinnistusraamat#" xmlns:Kinnistusraamat2="file:/V:/Kinnistus/RIHA/riha.eesti.ee/Kinnistusraamat#" xmlns:kinnistusraamat="www.riha.ee/kinnistusraamat#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:Kinnistusraamat="riha.eesti.ee/Kinnistusraamat#" xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#" xmlns:Ontology1274341618515="http://www.semanticweb.org/ontologies/2010/4/Ontology1274341618515.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:r1="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#" xml:base="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1">
+<owl:Ontology rdf:about="">
+<rdfs:label xml:lang="et">Kinnistusraamatu infosüsteemi ontoloogia</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusraamatu infosüsteemi ontoloogia, mis hõlmab x-tee teenuste sisendeid ja väljundeid.</rdfs:comment>
+<owl:versionInfo xml:lang="et">Versioon 1 2010</owl:versionInfo>
+</owl:Ontology>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Iga_kinnistu_kohta_avatakse_iseseisev_registriosa  -->
+<owl:ObjectProperty rdf:about="#Iga_kinnistu_kohta_avatakse_iseseisev_registriosa">
+<rdfs:label xml:lang="et">Iga kinnistu kohta avatakse iseseisev registriosa</rdfs:label>
+<rdfs:comment xml:lang="et">Iga kinnistu kohta avatakse kinnistusraamatus iseseisev registriosa.</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:range rdf:resource="#Kinnistusregistriosa"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kaasomand_jaguneb_osasuuruseks  -->
+<owl:ObjectProperty rdf:about="#Kaasomand_jaguneb_osasuuruseks">
+<rdfs:label xml:lang="et">Kaasomand jaguneb osasuuruseks</rdfs:label>
+<rdfs:comment xml:lang="et">Omandiõigus võib olla ainuomand, kaasomand või ühisomand. Kaasomandi osade summa on alati 1.</rdfs:comment>
+<rdfs:domain rdf:resource="#Kaasomand"/>
+<rdfs:range rdf:resource="#Oigusteosad"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kanded_tehakse_oiguste_kohta  -->
+<owl:ObjectProperty rdf:about="#Kanded_tehakse_oiguste_kohta">
+<rdfs:label xml:lang="et">Kanded tehakse õiguste kohta</rdfs:label>
+<rdfs:comment xml:lang="et">Kanded tehakse õiguste kohta.</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+<rdfs:range rdf:resource="#Oigus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusosakond_jaguneb_Kinnistusjaoskondadeks  -->
+<owl:ObjectProperty rdf:about="#Kinnistusosakond_jaguneb_Kinnistusjaoskondadeks">
+<rdfs:label xml:lang="et">Kinnistusosakond jaguneb kinnistusjaoskondadeks</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusosakonnad jagunevad kinnistusjaoskondadeks.</rdfs:comment>
+<rdfs:range rdf:resource="#Kinnistujaoskond"/>
+<rdfs:domain rdf:resource="#Kinnistuosakond"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistuspaevikusse_registreeritakse_Kinnistamisavaldused  -->
+<owl:ObjectProperty rdf:about="#Kinnistuspaevikusse_registreeritakse_Kinnistamisavaldused">
+<rdfs:label xml:lang="et">Kinnistuspäevikusse registreeritakse kinnistamisavaldused</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistuspäevikusse registreeritakse kinnistamisavaldused.</rdfs:comment>
+<rdfs:range rdf:resource="#Kinnistamisavaldus"/>
+<rdfs:domain rdf:resource="#Kinnistuspaevik"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusraamat_koosneb_Kinnistuspaevikus_ja_Kinnistusregistrist_ja_Kinnistustoimikus  -->
+<owl:ObjectProperty rdf:about="#Kinnistusraamat_koosneb_Kinnistuspaevikus_ja_Kinnistusregistrist_ja_Kinnistustoimikus">
+<rdfs:label xml:lang="et">Kinnistusraamat koosneb kinnistuspäevikust, kinnistusregistrist ja kinnistustoimikust</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusraamat koosnev kinnistuspäevikust, kinnistusregistrist ja kinnistustoimikust.</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistusraamat"/>
+<rdfs:range>
+<owl:Class>
+<owl:intersectionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="#Kinnistuspaevik"/>
+<rdf:Description rdf:about="#Kinnistusregister"/>
+<rdf:Description rdf:about="#Kinnistustoimik"/>
+</owl:intersectionOf>
+</owl:Class>
+</rdfs:range>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusraamatus_avatakse_Registriosa  -->
+<owl:ObjectProperty rdf:about="#Kinnistusraamatus_avatakse_Registriosa">
+<rdfs:label xml:lang="et">Kinnistusraamatus avatakse registriosa</rdfs:label>
+<rdfs:comment xml:lang="et">Iga kinnistusraamatusse kantud kinnisasja kohta avatakse iseseisev registriosa ja antakse sellele eraldi number.</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistusraamat"/>
+<rdfs:range rdf:resource="#Kinnistusregistriosa"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusraamatusse_kantakse_Kinnistud  -->
+<owl:ObjectProperty rdf:about="#Kinnistusraamatusse_kantakse_Kinnistud">
+<rdfs:label xml:lang="et">Kinnistusraamatusse kantakse kinnistud</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusraamatusse kantakse kinnistud ja kinnistuga seotud õigused.</rdfs:comment>
+<rdfs:range rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusraamat"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_III_jakku_kantakse_piiratud_asja&#245;igused_va_h&#252;poteek  -->
+<owl:ObjectProperty rdf:about="#Kinnistusregistriosa_III_jakku_kantakse_piiratud_asjaõigused_va_hüpoteek">
+<rdfs:label xml:lang="et">Kinnistusregistriosa III jakku kantakse piiratud asjaõigused väljaarvatud pandiõigus.</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusregistri III jakku kantakse piiratud asjaõigused, märkused ja eelmärkused, väljaarvatud hüpoteek.</rdfs:comment>
+<rdfs:range rdf:resource="#Eelmarge"/>
+<rdfs:range rdf:resource="#Hoonestusoigus_oigus"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_III_jagu"/>
+<rdfs:range rdf:resource="#Markus"/>
+<rdfs:range rdf:resource="#Reaalkoormatised"/>
+<rdfs:range rdf:resource="#Servituudid"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_II_jakku_kantakse_omandioigus  -->
+<owl:ObjectProperty rdf:about="#Kinnistusregistriosa_II_jakku_kantakse_omandioigus">
+<rdfs:label xml:lang="et">Kinnistusregistriosa II jakku kantakse omandiõigus</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusregistriosa II jakku kantakse omandiõigus.</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_II_jagu"/>
+<rdfs:range rdf:resource="#Omandioigus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_IV_jakku_kantakse_pandi&#245;igus  -->
+<owl:ObjectProperty rdf:about="#Kinnistusregistriosa_IV_jakku_kantakse_pandiõigus">
+<rdfs:label xml:lang="et">Kinnistusregistriosa IV jakku kantakse pandiõigus</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusregistriosa IV jakku kantakse hüpteek ja sellega seotud eelmärked ja märkused.</rdfs:comment>
+<rdfs:range rdf:resource="#Eelmarge"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_IV_jagu"/>
+<rdfs:range rdf:resource="#Markus"/>
+<rdfs:range rdf:resource="#Pandioigus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosal_on_Kinnistusjaoskond  -->
+<owl:ObjectProperty rdf:about="#Kinnistusregistriosal_on_Kinnistusjaoskond">
+<rdfs:label xml:lang="et">Kinnistusregistriosal on kinnistusjaoskond</rdfs:label>
+<rdfs:comment xml:lang="et">Iga kinnisturegistriosa asub ühes kinnistusjaoskonnas.</rdfs:comment>
+<rdfs:range rdf:resource="#Kinnistujaoskond"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosal_on_neli_jagu  -->
+<owl:ObjectProperty rdf:about="#Kinnistusregistriosal_on_neli_jagu">
+<rdfs:label xml:lang="et">Kinnistusregistriosal on neli jagu</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusregistriosa koosneb neljast jaost.</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+<rdfs:range rdf:resource="#Kinnistusregistriosa_jaod"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistustoimik_koosneb_dokumentidest  -->
+<owl:ObjectProperty rdf:about="#Kinnistustoimik_koosneb_dokumentidest">
+<rdfs:label xml:lang="et">Kinnistustoimik koosneb dokumentidest</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistustoimikus hoitakse kinnistamisavaldusi ja dokumente.</rdfs:comment>
+<rdfs:range rdf:resource="#Dokumendid"/>
+<rdfs:domain rdf:resource="#Kinnistustoimik"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Maarus_tehakse_menetluses  -->
+<owl:ObjectProperty rdf:about="#Maarus_tehakse_menetluses">
+<rdfs:label xml:lang="et">Määrus tehakse menetluses</rdfs:label>
+<rdfs:comment xml:lang="et">Määrus tehakse menetluses. Menetluses võib teha rohkem kui ühe määruse. Määruse allkirjastamisega allkirjastatakse kanded.</rdfs:comment>
+<rdfs:domain rdf:resource="#Maarus"/>
+<rdfs:range rdf:resource="#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Maaruses_sooritatakse_Toiming  -->
+<owl:ObjectProperty rdf:about="#Maaruses_sooritatakse_Toiming">
+<rdfs:label xml:lang="et">Määruses sooritatakse toiming</rdfs:label>
+<rdfs:comment xml:lang="et">Määruses sooritatakse toimingud.</rdfs:comment>
+<rdfs:domain rdf:resource="#Maarus"/>
+<rdfs:range rdf:resource="#Toiming"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Menetlus_algatakse_Kinnistamisavalduse_alusel  -->
+<owl:ObjectProperty rdf:about="#Menetlus_algatakse_Kinnistamisavalduse_alusel">
+<rdfs:label xml:lang="et">Menetlus algatakse kinnistamisavalduse alusel</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlus algatakse kinnistamisavalduse alusel.</rdfs:comment>
+<rdfs:range rdf:resource="#Kinnistamisavaldus"/>
+<rdfs:domain rdf:resource="#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Menetlused_voivad_toimuda_Tehingute_alusel  -->
+<owl:ObjectProperty rdf:about="#Menetlused_voivad_toimuda_Tehingute_alusel">
+<rdfs:label xml:lang="et">Menetlused võivad toimuda tehingute alusel</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlused võivad toimuda notariaalsete tehingute alusel. Tehingute andmed edastab Kinnistusraamati infosüsteemi notar.</rdfs:comment>
+<rdfs:domain rdf:resource="#Menetlus"/>
+<rdfs:range rdf:resource="#Tehing"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Piiratud_asjaoiguse_puhul_on_osasuurus  -->
+<owl:ObjectProperty rdf:about="#Piiratud_asjaoiguse_puhul_on_osasuurus">
+<rdfs:label xml:lang="et">Piiratud asjaõiguse puhul on osasuurus</rdfs:label>
+<rdfs:comment xml:lang="et">Piiratud asjaõiguse puhul on mitme õigustatud isiku puhul osade summa suurus 1.</rdfs:comment>
+<rdfs:range rdf:resource="#Oigusteosad"/>
+<rdfs:domain rdf:resource="#Piiratud_asjaoigus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Registriossa_kantakse_kanded  -->
+<owl:ObjectProperty rdf:about="#Registriossa_kantakse_kanded">
+<rdfs:label xml:lang="et">Registriossa kantakse kanded</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusregistriossa sisestatakse kanded.</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+<rdfs:range rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:ObjectProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendi_fail  -->
+<owl:DatatypeProperty rdf:about="#Dokumendi_fail">
+<rdfs:label xml:lang="et">Dokumendi fail</rdfs:label>
+<rdfs:comment xml:lang="et">Viide digitaalse dokumendi asukohale failisüsteemis.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendi_failinimi  -->
+<owl:DatatypeProperty rdf:about="#Dokumendi_failinimi">
+<rdfs:label xml:lang="et">Dokumendi failinimi</rdfs:label>
+<rdfs:comment xml:lang="et">Dokumendi faili nimi.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendi_id  -->
+<owl:DatatypeProperty rdf:about="#Dokumendi_id">
+<rdfs:label xml:lang="et">Dokumendi id</rdfs:label>
+<rdfs:comment xml:lang="et">Dokumendid unikaalne võti.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendi_kuupaev  -->
+<owl:DatatypeProperty rdf:about="#Dokumendi_kuupaev">
+<rdfs:label xml:lang="et">Dokumendi kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Dokumendi kuupäev, millal dokument on allkirjastatud.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendi_lehekylgede_arv  -->
+<owl:DatatypeProperty rdf:about="#Dokumendi_lehekylgede_arv">
+<rdfs:label xml:lang="et">Dokumendi lehekülgede arv</rdfs:label>
+<rdfs:comment>Paberdokumendi lehtede arv.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendi_markus  -->
+<owl:DatatypeProperty rdf:about="#Dokumendi_markus">
+<rdfs:label xml:lang="et">Märkus</rdfs:label>
+<rdfs:comment xml:lang="et">Vabatekst dokumendi juurde</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendi_number  -->
+<owl:DatatypeProperty rdf:about="#Dokumendi_number">
+<rdfs:label xml:lang="et">Dokumendi number</rdfs:label>
+<rdfs:comment xml:lang="et">Dokumendi number kujul jooksev number + aasta.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendi_registreerimise_aeg  -->
+<owl:DatatypeProperty rdf:about="#Dokumendi_registreerimise_aeg">
+<rdfs:label xml:lang="et">Dokumendi registreerimise aeg</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusraamatusse lisamise aeg.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Id  -->
+<owl:DatatypeProperty rdf:about="#Id">
+<rdfs:label xml:lang="et">id</rdfs:label>
+<rdfs:comment xml:lang="et">Registriosad unikaalne võti</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Jao_alguskuupaev  -->
+<owl:DatatypeProperty rdf:about="#Jao_alguskuupaev">
+<rdfs:label xml:lang="et">Jao alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Jao registreerimise alguskuupäev.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_jaod"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Jao_lopukuupaev  -->
+<owl:DatatypeProperty rdf:about="#Jao_lopukuupaev">
+<rdfs:label xml:lang="et">Jao lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Jao lõpukuupäev.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_jaod"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Jaoskonna_lopp_kuupaev  -->
+<owl:DatatypeProperty rdf:about="#Jaoskonna_lopp_kuupaev">
+<rdfs:label xml:lang="et">Jaoskonna lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna sulgemise aeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kande_alguskuupaev  -->
+<owl:DatatypeProperty rdf:about="#Kande_alguskuupaev">
+<rdfs:label xml:lang="et">Kande alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kande allkirjastamise aeg.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kande_lopukuupaev  -->
+<owl:DatatypeProperty rdf:about="#Kande_lopukuupaev">
+<rdfs:label xml:lang="et">Kande lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kande lõpu aeg või muutmise aeg.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kande_number  -->
+<owl:DatatypeProperty rdf:about="#Kande_number">
+<rdfs:label xml:lang="et">Kande number</rdfs:label>
+<rdfs:comment xml:lang="et">Kande järjekorranumber, sama mis kandetekstis.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kandealus  -->
+<owl:DatatypeProperty rdf:about="#Kandealus">
+<rdfs:label xml:lang="et">Kandealus</rdfs:label>
+<rdfs:comment xml:lang="et">Kande tekst pöördel.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kandetekst  -->
+<owl:DatatypeProperty rdf:about="#Kandetekst">
+<rdfs:label xml:lang="et">Kandetekst</rdfs:label>
+<rdfs:comment xml:lang="et">Kandetekst põhilahtris.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kandetekst_genereerimisel  -->
+<owl:DatatypeProperty rdf:about="#Kandetekst_genereerimisel">
+<rdfs:label xml:lang="et">Kandetekst genereerimisel</rdfs:label>
+<rdfs:comment xml:lang="et">Näitab, kas kande tekst on genereerimisel või mitte.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kannete_kehtivus  -->
+<owl:DatatypeProperty rdf:about="#Kannete_kehtivus">
+<rdfs:label xml:lang="et">Kannete kehtivus</rdfs:label>
+<rdfs:comment xml:lang="et">Näitab, kas kanne on kehtiv või mitte.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistu_avamis_kuupaev  -->
+<owl:DatatypeProperty rdf:about="#Kinnistu_avamis_kuupaev">
+<rdfs:label xml:lang="et">Kinnistu avamise kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistu, registriosa avamise kuupäev.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistu_nime_alguskuupaev  -->
+<owl:DatatypeProperty rdf:about="#Kinnistu_nime_alguskuupaev">
+<rdfs:label xml:lang="et">Kinnistu nime alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistu nime lisamise kuupäev.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregister"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistu_nime_lopukuupaev  -->
+<owl:DatatypeProperty rdf:about="#Kinnistu_nime_lopukuupaev">
+<rdfs:label xml:lang="et">Kinnistu nime lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistu nime lõpetamise kuupäev.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusjaoskonna_nimi  -->
+<owl:DatatypeProperty rdf:about="#Kinnistusjaoskonna_nimi">
+<rdfs:label xml:lang="et">Kinnistusjaoskonna nimi</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna nimetus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusosakonna_nimi  -->
+<owl:DatatypeProperty rdf:about="#Kinnistusosakonna_nimi">
+<rdfs:label xml:lang="et">Kinnistusosakonna nimi</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusosakonna nimetus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Kinnistuosakond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Koormatise_tahtaeg  -->
+<owl:DatatypeProperty rdf:about="#Koormatise_tahtaeg">
+<rdfs:label xml:lang="et">Koormatise tähtaeg</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse tähtaeg kuupäevana</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Piiratud_asjaoigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Koormatise_tahtaeg_kuudes  -->
+<owl:DatatypeProperty rdf:about="#Koormatise_tahtaeg_kuudes">
+<rdfs:label xml:lang="et">Koormatise tähtaeg kuudes</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse tähtaeg kuudes</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Piiratud_asjaoigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Koormatuse_tahtaeg_aastates  -->
+<owl:DatatypeProperty rdf:about="#Koormatuse_tahtaeg_aastates">
+<rdfs:label xml:lang="et">Koormatise tähtaeg aastates</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse tähtaeg aastates</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Piiratud_asjaoigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Korrastatud  -->
+<owl:DatatypeProperty rdf:about="#Korrastatud">
+<rdfs:label xml:lang="et">Korrastatud</rdfs:label>
+<rdfs:comment xml:lang="et">Näitab, kas registriosa kanne on korrastatud või mitte.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Maaruse_allkirjastamise_aeg  -->
+<owl:DatatypeProperty rdf:about="#Maaruse_allkirjastamise_aeg">
+<rdfs:label xml:lang="et">Määruse allkirjastamise aeg</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse allkirjastamise kuupäev.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Maaruse_number  -->
+<owl:DatatypeProperty rdf:about="#Maaruse_number">
+<rdfs:label xml:lang="et">Määruse number</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse number kujul jooksev number + aasta</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Maaruse_sisu  -->
+<owl:DatatypeProperty rdf:about="#Maaruse_sisu">
+<rdfs:label xml:lang="et">Määruse sisu</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse sisu vabatekstina</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Maaruse_tekst  -->
+<owl:DatatypeProperty rdf:about="#Maaruse_tekst">
+<rdfs:label xml:lang="et">Määruse tekst</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse sisu vabatekstina</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Menetluse_alguskuupaev  -->
+<owl:DatatypeProperty rdf:about="#Menetluse_alguskuupaev">
+<rdfs:label xml:lang="et">Menetluse alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse algusaeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Menetluse_lopukuupaev  -->
+<owl:DatatypeProperty rdf:about="#Menetluse_lopukuupaev">
+<rdfs:label xml:lang="et">Menetluse lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse lõppemise aeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Menetluse_tahtaeg  -->
+<owl:DatatypeProperty rdf:about="#Menetluse_tahtaeg">
+<rdfs:label xml:lang="et">Menetluse tähtaeg</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlustähtaeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Nimi  -->
+<owl:DatatypeProperty rdf:about="#Nimi">
+<rdfs:label xml:lang="et">Nimi</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistu nimi</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Notari_ametitoiming  -->
+<owl:DatatypeProperty rdf:about="#Notari_ametitoiming">
+<rdfs:label xml:lang="et">Notari ametitoiming</rdfs:label>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Tehing"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Notariaaltehingu_aasta  -->
+<owl:DatatypeProperty rdf:about="#Notariaaltehingu_aasta">
+<rdfs:label xml:lang="et">Notariaaltehingu aasta</rdfs:label>
+<rdfs:comment xml:lang="et">Notariaaltehingu aasta</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#notariaaltehing"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Notariaaltehingu_number  -->
+<owl:DatatypeProperty rdf:about="#Notariaaltehingu_number">
+<rdfs:label xml:lang="et">Notariaaltehingu number</rdfs:label>
+<rdfs:comment xml:lang="et">Notariaaltehingu number.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#notariaaltehing"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Number  -->
+<owl:DatatypeProperty rdf:about="#Number">
+<rdfs:label xml:lang="et">Number</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistu number</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Oiguse_alamliik  -->
+<owl:DatatypeProperty rdf:about="#Oiguse_alamliik">
+<rdfs:label xml:lang="et">Õiguse alamliik</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse alamiliik (märkuste, hüpoteekide puhul )</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Oiguse_alguskuupaev  -->
+<owl:DatatypeProperty rdf:about="#Oiguse_alguskuupaev">
+<rdfs:label xml:lang="et">Õiguse alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse sissekandmise aeg, allkirjastamise aeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Oiguse_liigi_klassifikaator  -->
+<owl:DatatypeProperty rdf:about="#Oiguse_liigi_klassifikaator">
+<rdfs:label xml:lang="et">Õiguse liigi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse liigi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Oiguse_lopukuupaev  -->
+<owl:DatatypeProperty rdf:about="#Oiguse_lopukuupaev">
+<rdfs:label xml:lang="et">Õiguse lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse lõpetamise aeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Oiguse_marge  -->
+<owl:DatatypeProperty rdf:about="#Oiguse_marge">
+<rdfs:label xml:lang="et">Õiguse märge</rdfs:label>
+<rdfs:comment xml:lang="et">1, kui registriosa ühendamise või jagamise käigus suletakse.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Oiguse_marke_kuupaev  -->
+<owl:DatatypeProperty rdf:about="#Oiguse_marke_kuupaev">
+<rdfs:label xml:lang="et">Õiguse märke kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Aeg, millal õigsuse märge tehti ja registriosa omab õiguslikku tähendust elektrooniliselt. Registriosad, millel on kuupäevaks 01.01.2006, on võrreldud üle 2005 aasta lõpul, kui seadus, mille alusel võivad olla täiselektroonilised ei onud veel jõustunud</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Omandiosa_number  -->
+<owl:DatatypeProperty rdf:about="#Omandiosa_number">
+<rdfs:label xml:lang="et">Omandiosa number</rdfs:label>
+<rdfs:comment xml:lang="et">Kaasomandiosa number, Kaasomanikel jooksevad numbrid alates ühest, kaasomanike omanikuvahetuse korral antakse uuele omanikule uus kaasomandiosa number, vana number jääb vahele</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Oigusteosad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Osasuurus  -->
+<owl:DatatypeProperty rdf:about="#Osasuurus">
+<rdfs:label xml:lang="et">Osasuurus</rdfs:label>
+<rdfs:comment xml:lang="et">Omandiosa või õigustatuse osa suurus. Kui on mitu omanikku või õigustatud isikut, siis murruna</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Oigusteosad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Reaalosa_motteline_osa  -->
+<owl:DatatypeProperty rdf:about="#Reaalosa_motteline_osa">
+<rdfs:label xml:lang="et">Reaalosa mõtteline osa</rdfs:label>
+<rdfs:comment xml:lang="et">Korteriomandile kuuluv mõtteline osa kõigile selle maja korteritele kuuluvast omandist.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Reaalosad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Reaalosa_number  -->
+<owl:DatatypeProperty rdf:about="#Reaalosa_number">
+<rdfs:label xml:lang="et">Reaalosa number</rdfs:label>
+<rdfs:comment xml:lang="et">Reaalosa number ehk korteri number.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Reaalosad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Reaalosa_tahistusplaanil  -->
+<owl:DatatypeProperty rdf:about="#Reaalosa_tahistusplaanil">
+<rdfs:label xml:lang="et">Reaalosa tähistusplaanil</rdfs:label>
+<rdfs:comment xml:lang="et">Reaalosa (korteri) tähistus plaanil. Tavaliselt numbrina, kuid võib olla kirjas ka mitmenda korruse plaan ja mis värviga on kirjutatud. Võib olla ka märkimata</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Reaalosad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Reaalosa_yldpind  -->
+<owl:DatatypeProperty rdf:about="#Reaalosa_yldpind">
+<rdfs:label xml:lang="et">Reaalosa üldpind</rdfs:label>
+<rdfs:comment xml:lang="et">Reaalosa (korteri) pindala ruutmeetrites.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Reaalosad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Seisund  -->
+<owl:DatatypeProperty rdf:about="#Seisund">
+<rdfs:label xml:lang="et">Seisund</rdfs:label>
+<rdfs:comment xml:lang="et">Seisundid.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+<rdfs:domain rdf:resource="#Maarus"/>
+<rdfs:domain rdf:resource="#Menetlus"/>
+<rdfs:domain rdf:resource="#Oigus"/>
+<rdfs:domain rdf:resource="#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Summa  -->
+<owl:DatatypeProperty rdf:about="#Summa">
+<rdfs:label xml:lang="et">Summa</rdfs:label>
+<rdfs:comment xml:lang="et">Tehingu väärtus, summa mille pealt arvestatakse riigilõivu ja notari tasusid</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Piiratud_asjaoigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Tehingu_id  -->
+<owl:DatatypeProperty rdf:about="#Tehingu_id">
+<rdfs:label xml:lang="et">Tehingu id</rdfs:label>
+<rdfs:comment xml:lang="et">Tehingud unikaalne võti</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="#Tehing"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Tehingu_number  -->
+<owl:DatatypeProperty rdf:about="#Tehingu_number">
+<rdfs:label xml:lang="et">Tehingu number</rdfs:label>
+<rdfs:comment xml:lang="et">Tehingu number.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Tehing"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Uus_kinnistu_number  -->
+<owl:DatatypeProperty rdf:about="#Uus_kinnistu_number">
+<rdfs:label xml:lang="et">Uus kinnistu number</rdfs:label>
+<rdfs:comment xml:lang="et">kinnistu number, kujul jooksev number + jaoskonna tähis</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+<rdfs:subPropertyOf rdf:resource="#Number"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Vana_kinnistu_number  -->
+<owl:DatatypeProperty rdf:about="#Vana_kinnistu_number">
+<rdfs:label xml:lang="et">Vana kinnistu number</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistu number, kujul jooksev number</rdfs:comment>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+<rdfs:subPropertyOf rdf:resource="#Number"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#kehtivus  -->
+<owl:DatatypeProperty rdf:about="#kehtivus">
+<rdfs:label xml:lang="et">Kehtivus</rdfs:label>
+<rdfs:comment xml:lang="et">Omandiõiguse kehtivus.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+<rdfs:domain rdf:resource="#Omandioigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#liik  -->
+<owl:DatatypeProperty rdf:about="#liik">
+<rdfs:label xml:lang="et">Liik</rdfs:label>
+<rdfs:comment xml:lang="et">Liik</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Dokumendid"/>
+<rdfs:domain rdf:resource="#Kinnistu"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_jaod"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+<rdfs:domain rdf:resource="#Maarus"/>
+<rdfs:domain rdf:resource="#Menetlus"/>
+<rdfs:domain rdf:resource="#Oigus"/>
+<rdfs:domain rdf:resource="#Omandioigus"/>
+<rdfs:domain rdf:resource="#Reaalosad"/>
+<rdfs:domain rdf:resource="#Tehing"/>
+<rdfs:domain rdf:resource="#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#menetluse_number  -->
+<owl:DatatypeProperty rdf:about="#menetluse_number">
+<rdfs:label xml:lang="et">Menetluse number</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse numer kujul jooksev number, aasta, jaoskonna tähis</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#paranduskanne  -->
+<owl:DatatypeProperty rdf:about="#paranduskanne">
+<rdfs:label xml:lang="et">Paranduskanne</rdfs:label>
+<rdfs:comment xml:lang="et">Näitab, kas kandele on tehtud paranduskanne.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="#Kinnistusregistriosa_kanded"/>
+</owl:DatatypeProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://www.w3.org/2002/07/owl#Thing  -->
+<owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Aadress  -->
+<owl:Class rdf:about="#Aadress">
+<rdfs:label xml:lang="et">Aadress</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Lisaandmed"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Ainuomand  -->
+<owl:Class rdf:about="#Ainuomand">
+<rdfs:label xml:lang="et">Ainuomand</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Omandioigus"/>
+<rdfs:comment xml:lang="et">Ainuomand on omandi üks liik, kus on ühe isiku täielik võim kinnistu üle.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Avalik_oiguslik_isik  -->
+<owl:Class rdf:about="#Avalik_oiguslik_isik">
+<rdfs:label xml:lang="et">Avalik-õiguslik isik</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isik"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Dokumendid  -->
+<owl:Class rdf:about="#Dokumendid">
+<rdfs:label xml:lang="et">Dokumendid</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kinnistustoimikus olevad dokumendid, mis on kannete või määruste aluseks.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Eelmarge  -->
+<owl:Class rdf:about="#Eelmarge">
+<rdfs:label xml:lang="et">Eelmärge</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Oigus"/>
+<rdfs:comment xml:lang="et">Eelmärge on õiguse liik, mida saab kinnistusregistriosale lisada.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Fyysilise_isiku_perenimi  -->
+<owl:Class rdf:about="#Fyysilise_isiku_perenimi">
+<rdfs:label xml:lang="et">Füüsilise isiku perenimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isiku_nimi"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Hoonestusoigus  -->
+<owl:Class rdf:about="#Hoonestusoigus">
+<rdfs:label xml:lang="et">Hoonestusõigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistu"/>
+<rdfs:comment xml:lang="et">Kinnistu koormamisel hoonestusõigusega avatakse hoonestusõigusele ametiülesande korras iseseisev registriosa. Hoonestusõigusele avatud registriosale antakse number üldises järjekorras. Registriosa pealkirjas näidatakse, et registriosa on avatud hoonestusõigusele.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Hoonestusoigus_oigus  -->
+<owl:Class rdf:about="#Hoonestusoigus_oigus">
+<rdfs:label xml:lang="et">Hoonestusõigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Piiratud_asjaoigus"/>
+<rdfs:comment xml:lang="et">Hoonestusõigus piiratud asjaõigusena annab võimaluse omada ehitist teisele isikule kuuluval kinnisasjal ja lubab maaga püsivalt ühendatud ehitise tsiviilkäivet lahus maast.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Isik  -->
+<owl:Class rdf:about="#Isik">
+<rdfs:label xml:lang="et">Isik</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Lisaandmed"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Isiku_kood  -->
+<owl:Class rdf:about="#Isiku_kood">
+<rdfs:label xml:lang="et">Isiku kood</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isik"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Isiku_nimi  -->
+<owl:Class rdf:about="#Isiku_nimi">
+<rdfs:label xml:lang="et">Isiku nimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isik"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Juriidilise_isiku_nimi  -->
+<owl:Class rdf:about="#Juriidilise_isiku_nimi">
+<rdfs:label xml:lang="et">Juriidilise isiku nimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isiku_nimi"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kaasomand  -->
+<owl:Class rdf:about="#Kaasomand">
+<rdfs:label xml:lang="et">Kaasomand</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Omandioigus"/>
+<rdfs:comment xml:lang="et">Kaasomand on üks omandi liik, kus mitmel isikul on õigus ühele kinnistule vastavalt õiguse osa suurusele.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Katastritunnus  -->
+<owl:Class rdf:about="#Katastritunnus">
+<rdfs:label xml:lang="et">Katastritunnus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Katastriyksus"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Katastriyksus  -->
+<owl:Class rdf:about="#Katastriyksus">
+<rdfs:label xml:lang="et">Katastriüksus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Lisaandmed"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnisasi  -->
+<owl:Class rdf:about="#Kinnisasi">
+<rdfs:label xml:lang="et">Kinnisasi</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistu"/>
+<rdfs:comment xml:lang="et">Kinnisasi on maapinna piiritletud osa (maatükk). Kinnisasjaks loetakse kõiki antud maatükiga seotud osi, mida ei saa lugeda eraldiseisvaks ning mida ei ole võimalik muul moel teisaldada.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistamisavaldus  -->
+<owl:Class rdf:about="#Kinnistamisavaldus">
+<rdfs:label xml:lang="et">Kinnistamisavaldus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Dokumendid"/>
+<rdfs:comment xml:lang="et">Kinnistusosakonnale isiku poolt esitatav avaldus RO avamiseks, õiguse lisamiseks RO-sse, RO-de liitmiseks, RO jagamiseks, õiguste liitmiseks, lõpetamiseks või muutmiseks. Ühe kinnistamisavaldusega võib taotleda mitme erineva kinnistamistoimingu teostamist. Kinnistamisavaldus algatab menetluse.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistu  -->
+<owl:Class rdf:about="#Kinnistu">
+<rdfs:label xml:lang="et">Kinnistu</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kinnistusraamatusse iseseisva objektina kantav üksus. Kinnistuid saab olla nelja liiki: kinnisasjad (maatükid), hoonestusõigused, korteriomandid ja korterihoonestusõigused. Iga kinnistusraamatusse kantud kinnistu kohta avatakse iseseisev registriosa ja sellele antakse eraldi number (kinnistu number). Registriosa koosneb 5 lehest: tiitellehest ja 4 jaost.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistujaoskond  -->
+<owl:Class rdf:about="#Kinnistujaoskond">
+<rdfs:label xml:lang="et">Kinnistusjaoskond</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Justiitsministri määrusega võib kinnistuspiirkonna jaotada kinnistusjaoskondadeks, kus peetakse eraldi kinnistusraamatuid.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistuosakond  -->
+<owl:Class rdf:about="#Kinnistuosakond">
+<rdfs:label xml:lang="et">Kinnistusosakond</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kinnistusosakonnas peetakse kinnistusraamatut ja abieluvararegistrit</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistuspaevik  -->
+<owl:Class rdf:about="#Kinnistuspaevik">
+<rdfs:label xml:lang="et">Kinnistuspäevik</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistusraamat"/>
+<rdfs:comment xml:lang="et">Kinnistuspäevikus registreeritakse kinnistamisavaldused, milles on väljendatud soov kande tegemiseks.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusraamat  -->
+<owl:Class rdf:about="#Kinnistusraamat">
+<rdfs:label xml:lang="et">Kinnistusraamat</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kinnistusraamatusse kantakse kõik kinnisasjad, kui seaduses ei ole sätestatud teisiti. Iga kinnistusraamatusse kantud kinnisasja kohta avatakse iseseisev registriosa ja sellele antakse eraldi number (kinnistu number).</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregister  -->
+<owl:Class rdf:about="#Kinnistusregister">
+<rdfs:label xml:lang="et">Kinnistusregister</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistusraamat"/>
+<rdfs:comment xml:lang="et">Kanded tehakse kinnistusregistrisse.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa  -->
+<owl:Class rdf:about="#Kinnistusregistriosa">
+<rdfs:label xml:lang="et">Kinnistusregistriosa</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kinnistusraamatusse iseseisva objektina kantav üksus. Kinnistuid saab olla nelja liiki: kinnisasjad (maatükid), hoonestusõigused, korteriomandid ja korterihoonestusõigused. Iga kinnistusraamatusse kantud kinnistu kohta avatakse iseseisev registriosa ja sellele antakse eraldi number (kinnistu number). Registriosa koosneb 5 lehest: tiitellehest ja 4 jaost.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_III_jagu  -->
+<owl:Class rdf:about="#Kinnistusregistriosa_III_jagu">
+<rdfs:label xml:lang="et">Kinnistusregistriosa III jagu</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistusregistriosa_jaod"/>
+<rdfs:comment xml:lang="et">Kinnistusregistriosa kolmandasse jakku «Koormatised ja kitsendused» kantakse: 1) kinnistut koormavad piiratud asjaõigused, välja arvatud hüpoteek, kinnisomandi kitsendused ja märked nende kohta; 2) kinnistu omaniku käsutusõiguse kitsendused, samuti muud märked omandi kohta; 3) käesoleva punktides 1 ja 2 nimetatud kannete muudatused, sealhulgas puudutatud isikute kitsendused oma õiguste käsutamisel; 4) käesoleva punktides 1-3 nimetatud kannete kustutamine.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_II_jagu  -->
+<owl:Class rdf:about="#Kinnistusregistriosa_II_jagu">
+<rdfs:label xml:lang="et">Kinnistusregistriosa II jagu</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistusregistriosa_jaod"/>
+<rdfs:comment xml:lang="et">Kinnistusregistriosa teise jakku «Omanik» kantakse: 1) omanik; 2) kui kinnistu on ühises omandis – omanikud, see, kas kinnistu on ühis- või kaasomandis, ning kaasomandi korral kaasomanike osade suurus.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_IV_jagu  -->
+<owl:Class rdf:about="#Kinnistusregistriosa_IV_jagu">
+<rdfs:label xml:lang="et">Kinnistusregistriosa IV jagu</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistusregistriosa_jaod"/>
+<rdfs:comment xml:lang="et">Kinnistusregistriosa neljandasse jakku «Hüpoteegid» kantakse: 1) hüpoteegipidaja; 2) hüpoteegi rahaline suurus (hüpoteegi summa); 3) märked hüpoteegi kohta; 4) käesoleva punktides 1-3 nimetatud kannete muudatused; 5) käesoleva punktides 1-4 nimetatud kannete kustutamine.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_I_jagu  -->
+<owl:Class rdf:about="#Kinnistusregistriosa_I_jagu">
+<rdfs:label xml:lang="et">Kinnistusregistriosa I jagu</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistusregistriosa_jaod"/>
+<rdfs:comment xml:lang="et">Kinnistusregistriosa esimesse jakku «Kinnistu koosseis» kantakse: 1) kinnistu katastritunnus; 2) kinnistu sihtotstarve; 3) kinnistu asukoht; 4) kinnistu kasuks seatud piiratud asjaõigused (§ 9 lg 3); 5) kinnistu pindala;</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_jaod  -->
+<owl:Class rdf:about="#Kinnistusregistriosa_jaod">
+<rdfs:label xml:lang="et">Kinnistusregistri jaod</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kinnistusregistriosas olevad kanded jaotuvad tiitellehele (0 jagu)ja nelja jakku Jaod on kinnistu koosseis; omanik; koormatised ja kitsendused; hüpteegid.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistusregistriosa_kanded  -->
+<owl:Class rdf:about="#Kinnistusregistriosa_kanded">
+<rdfs:label xml:lang="et">Kinnistusregistriosa kanded</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Andmed Kinnistusregistriosas olevatest kannetest. Kanne sisaldab: kande teksti; kande tegemise kuupäeva; kande teinud isikute allkirja.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Kinnistustoimik  -->
+<owl:Class rdf:about="#Kinnistustoimik">
+<rdfs:label xml:lang="et">Kinnistustoimik</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistusraamat"/>
+<rdfs:comment xml:lang="et">Iga kinnistu kohta avatakse kinnistustoimik, mille kaanele märgitakse kohtu, kinnistusosakonna ja kinnistusjaoskonna nimi, sõna “Kinnistustoimik”, registriosa number ja kinnistu nimi.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Korterihoonestusoigus  -->
+<owl:Class rdf:about="#Korterihoonestusoigus">
+<rdfs:label xml:lang="et">Korterihoonestusõigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistu"/>
+<rdfs:comment xml:lang="et">Korterihoonestusõigus on analoogne korteriomandiga - korterihoonestusõigus koosneb ainuomandis olevast eluruumist ja hoonestusõiguse mõttelisest osast.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Korteriomand  -->
+<owl:Class rdf:about="#Korteriomand">
+<rdfs:label xml:lang="et">Korteriomand</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Kinnistu"/>
+<rdfs:comment xml:lang="et">Korteriomand on omand ehitise reaalosa üle, millega on ühendatud mõtteline osa kaasomandist, mille juurde reaalosa kuulub. Reguleerimata küsimustes kohaldatakse korteriomandile asjaõigusseaduse kinnisomandi sätteid.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Lisaandmed  -->
+<owl:Class rdf:about="#Lisaandmed">
+<rdfs:label xml:lang="et">Lisaandmed</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Maarus  -->
+<owl:Class rdf:about="#Maarus">
+<rdfs:label xml:lang="et">Määrus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Menetleja poolt menetluse käigus tehtav otsus. Mitme erineva toimingu kohta võib teha ühe määruse, kuid määrus ei pruugi alati olla seotud konkreetsete toimingutega (vahemäärus, negatiivne määrus).</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Markus  -->
+<owl:Class rdf:about="#Markus">
+<rdfs:label xml:lang="et">Märkus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Oigus"/>
+<rdfs:comment xml:lang="et">Märkus on õiguse liik, mida saab kinnistusregistriosale lisada.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Menetlus  -->
+<owl:Class rdf:about="#Menetlus">
+<rdfs:label xml:lang="et">Menetlus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kõik kinnistusraamatus tehtavad toimingud on hõlmatud mõistega “kinnistamismenetlus”. Sisuliselt on kinnistamismenetlus protsess, mis algab kinnistamisavalduse registreerimisega, või menetluse algatamisega ametiülesande korras. Menetluse käigus tehakse 1 - n määrust (otsust) ning menetlus lõpetatakse toiminguga „Lõpeta menetlus“. 2007. aasta algusest laekuvad notari poolt esitatavad avaldused koos kõigi lisadokumentidega konteinerina elektroonilisel teel E-notarist Kinnistusraamatusse.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Notar  -->
+<owl:Class rdf:about="#Notar">
+<rdfs:label xml:lang="et">Notar</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Avalik_oiguslik_isik"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Notari_isikukood  -->
+<owl:Class rdf:about="#Notari_isikukood">
+<rdfs:label xml:lang="et">Notari isikukood</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Notar"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Notari_lyhitunnus  -->
+<owl:Class rdf:about="#Notari_lyhitunnus">
+<rdfs:label xml:lang="et">Notari lühitunnus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Notar"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Oigus  -->
+<owl:Class rdf:about="#Oigus">
+<rdfs:label xml:lang="et">Õigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Infosüsteemis on õigus seos registriosa ja isiku(te), või registriosa ja registriosa(de) vahel, millel atribuudid, mis kajastavad õiguse juriidilist olemust (nt õiguse sisu, liik, tähtaeg jne). Juhul, kui on tegemist registriosa ja isiku(te) vahelise seosega, siis sätestab koormatud RO-de kohustused, või/ja õigustatud isikute õigused koormatud registriosa suhtes. Juhul, kui on tegemist registriosa ja registriosa(de) vahelise seosega, siis sätestab koormatud RO-de kohustused, või/ja valitsevate RO-de õigused koormatud registriosa suhtes (sisuliselt seos koormatud RO(de) ja valitseva(te) RO(de) igakordse omaniku vahel). Õigusi kajastatakse kannetena registriosadel.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Oigusteosad  -->
+<owl:Class rdf:about="#Oigusteosad">
+<rdfs:label xml:lang="et">Õigusteosad</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kaasomandiosade või õigustatuse osad.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Omandioigus  -->
+<owl:Class rdf:about="#Omandioigus">
+<rdfs:label xml:lang="et">Omandiõigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Oigus"/>
+<rdfs:comment xml:lang="et">Omand on ühe või mitme isiku täielik võim kinnistu üle ning õiguslikule seosele vastava infotehnoloogilise seose peab siinjuures looma objekt „omand“, mis ühendab registriosa ja isiku. „Omand“ saab kuuluda mitmele isikule ühiselt, sellisel juhul räägitakse kas kaasomandist või ühisomandist.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Ostueesoigus  -->
+<owl:Class rdf:about="#Ostueesoigus">
+<rdfs:label xml:lang="et">Ostueesõigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Piiratud_asjaoigus"/>
+<rdfs:comment xml:lang="et">Ostueesõigus on piiratud asjaõigus, mille alusel isikul, kelle kasuks ostueesõigus on seatud, on õigus kinnisasja võõrandamisel asuda omandaja asemele.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Pandioigus  -->
+<owl:Class rdf:about="#Pandioigus">
+<rdfs:label xml:lang="et">Pandiõigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Piiratud_asjaoigus"/>
+<rdfs:comment xml:lang="et">Asja võib pandiga (pandiõigusega) koormata selliselt, et isikul, kelle kasuks pant on seatud, on õigus pandiga tagatud nõude rahuldamisele panditud vara arvel, kui nõuet ei ole kohaselt täidetud.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Piiratud_asjaoigus  -->
+<owl:Class rdf:about="#Piiratud_asjaoigus">
+<rdfs:label xml:lang="et">Piiratud asjaõigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Oigus"/>
+<rdfs:comment xml:lang="et">Piiratud asjaõigus annab teatud õigused asjale, aga ei ulatu kunagi täieliku võimuni asja üle</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Reaalkoormatised  -->
+<owl:Class rdf:about="#Reaalkoormatised">
+<rdfs:label xml:lang="et">Reaalkoormatis</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Piiratud_asjaoigus"/>
+<rdfs:comment xml:lang="et">Kinnisasja võib koormata selliselt, et kinnisasja igakordne omanik peab tasuma isikule, kelle kasuks reaalkoormatis on seatud, perioodilisi makseid rahas.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Reaalosad  -->
+<owl:Class rdf:about="#Reaalosad">
+<rdfs:label xml:lang="et">Reaalosad</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Lisaandmed"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Servituudid  -->
+<owl:Class rdf:about="#Servituudid">
+<rdfs:label xml:lang="et">Servituudid</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Piiratud_asjaoigus"/>
+<rdfs:comment xml:lang="et">Servituut koormab teenivat kinnisasja valitseva kinnisasja kasuks selliselt, et valitseva kinnisasja igakordne omanik on õigustatud teenivat kinnisasja teatud viisil kasutama või et teeniva kinnisasja igakordne omanik on kohustatud oma omandiõiguse teostamisest valitseva kinnisasja kasuks teatavas osas hoiduma.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Sihtotstarbed  -->
+<owl:Class rdf:about="#Sihtotstarbed">
+<rdfs:label xml:lang="et">Sihtotstarbed</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Katastriyksus"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Tehing  -->
+<owl:Class rdf:about="#Tehing">
+<rdfs:label xml:lang="et">Tehing</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Lisaandmed"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Toiming  -->
+<owl:Class rdf:about="#Toiming">
+<rdfs:label xml:lang="et">Toiming</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kinnistusraamatu toimingud, mille käigus luuakse, muudetakse, lõpetatakse registriosi, kandeid, õigusi.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#Yhisomand  -->
+<owl:Class rdf:about="#Yhisomand">
+<rdfs:label xml:lang="et">Ühisomand</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Omandioigus"/>
+<rdfs:comment>Ühisomand on üks omandi liik, kus mitmel isikul on õigus ühele kinnistule võrdne osa suurusena.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#fyysiline_isik  -->
+<owl:Class rdf:about="#fyysiline_isik">
+<rdfs:label xml:lang="et">Füüsiline isik</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isik"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#fyysilise_isiku_eesnimi  -->
+<owl:Class rdf:about="#fyysilise_isiku_eesnimi">
+<rdfs:label xml:lang="et">Füüsilise isiku nimi</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isiku_nimi"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#isikukood  -->
+<owl:Class rdf:about="#isikukood">
+<rdfs:label xml:lang="et">Füüsilise isiku isikukood</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isiku_kood"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#juriidiline_isik  -->
+<owl:Class rdf:about="#juriidiline_isik">
+<rdfs:label xml:lang="et">Juriidiline isik</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isik"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#notariaaltehing  -->
+<owl:Class rdf:about="#notariaaltehing">
+<rdfs:label xml:lang="et">Notariaaltehing</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Tehing"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#registrikood  -->
+<owl:Class rdf:about="#registrikood">
+<rdfs:label xml:lang="et">Avalik-õigusliku ja juriidilise isiku registrikood</rdfs:label>
+<rdfs:subClassOf rdf:resource="#Isiku_kood"/>
+</owl:Class>
+</rdf:RDF>

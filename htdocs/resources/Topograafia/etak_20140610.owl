@@ -1,0 +1,2959 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY riha "https://riha.eesti.ee/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY acetext "http://attempto.ifi.uzh.ch/acetext#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY r12 "https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/" >
+    <!ENTITY r1 "https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/" >
+    <!ENTITY r13 "https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/" >
+]>
+
+
+<rdf:RDF xmlns="&riha;riha/onto/keskkond.topograafia/2014/r1/"
+     xml:base="&riha;riha/onto/keskkond.topograafia/2014/r1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:riha="https://riha.eesti.ee/"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:acetext="http://attempto.ifi.uzh.ch/acetext#"
+     xmlns:r13="&riha;riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/"
+     xmlns:r1="&riha;riha/onto/keskkond.topograafia/2014/r1/"
+     xmlns:r12="&riha;riha/onto/keskkond.geomeetria/2012/r1/">
+    <owl:Ontology rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1">
+        <rdfs:label xml:lang="et">Eesti topograafia andmekogu ontoloogia</rdfs:label>
+        <rdfs:comment xml:lang="et">Eesti topograafia andmekogu nأ¤htuste ontoloogia.</rdfs:comment>
+        <owl:versionInfo xml:lang="et">Versioon 0.2 (2014-06-10).</owl:versionInfo>
+        <owl:imports rdf:resource="&riha;riha/onto/keskkond.geomeetria/2012/r1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://attempto.ifi.uzh.ch/acetext#acetext -->
+
+    <owl:AnnotationProperty rdf:about="&acetext;acetext"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/asub_hoone_peal -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/asub_hoone_peal">
+        <rdfs:label xml:lang="et">Kأµrgrajatis asub hoone peal</rdfs:label>
+        <rdfs:comment xml:lang="et">Kأµrgrajatis asub hoone peal, nأ¤iteks kirikul asuv torn.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+        <owl:propertyDisjointWith rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/on_sama_objekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_andmeallikat -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_andmeallikat">
+        <rdfs:label xml:lang="et">Topograafilisel ruumiobjektil on andmeallikas</rdfs:label>
+        <rdfs:comment xml:lang="et">Topograafilise nأ¤htuse ruumiobjekt omab andmeallikat.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_koha_aadressi -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_koha_aadressi">
+        <rdfs:label xml:lang="et">Omab koha-aadressi</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiobjektiga on seotud koha-aadress ADSIst.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Ametlik_koha_aadress"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_korgusallikat -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_korgusallikat">
+        <rdfs:label xml:lang="et">Topograafilisel ruumiobjektil on kأµrgusallikas</rdfs:label>
+        <rdfs:comment xml:lang="et">Topograafilise nأ¤htuse ruumiobjekt omab kأµrgusallikat.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_liikluspinna_nime -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_liikluspinna_nime">
+        <rdfs:label xml:lang="et">Omab liikluspinna nime</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiobjektiga on seotud liikluspinna (aadressi 5. taseme komponendi) nimi ADSist.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/Aadressi_komponent_tase_5"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_ruumikuju_orienteerimata_joon -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_ruumikuju_orienteerimata_joon">
+        <rdfs:label xml:lang="et">Ruumikuju on orienteerimata joon</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumikuju omab geomeetriat orienteerimata joon.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.geomeetria/2012/r1/Orienteerimata_joon"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Elektriliin"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaitsekraav"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kiviaed"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muul"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Paadisild"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimede_rida"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Purre"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Roobastee"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisu-_ja_vooluveekogu_kallas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu_kallas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Siht"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Soidutakistus"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Torujuhe"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Truup"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tunnel"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ulevedu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vall"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu_kallas"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_ruumikuju_orienteeritud_joon -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_ruumikuju_orienteeritud_joon">
+        <rdfs:label xml:lang="et">Ruumikuju on orienteeritud joon</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumikuju omab geomeetriat orienteeritud joon.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.geomeetria/2012/r1/Orienteeritud_joon"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Juga"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_ja_seisuveekogu_kallas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_ja_vooluveekogu_kallas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_kallas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muur"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Nolv"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pais"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Piirdeaed"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Samakorgusjoon"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehissein"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_ruumikuju_pind -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_ruumikuju_pind">
+        <rdfs:label xml:lang="et">Ruumikuju on pind</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumikuju omab geomeetriat pind.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.geomeetria/2012/r1/Pind"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Autotunnel"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Biotiik"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Haljasala"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Haritav_maa"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Jaatmaa"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Jarv"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kalmistu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karjaar"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kasvuhoone"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Katusealune"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Lage"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Laugas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Lennuvali"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Maa-alune_hoone"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Margala"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Meri"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mets"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_rajatis"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_seisuveekogu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ou"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Paisjarv"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Poosastik"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Prugila"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sadam"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sild"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Spordikompleks"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehisjarv"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tiik"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Turbavali"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_ruumikuju_punkt -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_ruumikuju_punkt">
+        <rdfs:label xml:lang="et">Ruumikuju on punkt</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumikuju omab geomeetriat punkt.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.geomeetria/2012/r1/Punkt"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Allikas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Auk"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ebatasane_ala"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Harvik"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karestik"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Koobas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Malestusmark"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaim"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Reljeefi_iseloomulik_punkt"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Salu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehiskungas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnopaigaldis"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Uksikhaud"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/omab_ruumikujuallikat -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/omab_ruumikujuallikat">
+        <rdfs:label xml:lang="et">Topograafilisel ruumiobjektil on ruumikuju allikas</rdfs:label>
+        <rdfs:comment xml:lang="et">Topograafilise nأ¤htuse ruumiobjekt omab ruumikuju allikat.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/on_sama_objekt -->
+
+    <owl:ObjectProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/on_sama_objekt">
+        <rdfs:label xml:lang="et">Kأµrgrajatis on hoonega sama ruumiobjekt</rdfs:label>
+        <rdfs:comment xml:lang="et">Kui kأµrgrajatise alune pindala on piisavalt suur, kaardistatakse ta nii ehitise kui kأµrgrajatisena.</rdfs:comment>
+        <rdfs:range rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/A_tasand -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/A_tasand">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Teelأµigu alguse tasand.</rdfs:label>
+        <rdfs:comment xml:lang="et">Teelأµigu alguspunkti tasand kirjeldab mitmetasandilistel ristmikel lأµigu alguspunkti tasandit.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Aeg_aerolaserskaneerimine -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Aeg_aerolaserskaneerimine">
+        <rdfs:label xml:lang="et">Aeg</rdfs:label>
+        <rdfs:comment xml:lang="et">Aerolaserskaneerimise aeg.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusmudel"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Aeg_alusdokument -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Aeg_alusdokument">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Alusdokumendi aeg</rdfs:label>
+        <rdfs:comment xml:lang="et">Alusdokumendi andmekogusse laekumise aeg.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Aeropildistamise_aeg -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Aeropildistamise_aeg">
+        <rdfs:label xml:lang="et">Aeropildistamise aeg</rdfs:label>
+        <rdfs:comment xml:lang="et">Ortofoto valmistamiseks kasutatud aerofoto pildistamise aeg.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ortofoto"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Andmeallikas_alusdokument -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Andmeallikas_alusdokument">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Andmeallikas</rdfs:label>
+        <rdfs:comment xml:lang="et">Andmeandja nimi.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/ETAK_ID -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/ETAK_ID">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">ETAK_ID</rdfs:label>
+        <rdfs:comment xml:lang="et">ETAK ruumiobjekti unikaalne identifikaator.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Elekter -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Elekter">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Elekter</rdfs:label>
+        <rdfs:comment xml:lang="et">Nأ¤itab, kas rأ¶أ¶basteed saavad kasutada ka elektrirongid.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Laiaroopmeline"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Halduspiir -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Halduspiir">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kallas on halduspiiriks</rdfs:label>
+        <rdfs:comment xml:lang="et">Halduspiiride tarbeks katastrile vajalik rannajoon - mere, jأ¤rvedest Peipsi ja Vأµrtsjأ¤rve kallas ning Narva jأµe vasak kallas koos Eestile kuuluvate Narva jأµe saartega.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Intensiivsus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Intensiivsus">
+        <rdfs:label xml:lang="et">Intensiivsus</rdfs:label>
+        <rdfs:comment xml:lang="et">Tagasipeegeldunud lasersignaali intensiivsus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kaardilehe_normaalmootkava -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaardilehe_normaalmootkava">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kaardilehe nornaalmأµأµtkava</rdfs:label>
+        <rdfs:comment xml:lang="et">Kaardilehtede nomenklatuuri mأ¤أ¤rav normaalmأµأµtkava.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ortofoto"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kaardilehe_number -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaardilehe_number">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kaardilehe number</rdfs:label>
+        <rdfs:comment xml:lang="et">Kujutatavat ala mأ¤أ¤rav kaardilehe number vastavalt mأµأµtkavast sأµltuvale kaardilehtede nomenklatuurile.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusmudel"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ortofoto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kaldaastang -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldaastang">
+        <rdfs:label xml:lang="et">Kaldaastang</rdfs:label>
+        <rdfs:comment xml:lang="et">Ranna ja kalda kasutamise kitsenduse erisus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Looduslik_jarsak"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Karto_nimi -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karto_nimi">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Tee kartograafiline nimi</rdfs:label>
+        <rdfs:comment xml:lang="et">Liikluspinna nimetus kaardile kandmiseks sobivalt lأ¼hendatud kujul Riigi kohanimeregistrist.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kasutus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kasutus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">أ•ueala kasutus</rdfs:label>
+        <rdfs:comment xml:lang="et">Tootmisأµue kasutus nأ¤itab, kas tegu on alajaama, tsisternlao, ilmajaama, antennirajatise vأµi muu kasutusega.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tootmisou"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Keskkonnaregistri_nimetus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Keskkonnaregistri_nimetus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Keskkonnaregistri nimetus</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiobjekti nimetus Keskkonnaregistris.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Klass -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Klass">
+        <rdfs:label xml:lang="et">Klass</rdfs:label>
+        <rdfs:comment xml:lang="et">Kأµrguspunkti iseloomustav klassifikatsioon.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kohanimeregistri_nimetus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kohanimeregistri_nimetus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kohanimeregistri nimetus</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiobjekti nimetus Riigi kohanimeregistris.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Harvik"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Juga"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kalmistu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karestik"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karjaar"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Koobas"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Lennuvali"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Malestusmark"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Prugila"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaim"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sadam"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Salu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sild"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Spordikompleks"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Uksikhaud"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kood -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kood">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Nأ¤htuse kood ETAK reaalsusmudelis.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kood_alusdokument -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kood_alusdokument">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Alusdokumendi kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Alusdokumendi identifikaator.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korgus_kivi -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgus_kivi">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kivi kأµrgus</rdfs:label>
+        <rdfs:comment xml:lang="et">Kaitsealuste rأ¤ndrahnude kأµrgus mأµأµdetuna maa vأµi veepinnast tأ¤ismeetrites.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Uksik_kivi"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korgus_korgusandmed -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgus_korgusandmed">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kأµrgusinfot kujutava ruumiobjektiga mأ¤أ¤ratud kأµrgus</rdfs:label>
+        <rdfs:comment xml:lang="et">Kأµrgus normaalkأµrgussأ¼steemis.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korgus_rajatis -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgus_rajatis">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kأµrgrajatise kأµrgus</rdfs:label>
+        <rdfs:comment xml:lang="et">Kأµrgrajatise kأµrgus maapinnast tأ¤ismeetrites.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korguskood_alusdokument -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korguskood_alusdokument">
+        <rdfs:label xml:lang="et">Alusdokumendi kأµrguskood</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiobjekti korgusallika_id vأ¤ljal kasutatav viide alusdokumendile.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korgustapsus_alusdokument -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgustapsus_alusdokument">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Alusdokumendi kأµrgustأ¤psus</rdfs:label>
+        <rdfs:comment xml:lang="et">Alusdokumendis mأ¤أ¤ratletud ruumiobjektide kأµrguse tأ¤psusklass.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/L_tasand -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/L_tasand">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Teelأµigu lأµpu tasand</rdfs:label>
+        <rdfs:comment xml:lang="et">Teelأµigu lأµpp-punkti tasand kirjeldab mitmetasandilistel ristmikel lأµigu lأµpp-punkti tasandit.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Laius_tee -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Laius_tee">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Tee laius</rdfs:label>
+        <rdfs:comment xml:lang="et">Teekatte laius koos sأµidukأµlbulike teepeenardega أ¼mardatuna meetriteks.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Laius_vooluveekogu -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Laius_vooluveekogu">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Vooluveekogu laius</rdfs:label>
+        <rdfs:comment xml:lang="et">Vooluveekogu laiusklass.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Lennukorgus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Lennukorgus">
+        <rdfs:label xml:lang="et">Lennukأµrgus</rdfs:label>
+        <rdfs:comment xml:lang="et">Aerolaserskaneerimise lennukأµrgus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Liiklus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Liiklus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Liikluse suunalisus</rdfs:label>
+        <rdfs:comment xml:lang="et">Mootorsأµidukite lubatud liikumissuund.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Mark -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mark">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mأ¤rk</rdfs:label>
+        <rdfs:comment xml:lang="et">Rajatis on navigatsioonimأ¤rk.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Markused -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Markused">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Mأ¤rkused</rdfs:label>
+        <rdfs:comment xml:lang="et">Vabas vormis mأ¤rkused.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muutmisaeg -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muutmisaeg">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Ruumiobjekti muutmisaeg</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiobjekti muutmisaeg nأ¤itab viimast operaatori poolt algatatud muudatuse aega.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Nimetus_alusdokument -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Nimetus_alusdokument">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Alusdokumendi nimetus</rdfs:label>
+        <rdfs:comment xml:lang="et">Alusdokumenti iseloomustav nimetus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Nimipinge -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Nimipinge">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Elektriliini nimipinge</rdfs:label>
+        <rdfs:comment xml:lang="et">Elektriliini nimipingeks nimetatakse pinget, millele elektriliin on ette nأ¤htud ja millega teda mأ¤أ¤ratletakse vأµi iseloomustatakse.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Elektriliin"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Peegelduse_tuup -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Peegelduse_tuup">
+        <rdfs:label xml:lang="et">Peegelduse tأ¼أ¼p</rdfs:label>
+        <rdfs:comment xml:lang="et">Kأµrguspunkti lasersignaali peegelduse tأ¼أ¼p.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Piksli_suurus_maapinnal -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Piksli_suurus_maapinnal">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Piksli suurus maapinnal</rdfs:label>
+        <rdfs:comment xml:lang="et">Nأ¤itab vأ¤ikseima jagamatu ala suurust maapinnal.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusmudel"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ortofoto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Puis -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puis">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Puittaimestiku olemasolu</rdfs:label>
+        <rdfs:comment xml:lang="et">Eristab puissood ja -rabad ning pأµأµsassood lagedatest vأµi vأµstastunud haritavad maad lagedatest.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Haritav_maa"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Madalsoo"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ootsik"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Raba"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Soovik"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Puittaimed -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimed">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Puittaimed</rdfs:label>
+        <rdfs:comment xml:lang="et">Piirde vahetus lأ¤heduses olevate puittaimede (puuderida, hekk, vأµsa) olemasolu.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Piire"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ruumikuju_muutmisaeg -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ruumikuju_muutmisaeg">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Ruumikuju_muutmisaeg</rdfs:label>
+        <rdfs:comment xml:lang="et">Ruumiobjekti ruumikuju viimase muutmise aeg.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Seos -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seos">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Seos</rdfs:label>
+        <rdfs:comment xml:lang="et">Nأ¤itab, kas kأµrgrajatisel on seos hoonega.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Soidutee -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Soidutee">
+        <rdfs:label xml:lang="et">Sأµidutee kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Sأµidutee kood Riiklikus teeregistris. Mأ¤أ¤ratakse tee loogilise suuna (mitte digimise suuna!) jأ¤rgi.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tahelepanuvajadus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tahelepanuvajadus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Tأ¤helepanuvajadus</rdfs:label>
+        <rdfs:comment xml:lang="et">Mأ¤rge, mis nأ¤itab, kas andmekogu vastutav tأ¶أ¶tleja peaks  ruumiobjektile tأ¤iendavat tأ¤helepanu pأ¶أ¶rama.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tahtsus_roobastee -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tahtsus_roobastee">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Rأ¶أ¶bastee tأ¤htsus</rdfs:label>
+        <rdfs:comment xml:lang="et">Nأ¤itab rأ¶أ¶bastee olulisust.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kitsaroopmeline"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Laiaroopmeline"/>
+                    <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Trammitee"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tahtsus_tee -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tahtsus_tee">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Tee tأ¤htsus</rdfs:label>
+        <rdfs:comment xml:lang="et">Tee tأ¤htsus nأ¤itab tee olulisust.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tapsus_alusdokument -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tapsus_alusdokument">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Alusdokumendi tأ¤psus</rdfs:label>
+        <rdfs:comment xml:lang="et">Alusdokumendis mأ¤أ¤ratletud ruumiobjektide asukoha tأ¤psusklass.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tee_nimetus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee_nimetus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Teeregistri nimetus</rdfs:label>
+        <rdfs:comment xml:lang="et">Tee nimetus Riiklikus teeregistris.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tee_number -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee_number">
+        <rdfs:label xml:lang="et">Tee number</rdfs:label>
+        <rdfs:comment xml:lang="et">Tee number Riiklikus teeregistris.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Teekate -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Teekate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Tee kattematerjal</rdfs:label>
+        <rdfs:comment xml:lang="et">Tee kattematerjal nأ¤itab tee pealmist katet.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Teeosa -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Teeosa">
+        <rdfs:label xml:lang="et">Teeosa</rdfs:label>
+        <rdfs:comment xml:lang="et">Teeosa on  Riikliku teeregistri aadresssأ¼steemis kasutatav mأµiste, mis jagab tee loogilisteks allأ¼ksusteks.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Telje_staatus -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Telje_staatus">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Vooluveekogu telje staatus</rdfs:label>
+        <rdfs:comment xml:lang="et">Nأ¤itab, kas tegu on Keskkonnaregistrisse kantud vooluveekogu pأµhiteljega vأµi sekundaarse teljega.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Telje_tyyp -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Telje_tyyp">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Vooluveekogu telje tأ¼أ¼p</rdfs:label>
+        <rdfs:comment xml:lang="et">Vooluveekogu telje alaliik.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Toke -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Toke">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Tأµkke suletus</rdfs:label>
+        <rdfs:comment xml:lang="et">Nأ¤itab, kas tegu on pأ¼siva vأµi avatava sأµidutakistusega.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Soidutakistus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tyyp -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tyyp">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Kalda tأ¼أ¼p</rdfs:label>
+        <rdfs:comment xml:lang="et">Kaldajoone tأ¼أ¼p kajastab kaldajoone olemust ja asukoha mأ¤أ¤ramise tأ¤psust.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tyyp_alusdokument -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tyyp_alusdokument">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Alusdokumendi tأ¼أ¼p</rdfs:label>
+        <rdfs:comment xml:lang="et">Alusdokumendi tأ¼أ¼p nأ¤itab andmete pأ¤ritolu ning kogumisviisi.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tyyp_korgusmudel -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tyyp_korgusmudel">
+        <rdfs:label xml:lang="et">Kأµrgusmudeli tأ¼أ¼p</rdfs:label>
+        <rdfs:comment xml:lang="et">Kأµrgusmudeli tأ¼أ¼p nأ¤itab, kas tegemist on maastikumudeliga (kأµrgus on mأ¤أ¤ratud maapinna kأµrguse jأ¤rgi) vأµi pinnamudeliga (kأµrgus sisaldab ka maapinnal paiknevaid objekte, nt. puid ja hooneid).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusmudel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Varviskeem -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Varviskeem">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Vأ¤rviskeem</rdfs:label>
+        <rdfs:comment xml:lang="et">Iseloomustab ortofoto vأ¤rvikanalite kooslust.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ortofoto"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Voolusuund -->
+
+    <owl:DatatypeProperty rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Voolusuund">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="et">Vooluveekogu voolusuund</rdfs:label>
+        <rdfs:comment xml:lang="et">Nأ¤itab vooluveekogu joone suuna vastavust vee voolamise suunale.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:domain rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv">
+        <rdfs:label xml:lang="et">Aerolaserskaneerimise punktipilv</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed"/>
+        <rdfs:comment xml:lang="et">Klassifitseeritud punktandmete kogum ehk punktipilv.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Aianduslik_maa -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Aianduslik_maa">
+        <rdfs:label xml:lang="et">Aianduslik maa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Haritav_maa"/>
+        <owl:disjointWith rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pold"/>
+        <rdfs:comment xml:lang="et">Puuvilja- ja marjaistandus, puukool, asula juures olev aiamaa ning ajutiste kasvuhoonetega katmikala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Allikas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Allikas">
+        <rdfs:label xml:lang="et">Allikas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+        <rdfs:comment xml:lang="et">Pأµhjavee loodusliku vأ¤ljavoolu koht maapinnal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Alusdokument -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument">
+        <rdfs:label xml:lang="et">Alusdokument</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="et">Topograafiliste nأ¤htuste vektorkujul andmete andmekogusse kandmise ning andmekogus andmete muutmise ja kustutamise alusdokumendi metainfo.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Auk -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Auk">
+        <rdfs:label xml:lang="et">Auk</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        <rdfs:comment xml:lang="et">Vأ¤ikese ulatusega negatiivne pinnavorm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Autotunnel -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Autotunnel">
+        <rdfs:label xml:lang="et">Autotunnel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis"/>
+        <rdfs:comment xml:lang="et">Autoliikluseks avatud tunnel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Biotiik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Biotiik">
+        <rdfs:label xml:lang="et">Biotiik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+        <rdfs:comment xml:lang="et">Reovee puhastamise tiik vأµi veepuhastusjaama lahtine bassein.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ebatasane_ala -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ebatasane_ala">
+        <rdfs:label xml:lang="et">Ebatasane ala</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        <rdfs:comment xml:lang="et">Ebaأ¼htlase reljeefiga ala (nأ¤iteks karstiala vأµi tasandamata karjأ¤أ¤r), kus ei moodustu eraldiseisvaid pinnavorme.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ehitatav_hoone -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitatav_hoone">
+        <rdfs:label xml:lang="et">Ehitatav hoone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+        <rdfs:comment xml:lang="et">Hoone, mille ehitus on pooleli ning mis ei klassifitseeru vundamendiks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ehitised -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitised">
+        <rdfs:label xml:lang="et">Ehitised</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+        <rdfs:comment xml:lang="et">Inimtekkelised nأ¤htused, mis ei ole hأ¼drotehniliste rajatiste, tehno- vأµi transpordivأµrkude osa (hooned, muud rajatised).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Elektriliin -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Elektriliin">
+        <rdfs:label xml:lang="et">Elektriliin</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnovorgud"/>
+        <rdfs:comment xml:lang="et">أ•huliin nimipingega vأ¤hemalt 1 kV.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Elektrituulik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Elektrituulik">
+        <rdfs:label xml:lang="et">Elektrituulik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnopaigaldis"/>
+        <rdfs:comment xml:lang="et">Elektripaigaldis, kus toimub elektri tootmine tuule abil.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Elu-_voi_uhiskondlik_hoone -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Elu-_voi_uhiskondlik_hoone">
+        <rdfs:label xml:lang="et">Elu- vأµi أ¼hiskondlik hoone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+        <rdfs:comment xml:lang="et">Eluhoone, hoolekandeasutuse ja أ¼hiselamu hoone; hotell, muu majutus- ja toitlustushoone; bأ¼roo- ja administratiivhoone; kaubandus- ja teenindushoone; transpordi- ja sidehoone; meelelahutus-, haridus-, tervishoiu-, kultus-, tavandihoone ja muu sarnane hoone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Eraou -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Eraou">
+        <rdfs:label xml:lang="et">Eraأµu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ou"/>
+        <owl:disjointWith rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tootmisou"/>
+        <rdfs:comment xml:lang="et">Eluhoonete vأµi أ¼hiskondlike hoonete juurde kuuluv ala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Garaaz -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Garaaz">
+        <rdfs:label xml:lang="et">Garaaإ¾</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Maa-alune_hoone"/>
+        <rdfs:comment xml:lang="et">Maa-alune mootorsأµidukite hooldus- vأµi hoiuruum vأµi parkla.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Haljasala -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Haljasala">
+        <rdfs:label xml:lang="et">Haljasala</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Madal- vأµi kأµrghaljastusega ala, mida kasutatakse rekreatiivsetel eesmأ¤rkidel ning millele on iseloomulikud ilutaimed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Haritav_maa -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Haritav_maa">
+        <rdfs:label xml:lang="et">Haritav maa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud"/>
+        <rdfs:comment xml:lang="et">Pأµllumajanduslikult kasutatav maa vأµi sأ¶أ¶t.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Harvik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Harvik">
+        <rdfs:label xml:lang="et">Harvik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimestik"/>
+        <rdfs:comment xml:lang="et">Puittaimede kasvuala, kus vأµrade liituvus on alla 30%.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Hoone -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone">
+        <rdfs:label xml:lang="et">Hoone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitised"/>
+        <rdfs:comment xml:lang="et">Katuse, siseruumi ja vأ¤lispiiretega ehitis ning selle erinevad ehitusjأ¤rgud ja vared.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Hudrotehniline_rajatis -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Hudrotehniline_rajatis">
+        <rdfs:label xml:lang="et">Hأ¼drotehniline rajatis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised"/>
+        <rdfs:comment xml:lang="et">Rajatis veekogul.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Jaatmaa -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Jaatmaa">
+        <rdfs:label xml:lang="et">Jأ¤أ¤tmaa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Majandustegevuses mittekasutatav tehnogeenne ala, kus looduslikud mullahorisondid on kas rikutud vأµi prأ¼gi vأµi pinnasega kaetud.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Jarv -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Jarv">
+        <rdfs:label xml:lang="et">Jأ¤rv</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+        <rdfs:comment xml:lang="et">Keskkonnaregistris tأ¼أ¼p looduslik jأ¤rv.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Jogi -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Jogi">
+        <rdfs:label xml:lang="et">Jأµgi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+        <rdfs:comment xml:lang="et">Keskkonnaregistris tأ¼أ¼p jأµgi.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Juga -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Juga">
+        <rdfs:label xml:lang="et">Juga</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        <rdfs:comment xml:lang="et">Veekogu osa, kus vesi langeb astangult, sealhulgas kosk.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kaitsekraav -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaitsekraav">
+        <rdfs:label xml:lang="et">Kaitsekraav</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        <rdfs:comment xml:lang="et">Negatiivne pinnavorm, mis on kaevatud riigikaitselisel vأµi sأµjalisel eesmأ¤rgil.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kaldajoon -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon">
+        <rdfs:label xml:lang="et">Kaldajoon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised"/>
+        <rdfs:comment xml:lang="et">Mere, seisuveekogu vأµi vooluveekogu ja maismaa vaheline piir.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kalmistu -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kalmistu">
+        <rdfs:label xml:lang="et">Kalmistu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Surnute matmiseks kasutatav maa-ala, mille pindala on vأ¤hemalt 500 m2.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kanal -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kanal">
+        <rdfs:label xml:lang="et">Kanal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+        <rdfs:comment xml:lang="et">Keskkonnaregistris tأ¼أ¼p kanal.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Karestik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karestik">
+        <rdfs:label xml:lang="et">Kأ¤restik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        <rdfs:comment xml:lang="et">Suure languga veekogu osa, kus vesi voolab mأ¶أ¶da ebatasast kivist pأµhja.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Karjaar -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karjaar">
+        <rdfs:label xml:lang="et">Karjأ¤أ¤r</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Pealmaakaevandus.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kasutusel_turbavali -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kasutusel_turbavali">
+        <rdfs:label xml:lang="et">Kasutusel turbavأ¤li</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Turbavali"/>
+        <owl:disjointWith rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Mahajaetud_turbavali"/>
+        <rdfs:comment xml:lang="et">Turba kaevandamise ala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kasvuhoone -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kasvuhoone">
+        <rdfs:label xml:lang="et">Kasvuhoone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_rajatis"/>
+        <rdfs:comment xml:lang="et">Klaasist vأµi muust valgust lأ¤bilaskvast materjalist katuse ja seintega rajatis kultuurtaimede kasvatamiseks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Katusealune -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Katusealune">
+        <rdfs:label xml:lang="et">Katusealune</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_rajatis"/>
+        <rdfs:comment xml:lang="et">Katuse ja selle tugistruktuuridega rajatis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kelder -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kelder">
+        <rdfs:label xml:lang="et">Kelder</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Maa-alune_hoone"/>
+        <rdfs:comment xml:lang="et">Maa-alune panipaik.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kitsaroopmeline -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kitsaroopmeline">
+        <rdfs:label xml:lang="et">Kitsarأ¶أ¶pmeline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Roobastee"/>
+        <rdfs:comment xml:lang="et">Alla 1500 mm rأ¶أ¶pavahega raudtee.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kivi -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi">
+        <rdfs:label xml:lang="et">Kivi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnamood"/>
+        <rdfs:comment xml:lang="et">أœksik kivi, kivihunnik vأµi kivine ala.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <acetext:acetext>Every Kivid is a Pinnamood.</acetext:acetext>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedSource rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+        <owl:annotatedTarget rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnamood"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kiviaed -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kiviaed">
+        <rdfs:label xml:lang="et">Kiviaed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Piire"/>
+        <rdfs:comment xml:lang="et">Kiviaed on looduslikest kividest, sideaineta laotud piire.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kivihunnik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivihunnik">
+        <rdfs:label xml:lang="et">Kivihunnik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+        <rdfs:comment xml:lang="et">Kivide kuhi, eristub reljeefselt muust أ¼mbritsevast alast.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <acetext:acetext>Every Kivihunnik is a Kivid.</acetext:acetext>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+        <owl:annotatedSource rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivihunnik"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kivine_ala -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivine_ala">
+        <rdfs:label xml:lang="et">Kivine ala</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+        <rdfs:comment xml:lang="et">Kividega ala, kus kivid ei kata maapinda tأ¤ielikult.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <acetext:acetext>Every Kivine_ala is a Kivid.</acetext:acetext>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+        <owl:annotatedSource rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivine_ala"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Klibune_ala -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Klibune_ala">
+        <rdfs:label xml:lang="et">Klibune ala</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Lage"/>
+        <rdfs:comment xml:lang="et">Looduslik ala, mille kaetus vأ¤ikeste kividega on suurem kui 50%.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Koistee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Koistee">
+        <rdfs:label xml:lang="et">Kأ¶istee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Roobastee"/>
+        <rdfs:comment xml:lang="et">Suusatأµstuk vأµi muu sarnane tأµstevahend.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kolvikud -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud">
+        <rdfs:label xml:lang="et">Kأµlvikud</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+        <rdfs:comment xml:lang="et">Nأ¤htused, mille piires on أ¼hesugune maakasutus vأµi -kate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Koobas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Koobas">
+        <rdfs:label xml:lang="et">Koobas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        <rdfs:comment xml:lang="et">Maa-alune tأ¼hemik, أµأµnsus, kأ¤ik vأµi nende kogum. Koopa seinad on vooderdamata.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korgrajatis -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis">
+        <rdfs:label xml:lang="et">Kأµrgrajatis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitised"/>
+        <rdfs:comment xml:lang="et">Korstnad, mastid ja tornid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korgusandmed -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed">
+        <rdfs:label xml:lang="et">Kأµrgusandmed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="et">Kأµrgusmudelid, isojooned ning kأµrgus- ja sأ¼gavuspunktid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korgusmudel -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusmudel">
+        <rdfs:label xml:lang="et">Kأµrgusmudel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed"/>
+        <rdfs:comment xml:lang="et">Kأµrgusmudel  on matemaatiline pind, kus igal mudeli punktil on olemas kأµrgusvأ¤أ¤rtus alustasandi suhtes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korsten -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korsten">
+        <rdfs:label xml:lang="et">Korsten</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+        <rdfs:comment xml:lang="et">Korsten, mis on selle alusest hoonest mأ¤rgatavalt pikem.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korval-_voi_tootmishoone -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korval-_voi_tootmishoone">
+        <rdfs:label xml:lang="et">Kأµrval- vأµi tootmishoone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+        <rdfs:comment xml:lang="et">Hoone, mis ei ole elu- ega أ¼hiskondlik hoone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Korvalmaantee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korvalmaantee">
+        <rdfs:label xml:lang="et">Kأµrvalmaantee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        <rdfs:comment xml:lang="et">Riigimaantee, mis أ¼hendab linnu alevite ja alevikega, aleveid ja alevikke omavahel vأµi kأ¼ladega ning neid kأµiki pأµhi- ja tugimaanteedega.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kraav -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kraav">
+        <rdfs:label xml:lang="et">Kraav</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+        <rdfs:comment xml:lang="et">Keskkonnaregistris tأ¼أ¼p kraav.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Kuiv_truup -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kuiv_truup">
+        <rdfs:label xml:lang="et">Kuiv</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Truup"/>
+        <owl:disjointWith rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Uhendatud_truup"/>
+        <rdfs:comment xml:lang="et">Truup ei ole vooluvetevأµrgu osa, vaid on paigaldatud hooajalise suurvee vأµi loomade juhtimiseks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Lage -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Lage">
+        <rdfs:label xml:lang="et">Lage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud"/>
+        <rdfs:comment xml:lang="et">Taimkatteta ala vأµi looduslik rohttaimede kasvuala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Laiaroopmeline -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Laiaroopmeline">
+        <rdfs:label xml:lang="et">Laiarأ¶أ¶pmeline</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Roobastee"/>
+        <rdfs:comment xml:lang="et">أœle 1500 mm rأ¶أ¶pavahega raudtee.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Laugas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Laugas">
+        <rdfs:label xml:lang="et">Laugas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+        <rdfs:comment xml:lang="et">Rabades esinev vأ¤ike loodusilmeline seisuveekogu.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Lennuvali -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Lennuvali">
+        <rdfs:label xml:lang="et">Lennuvأ¤li</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Ala, kus asuvad lennuliiklusalased rajatised, kaasa arvatud maandumis- ja ruleerimisrajad.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis">
+        <rdfs:label xml:lang="et">Liikluskorralduslik rajatis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Transport"/>
+        <rdfs:comment xml:lang="et">Liikluskorralduslik rajatis tee vأµi veekogu أ¼letamiseks vأµi liikluse tأµkestamiseks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Liivane_ala -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Liivane_ala">
+        <rdfs:label xml:lang="et">Liivane ala</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Lage"/>
+        <rdfs:comment xml:lang="et">Looduslik ala, mille kaetus lahtise liiva vأµi kruusaga on suurem kui 50%.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Looduslik_jarsak -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Looduslik_jarsak">
+        <rdfs:label xml:lang="et">Looduslik jأ¤rsak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Nolv"/>
+        <rdfs:comment xml:lang="et">Vertikaalilأ¤hedane looduslik pinnavorm (nأ¤iteks liivakivi- vأµi paekivipaljand).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Maa-alune_hoone -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Maa-alune_hoone">
+        <rdfs:label xml:lang="et">Maa-alune hoone</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitised"/>
+        <rdfs:comment xml:lang="et">Hoone, mis asub maa all.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Madalsoo -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Madalsoo">
+        <rdfs:label xml:lang="et">Madalsoo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Margala"/>
+        <owl:disjointWith rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Raba"/>
+        <rdfs:comment xml:lang="et">Madalsoo on pأµhjaveest toituv vأ¤hemalt 30 cm paksuse turbakihiga ala, kus rohurindes kasvab rohkesti tarnu jm lأµikheinalisi ja valitsevad metsasamblad.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Mahajaetud_turbavali -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mahajaetud_turbavali">
+        <rdfs:label xml:lang="et">Mahajأ¤etud turbavأ¤li</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Turbavali"/>
+        <rdfs:comment xml:lang="et">Turba kaevandamise ala, kus turba tootmine on lأµpetatud, kuid looduslikud kooslused pole taastunud.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Mahuti -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mahuti">
+        <rdfs:label xml:lang="et">Mahuti</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnopaigaldis"/>
+        <rdfs:comment xml:lang="et">Alaline tsistern.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Malestusmark -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Malestusmark">
+        <rdfs:label xml:lang="et">Mأ¤lestusmأ¤rk</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Isiku vأµi sأ¼ndmuse auks pأ¼stitatud mأ¤lestussammas, monument vأµi muu selline rajatis.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Margala -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Margala">
+        <rdfs:label xml:lang="et">Mأ¤rgala</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud"/>
+        <rdfs:comment xml:lang="et">Liigniiske ala, millel on moodustunud turbakiht vأµi mis on ajutiselt vأµi pidevalt أ¼leujutatud.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Mere_ja_seisuveekogu_kallas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_ja_seisuveekogu_kallas">
+        <rdfs:label xml:lang="et">Mere ja seisuveekogu kallas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+        <rdfs:comment xml:lang="et">Mere ja seisuveekogu vaheline mأµtteline kallas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Mere_ja_vooluveekogu_kallas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_ja_vooluveekogu_kallas">
+        <rdfs:label xml:lang="et">Mere ja vooluveekogu kallas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+        <rdfs:comment xml:lang="et">Mere ja vooluveekogu vaheline mأµtteline kallas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Mere_kallas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_kallas">
+        <rdfs:label xml:lang="et">Mere kallas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+        <rdfs:comment xml:lang="et">Kaldajoon piiritleb merd.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Meri -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Meri">
+        <rdfs:label xml:lang="et">Meri</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised"/>
+        <rdfs:comment xml:lang="et">Eesti maismaaga piirnev Lأ¤أ¤nemere osa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Mets -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mets">
+        <rdfs:label xml:lang="et">Mets</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimestik"/>
+        <rdfs:comment xml:lang="et">Puittaimede kasvuala, kus puuvأµrade liituvus on vأ¤hemalt 30%, sealhulgas raiesmikud ja noorendikud.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu">
+        <rdfs:label xml:lang="et">Muu muu rajatis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_rajatis"/>
+        <rdfs:comment xml:lang="et">Elevaator, tuuleveski, gradiir, trampliin, tribأ¼أ¼n, perroon, lأ¤gahoidla, pinnasega kaetud maapealne angaar, kأµrgrajatise nأµuetele mittevastav lennuliiklusrajatis, navigatsioonimأ¤rk, radar vأµi teised eriotstarbelised rajatised.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik">
+        <rdfs:label xml:lang="et">Muu kأµlvik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud"/>
+        <rdfs:comment xml:lang="et">Mittepأµllumajanduslik, inimeste poolt kasutatav ala (mis ei ole أµu).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu_lage -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_lage">
+        <rdfs:label xml:lang="et">Muu lage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Lage"/>
+        <rdfs:comment xml:lang="et">Ala, mida ei saa kaardistada أ¼hegi teise pأµhipindobjektina, sealhulgas tehnovأµrgu trass puistus, rأ¶أ¶bastee trass, ehitus- ja karjأ¤أ¤riala, ilutaimedeta liiklussaar ja eraldusriba, vأ¤lja arvatud teekattemأ¤rgistusega tekitatud ala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu_maa-alune_hoone -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_maa-alune_hoone">
+        <rdfs:label xml:lang="et">Muu maa-alune hoone.</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Maa-alune_hoone"/>
+        <rdfs:comment xml:lang="et">Muu maa-alune hoone.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu_rajatis -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_rajatis">
+        <rdfs:label xml:lang="et">Muu rajatis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitised"/>
+        <rdfs:comment xml:lang="et">Ehitis, mis ei ole hoone ja mis ei kuulu أ¼htegi muusse nأ¤htusklassi.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu_riigimaantee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_riigimaantee">
+        <rdfs:label xml:lang="et">Muu riigimaantee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        <rdfs:comment xml:lang="et">Muu majandus- ja kommunikatsiooniministri otsuse alusel riigimaanteede nimekirja kantud tee</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu_roobastee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_roobastee">
+        <rdfs:label xml:lang="et">Muu rأ¶أ¶bastee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Roobastee"/>
+        <rdfs:comment xml:lang="et">Muu rأ¶أ¶bastee, sealhulgas ainult أ¼he relsiga rأ¶أ¶bastee.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu_seisuveekogu -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_seisuveekogu">
+        <rdfs:label xml:lang="et">Muu seisuveekogu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+        <rdfs:comment xml:lang="et">Muu vأ¤ike loodusilmeline seisuveekogu.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muu_tee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_tee">
+        <rdfs:label xml:lang="et">Muu tee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        <rdfs:comment xml:lang="et">Kأµik muud teed, mis ei ole riigimaanteed, tأ¤navad ega rajad.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muul -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muul">
+        <rdfs:label xml:lang="et">Muul</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hudrotehniline_rajatis"/>
+        <rdfs:comment xml:lang="et">Kaldajoonega mitteesitatav rajatis, mis kaitseb sadamat vأµi jأµe suuet lainetuse ja uhtainete eest.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Muur -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muur">
+        <rdfs:label xml:lang="et">Mأ¼أ¼r</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Piire"/>
+        <rdfs:comment xml:lang="et">Mأ¼أ¼r on kividest vأµi betoonist massiivne piire, mille loomisel on kasutatud sideaineid ja/vأµi mehaanilisi kinnitusvahendeid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Nolv -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Nolv">
+        <rdfs:label xml:lang="et">Nأµlv</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnamood"/>
+        <rdfs:comment xml:lang="et">Maapinna suure kaldenurgaga ala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Nolvak -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Nolvak">
+        <rdfs:label xml:lang="et">Nأµlvak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Nolv"/>
+        <rdfs:comment xml:lang="et">Maapinna kأµrguse jأ¤rsk muutus, mis on أ¼mbritsevast selgelt eristuv.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Oja -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Oja">
+        <rdfs:label xml:lang="et">Oja</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+        <rdfs:comment xml:lang="et">Keskkonnaregistris tأ¼أ¼p oja.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ootsik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ootsik">
+        <rdfs:label xml:lang="et">أ•أµtsik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Margala"/>
+        <rdfs:comment xml:lang="et">Veekogu kinnikasvamisel tekkiv ala, kus kamar on moodustunud kas mudas vأµi vees kasvavate taimede lأ¤bipأµimunud juurtest ja risoomidest</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ortofoto -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ortofoto">
+        <rdfs:label xml:lang="et">Ortofoto</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="et">Ortofoto on tأ¶أ¶deldud aerofoto, millelt on kأµrvaldatud moonutused, mis tekivad maapinna reljeefist, kaamera kaldest maapinna suhtes pildistamise hetkel ja kaamera tsentraalprojektsioonist.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ou -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ou">
+        <rdfs:label xml:lang="et">أ•u</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud"/>
+        <rdfs:comment xml:lang="et">Hoonete juurde kuuluv ala vأµi tootmisala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Paadisild -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Paadisild">
+        <rdfs:label xml:lang="et">Paadisild</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hudrotehniline_rajatis"/>
+        <rdfs:comment xml:lang="et">Rajatis, mis on ehitatud veesأµidukite randumiseks, kinnitamiseks, lastimiseks ja lossimiseks. Paadisillana kaardistatakse ka ujumissild.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Pais -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pais">
+        <rdfs:label xml:lang="et">Pais</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hudrotehniline_rajatis"/>
+        <rdfs:comment xml:lang="et">Pais on vooluveekogu sأ¤ngi rajatud ehitis, mille abil tأµkestatakse vee voolu vأµi tأµstetakse veetaset.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Paisjarv -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Paisjarv">
+        <rdfs:label xml:lang="et">Paisjأ¤rv</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+        <rdfs:comment xml:lang="et">Keskkonnaregistris tأ¼أ¼p paisjأ¤rv.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Peakraav -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Peakraav">
+        <rdfs:label xml:lang="et">Peakraav</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+        <rdfs:comment xml:lang="et">Keskkonnaregistris tأ¼أ¼p peakraav.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Piirdeaed -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Piirdeaed">
+        <rdfs:label xml:lang="et">Piirdeaed</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Piire"/>
+        <rdfs:comment xml:lang="et">Piirdeaed on puidust, traadist vms materjalist mittemassiivne piire.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Piire -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Piire">
+        <rdfs:label xml:lang="et">Piire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitised"/>
+        <rdfs:comment xml:lang="et">Rajatis, mis on ette nأ¤htud millegi piiramiseks vأµi kaitsmiseks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Pinnamood -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnamood">
+        <rdfs:label xml:lang="et">Pinnamood</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+        <rdfs:comment xml:lang="et">Nأ¤htused, mis kirjeldavad reljeefi (kivid, nأµlvad).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Pinnavorm -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm">
+        <rdfs:label xml:lang="et">Pinnavorm</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnamood"/>
+        <rdfs:comment xml:lang="et">Kأµrgusjoontega mitteesitatav positiivse vأµi negatiivse pinnamoe element.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <acetext:acetext>Every Pinnavormid is a Pinnamood.</acetext:acetext>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnamood"/>
+        <owl:annotatedSource rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Pohimaantee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pohimaantee">
+        <rdfs:label xml:lang="et">Pأµhimaantee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        <rdfs:comment xml:lang="et">Riigimaantee, mis أ¼hendab pealinna teiste suurte linnadega, neid linnu omavahel ning pealinna ja teisi suuri linnu tأ¤htsate sadamate, raudteesأµlmede ja piiripunktidega.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Pold -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pold">
+        <rdfs:label xml:lang="et">Pأµld</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Haritav_maa"/>
+        <rdfs:comment xml:lang="et">Kultuurtaimede kasvatamiseks kasutatav maa ja sأ¶أ¶t.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Poosastik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Poosastik">
+        <rdfs:label xml:lang="et">Pأµأµsastik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimestik"/>
+        <rdfs:comment xml:lang="et">Vأ¤hemalt 50% ulatuses pأµأµsastega kaetud ala, kus puude esinemise korral puuvأµrade liituvus on alla 30%.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Prugila -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Prugila">
+        <rdfs:label xml:lang="et">Prأ¼gila</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Ala, kus asub jأ¤أ¤tmete ladestamise, sorteerimise ja komposteerimise kompleks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Puittaim -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaim">
+        <rdfs:label xml:lang="et">Puittaim</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimestik"/>
+        <rdfs:comment xml:lang="et">Kaitsealune vأµi orientiiri tأ¤htsusega أ¼ksik puu vأµi pأµأµsas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Puittaimede_rida -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimede_rida">
+        <rdfs:label xml:lang="et">Puittaimede rida</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimestik"/>
+        <rdfs:comment xml:lang="et">Hekk, pأµأµsaste vأµi puude rida.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Puittaimestik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimestik">
+        <rdfs:label xml:lang="et">Puittaimestik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud"/>
+        <rdfs:comment xml:lang="et">Puittaimede kasvuala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Purre -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Purre">
+        <rdfs:label xml:lang="et">Purre</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis"/>
+        <rdfs:comment xml:lang="et">Jalakأ¤ijate alaline أ¼lekأ¤ik, mis on kitsam kui 2 m.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Raba -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Raba">
+        <rdfs:label xml:lang="et">Raba</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Margala"/>
+        <rdfs:comment xml:lang="et">Liigniiske ala toitainetevaese, vأ¤hemalt 30 cm paksuse rabaturbakihiga, kus taimed toituvad sademetest ning valitsevad turbasamblad.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Rada -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Rada">
+        <rdfs:label xml:lang="et">Rada</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        <rdfs:comment xml:lang="et">Eraldi asuv kأµnnitee haljasalal vأµi kalmistul, eraldi asuv jalgrattatee, matkarada, autole sأµiduks sobimatu alaline tee, traktoritee (kaardistatakse peamised metsavأ¤ljaveo traktoriteed).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ramp_voi_uhendustee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ramp_voi_uhendustee">
+        <rdfs:label xml:lang="et">Ramp vأµi أ¼hendustee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        <rdfs:comment xml:lang="et">Riigimaantee, mis on liikluse korraldamiseks ja liiklusvoogude kanaliseerimiseks rajatud eri- ja samatasandiliste maanteede ristumisalale.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Reljeefi_iseloomulik_punkt -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Reljeefi_iseloomulik_punkt">
+        <rdfs:label xml:lang="et">Reljeefi iseloomulik punkt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed"/>
+        <rdfs:comment xml:lang="et">Lokaalselt madalaim vأµi kأµrgeim punkt vأµi veepiiri kأµrgus.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Rohumaa -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Rohumaa">
+        <rdfs:label xml:lang="et">Rohumaa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Lage"/>
+        <rdfs:comment xml:lang="et">Ala, mis ei sobi intensiivseks pأµllukultuuride kasvatamiseks, sealhulgas ka kasutusest ebarahuldava kuivenduse vأµi sobimatu asukoha tأµttu vأ¤lja langenud endine haritav maa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Roobastee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Roobastee">
+        <rdfs:label xml:lang="et">Rأ¶أ¶bastee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Transport"/>
+        <rdfs:comment xml:lang="et">Rأ¶أ¶bastee on transpordirajatis, mis on mأµeldud rأ¶أ¶bastel liikuvatele liiklusvahenditele vأµi kأ¶istee.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Roostik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Roostik">
+        <rdfs:label xml:lang="et">Roostik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Margala"/>
+        <rdfs:comment xml:lang="et">Roostik on maa- vأµi veeala, kus kasvavad massiliselt kأµrgekasvulised rohtsed veetaimed, nt pilliroog, kaisel, kأµrkjas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Sadam -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sadam">
+        <rdfs:label xml:lang="et">Sadam</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Laevaliikluse ja meretranspordi teenindamise ala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Salu -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Salu">
+        <rdfs:label xml:lang="et">Salu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimestik"/>
+        <rdfs:comment xml:lang="et">Mأµأµtkavatu puittaimede rأ¼hm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Samakorgusjoon -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Samakorgusjoon">
+        <rdfs:label xml:lang="et">Samakأµrgusjoon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed"/>
+        <rdfs:comment xml:lang="et">Joon, mis أ¼hendab sama absoluutkأµrgusega punkte ja on kأµrguse kasvu suunaga alati risti.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Seisu-_ja_vooluveekogu_kallas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisu-_ja_vooluveekogu_kallas">
+        <rdfs:label xml:lang="et">Seisu- ja vooluveekogu kallas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+        <rdfs:comment xml:lang="et">Seisu- ja vooluveekogu vaheline mأµtteline kallas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu">
+        <rdfs:label xml:lang="et">Seisuveekogu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised"/>
+        <rdfs:comment xml:lang="et">Seisuveekogu on magedaveeline veekogu, kus vee voolamine pole keskmise suvise veeseisu juures mأ¤rgatav. Seisuveekoguks loetakse ka allikas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu_kallas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu_kallas">
+        <rdfs:label xml:lang="et">Seisuveekogu kallas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+        <rdfs:comment xml:lang="et">Kaldajoon piiritleb seisuveekogusid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Sidemast -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sidemast">
+        <rdfs:label xml:lang="et">Sidemast</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+        <rdfs:comment xml:lang="et">Sidemast on sides kasutatav kأµrgrajatis, nt raadio-, mobiilside-, radari- ja televisioonimast.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Siht -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Siht">
+        <rdfs:label xml:lang="et">Siht</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Transport"/>
+        <rdfs:comment xml:lang="et">Sirge, pikk ja kitsas puudevaba ala metsas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Sild -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sild">
+        <rdfs:label xml:lang="et">Sild</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis"/>
+        <rdfs:comment xml:lang="et">Alaline konstruktsioon veekogu, tee vأµi maapinna negatiivse vormi أ¼letamiseks, sealhulgas viadukt.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Soidutakistus -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Soidutakistus">
+        <rdfs:label xml:lang="et">Sأµidutakistus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis"/>
+        <rdfs:comment xml:lang="et">Koht, kus tee suletakse tأµkkepuuga vأµi on muu alaline lأ¤bisأµidutakistus.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Soovik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Soovik">
+        <rdfs:label xml:lang="et">Soovik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Margala"/>
+        <rdfs:comment xml:lang="et">Mأ¤rg maismaapaik, kus vesi on mitme kuu vأ¤ltel maapinna tasemel. Soovikud esinevad nأ¤iteks mererannikul ning veereإ¾iimi rikkumise tagajأ¤rjena tee vأµi kraavimullete taga.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Spordikompleks -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Spordikompleks">
+        <rdfs:label xml:lang="et">Spordikompleks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Ala, kus asuvad erinevad spordirajatised.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tanav -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tanav">
+        <rdfs:label xml:lang="et">Tأ¤nav</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        <rdfs:comment xml:lang="et">Tأ¤nav on linnas, alevis vأµi alevikus paiknev kattega tee, mis on ehitatud vأµi kohandatud sأµidukite vأµi jalakأ¤ijate liiklemiseks vأµi mis on kantud tأ¤navana Riiklikusse teeregistrisse.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee">
+        <rdfs:label xml:lang="et">Tee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Transport"/>
+        <rdfs:comment xml:lang="et">Tee on rajatis sأµidukite ja jalakأ¤ijate liiklemiseks, vأ¤lja arvatud rأ¶أ¶bastee.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tehisjarsak -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehisjarsak">
+        <rdfs:label xml:lang="et">Tehisjأ¤rsak</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Nolv"/>
+        <rdfs:comment xml:lang="et">Vertikaalilأ¤hedane inimtekkeline pinnavorm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tehisjarv -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehisjarv">
+        <rdfs:label xml:lang="et">Tehisjأ¤rv</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+        <rdfs:comment xml:lang="et">Keskkonnaregistris tأ¼أ¼p tehisjأ¤rv.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tehiskungas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehiskungas">
+        <rdfs:label xml:lang="et">Tehiskأ¼ngas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        <rdfs:comment xml:lang="et">Tehiskأ¼ngas on inimtekkeline positiivne pinnavorm.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tehissein -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehissein">
+        <rdfs:label xml:lang="et">Tehissein</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Piire"/>
+        <rdfs:comment xml:lang="et">Tehissein on inimese rajatud, أ¼helt poolt pinnasega tأ¤idetud enamasti kivist vأµi betoonist sein.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tehnopaigaldis -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnopaigaldis">
+        <rdfs:label xml:lang="et">Tehnopaigaldis</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnovorgud"/>
+        <rdfs:comment xml:lang="et">Paigaldis, mis on osa tehnovأµrgust vأµi أ¼ksik mahuti.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tehnovorgud -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnovorgud">
+        <rdfs:label xml:lang="et">Tehnovأµrgud</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+        <rdfs:comment xml:lang="et">Liinirajatised ja nendega seotud tehnopaigaldised (elektriliinid, torujuhtmed).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tiik -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tiik">
+        <rdfs:label xml:lang="et">Tiik</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+        <rdfs:comment xml:lang="et">Inimtekkeline vأ¤iksem veekogu, mis ei ole bassein ega tehisjأ¤rv.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tootmisou -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tootmisou">
+        <rdfs:label xml:lang="et">Tootmisأµu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Ou"/>
+        <rdfs:comment xml:lang="et">Ala, mis kuulub tootmishoone juurde vأµi laoplats.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus">
+        <rdfs:label xml:lang="et">Topograafiline nأ¤htus</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment xml:lang="et">Eesti topograafia andmekogu topograafiliste nأ¤htuste ruumiobjektide vektorkujul andmed.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Torn -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Torn">
+        <rdfs:label xml:lang="et">Torn</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+        <rdfs:comment xml:lang="et">Torn on kأµrgusesse pأ¼rgiv, suhteliselt vأ¤ikese aluspinnaga ehitis vأµi ehitise osa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Torujuhe -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Torujuhe">
+        <rdfs:label xml:lang="et">Torujuhe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnovorgud"/>
+        <rdfs:comment xml:lang="et">Toru vأµi konveier materjali juhtimiseks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Trafo -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Trafo">
+        <rdfs:label xml:lang="et">Trafo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnopaigaldis"/>
+        <rdfs:comment xml:lang="et">Elektripaigaldis, kus toimub elektrienergia muundamine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Trammitee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Trammitee">
+        <rdfs:label xml:lang="et">Trammitee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Roobastee"/>
+        <rdfs:comment xml:lang="et">Rأ¶أ¶bastee tiheasustusega aladel, mأµeldud trammide liiklemiseks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Transport -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Transport">
+        <rdfs:label xml:lang="et">Transport</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+        <rdfs:comment xml:lang="et">Transpordialased liiklusrajatised (teed, rأ¶أ¶basteed).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Truup -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Truup">
+        <rdfs:label xml:lang="et">Truup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised"/>
+        <rdfs:comment xml:lang="et">Toru, mis on kasutuses vee juhtimiseks vأµi metsloomade liikumiseks tee vأµi muu rajatise alt lأ¤bi.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tugimaantee -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tugimaantee">
+        <rdfs:label xml:lang="et">Tugimaantee</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        <rdfs:comment xml:lang="et">Riigimaantee, mis أ¼hendab linnu omavahel ning linnu pأµhimaanteedega.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Tunnel -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tunnel">
+        <rdfs:label xml:lang="et">Tunnel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis"/>
+        <rdfs:comment xml:lang="et">Jalakأ¤ijate tunnel.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Turbavali -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Turbavali">
+        <rdfs:label xml:lang="et">Turbavأ¤li</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud"/>
+        <rdfs:comment xml:lang="et">Aktiivses kasutuses vأµi mahajأ¤etud turbakaevandamisala.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Uhendatud_truup -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Uhendatud_truup">
+        <rdfs:label xml:lang="et">أœhendatud truup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Truup"/>
+        <rdfs:comment xml:lang="et">Truup on vooluvetevأµrgu osa.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Uksik_kivi -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Uksik_kivi">
+        <rdfs:label xml:lang="et">أœksik kivi</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+        <rdfs:comment xml:lang="et">أœksik rأ¤ndrahn.</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <acetext:acetext>Every Kivi is a Kivid.</acetext:acetext>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+        <owl:annotatedSource rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Uksik_kivi"/>
+    </owl:Axiom>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Uksikhaud -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Uksikhaud">
+        <rdfs:label xml:lang="et">أœksikhaud</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+        <rdfs:comment xml:lang="et">Kalmistu vأµi matmispaik, mille pindala on vأ¤iksem kui 500 m2.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Ulevedu -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ulevedu">
+        <rdfs:label xml:lang="et">أœlevedu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis"/>
+        <rdfs:comment xml:lang="et">Rajatis inimeste, liiklusvahendite, kaupade transportimiseks veekogu أ¼helt kaldalt teisele.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Valgusmast -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Valgusmast">
+        <rdfs:label xml:lang="et">Valgusmast</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+        <rdfs:comment xml:lang="et">Valgustamiseks kasutatav mast vأµi torn.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Vall -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vall">
+        <rdfs:label xml:lang="et">Vall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        <rdfs:comment xml:lang="et">Vall on positiivne pinnavorm, mille pikkus أ¼letab laiust.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Vare -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vare">
+        <rdfs:label xml:lang="et">Vare</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+        <rdfs:comment xml:lang="et">Lagunenud katusega vأµi katuseta hoone, millel on pأ¼sti vأ¤hemalt osa seinu.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised">
+        <rdfs:label xml:lang="et">Veekogud ja hأ¼drotehnilised rajatised</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+        <rdfs:comment xml:lang="et">Looduslikud ja inimtekkelised veega seotud nأ¤htused (meri, seisuveekogu, truup).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu">
+        <rdfs:label xml:lang="et">Vooluveekogu</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised"/>
+        <rdfs:comment xml:lang="et">Looduslik vأµi inimtekkeline vee vool.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu_kallas -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu_kallas">
+        <rdfs:label xml:lang="et">Vooluveekogu kallas</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+        <rdfs:comment xml:lang="et">Kaldajoon piiritleb vooluveekogusid.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/keskkond.topograafia/2014/r1/Vundament -->
+
+    <owl:Class rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vundament">
+        <rdfs:label xml:lang="et">Vundament</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+        <rdfs:comment xml:lang="et">Vundament on ehitis, millel veel vأµi enam ei ole katust ega أ¼htki seina.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Alusdokument"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusandmed"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ortofoto"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Topograafiline_nahtus"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Autotunnel"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Purre"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sild"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Soidutakistus"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tunnel"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ulevedu"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kitsaroopmeline"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Koistee"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Laiaroopmeline"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_roobastee"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Trammitee"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korvalmaantee"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_riigimaantee"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_tee"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pohimaantee"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Rada"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ramp_voi_uhendustee"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tanav"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tugimaantee"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivihunnik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivine_ala"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Uksik_kivi"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Haritav_maa"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Lage"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Margala"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_kolvik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ou"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimestik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Turbavali"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muul"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Paadisild"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pais"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Haljasala"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Jaatmaa"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kalmistu"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karjaar"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Lennuvali"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Malestusmark"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Prugila"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sadam"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Spordikompleks"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Uksikhaud"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Aerolaserskaneerimise_punktipilv"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgusmudel"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Reljeefi_iseloomulik_punkt"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Samakorgusjoon"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kivi"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Nolv"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnavorm"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Garaaz"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kelder"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_maa-alune_hoone"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Elektrituulik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mahuti"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Trafo"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Elektriliin"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnopaigaldis"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Torujuhe"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Hudrotehniline_rajatis"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaldajoon"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Meri"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Truup"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Harvik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mets"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Poosastik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaim"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Puittaimede_rida"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Salu"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kiviaed"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muur"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Piirdeaed"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehissein"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Looduslik_jarsak"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Nolvak"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehisjarsak"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Hoone"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korgrajatis"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Maa-alune_hoone"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_rajatis"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Piire"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korsten"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Sidemast"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Torn"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Valgusmast"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Klibune_ala"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Liivane_ala"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_lage"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Rohumaa"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Jogi"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kanal"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kraav"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Oja"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Peakraav"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_ja_seisuveekogu_kallas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_ja_vooluveekogu_kallas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Mere_kallas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisu-_ja_vooluveekogu_kallas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Seisuveekogu_kallas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vooluveekogu_kallas"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kasvuhoone"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Katusealune"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Auk"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ebatasane_ala"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Juga"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kaitsekraav"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Karestik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Koobas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehiskungas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vall"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitised"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Kolvikud"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Pinnamood"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehnovorgud"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Transport"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Veekogud_ja_hudrotehnilised_rajatised"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ehitatav_hoone"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Elu-_voi_uhiskondlik_hoone"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Korval-_voi_tootmishoone"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vare"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Vundament"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Liikluskorralduslik_rajatis"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Roobastee"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Siht"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tee"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Madalsoo"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Ootsik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Raba"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Roostik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Soovik"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Allikas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Biotiik"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Jarv"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Laugas"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Muu_seisuveekogu"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Paisjarv"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tehisjarv"/>
+            <rdf:Description rdf:about="&riha;riha/onto/keskkond.topograafia/2014/r1/Tiik"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->

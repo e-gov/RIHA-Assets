@@ -1,0 +1,10 @@
+{
+    "name": "Eesti haldus- ja asustusjaotuse klassifikaator",
+    "version": "2020v2",
+    "start_date": "1.09.2020",
+    "end_date": "",
+    "description": "Klassifikaator (EHAK) on ette nähtud kasutamiseks territoriaalse paiknevuse tähistamiseks. Klassifikaator hõlmab haldus- ja asustusüksusi.",
+    "type": "Klassifikaator",
+    "owner": "Statistikaamet",
+    "status": "Kehtestatud"
+}

@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY r2 "https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/" >
+    <!ENTITY r3 "https://riha.eesti.ee/riha/onto/infoyhiskond.riigi_infosysteem/2012/r1/" >
+    <!ENTITY r1 "https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/" >
+]>
+
+
+<rdf:RDF xmlns="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/"
+     xml:base="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:r1="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1/"
+     xmlns:r2="https://riha.eesti.ee/riha/onto/keskkond.geomeetria/2012/r1/"
+     xmlns:r3="https://riha.eesti.ee/riha/onto/infoyhiskond.riigi_infosysteem/2012/r1/">
+    <owl:Ontology rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1">
+        <rdfs:label xml:lang="et">ADS andmeteenuste tehniliste detailide ontoloogia</rdfs:label>
+        <rdfs:comment xml:lang="et">Ontoloogia koondab enda alla ADS teenuste rakendamise tehnilised detailid, mis oma olemuselt ei sobi ADS ontoloogiasse.</rdfs:comment>
+        <owl:versionInfo xml:lang="et">Versioon 0.2. (22.05.2012)</owl:versionInfo>
+        <owl:imports rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.kindlustavad_systeemid.ads/2012/r1"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Aadressiobjekt_omab_Probleemi -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Aadressiobjekt_omab_Probleemi">
+        <rdfs:label xml:lang="et">Aadressiobjekti probleemid</rdfs:label>
+        <rdfs:comment xml:lang="et">Aadressiobjektiga vأµivad olla seotud probleemid.</rdfs:comment>
+        <rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem"/>
+        <owl:inverseOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem_kuulub_Aadressiobjektile"/>
+        <rdfs:domain rdf:resource="&r1;Aadressiobjekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatuse_on_pohjustanud_Aadressiobjekt -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatuse_on_pohjustanud_Aadressiobjekt">
+        <rdfs:label xml:lang="et">Muudatusega seotud aadressiobjekt</rdfs:label>
+        <rdfs:comment xml:lang="et">Koha-aadressi muudatuse pأµhjustanud objekt vأµib olla selline, mis ise pole kunagi seda aadressi omanud. Nأ¤iteks asustusأ¼ksuse kehtetuks muutumine pأµhjustab tagajأ¤rjena kأµigi nende aadresside kehtetuks muutumise, mis sisaldavad selle asustusأ¼ksuse poolt initsialiseeritud komponenti. Aadressi lisamise sأ¼ndmus saab aga toimuda ainult sellise objekti poolt, mis ise seda aadressi omab. Muutumise sأ¼ndmus saab samuti olla pأµhjustatud objekti poolt, mis ise ei oma seda aadressi. Nأ¤iteks tأ¤nava nime muutumise tulemusena muutuvad kأµik aadressid, mis sisaldavad selle liikluspinna objekti poolt initsialiseeritud komponenti.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatus"/>
+        <rdfs:range rdf:resource="&r1;Aadressiobjekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem_kuulub_Aadressiobjektile -->
+
+    <owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem_kuulub_Aadressiobjektile">
+        <rdfs:label xml:lang="et">Probleemiga seotud aadressiobjekt</rdfs:label>
+        <rdfs:comment xml:lang="et">Probleem on seotud konkreetse aadressiobjektiga.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem"/>
+        <rdfs:range rdf:resource="&r1;Aadressiobjekt"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Ainult_kontrolli -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Ainult_kontrolli">
+        <rdfs:label xml:lang="et">Menetluse jأµustamise mأ¤rge</rdfs:label>
+        <rdfs:comment xml:lang="et">Menetlust ei jأµustata, vaid kustutatakse menetlus pأ¤rast kontrollide teostamist vastavalt selle elemendi vأ¤أ¤rtusele.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Ala_raadius_meetrites -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Ala_raadius_meetrites">
+        <rdfs:label xml:lang="et">Ala raadius meetrites</rdfs:label>
+        <rdfs:comment xml:lang="et">Ala raadius meetrites esitatud punkti asukohast lأ¤htuvalt ehk ala ruudu pool kأ¼lje pikkust meetrites.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;double"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Alates_kirjest -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Alates_kirjest">
+        <rdfs:label xml:lang="et">Alates kirjest</rdfs:label>
+        <rdfs:comment xml:lang="et">Mitmendast pأ¤ringuga leitud objektist alates tagastatakse vastuste hulk.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Andmevektor -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Andmevektor">
+        <rdfs:label xml:lang="et">Andmevektor</rdfs:label>
+        <rdfs:comment xml:lang="et">Andmevektor on kolmest sأ¼mbolist koosnev string. Eraldi positsioonis sأ¼mbolitega (0,1) tأ¤histatakse, millised andmed teenus tagastab. Esimene positsioon tأ¤histab objekti tأ¤rk-, teine ruumi- ja kolmas aadressiandmeid.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Arvuta_uuesti -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Arvuta_uuesti">
+        <rdfs:label xml:lang="et">Arvuta uuesti</rdfs:label>
+        <rdfs:comment xml:lang="et">Kui sisendiks on أ¼ks objekt, siis vأ¤rskendatakse vahetult enne tagastust objekti probleeme.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Identifikaator -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Identifikaator">
+        <rdfs:label xml:lang="et">Logikirje identifikaator</rdfs:label>
+        <rdfs:comment xml:lang="et">Logikirje identifikaator on unikaalne أ¼le terve ADS-i.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Logikirje"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Kaivitamise_tulem -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Kaivitamise_tulem">
+        <rdfs:label xml:lang="et">Kأ¤ivitamise tulem</rdfs:label>
+        <rdfs:comment xml:lang="et">Pأ¤ringu kأ¤ivitamise tulem: 1 - أµnnestumise korral ; 0 vea korral.</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Kehtivate_probleemide_arv -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Kehtivate_probleemide_arv">
+        <rdfs:label xml:lang="et">Kehtivate probleemide arv</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti aadressi kehtivate probleemide arv.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Objektile lisatud aktuaalsete probleemide arv.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="&r1;Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/MA_Syndmuse_kood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/MA_Syndmuse_kood">
+        <rdfs:label xml:lang="et">Mitteametliku sأ¼ndmuse kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Vأ¤أ¤rtus loendist maSyndmusType.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Maksimaalne_tagastatavate_kirjete_arv -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Maksimaalne_tagastatavate_kirjete_arv">
+        <rdfs:label xml:lang="et">Kirjete arv</rdfs:label>
+        <rdfs:comment xml:lang="et">Maksimaalne tagastavate kirjete arv.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Maksimaalne_tagastatavate_tasemete_arv -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Maksimaalne_tagastatavate_tasemete_arv">
+        <rdfs:label xml:lang="et">Maksimaalne tase</rdfs:label>
+        <rdfs:comment xml:lang="et">Maksimaalne tase (أ¼ldisemast tأ¤psema suunas), mille muudatused vastusesse tulevad.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Pأ¤ringu tulemusena vأ¤ljastatavate komponentide maksimum tase.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Minimaalne_tagastatavate_tasemete_arv -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Minimaalne_tagastatavate_tasemete_arv">
+        <rdfs:label xml:lang="et">Minimaalne tase</rdfs:label>
+        <rdfs:comment xml:lang="et">Minimaalne tase (أ¼ldisemast tأ¤psema suunas), mille muudatused vastusesse tulevad.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Pأ¤ringu tulemusena vأ¤ljastatavate komponentide miinimum tase.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatuse_oigusliku_aluse_kuupaev -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatuse_oigusliku_aluse_kuupaev">
+        <rdfs:label xml:lang="et">Muudatuse أµigusliku aluse kuupأ¤ev</rdfs:label>
+        <rdfs:comment xml:lang="et">Muudatuse pأµhjustamise أµigusliku aluse kuupأ¤ev.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Muudatuse pأµhjustanud objekti أµigusliku aluse kuupأ¤ev.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatuse_olulisus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatuse_olulisus">
+        <rdfs:label xml:lang="et">Muudatuse olulisus</rdfs:label>
+        <rdfs:comment xml:lang="et">1-muudatus on kindel, tingitud aadressi versioneerumisest; 2-muudatus on tأµenأ¤one, sest vana aadress on mittekehtiv ja uus leitud أ¤rireeglite alusel; 3-muudatus on vأµimalik, sest vana aadress on kehtiv ja uus tekkinud tema lأ¤hikonda, أ¤rireeglite alusel on tuvastatud vأµimalik muudatusvajadus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatused_alates -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatused_alates">
+        <rdfs:label xml:lang="et">Muudetud alates</rdfs:label>
+        <rdfs:label xml:lang="et">Tekkinud alates</rdfs:label>
+        <rdfs:comment xml:lang="et">Kuupأ¤ev alates millest (k.a) registreeritud muudatusi soovitakse leida.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatused_kuni -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatused_kuni">
+        <rdfs:label xml:lang="et">Muudatused kuni</rdfs:label>
+        <rdfs:comment xml:lang="et">Kuupأ¤ev kuni milleni (v.a.) registreeritud muudatusi soovitakse leida.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;date"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatuste_paevade_arv -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatuste_paevade_arv">
+        <rdfs:label xml:lang="et">Muudatuste pأ¤evade arv</rdfs:label>
+        <rdfs:comment xml:lang="et">Number vahemikus 1-10 mitme pأ¤eva muudatusi vastusesse soovitakse. Vaikimisi 1 pأ¤ev.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatusvektor -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatusvektor">
+        <rdfs:label xml:lang="et">Muudatusvektor</rdfs:label>
+        <rdfs:comment xml:lang="et">Kolmest 0/1 sأ¼mbolist koosnev string, mis vأ¤ljendab muudatusi vأµrreldes eelmise versiooniga.Pos1 - objekti أµiguslik alus, Pos2 - objekti kuju, Pos3 - objekti aadressid.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Otsi_ka_synonyymide_hulgast -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Otsi_ka_synonyymide_hulgast">
+        <rdfs:label xml:lang="et">Otsi ka sأ¼nonأ¼أ¼mide hulgast.</rdfs:label>
+        <rdfs:comment xml:lang="et">True - otsitakse ka sأ¼nonأ¼أ¼mide hulgast, False - otsitakse ainult ametlike tekstide hulgast.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Otsingu_meetod -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Otsingu_meetod">
+        <rdfs:label xml:lang="et">Otsingu meetod</rdfs:label>
+        <rdfs:comment xml:lang="et">Vأµimalikud vأ¤أ¤rtused 1 (otsitakse aadresse, milles esinevad kأµik sisestatud aadressi osad)ja 2 (otsitakse aadresse, milles esineb vأ¤hemalt أ¼ks sisestatud aadressi osadest).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Otsingu_tapsus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Otsingu_tapsus">
+        <rdfs:label xml:lang="et">Otsingu tأ¤psus</rdfs:label>
+        <rdfs:comment xml:lang="et">Vأµimalikud vأ¤أ¤rtused 1 (Tأ„PNE), 2 (ALGUSEST), 3 (KESKELT) ja 4 (Lأ•PUST).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleemi_olulisus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleemi_olulisus">
+        <rdfs:label xml:lang="et">Probleemi olulisus</rdfs:label>
+        <rdfs:comment xml:lang="et">Probleemi olulisus skaalal kindel(1), tأµene(2), vأµimalik (3)</rdfs:comment>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Ruumikuju_GML -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Ruumikuju_GML">
+        <rdfs:label xml:lang="et">Ruumikuju GML vormingus</rdfs:label>
+        <rdfs:comment xml:lang="et">Objekti ja aadressi seospunkti vأµi aadressiobjekti tsentroidi andmed GML vormingus.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Seotud_objektide_arv -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Seotud_objektide_arv">
+        <rdfs:label xml:lang="et">Objektide arv</rdfs:label>
+        <rdfs:comment xml:lang="et">Pأ¤ringutingimustele vastavate seotud objektide arv (tagastatakse ainult siis kui sooviti saada seotud objektide hulka).</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="&r1;Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Syndmuse_kood -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Syndmuse_kood">
+        <rdfs:label xml:lang="et">Sأ¼ndmuse kood</rdfs:label>
+        <rdfs:comment xml:lang="et">Komponendi korral: I (insert) - komponent lisandus, U (update) - komponenti versiooniti, D (delete) - komponendi viimane versioon muudeti kehtetuks, R(restore) - komponent taastati;
+
+Aadressiobjekti korral: I (insert) - objektile lisandus seos aadressiga, U (update) - objekt muutis temaga seotud aadressi, D (delete) - objekti seos aadressiga kustus;
+
+Kohaaadressi korral: I (insert) - aadress lisati sأ¼steemi, U (update) - samade komponentidega aadressi tekst muutus, aadress versiooniti, D (delete) - aadress tأ¼histati, R(restore) - aadress taastati.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tagasta_aadress_komponentidena -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tagasta_aadress_komponentidena">
+        <rdfs:label xml:lang="et">Tagasta aadress komponentidena</rdfs:label>
+        <rdfs:comment xml:lang="et">True - tagastab aadressid koos viidetega komponentidele. False - tagastab aadressid ainult tekstilisel kujul koos koodi ja aadressi identifikaatoriga.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tagasta_ka_kehtetud -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tagasta_ka_kehtetud">
+        <rdfs:label xml:lang="et">Tagasta ka kehtetud</rdfs:label>
+        <rdfs:comment xml:lang="et">Tagasta ka tأ¼histatud ja vananenud aadressiversioonid.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tagasta_seotud_objekti_andmed -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tagasta_seotud_objekti_andmed">
+        <rdfs:label xml:lang="et">Tagasta seotud objekti andmed</rdfs:label>
+        <rdfs:comment xml:lang="et">Kas tagastatakse ka muudatuse pأµhjustanud aadressiobjekti andmed.
+True - tagastatakse ka seotud aadressiobjekti andmed. Kui aadress on seotud mitme objektiga, siis tuleb ta vastusesse mitu korda. False - seotud objekti andmeid ei lisata vastusesse, aadressid tulevad vأ¤ljundisse أ¼hekordselt.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tagasta_vaid_aadressiobjektide_arv -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tagasta_vaid_aadressiobjektide_arv">
+        <rdfs:label xml:lang="et">Tagasta ainult aadressiobjektide arv</rdfs:label>
+        <rdfs:comment xml:lang="et">True - vastuseks tagastatakse leitud objektide arv ning أ¼lejأ¤أ¤nud tagastusparameetrite mأ¤أ¤ranguid ignoreeritakse, False - tagastatakse leitud objektid ning arvestatakse jأ¤rgnevaid tagastusparameetreid.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Teade -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Teade">
+        <rdfs:label xml:lang="et">Teade</rdfs:label>
+        <rdfs:comment xml:lang="et">ADS andmeteenuse vأ¤ljakutsumisega seotud teate sisu.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tekkeaeg -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Tekkeaeg">
+        <rdfs:label xml:lang="et">Tekkeaeg</rdfs:label>
+        <rdfs:comment xml:lang="et">Logikirje tekkimise aeg.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Logikirje"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/URL_aadressiobjekti_kaardil_vaatamiseks -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/URL_aadressiobjekti_kaardil_vaatamiseks">
+        <rdfs:label xml:lang="et">Aadressiobjekti URL</rdfs:label>
+        <rdfs:comment xml:lang="et">Link andmete kaardil vaatamiseks.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="&r1;Ametlik_aadressiobjekt"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Vea_pohjus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Vea_pohjus">
+        <rdfs:label xml:lang="et">Vea pأµhjus</rdfs:label>
+        <rdfs:comment xml:lang="et">Muudatuse tinginud vea vأµi mittevastavuse kirjeldus. Kirjelduse tekstid tulenevad vigade klassifikaatorist ning vأµivad vajadusel sisaldada ka أµigusliku aluse teksti, kui أµiguslik alus on tuvastatav.</rdfs:comment>
+        <rdfs:comment xml:lang="et">Probleemi kirjeldus, mistأµttu olemasolev aadress objektile ei sobi vأµi mis on viga asendaval aadressil, kui see objektile lisada.</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Kehtetuks_muutmine -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Kehtetuks_muutmine">
+        <rdfs:label xml:lang="et">Kehtetuks muutmine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatus"/>
+        <rdfs:comment xml:lang="et">Objekt on esindatud mitteametlikul kihil, kui ADS andmete haldaja on pidanud vajalikuks teda sinna lisada. Lisamise hetkel tuvastab sأ¼steem, kas tegemist on ametliku vأµi mitteametliku objektiga. Objektide kustutamist (tأ¤ielikku eemaldamist) mitteametlikult kihilt ei toimu. Objekte saab ainult kehtetuks muuta.
+
+Mitteametlikul kihil olevad objektid vأµivad muutuda kehtetuks kahel moel. Need, mis esinevad ka ametlikul kihil, muutuvad automaatselt kehtetuks, kui need tأ¼histatakse ametlikul kihil. Mitteametlikke objekte saab tأ¼histada ADS sأ¼steemis andmeid haldav kasutaja.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Logikirje -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Logikirje">
+        <rdfs:label xml:lang="et">Logikirje</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem"/>
+        <rdfs:comment xml:lang="et">ADS sأ¼steemis tehtud muudatusi kajastav kirje nii operatsioonile eelnenud kui jأ¤rgnenud andmete seisuga.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatus -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Muudatus">
+        <rdfs:label xml:lang="et">Muudatus</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem"/>
+        <rdfs:comment xml:lang="et">Muudatused on seotud operatsioonidega nii ametlike kui mitteametlike aadressiobjektide ja koha-aadressidega.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Paringu_detailid">
+        <rdfs:label xml:lang="et">Pأ¤ringute tehnilised detailid</rdfs:label>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem"/>
+        <rdfs:comment xml:lang="et">Klass ADS andmeteenuste kأ¤ivitamiseks vajalike, ent mitte valdakonnaontoloogiaga seotud andmetأ¼أ¼pomaduste grupeerimiseks.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.andmeteenused.ads/2012/r1/Probleem">
+        <rdfs:label xml:lang="et">Probleem</rdfs:label>
+        <rdfs:comment xml:lang="et">Komponentide lisamise, muutmise, tأ¼histamise ja taastamise sأ¼ndmuse jأ¤reltegevusena teostatakse sأ¼steemis komponendi sisulise ja loogilise korrektsuse kontroll.
+
+Kontrollimisel leitud probleemid salvestatakse sأ¼steemi ning neid kuvatakse ADS suunatud rakenduses. Probleemid klassifitseeritakse. Mأµni probleem vأµib olla selline, mida andmeesitaja peab viivitamatult parandama. Sellised probleemid tekitavad aadressivea, mis suunatakse ka andmeesitajale. أœlejأ¤أ¤nud probleemid on ainult informatiivse iseloomuga ning suunatud ADS sأ¼steemi haldajaile.</rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->

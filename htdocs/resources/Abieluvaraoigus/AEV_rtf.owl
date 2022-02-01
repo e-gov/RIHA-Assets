@@ -1,0 +1,1515 @@
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2010/4/Ontology1274341618515.owl#" xmlns:v1="https://riha.eesti.ee/riha/onto/kinnistusoigus/2010/v1#" xmlns:kinnistusraamat2="file:/C:/Documents%20and%20Settings/katre.oja/Desktop/www.riha.ee/kinnistusraamat#" xmlns:Kinnistusraamat2="file:/V:/Kinnistus/RIHA/riha.eesti.ee/Kinnistusraamat#" xmlns:kinnistusraamat="www.riha.ee/kinnistusraamat#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:Kinnistusraamat="riha.eesti.ee/Kinnistusraamat#" xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#" xmlns:Ontology1274341618515="http://www.semanticweb.org/ontologies/2010/4/Ontology1274341618515.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:r1="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.kinnistusoigus/2010/r1#" xml:base="http://www.semanticweb.org/ontologies/2010/4/Ontology1274341618515.owl">
+<owl:Ontology rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1">
+<rdfs:label xml:lang="et">Abileuvararegistri infosüsteemi ontoloogia.</rdfs:label>
+<rdfs:comment xml:lang="et">Abileuvararegistri infosüsteemi ontoloogia.</rdfs:comment>
+<owl:versionInfo xml:lang="et">Versioon 1 2012</owl:versionInfo>
+</owl:Ontology>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluregister_on_seotud_registrikaardi,_registripäeviku_ja_registritoimikuga  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluregister_on_seotud_registrikaardi,_registripäeviku_ja_registritoimikuga">
+<rdfs:label xml:lang="et">Abieluvararegister sisaldab registrikaarti, registripäevikut ja registritoimikut</rdfs:label>
+<rdfs:comment xml:lang="et">Abieluvararegister sisaldab registrikaarti, registripäevikut ja registritoimikut.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluvararegister"/>
+<rdfs:range>
+<owl:Class>
+<owl:intersectionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registripäevik"/>
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registritoimik"/>
+</owl:intersectionOf>
+</owl:Class>
+</rdfs:range>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid_on_seotud_isikutega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid_on_seotud_isikutega">
+<rdfs:label xml:lang="et">Dokumendid on seotud isikutega</rdfs:label>
+<rdfs:comment xml:lang="et">Dokument võib olla seotud dokumendi esitajaga, dokumendi skaneerijaga ja digitempli andjaga.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik_omab_kontaktandmeid  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik_omab_kontaktandmeid">
+<rdfs:label xml:lang="et">Isik on seotud kontaktandmetega</rdfs:label>
+<rdfs:comment xml:lang="et">Isiku kohta on võimalik registrereida järgmised kontaktandmed: e-post, telefon, õhielukoht, postiaadress, muu elukoht, faks, interneti aadress, mobiiltelefon, modem, muu sidevahend, ruumi sideaadress, elukoht eestis, elukoht välisriigis, sideaadress.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isikud_on_seotud_isikutega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isikud_on_seotud_isikutega">
+<rdfs:label xml:lang="et">Isik on seotud isikutega</rdfs:label>
+<rdfs:comment xml:lang="et">Isik seotakse isiku eelmise versiooniga.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isikud_on_seotud_teadetega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isikud_on_seotud_teadetega">
+<rdfs:label xml:lang="et">Isikud on seotud teadetega</rdfs:label>
+<rdfs:comment xml:lang="et">Puudutatud isikutele saadetakse teated abieluvarakaardile tehtud kandest.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded_on_seotud_dokumentidega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded_on_seotud_dokumentidega">
+<rdfs:label xml:lang="et">Kanne on seotud dokumendiga</rdfs:label>
+<rdfs:comment xml:lang="et">Kande tegemise aluseks on dokument</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded_on_seotud_seisunditega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded_on_seotud_seisunditega">
+<rdfs:label xml:lang="et">Kanded on seotud seisunditega</rdfs:label>
+<rdfs:comment xml:lang="et">Kande seisundi klassifikaatorid on defineeritud klvaartused tabelis</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KLvaartused"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad_on_seotud_kasutajatega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad_on_seotud_kasutajatega">
+<rdfs:label xml:lang="et">Kasutajad on seotud kasutajatega</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutaja on seotud kasutajaga</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad_on_seotud_rollidega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad_on_seotud_rollidega">
+<rdfs:label xml:lang="et">Kasutaja on seotud rollidega</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutaja on seotud rollidega</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rollid"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotu_tähtajaseisundiga  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotu_tähtajaseisundiga">
+<rdfs:label xml:lang="et">Menetlused on seotud tähtaja seisundiga</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse tähtaja seisundid saavad olla: menetlusaeg, kriitiline, tähtaeg ületatud, menetlus lõpetatud, menetlus peatatud, menetlusaeg peatatud</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KLvaartused"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_dokumentidega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_dokumentidega">
+<rdfs:label xml:lang="et">Menetlus on seotud dokumendiga</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlus on seotud dokumentidega.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_isikutega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_isikutega">
+<rdfs:label xml:lang="et">Menetlus on seotud isikuga</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse seotud isik võib olla avalduse esitaja või puudutatud isik</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_kasutajatega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_kasutajatega">
+<rdfs:label xml:lang="et">Menetlus on seotud kasutajaga</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlusega seotud kasutaja võib olla menetleja või alammenetleja</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_menetlustega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_menetlustega">
+<rdfs:label xml:lang="et">Menetlus on seotud menetlusega</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlus on seotud menetlusega, seos tekib menetluste ühendamisel.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_määrustega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_määrustega">
+<rdfs:label xml:lang="et">Menetlus on seotud määrusega</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluses koostatud määrused.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_teateseisundiga  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlused_on_seotud_teateseisundiga">
+<rdfs:label xml:lang="et">Menetlused on seotud teate seisunditega</rdfs:label>
+<rdfs:comment xml:lang="et">Seisundi klassifikaatorid on defineeritud klvaartused tabelis</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KLvaartused"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlustel_on_seisund  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlustel_on_seisund">
+<rdfs:label xml:lang="et">Menetlusel on seisundid</rdfs:label>
+<rdfs:comment xml:lang="et">Seisundite klassifikaatorid on defineeritud tabelis klvaartused.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KLvaartused"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_dokumentidega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_dokumentidega">
+<rdfs:label xml:lang="et">Määrus on seotud dokumendiga</rdfs:label>
+<rdfs:comment xml:lang="et">Määrus on seotud dokumentidega, mille alusel tehakse kanne registrikaardile.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_isikuga  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_isikuga">
+<rdfs:label xml:lang="et">Määrused on seotud isikutega</rdfs:label>
+<rdfs:comment xml:lang="et">Määrusega on seotud puudutatud isikud</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_registrikaartidega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_registrikaartidega">
+<rdfs:label xml:lang="et">Määrus on seotud registrikaardiga</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaart, milles tehakse määrus</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_seisunditega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_seisunditega">
+<rdfs:label xml:lang="et">Määrus on seotud seisunditega</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse seisunditeks saavad olla: projekt, kinnitatud, allkirjastatud, tühistatud</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_teadetega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_teadetega">
+<rdfs:label xml:lang="et">Määrus on seotud teadetega</rdfs:label>
+<rdfs:comment xml:lang="et">Puudutatud isikule saadetav teade on seotud menetluses tehtud määrusega.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_toimingutega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrused_on_seotud_toimingutega">
+<rdfs:label xml:lang="et">Määrus on seotud toiminguga</rdfs:label>
+<rdfs:comment xml:lang="et">Üks määrus võib olla seotud mitme toiminguga</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrustel_on_puuduste_seisundid  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määrustel_on_puuduste_seisundid">
+<rdfs:label xml:lang="et">Määrus on seotud puuduste seisunditega</rdfs:label>
+<rdfs:comment xml:lang="et">Puuduste seisundid saavad olla: esinesid puudused, tähtaeg ületatud, puudused kõrvaldatud, puudusi pole, tähtaeg pikendatud</rdfs:comment>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_dokumentidega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_dokumentidega">
+<rdfs:label xml:lang="et">Registrikaart on seotud dokumentidega</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaart on seotud dokumentidega.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_kinnistusjaoskonnaga  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_kinnistusjaoskonnaga">
+<rdfs:label xml:lang="et">Registrikaart on seotud kinnistusjaoskonnaga</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaart on seotud kinnistusjaoskonnaga, kus kaart on avatud.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_menetlustega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_menetlustega">
+<rdfs:label xml:lang="et">Registrikaart on seotud menetlusega</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlusega seotud registrikaardid.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_registrikaardiga  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_registrikaardiga">
+<rdfs:label xml:lang="et">Registrikaart on seotud registrikaardiga</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaart on seotud registrikaardiga.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_seisundiga  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_seisundiga">
+<rdfs:label xml:lang="et">Registrikaart on seotud seisundiga</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaardi seisundid saavad olla:projekt, avatud,suletud,menetluses,kinnitatud,tühistatud,muudetud. Seisundi väärtused on defineeritud tabelis klvaartused.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_teadetega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_teadetega">
+<rdfs:label xml:lang="et">Registrikaart on seotud teadetega</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaart on seotud teadetega.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_toimingutega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart_on_seotud_toimingutega">
+<rdfs:label xml:lang="et">Registrikaart on seotud toimingutega</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaart on seotud toimingutega.</rdfs:comment>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaarton_seotud_kannetega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaarton_seotud_kannetega">
+<rdfs:label xml:lang="et">Registrikaart on seotud kannetega</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaart on seotud kannetega.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingud_on_seotud_Dokumentidega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingud_on_seotud_Dokumentidega">
+<rdfs:label xml:lang="et">Toimingud on seotud dokumentidega</rdfs:label>
+<rdfs:comment xml:lang="et">Toimingud on seotud dokumentidega.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingud_on_seotud_kannetega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingud_on_seotud_kannetega">
+<rdfs:label xml:lang="et">Toimingud on seotud kannetega</rdfs:label>
+<rdfs:comment xml:lang="et">Toimingud on seotud kannetega.</rdfs:comment>
+<rdfs:range rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õigus_on_seotud_toiminguga  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õigus_on_seotud_toiminguga">
+<rdfs:label xml:lang="et">Õigus on seotud toiminguga</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse seos toiminguga näitab, millise toimingu tulemusel on õigus tekkinud</rdfs:comment>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õigused_on_seotud_õigustega  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õigused_on_seotud_õigustega">
+<rdfs:label xml:lang="et">Õigus on seotud õigusega</rdfs:label>
+<rdfs:comment xml:lang="et">Seos tekib õiguse muutmise tulemusel</rdfs:comment>
+</owl:ObjectProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õigusel_on_seisundid  -->
+<owl:ObjectProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õigusel_on_seisundid">
+<rdfs:label xml:lang="et">Õigusel on seisundid</rdfs:label>
+<rdfs:comment xml:lang="et">Õigus on seotud seisundiga, mille klassifikaator on defineeritud klvaartused tabelis</rdfs:comment>
+</owl:ObjectProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#ADR_ID  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#ADR_ID">
+<rdfs:label xml:lang="et">ADR ID</rdfs:label>
+<rdfs:comment xml:lang="et">ADR ID</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadress  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadress">
+<rdfs:label xml:lang="et">Aadress</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlusega seotud isiku aadress.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadress"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#AadressOtsing  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#AadressOtsing">
+<rdfs:label xml:lang="et">Aadressotsing</rdfs:label>
+<rdfs:comment xml:lang="et">Aadressotsing</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmete_Aadresskood  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmete_Aadresskood">
+<rdfs:label xml:lang="et">Aadressandmete aadresskood</rdfs:label>
+<rdfs:comment xml:lang="et">Aadressandmete aadresskood</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadresskood  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadresskood">
+<rdfs:label xml:lang="et">Aadresskood</rdfs:label>
+<rdfs:comment xml:lang="et">Aadresskood</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadress"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aktiivne  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aktiivne">
+<rdfs:label xml:lang="et">Aktiivne</rdfs:label>
+<rdfs:comment xml:lang="et">Aktiivne</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#AlevKylaLinnaosaKL_ID  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#AlevKylaLinnaosaKL_ID">
+<rdfs:label xml:lang="et">AlevkylaLinnaosa klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Alevi, küla ja linnaosa klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Alguskuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Alguskuupäev">
+<rdfs:label xml:lang="et">Alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Aadressadnemete alguskuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Autojagamine  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Autojagamine">
+<rdfs:label xml:lang="et">Autojagamine</rdfs:label>
+<rdfs:comment xml:lang="et">Autojagamine</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_fail  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_fail">
+<rdfs:label xml:lang="et">Dokumendi fail</rdfs:label>
+<rdfs:comment xml:lang="et">Viide digitaalse dokumendi asukohale failisüsteemis.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_kuupaev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_kuupaev">
+<rdfs:label xml:lang="et">Dokumendi kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Dokumendi kuupäev, millal dokument on allkirjastatud.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_lehekylgede_arv  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_lehekylgede_arv">
+<rdfs:label xml:lang="et">Dokumendi lehekülgede arv</rdfs:label>
+<rdfs:comment xml:lang="et">Paberdokumendi lehtede arv.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_liik  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_liik">
+<rdfs:label xml:lang="et">Dokumendi liik</rdfs:label>
+<rdfs:comment xml:lang="et">Dokumendi liik</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_markus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_markus">
+<rdfs:label xml:lang="et">Märkus</rdfs:label>
+<rdfs:comment xml:lang="et">Vabatekst dokumendi juurde</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_number">
+<rdfs:label xml:lang="et">Dokumendi number</rdfs:label>
+<rdfs:comment xml:lang="et">Dokumendi number kujul jooksev number + aasta.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_registreerimise_aeg  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendi_registreerimise_aeg">
+<rdfs:label xml:lang="et">Dokumendi registreerimise aeg</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusraamatusse lisamise aeg.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#EHAKkood  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#EHAKkood">
+<rdfs:label xml:lang="et">EHAKkood</rdfs:label>
+<rdfs:comment xml:lang="et">EHAK kood</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Jao_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Jao_number">
+<rdfs:label xml:lang="et">Jao number</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaardil oleva jao number.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Juriidiineaadress  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Juriidiineaadress">
+<rdfs:label xml:lang="et">Juriidiilineaadress</rdfs:label>
+<rdfs:comment xml:lang="et">Aadressandmete juriidiline aadress</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kande_alguskuupaev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kande_alguskuupaev">
+<rdfs:label xml:lang="et">Kande alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kande allkirjastamise aeg.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kande_lopukuupaev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kande_lopukuupaev">
+<rdfs:label xml:lang="et">Kande lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kande lõpu aeg või muutmise aeg.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kande_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kande_number">
+<rdfs:label xml:lang="et">Kande number</rdfs:label>
+<rdfs:comment xml:lang="et">Kande järjekorranumber, sama mis kandetekstis.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kande_või_dokuemdi_kirjeldus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kande_või_dokuemdi_kirjeldus">
+<rdfs:label xml:lang="et">Kande või dokuemdi kirjeldus</rdfs:label>
+<rdfs:comment xml:lang="et">Kande või dokumendi kirjeldus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kandealus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kandealus">
+<rdfs:label xml:lang="et">Kandealus</rdfs:label>
+<rdfs:comment xml:lang="et">Kande tekst pöördel.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kandetekst  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kandetekst">
+<rdfs:label xml:lang="et">Kandetekst</rdfs:label>
+<rdfs:comment xml:lang="et">Kandetekst põhilahtris.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kannete_kehtivus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kannete_kehtivus">
+<rdfs:label xml:lang="et">SeisundKL_ID</rdfs:label>
+<rdfs:comment xml:lang="et">Näitab kande seisundit.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kas_jagada_menetlusi  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kas_jagada_menetlusi">
+<rdfs:label xml:lang="et">KasJagadaMenetlusi </rdfs:label>
+<rdfs:comment xml:lang="et">Kas jagada menetlusi veerg näitab, millisele rollile jagatakse menetlusi. </rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rollid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KasutajaAmet  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KasutajaAmet">
+<rdfs:label xml:lang="et">Kasutajaamet</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutaja amet</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutaja_algusKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutaja_algusKP">
+<rdfs:label xml:lang="et">Kasutaja alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutaja kirje loomise kuupäev.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutaja_loppKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutaja_loppKP">
+<rdfs:label xml:lang="et">Kasutaja lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutaja lõpukuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajanimi  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajanimi">
+<rdfs:label xml:lang="et">Kasutajanimi</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutaja nimi</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuse_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuse_kuupäev">
+<rdfs:label xml:lang="et">Kinnituse kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnituse andmise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskond_Yldmeil  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskond_Yldmeil">
+<rdfs:label xml:lang="et">Kinnistusjaoskond Yldmeil</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna üldmeili aadress</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskond_autojagamine  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskond_autojagamine">
+<rdfs:label xml:lang="et">Kinnistusjaoskond autojagamine</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskond autojagamine</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskond_viitenumber  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskond_viitenumber">
+<rdfs:label xml:lang="et">Kinnistusjaoskond viitenumber</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna viitenumber</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonna_aadress  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonna_aadress">
+<rdfs:label xml:lang="et">Kinnistusjaoskonna aadress</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna aadress</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonna_alguskuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonna_alguskuupäev">
+<rdfs:label xml:lang="et">Kinnistusjaoskonna alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna alguskuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonna_lõpukuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonna_lõpukuupäev">
+<rdfs:label xml:lang="et">Kinnistusjaoskonna lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna lõpukuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonna_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonna_number">
+<rdfs:label xml:lang="et">Kinnistusjaoskonna number</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna number</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonnad_ADGrupp  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonnad_ADGrupp">
+<rdfs:label xml:lang="et">Kinnistusjaoskonnad ADGrupp</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna AD grupp</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonnad_maakondlinnkl_id  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonnad_maakondlinnkl_id">
+<rdfs:label xml:lang="et">Kinnistusjaoskonnad maakondlinnkl_id</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna maakonna klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonnad_nimi  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusjaoskonnad_nimi">
+<rdfs:label xml:lang="et">Kinnistusjaoskonnad nimi</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusjaoskonna nimi</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonna_aadress  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonna_aadress">
+<rdfs:label xml:lang="et">Kinnistusosakonna aadress</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusosakonna aadress</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuosakond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonna_alguskuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonna_alguskuupäev">
+<rdfs:label xml:lang="et">Kinnistusosakonna alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusosakonna alguskuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuosakond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonna_loppKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonna_loppKP">
+<rdfs:label xml:lang="et">Kinnistusosakonna loppkuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusosakonna lõpukuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuosakond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonnad_nimi  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonnad_nimi">
+<rdfs:label xml:lang="et">Kinnistusosakonnad nimi</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusosakonna nimi</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuosakond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonnad_viitenumber  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistusosakonnad_viitenumber">
+<rdfs:label xml:lang="et">Kinnistusosakonna viitenumber</rdfs:label>
+<rdfs:comment xml:lang="et">Kinnistusosakonna viitenumber</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuosakond"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnitaja  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnitaja">
+<rdfs:label xml:lang="et">Kinnitaja</rdfs:label>
+<rdfs:comment xml:lang="et">Teate kinniataja</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnitus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnitus">
+<rdfs:label xml:lang="et">Kinnitus</rdfs:label>
+<rdfs:comment xml:lang="et">Teate kinnitus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KohtunikuabiTunnus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KohtunikuabiTunnus">
+<rdfs:label xml:lang="et">Kohtunikuabi tunnus</rdfs:label>
+<rdfs:comment xml:lang="et">Kohtunikuabi tunnus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood1  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood1">
+<rdfs:label xml:lang="et">Kood 1</rdfs:label>
+<rdfs:comment xml:lang="et">Kood 1</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood2  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood2">
+<rdfs:label xml:lang="et">Kood 2</rdfs:label>
+<rdfs:comment xml:lang="et">Kood 2</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood3  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood3">
+<rdfs:label xml:lang="et">Kood 3</rdfs:label>
+<rdfs:comment xml:lang="et">Kood 3</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood4  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood4">
+<rdfs:label xml:lang="et">Kood 4</rdfs:label>
+<rdfs:comment xml:lang="et">Kood 4</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood5  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood5">
+<rdfs:label xml:lang="et">Kood 5</rdfs:label>
+<rdfs:comment xml:lang="et">Kood 5</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood6  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood6">
+<rdfs:label xml:lang="et">Kood 6</rdfs:label>
+<rdfs:comment xml:lang="et">Kood 6</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood7  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood7">
+<rdfs:label xml:lang="et">Kood 7</rdfs:label>
+<rdfs:comment xml:lang="et">Kood 7</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood8  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kood8">
+<rdfs:label xml:lang="et">Kood 8</rdfs:label>
+<rdfs:comment xml:lang="et">Kood 8</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Koormus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Koormus">
+<rdfs:label xml:lang="et">Koormus</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutajate koormus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Korter  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Korter">
+<rdfs:label xml:lang="et">Korter</rdfs:label>
+<rdfs:comment xml:lang="et">Korteri number</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KuvaOtsingus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KuvaOtsingus">
+<rdfs:label xml:lang="et">Kuva otsingus</rdfs:label>
+<rdfs:comment xml:lang="et">Kuva otsingus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Loomise_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Loomise_kuupäev">
+<rdfs:label xml:lang="et">Loomise kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kande loomise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Lõpukuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Lõpukuupäev">
+<rdfs:label xml:lang="et">Lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Aadressandme lõpukuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#MaakondKL_ID  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#MaakondKL_ID">
+<rdfs:label xml:lang="et">Maakonna ja linna klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">MaakondLinn klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maaruse_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maaruse_number">
+<rdfs:label xml:lang="et">Määruse number</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse number kujul jooksev number + aasta</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maaruse_sisu  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maaruse_sisu">
+<rdfs:label xml:lang="et">Määruse sisu</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse sisu vabatekstina</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#MajaKrunt  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#MajaKrunt">
+<rdfs:label xml:lang="et">MajaKrunt</rdfs:label>
+<rdfs:comment xml:lang="et">Andmeveerg sisaldab infot maja võu krundi numbri kohta.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Makstud_riigilõiv  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Makstud_riigilõiv">
+<rdfs:label xml:lang="et">Makstud riigilõiv</rdfs:label>
+<rdfs:comment xml:lang="et">Sisaldab informatsiooni selle kohta, kas riigilõiv on makstud või mitte.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus_riigilõivKokku  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus_riigilõivKokku">
+<rdfs:label xml:lang="et">Menetlus riigilõivKokku</rdfs:label>
+<rdfs:comment xml:lang="et">Riigilõivu summa kokku</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_alguskuupaev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_alguskuupaev">
+<rdfs:label xml:lang="et">Menetluse alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse algusaeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_laekumise_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_laekumise_kuupäev">
+<rdfs:label xml:lang="et">Menetluse laekumise kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Avalduse laekumuse kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_laekumiseviisKL_ID  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_laekumiseviisKL_ID">
+<rdfs:label xml:lang="et">Menetluse laekumiseviiskl_ID</rdfs:label>
+<rdfs:comment xml:lang="et">Avalduse laekumise viisi klassifikaator.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_liik  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_liik">
+<rdfs:label xml:lang="et">Menetluse liik</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse liik saab olla: muu avaldus,uue registrikaardi avamine, menetlus ametiülesande korras, tutvumise menetlus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_lopukuupaev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_lopukuupaev">
+<rdfs:label xml:lang="et">Menetluse lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse lõppemise aeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_registreerimise_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_registreerimise_kuupäev">
+<rdfs:label xml:lang="et">Menetluse registreerimise kuuppäev</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse registreerimise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_tahtaeg  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetluse_tahtaeg">
+<rdfs:label xml:lang="et">Menetluse tähtaeg</rdfs:label>
+<rdfs:comment xml:lang="et">Menetlustähtaeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Muutjatunnus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Muutjatunnus">
+<rdfs:label xml:lang="et">Muutjatunnus</rdfs:label>
+<rdfs:comment xml:lang="et">Isiku nimi, kes on nimetatud kirje juures viimase muudatuse teinud.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadress"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuosakond"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rollid"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Märkused  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Märkused">
+<rdfs:label xml:lang="et">Märkused</rdfs:label>
+<rdfs:comment xml:lang="et">Vabateksti veerg tutvumiste ja ärakirjade raamatus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_LiikKL_ID  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_LiikKL_ID">
+<rdfs:label xml:lang="et">Määruse liik</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse liik</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_loomise_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_loomise_kuupäev">
+<rdfs:label xml:lang="et">Määruse loomise kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse loomise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_põhistus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_põhistus">
+<rdfs:label xml:lang="et">Määruse põhistus</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse põhistus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_resolutsioon  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_resolutsioon">
+<rdfs:label xml:lang="et">Määruse resolutsioon</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse resulutsioon</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_tagastatud_riigilõiv  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_tagastatud_riigilõiv">
+<rdfs:label xml:lang="et">Määruse tagastatud riigilõiv</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse tagastatud riigilõiv</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_teate_tekst  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_teate_tekst">
+<rdfs:label xml:lang="et">Määruse teate tekst</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse teate tekst</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_tähtaeg  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Määruse_tähtaeg">
+<rdfs:label xml:lang="et">Määruse tähtaja kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Määruse tähtaja kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#NimetusKorter  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#NimetusKorter">
+<rdfs:label xml:lang="et">NimetusKorter</rdfs:label>
+<rdfs:comment xml:lang="et">Korteri nimetus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Normaliseeritud  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Normaliseeritud">
+<rdfs:label xml:lang="et">Normaliseeritud</rdfs:label>
+<rdfs:comment xml:lang="et">Normaliseeritud</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Normaliseeritud_aadress  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Normaliseeritud_aadress">
+<rdfs:label xml:lang="et">Normaliseeritud aadress</rdfs:label>
+<rdfs:comment xml:lang="et">Normaliseeitud aadress</rdfs:comment>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Notariaaltehingu_aasta  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Notariaaltehingu_aasta">
+<rdfs:label xml:lang="et">Notariaaltehingu aasta</rdfs:label>
+<rdfs:comment xml:lang="et">Notariaaltehingu aasta</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Notariaaltehingu_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Notariaaltehingu_number">
+<rdfs:label xml:lang="et">Notariaaltehingu number</rdfs:label>
+<rdfs:comment xml:lang="et">Notariaaltehingu number.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_alguskuupaev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_alguskuupaev">
+<rdfs:label xml:lang="et">Õiguse alguskuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse sissekandmise aeg, allkirjastamise aeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_liigi_klassifikaator  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_liigi_klassifikaator">
+<rdfs:label xml:lang="et">Õiguse liigi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse liigi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain>
+<owl:Class>
+<owl:unionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:unionOf>
+</owl:Class>
+</rdfs:domain>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_lopukuupaev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_lopukuupaev">
+<rdfs:label xml:lang="et">Õiguse lõpukuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse lõpetamise aeg</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_number">
+<rdfs:label xml:lang="et">Õiguse number</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse number</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_seisundiKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_seisundiKP">
+<rdfs:label xml:lang="et">Õiguse seisundi kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse seisundi kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_õigustatuseliik  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oiguse_õigustatuseliik">
+<rdfs:label xml:lang="et">Õiguse õigustatuse liigi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse õigustatuse liigi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigused_RegistriosadCSL  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigused_RegistriosadCSL">
+<rdfs:label xml:lang="et">Oigused registriosadCSL</rdfs:label>
+<rdfs:comment xml:lang="et">Õigusega seotud registriosad</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Paralleelaadress  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Paralleelaadress">
+<rdfs:label xml:lang="et">Paralleelaadress</rdfs:label>
+<rdfs:comment xml:lang="et">Paralleelaadress</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#PuudubTäna  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#PuudubTäna">
+<rdfs:label xml:lang="et">Puudubtäna</rdfs:label>
+<rdfs:comment xml:lang="et">Märge puudumise kohta.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rolli_IlusNimi  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rolli_IlusNimi">
+<rdfs:label xml:lang="et">Rolli ilusnimi</rdfs:label>
+<rdfs:comment xml:lang="et">Rolli nimi</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rollid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rolli_kirjeldus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rolli_kirjeldus">
+<rdfs:label xml:lang="et">Rolli kirjeldus</rdfs:label>
+<rdfs:comment xml:lang="et">Rolli kirjeldus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rollid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rolli_nimetus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rolli_nimetus">
+<rdfs:label xml:lang="et">Rolli nimetus</rdfs:label>
+<rdfs:comment xml:lang="et">Rolli täisnimi</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rollid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Seisund  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Seisund">
+<rdfs:label xml:lang="et">Seisund</rdfs:label>
+<rdfs:comment xml:lang="et">Seisundid.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain>
+<owl:Class>
+<owl:unionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus"/>
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+<rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:unionOf>
+</owl:Class>
+</rdfs:domain>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Seisundi_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Seisundi_kuupäev">
+<rdfs:label xml:lang="et">Seisundi kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Seisundi muutumise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Summa  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Summa">
+<rdfs:label xml:lang="et">Summa</rdfs:label>
+<rdfs:comment xml:lang="et">Tehingu väärtus, summa mille pealt arvestatakse riigilõivu ja notari tasusid</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tagastatud_riigilõiv  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tagastatud_riigilõiv">
+<rdfs:label xml:lang="et">Tagastatud riigilõiv</rdfs:label>
+<rdfs:comment xml:lang="et">Tagastatud riigilõiv</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_aadress  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_aadress">
+<rdfs:label xml:lang="et">Teate aadress</rdfs:label>
+<rdfs:comment xml:lang="et">Teate aadress</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_koostamiseKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_koostamiseKP">
+<rdfs:label xml:lang="et">Teate koostamise kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Teate koostamise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_lisatekst  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_lisatekst">
+<rdfs:label xml:lang="et">Teate lisatekst</rdfs:label>
+<rdfs:comment xml:lang="et">Teatesse kirjutatav lisatekst</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_maarusedCSL  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_maarusedCSL">
+<rdfs:label xml:lang="et">Teate maarusedCSL</rdfs:label>
+<rdfs:comment xml:lang="et">Teatega seotud määruse number</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_number">
+<rdfs:label xml:lang="et">Teate number</rdfs:label>
+<rdfs:comment xml:lang="et">Teate number</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_registriosadCSL  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_registriosadCSL">
+<rdfs:label xml:lang="et">Teate registriosadCSL</rdfs:label>
+<rdfs:comment xml:lang="et">Teatega seotud registrikaardi numbrid</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_saatja  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_saatja">
+<rdfs:label xml:lang="et">Teate saatja</rdfs:label>
+<rdfs:comment xml:lang="et">Teate saatja nimi</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_saatmiseviisKL_ID  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_saatmiseviisKL_ID">
+<rdfs:label xml:lang="et">Teate saatmise viisi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Teate saatmise viisi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_seisundKL_ID  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_seisundKL_ID">
+<rdfs:label xml:lang="et">Teate seisundi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Teate seisundi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_seisundiKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_seisundiKP">
+<rdfs:label xml:lang="et">Teate seisundi kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Teate seisundi kuupäev</rdfs:comment>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_sisu  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teate_sisu">
+<rdfs:label xml:lang="et">Teate sisu</rdfs:label>
+<rdfs:comment xml:lang="et">Teate sisu</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tehingu_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tehingu_kuupäev">
+<rdfs:label xml:lang="et">Tehingu kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Tehingu kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tehingu_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tehingu_number">
+<rdfs:label xml:lang="et">Tehingu number</rdfs:label>
+<rdfs:comment xml:lang="et">Tehingu number.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming_OnMenetluseToiming  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming_OnMenetluseToiming">
+<rdfs:label xml:lang="et">Toiming OnMenetluseToiming</rdfs:label>
+<rdfs:comment xml:lang="et">Toiming on menetluses toiming</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming_kaskinnitatud  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming_kaskinnitatud">
+<rdfs:label xml:lang="et">Toiming KasKinnitatud</rdfs:label>
+<rdfs:comment xml:lang="et">Märge selle kohta, kas toiming on kinnitatud</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_liik  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_liik">
+<rdfs:label xml:lang="et">Toimingu liigi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Toimingu liigi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_number">
+<rdfs:label xml:lang="et">Toimingu number</rdfs:label>
+<rdfs:comment xml:lang="et">Toimingu number</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_registriosadCSL  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_registriosadCSL">
+<rdfs:label xml:lang="et">Toimingu registriosadCSL</rdfs:label>
+<rdfs:comment xml:lang="et">Toiminguga seotud registrikaardi numbrid</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_seisund  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_seisund">
+<rdfs:label xml:lang="et">Toimingu seisundi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Toimingu seisundi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_seisundiKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toimingu_seisundiKP">
+<rdfs:label xml:lang="et">Toimingu seisundi kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Toimingu seisundi muutumise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#TutvumiseLoppKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#TutvumiseLoppKP">
+<rdfs:label xml:lang="et">Tutvumise lõppkuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Kuupäev, milleni on avatud dokumentidega tutvumine tutvumist soovinud isikule.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumise_soov  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumise_soov">
+<rdfs:label xml:lang="et">Tutvumise soov</rdfs:label>
+<rdfs:comment xml:lang="et">Tutvumise soov.</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_alamliigi_klassifikaator  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_alamliigi_klassifikaator">
+<rdfs:label xml:lang="et">Tutvumiste ja ärakirjade alamliigi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Tutvumiste ja ärakirjade alamliigi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_liigi_klassifikaatorid  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_liigi_klassifikaatorid">
+<rdfs:label xml:lang="et">Tutvumiste ja ärakirjade liigi klassifikaatorid</rdfs:label>
+<rdfs:comment xml:lang="et">Tutvumiste ja ärakirjade liigi klassifikaatorid</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_loomise_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_loomise_kuupäev">
+<rdfs:label xml:lang="et">Tutvumiste ja ärakirjade loomise kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Tutvumiste ja ärakirjade loomise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_sissekande_kuupäev  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_sissekande_kuupäev">
+<rdfs:label xml:lang="et">Tutvumiste ja ärakirjade sissekande kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Tutvumiste ja ärakirjade sissekande kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tänav  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tänav">
+<rdfs:label xml:lang="et">Tänav</rdfs:label>
+<rdfs:comment xml:lang="et">Tänav</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Vajab_kinnitust  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Vajab_kinnitust">
+<rdfs:label xml:lang="et">Vajab kinnitust</rdfs:label>
+<rdfs:comment xml:lang="et">Vajab kinnitust</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#X_koordinaat  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#X_koordinaat">
+<rdfs:label xml:lang="et">X koordinaat</rdfs:label>
+<rdfs:comment xml:lang="et">X koordinaat</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Y_koordinaat  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Y_koordinaat">
+<rdfs:label xml:lang="et">Y koordinaat</rdfs:label>
+<rdfs:comment xml:lang="et">Y koordinaat</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#YhistuKoperatiiv  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#YhistuKoperatiiv">
+<rdfs:label xml:lang="et">Yhistukoperatiiv</rdfs:label>
+<rdfs:comment xml:lang="et">Ühistukoperatiiv</rdfs:comment>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#kasutajaTunnus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#kasutajaTunnus">
+<rdfs:label xml:lang="et">KasutajaTunnus</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutaja nimi</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#menetluse_number  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#menetluse_number">
+<rdfs:label xml:lang="et">Menetluse number</rdfs:label>
+<rdfs:comment xml:lang="et">Menetluse numer kujul jooksev number, aasta, jaoskonna tähis</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#vabatekst  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#vabatekst">
+<rdfs:label xml:lang="et">Vabatekst</rdfs:label>
+<rdfs:comment xml:lang="et">Vabatekst</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_alamliik  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_alamliik">
+<rdfs:label xml:lang="et">Õiguse alamliik</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse alamliik</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_loomiseKP  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_loomiseKP">
+<rdfs:label xml:lang="et">Õiguse loomise kuupäev</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse loomise kuupäev</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_seisund  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_seisund">
+<rdfs:label xml:lang="et">Õiguse seisundi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse seisundi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_sisu  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_sisu">
+<rdfs:label xml:lang="et">Õiguse sisu</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse sisu</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_tüüp  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õiguse_tüüp">
+<rdfs:label xml:lang="et">Õiguse tüübi klassifikaator</rdfs:label>
+<rdfs:comment xml:lang="et">Õiguse tüübi klassifikaator</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+</owl:DatatypeProperty>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õigustatud_huvi_põhjendus  -->
+<owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Õigustatud_huvi_põhjendus">
+<rdfs:label xml:lang="et">Õigustatud huvi põhjendus</rdfs:label>
+<rdfs:comment xml:lang="et">Õigustatud huvi põhjendus</rdfs:comment>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat"/>
+</owl:DatatypeProperty>
+<!--  
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+      -->
+<!--  http://www.w3.org/2002/07/owl#Thing  -->
+<owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadress  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadress">
+<rdfs:label xml:lang="et">Aadress</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isiku_kontaktandmed"/>
+<rdfs:comment xml:lang="et">Menetlusega seotud isiku aadress.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Aadressandmed">
+<rdfs:label xml:lang="et">Aadressandmed</rdfs:label>
+<rdfs:comment xml:lang="et">Aadressandmed</rdfs:comment>
+<owl:versionInfo rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1"/>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluvaraleping  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluvaraleping">
+<rdfs:label xml:lang="et">Abileuvaraleping </rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:comment xml:lang="et">Abikaasade vaheline kokkulepe varaliste õiguste reguleerimiseks.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluvararegister  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluvararegister">
+<rdfs:label xml:lang="et">Abieluvararegister</rdfs:label>
+<rdfs:comment xml:lang="et">Abieluvararegister on riiklik register, kuhu kantakse abikaasade abieluvaralepingus toodud ning seaduses sätestatud juhtudel teised varalised õigused.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abikaasa  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abikaasa">
+<rdfs:label xml:lang="et">Abikaasa</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+<rdfs:comment xml:lang="et">Registrikaardile kantud isikud.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Avalduse_esitaja  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Avalduse_esitaja">
+<rdfs:label xml:lang="et">Avalduse esitaja </rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik"/>
+<rdfs:comment xml:lang="et">Avalduse esitaja on isk, kes esitab kandeavalduse. Avalduse esitaja saab olla abikaasa, notar või perekonnaseisuametnik.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid">
+<rdfs:label xml:lang="et">Dokumendid</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Registritoimikus olevad dokumendid, mis on kannete või määruste aluseks.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#E-post  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#E-post">
+<rdfs:label xml:lang="et">E-post</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isiku_kontaktandmed"/>
+<rdfs:comment xml:lang="et">Menetlusega seotud isiku e-posti aadress.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isik">
+<rdfs:label xml:lang="et">Isik</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Lisaandmed"/>
+<rdfs:comment xml:lang="et">Menetlusega seotud isik.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isiku_kontaktandmed  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Isiku_kontaktandmed">
+<rdfs:label xml:lang="et">Isiku kontaktandmed</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Lisaandmed"/>
+<rdfs:comment xml:lang="et">Andmed, kuhu saadetakse isikuga seotud ja menetlusega käigus koostatud dokumendid.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KLvaartused  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#KLvaartused">
+<rdfs:label xml:lang="et">KLVaartused</rdfs:label>
+<rdfs:comment xml:lang="et">Klvaartused tabelis on kirjas klassifikaatorite väärtused</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kandeavaldus  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kandeavaldus">
+<rdfs:label xml:lang="et">Kandeavaldus</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Dokumendid"/>
+<rdfs:comment xml:lang="et">Dokument, milles sisaldub taotletava kande sisu</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kanded">
+<rdfs:label xml:lang="et">Kanded</rdfs:label>
+<rdfs:comment xml:lang="et">Registrikaardile tehtav kanne.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kasutajad">
+<rdfs:label xml:lang="et">Kasutajad</rdfs:label>
+<rdfs:comment xml:lang="et">Kasutajad on kinnistusosakonna teenistujad, kes on menetlusega seotud (menetleja, sekretär ja juhataja).</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistujaoskond">
+<rdfs:label xml:lang="et">Kinnistusjaoskond</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Justiitsministri määrusega võib kinnistuspiirkonna jaotada kinnistusjaoskondadeks, kus peetakse eraldi kinnistusraamatuid.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuosakond  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Kinnistuosakond">
+<rdfs:label xml:lang="et">Kinnistusosakond</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kinnistusosakonnas peetakse kinnistusraamatut ja abieluvararegistrit</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Lisaandmed  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Lisaandmed">
+<rdfs:label xml:lang="et">Lisaandmed</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Menetluse läbi viimiseks vajalikud andmed.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Maarus">
+<rdfs:label xml:lang="et">Määrus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Menetleja poolt menetluse käigus tehtav otsus. Mitme erineva toimingu kohta võib teha ühe määruse. </rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Markus  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Markus">
+<rdfs:label xml:lang="et">Märkus</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+<rdfs:comment xml:lang="et">Märkus on õiguse liik, mida saab kinnistusregistriosale lisada.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Menetlus">
+<rdfs:label xml:lang="et">Menetlus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Kõik abileuvararegistris tehtavad toimingud on hõlmatud mõistega “menetlus”. Sisuliselt on menetlus protsess, mis algab kandeavalduse registreerimisega, või menetluse algatamisega ametiülesande korras. Menetluse käigus tehakse 1 - n määrust (otsust) ning menetlus lõpetatakse toiminguga „Lõpeta menetlus“. </rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus">
+<rdfs:label xml:lang="et">Õigus</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Registrikaardile tehtav kanne.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registrikaart">
+<rdfs:label xml:lang="et">Registrikaart</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluvararegister"/>
+<rdfs:comment xml:lang="et">Registrikaart on andmestik, mis sisaldab abieluregistrisse kantud andmeid.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registripäevik  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registripäevik">
+<rdfs:label xml:lang="et">Registripäevik</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluvararegister"/>
+<rdfs:comment xml:lang="et">Registripäevikus registreeritakse kande tegemise avaldused, milles on väljendatud soov kande tegemiseks. Registripäevikusse kantakse avalduse vastuvõtmise kuupäev, puudutatud registrikaardi number, määruse tegemise aeg, kestus, täiendavate dokumentide saabumise aeg, kandemääruse tegemise, kande tegemise ja teatavakstegemise aeg, kandemenetlust teostava isiku, tehinguväärtuse ning riigilõivu suurus.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registritoimik  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Registritoimik">
+<rdfs:label xml:lang="et">Registritoimik</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Abieluvararegister"/>
+<rdfs:comment xml:lang="et">Registritoimikus hoitakse kande tegemise aluseks olevaid dokumente (abieluvaralepingud, kohtuotsused, kande tegemise avaldused jt).</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rollid  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Rollid">
+<rdfs:label xml:lang="et">Rollid</rdfs:label>
+<rdfs:comment xml:lang="et">Rollideks saavad olla: kohtunikuabi, kinnistussekretär,, tehniline sekretär</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Teated">
+<rdfs:label xml:lang="et">Teated</rdfs:label>
+<rdfs:comment xml:lang="et">Abikaasale või kandeavalduse esitajale edastatav info menetluse käigu kohta. Teade võib sisaldada registrikaardi väljatrükki või määrust.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Toiming">
+<rdfs:label xml:lang="et">Toiming</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:comment xml:lang="et">Menetluse käigus tehtav toiming, millega avatakse uus registrikaart ja tehakse, muudetakse või kustutatakse registrikaardile kantu andmeid.</rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Tutvumiste_ja_ärakirjade_raamat">
+<rdfs:label xml:lang="et">Tutvumiste ja ärakirjade raamat</rdfs:label>
+<rdfs:comment xml:lang="et">Tutvumiste ja ärakirjade raamatus registriteeritakse registritoimikuga tutvumine ja registritoimiku dokumendist või registrikaardist kinnitatud ärakirja väljastamine. </rdfs:comment>
+</owl:Class>
+<!--  https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Varasuhe  -->
+<owl:Class rdf:about="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Varasuhe">
+<rdfs:label xml:lang="et">Varasuhe</rdfs:label>
+<rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/oigus_vabadus_ja_turvalisus.abieluvaraoigus/2012/r1#Oigus"/>
+<rdfs:comment xml:lang="et">Abikaasade poolt valitud varasuhte liik.</rdfs:comment>
+</owl:Class>
+</rdf:RDF>

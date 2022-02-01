@@ -1210,7 +1210,7 @@
         </structure:Annotations>
       </structure:Code>
       <structure:Code value="41" parentCode="5">
-        <structure:Description xml:lang="et">Põhjendatud juhtudel asutusesiseslt adresseeritud dokumendid</structure:Description>
+        <structure:Description xml:lang="et">Põhjendatud juhtudel asutusesiseselt adresseeritud dokumendid</structure:Description>
         <structure:Annotations>
           <common:Annotation>
             <common:AnnotationTitle>Õigusakti lühend</common:AnnotationTitle>
@@ -2705,7 +2705,7 @@
         </structure:Annotations>
       </structure:Code>
       <structure:Code value="101" parentCode="99">
-        <structure:Description xml:lang="et">Omafinanseeringu allikad (v.a juhul kui need on saadud eelarvelistest vahenditest) ja hindamisse kaasatud isikute nimed hinnanguga seostatud kujul</structure:Description>
+        <structure:Description xml:lang="et">Omafinantseeringu allikad (v.a juhul kui need on saadud eelarvelistest vahenditest) ja hindamisse kaasatud isikute nimed hinnanguga seostatud kujul</structure:Description>
         <structure:Annotations>
           <common:Annotation>
             <common:AnnotationTitle>Õigusakti lühend</common:AnnotationTitle>

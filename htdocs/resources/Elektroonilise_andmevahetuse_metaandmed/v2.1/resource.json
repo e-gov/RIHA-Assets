@@ -3,7 +3,7 @@
     "version": "2.1",
     "start_date": "01.01.2014",
     "end_date": "",
-    "description": "Metaandmed, mida saadetakse dokumendi edastamisel DVK kaudu, lihtsustamaks elektroonilist suhtlust dokumendihaldussüsteemide ja teiste infosüsteemide vahel.",
+    "description": "Metaandmed, mida saadetakse dokumendi edastamisel DHX kaudu, lihtsustamaks elektroonilist suhtlust dokumendihaldussüsteemide ja teiste infosüsteemide vahel.",
     "type": [
         "Standardsed metaandmed",
         "Andmevahetuse konteiner"

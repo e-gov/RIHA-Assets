@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Kirjeldus: Dokumendihalduse metaandmete loendi isiku ja aadressi plokki kajastav XML skeem -->
+<!-- Skeemi aluseks on dokumendihalduse metaandmete loendi versioon 4.0 -->
+<xs:schema xmlns="http://xmlr.eesti.ee/xml/schemas/Dokumendihalduse_metaandmed/2018/vers4/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlr.eesti.ee/xml/schemas/Dokumendihalduse_metaandmed/2018/vers4/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Isik" type="IsikType">
+		<xs:annotation>
+			<xs:documentation>Juriidilisi ja füüsilisi isikuid kirjeldavad metaandmeelemendid</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="IsikType">
+		<xs:annotation>
+			<xs:documentation>Juriidilisi ja füüsilisi isikuid kirjeldavate elementide komplekstüüp</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="IsikNimi" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Üksuse, juriidilise või füüsilise isiku ametlik nimi</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IsikNimiDokumendiregistris" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Dokumendi saaja või saatja nimeasendus avalikus dokumendiregistris</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IsikTyyp" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Kirjeldatava üksuse või isiku tüüp</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OrganisatsioonRegistrikood" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Juriidilise isiku registrikood või registrikood koos DHX tunnusega</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Isikukood" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Füüsilise isiku isikukood</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ametinimetus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Füüsilise isiku ameti ametlik nimetus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Postiaadress" type="AadressType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Paberdokumendi kättetoimetamise aadress </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Kontaktandmed" type="KontaktandmedType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Juriidilise või füüsilise isiku muud kontaktandmed</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="isikGuid" type="xs:ID" use="required">
+			<xs:annotation>
+				<xs:documentation>Üksuse, juriidilise või füüsilise isiku kirjelduse unikaalne identifikaator</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="AadressType">
+		<xs:annotation>
+			<xs:documentation>Aadressandmeid kirjeldavaid elemente sisaldav komplekstüüp</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Riik" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Aadressiobjekti riigi nimetus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sihtnumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Aadressiobjekti asukoha sihtnumber</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Maakond" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maakonna nimi</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Omavalitsusyksus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Valla või linna nimi</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Asula" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Asula või linnaosa nimi</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Vaikekoht" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Väikekoha (asulast või linnaosast väiksema maa-ala) nimi</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HooneNimi" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Hoone ADSis registreerimata nimi</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Liikluspind" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Tänava, tee, väljaku või muu liikluspinna nimi</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AadressiobjektNimi" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Talu vm objekti nimi ADSis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Aadressinumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Maja number ja vajadusel numbri erilisand (nt täht või murruga number)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HooneosaNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Korteri või tööruumi number ja vajadusel numbri erilisand</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PostkastNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Postiasutuses asuva või muu nimelise postkasti number</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdrId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Koha-aadressi identifikaator ehk ADR-ID ADSis</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="KohaadressAdsist" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ADSist imporditud aadressikirje</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="KontaktandmedType">
+		<xs:annotation>
+			<xs:documentation>Kontaktandmeid kirjeldavaid elemente sisaldav komplekstüüp</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Telefon" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Telefoninumber</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Faks" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Faksinumber</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Epost" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Isiku või asutuse e-posti aadress</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DvkKasutaja" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>DVK kasutaja tunnus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SonumsideAadress" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Sõnumside aadress või sotsiaalmeedia kasutajatunnus</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

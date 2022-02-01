@@ -1,0 +1,512 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/"
+     xml:base="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2">
+        <rdfs:comment xml:lang="et">Eesti geoportaali ontoloogia</rdfs:comment>
+        <owl:versionInfo xml:lang="et">Versioon 0.2</owl:versionInfo>
+        <rdfs:label xml:lang="et">Eesti geoportaali ontoloogia</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ajaline_ulatus -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ajaline_ulatus">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ajaline_viide"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_referaat"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmete_kontaktpunkt"/>
+        <rdfs:comment xml:lang="et">Ajalise ulatusega mأ¤أ¤ratakse kindlaks allika sisu kattev ajaperiood. Seda ajaperioodi saab vأ¤ljendada أ¼hel jأ¤rgmistest viisidest: - أ¼ksikkuupأ¤ev; - algus- ja lأµppkuupأ¤eva abil vأ¤ljendatud kuupأ¤evavahemik; - أ¼ksikkuupأ¤evade ja kuupأ¤evavahemike kombinatsioon.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ajaline ulatus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_asukoha_mأ¤أ¤raja -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_asukoha_mأ¤أ¤raja">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_kordumatu_identifikaator"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_referaat"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmete_kontaktpunkt"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vأµtmesأµna"/>
+        <rdfs:comment xml:lang="et">Allika asukoha mأ¤أ¤raja mأ¤أ¤rab kindlaks lingi(d) allikale ning lingi allika lisateabele. Selle metaandmeelemendi vأ¤أ¤rtuste domeen on mأ¤rgijada, mille tavapأ¤raseks vأ¤ljenduseks on URL (Uniform Resource Locator).</rdfs:comment>
+        <rdfs:label xml:lang="et">Allika asukoha mأ¤أ¤raja</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_kordumatu_identifikaator -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_kordumatu_identifikaator">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_pealkiri"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_referaat"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Keel"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmete_kontaktpunkt"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vأµtmesأµna"/>
+        <rdfs:comment xml:lang="et">Vأ¤أ¤rtus, mis identifitseerib allika أ¼heselt. Selle metaandmeelemendi vأ¤أ¤rtuste domeen on kohustuslik mأ¤rgijadakood, mille tavaliselt mأ¤أ¤rab andmete omanik, ja mأ¤rgijada nimeruum, mis mأ¤أ¤ratleb أ¼heselt identifikaatori koodi konteksti (nأ¤iteks andmete omaniku).</rdfs:comment>
+        <rdfs:label xml:lang="et">Allika kordumatu identifikaator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_pealkiri -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_pealkiri">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_referaat"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Keel"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmete_kontaktpunkt"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vأµtmesأµna"/>
+        <rdfs:comment xml:lang="et">Iseloomulik ja tihti kordumatu nimi, mille all allikat tuntakse. Selle metaandmeelemendi vأ¤أ¤rtuste domeen on vabas vormis tekst.</rdfs:comment>
+        <rdfs:label xml:lang="et">Allika pealkiri</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_referaat -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Allika_referaat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Keel"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmete_kontaktpunkt"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Valdkond"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vأµtmesأµna"/>
+        <rdfs:comment xml:lang="et">Sisukokkuvأµte. Lأ¼hike kirjeldav kokkuvأµte allika sisust. Selle metaandmeelemendi vأ¤أ¤rtuste domeen on vabas vormis tekst.</rdfs:comment>
+        <rdfs:label xml:lang="et">Allika referaat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Avaldamise_kuupأ¤ev -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Avaldamise_kuupأ¤ev">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ajaline_viide"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="et">Allika avaldamise kuupأ¤ev, kui see on teada, vأµi jأµustumise kuupأ¤ev.</rdfs:comment>
+        <rdfs:label xml:lang="et">Avaldamise kuupأ¤ev</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Avaliku_juurdepأ¤أ¤su_piirangud -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Avaliku_juurdepأ¤أ¤su_piirangud">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Juurdepأ¤أ¤su_ja_kasutamise_tingimused"/>
+        <rdfs:comment xml:lang="et">Kui liikmesriigid piiravad direktiivi 2007/2/Eأœ artikli 13 alusel juurdepأ¤أ¤su ruumiandmekogumitele vأµi ruumiandmeteenustele, antakse selle metaandmeelemendiga teavet piirangute ja nende pأµhjuste kohta. Kui avalikule juurdepأ¤أ¤sule ei ole piiranguid, nأ¤idatakse seda kأ¤esoleva metaandmeelemendiga. Selle metaandmeelemendi vأ¤أ¤rtuste domeen on vabas vormis tekst.</rdfs:comment>
+        <rdfs:label xml:lang="et">Avaliku juurdepأ¤أ¤su piirangud</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Edastamisseaded -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Edastamisseaded">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitamine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitusformaat"/>
+        <rdfs:comment xml:lang="et">Allika asukoha mأ¤أ¤raja (URL)</rdfs:comment>
+        <rdfs:label xml:lang="et">Edastamisseaded</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Geograafiline_piirdekate -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Geograafiline_piirdekate">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Geograafiline_asukoht"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="et">Allika ulatus geograafilises ruumis, mis esitatakse piirdekattena. Piirdekate avaldatakse piirava lأ¤أ¤ne- ja idapikkuse ning lأµuna- ja pأµhjalaiuse abil kأ¼mnendkraadides vأ¤hemalt kahe kأ¼mnendkoha tأ¤psusega.</rdfs:comment>
+        <rdfs:label xml:lang="et">Geograafiline piirdekate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Juurdepأ¤أ¤su_ja_kasutamise_tingimused -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Juurdepأ¤أ¤su_ja_kasutamise_tingimused">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="et">See metaandmeelement mأ¤أ¤rab kindlaks ruumiandmekogumitele ja -teenustele juurdepأ¤أ¤su ning nende kasutamise tingimused ja vajaduse korral direktiivi 2007/2/Eأœ artikli 5 lأµike 2 punktis b ja artikli 11 lأµike 2 punktis f nأµutud asjaomased tasud. Selle metaandmeelemendi vأ¤أ¤rtuste domeen on vabas vormis tekst. Element peab omama vأ¤أ¤rtusi. Kui allika juurdepأ¤أ¤sule ja kasutamisele ei rakendata tingimusi, kasutatakse mأ¤rget &quot;Tingimusi ei rakendata&quot;. Kui tingimused ei ole teada, kasutatakse mأ¤rget &quot;Tingimused ei ole teada&quot;. Samuti antakse selle elemendiga teavet kأµikide tasude kohta, mis on vajalikud allikale juurdepأ¤أ¤suks ja selle kasutamiseks, vأµi kui teave tasude kohta on kأ¤ttesaadav, viidatakse URLile (Uniform Resource Locator).</rdfs:comment>
+        <rdfs:label xml:lang="et">Juurdepأ¤أ¤su ja kasutamise tingimused</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Keel -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Keel">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+                    <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmete_kontaktpunkt"/>
+        <rdfs:comment xml:lang="et">Keel(ed), mida allikas kasutatakse. Selle metaandmeelemendi vأ¤أ¤rtuste domeen on piiratud standardis ISO 639-2 osutatud keeltega</rdfs:comment>
+        <rdfs:label xml:lang="et">Keel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitusformaat -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitusformaat">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitamine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="et">Andmete edastamise formaat (.shp, .txt, csv, .dwg jne.)</rdfs:comment>
+        <rdfs:label xml:lang="et">Levitusformaat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Loomise_kuupأ¤ev -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Loomise_kuupأ¤ev">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ajaline_viide"/>
+                    <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="et">Allika loomise kuupأ¤ev</rdfs:comment>
+        <rdfs:label xml:lang="et">Loomise kuupأ¤ev</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmete_kontaktpunkt -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmete_kontaktpunkt">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vأµtmesأµna"/>
+        <rdfs:comment xml:lang="et">Metaandmete loomise ja hooldamise eest vastutava organisatsiooni kirjeldus. Kirjeldus sisaldab jأ¤rgmist: - organisatsiooni nimi vabas vormis tekstina; - e-posti kontaktaadress mأ¤rgijadana.</rdfs:comment>
+        <rdfs:label xml:lang="et">Metaandmete kontaktpunkt</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Osaline -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Osaline">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutava_osalise_أ¼lesanded"/>
+        <rdfs:comment xml:lang="et">Allika loomise, haldamise, hooldamise ja levitamise eest vastutava organisatsiooni (teabehaldaja) kirjeldus. Kirjeldus sisaldab jأ¤rgmist: - organisatsiooni nimi vabas vormis tekstina; - e-posti kontaktaadress mأ¤rgijadana.</rdfs:comment>
+        <rdfs:label xml:lang="et">Vastutav osaline</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Pأ¤ritolu -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Pأ¤ritolu">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ruumiline_lahutusvأµime"/>
+        <rdfs:comment xml:lang="et">Teave protsessi ajaloo ja/vأµi ruumiandmekogumite أ¼ldise kvaliteedi kohta. Vajaduse korral vأµib see sisaldada teavet selle kohta, kas andmekogumi أµigsus on kinnitatud vأµi kvaliteet tagatud, kas see on ametlik versioon (kui on olemas mitu versiooni) ja kas see on أµiguslikult kehtiv. Selle metaandmeelemendi vأ¤أ¤rtuste domeen on vabas vormis tekst.</rdfs:comment>
+        <rdfs:label xml:lang="et">Pأ¤ritolu</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ruumiline_lahutusvأµime -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ruumiline_lahutusvأµime">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="et">Ruumiline lahutusvأµime viitab andmekogumite detailsuse astmele. See vأ¤ljendatakse hulgana nullist kuni paljude lahutusvأµimet defineerivate kaugusteni (tavaliselt rasteriseeritud andmete ja rasterkujutistest tuletatud toodete puhul) vأµi samavأ¤أ¤rsete mأµأµtkavadeni (tavaliselt kaartide vأµi kaartidest tuletatud toodete korral). Samavأ¤أ¤rset mأµأµtkava vأ¤ljendatakse tavaliselt mأµأµtkava jagajas oleva tأ¤isarvuna. Lahutusvأµimet defineerivat kaugust vأ¤ljendatakse pikkusأ¼hikuga seotud arvvأ¤أ¤rtusena.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ruumiline lahutusvأµime</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Spetsifikatsioon -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Spetsifikatsioon">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:propertyDisjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavusaste"/>
+        <rdfs:comment xml:lang="et">Viide direktiivi 2007/2/Eأœ artikli 7 lأµike 1 kohaselt vastu vأµetud rakenduseeskirjadele vأµi mأµnele muule spetsifikatsioonile, millega asjaomane allikas on kooskأµlas. Allikas vأµib olla kooskأµlas rohkem kui أ¼he rakenduseeskirjaga, mis on vastu vأµetud direktiivi 2007/2/Eأœ artikli 7 lأµike 1 alusel, vأµi muu spetsifikatsiooniga. Viide sisaldab vأ¤hemalt direktiivi 2007/2/Eأœ artikli 7 lأµike 1 kohaselt vastu vأµetud rakenduseeskirjade vأµi spetsifikatsiooni pealkirja ja viitekuupأ¤eva (avaldamise, viimase lأ¤bivaatamise vأµi loomise kuupأ¤ev).</rdfs:comment>
+        <rdfs:label xml:lang="et">Spetsifikatsioon</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Valdkond -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Valdkond">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="et">Iseloomustab andmete kuuluvust mingisse valdkonda</rdfs:comment>
+        <rdfs:label xml:lang="et">Valdkond</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavusaste -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavusaste">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="et">Iseloomustab mأ¤أ¤ra, mille ulatuses allikas vastab direktiivi 2007/2/Eأœ artikli 7 lأµike 1 kohaselt vastu vأµetud rakenduseeskirjadele vأµi muule spetsifikatsioonile.</rdfs:comment>
+        <rdfs:label xml:lang="et">Vastavusaste</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutava_osalise_أ¼lesanded -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutava_osalise_أ¼lesanded">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="et">Vastutava osalise (teabehaldaja) أ¼lesanded. Selle metaandmeelemendi vأ¤أ¤rtuste domeen mأ¤أ¤ratakse kindlaks D osa punktis 6. Komisjoni mأ¤أ¤rus (Eأœ) nr 1205/2008, 3. detsember 2008</rdfs:comment>
+        <rdfs:label xml:lang="et">Vastutava osalise أ¼lesanded</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Viimase_lأ¤bivaatamise_kuupأ¤ev -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Viimase_lأ¤bivaatamise_kuupأ¤ev">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ajaline_viide"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="et">Allika viimase lأ¤bivaatamise kuupأ¤ev, kui allikat on lأ¤bi vaadatud.</rdfs:comment>
+        <rdfs:label xml:lang="et">Viimase lأ¤bivaatamise kuupأ¤ev</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vأµtmesأµna -->
+
+    <owl:DatatypeProperty rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vأµtmesأµna">
+        <rdfs:domain rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="et">Vأµtmesأµna on termin, mis on mأµeldud infootsinguks kataloogides vأµi otsimootorites</rdfs:comment>
+        <rdfs:label xml:lang="et">Vأµtmesأµna</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ajaline_viide -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Ajaline_viide">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Geograafiline_asukoht"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitamine"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Liigitus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:comment xml:lang="et">Ajaline viide iseloomustab metaandmete erinevaid ajas toimunud muudatusi, nagu loomise kuupأ¤ev, avaldamisekuupأ¤ev, muudatuste tegemise kuupأ¤evad jne.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ajaline viide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Geograafiline_asukoht -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Geograafiline_asukoht">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitamine"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Liigitus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:comment xml:lang="et">Allika ulatus geograafilises ruumis.</rdfs:comment>
+        <rdfs:label xml:lang="et">Geograafiline asukoht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Identifitseerimine">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitamine"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Liigitus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:comment xml:lang="et">Kirjeldab allika asukoha mأ¤أ¤raja, keele, ID, pealkirja, referaadi ning andmete loomise ja hooldamise eest vastutava organisatsiooni.</rdfs:comment>
+        <rdfs:label xml:lang="et">Identifitseerimine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Kvaliteet">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitamine"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Liigitus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:comment xml:lang="et">Metaandmete kvaliteet iseloomustab andmete أµiguslikku kehtivust, andmete versiooni, seda, kas kvaliteet on tagatud, mأµأµtkava, lahutusvأµimet jne.</rdfs:comment>
+        <rdfs:label xml:lang="et">Kvaliteet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitamine -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Levitamine">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Liigitus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:comment xml:lang="et">Andmete kogum andmete formaadi ja paiknemise kohta</rdfs:comment>
+        <rdfs:label xml:lang="et">Levitamine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Liigitus -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Liigitus">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:comment xml:lang="et">1.Valdkondade kategooria on kأµrgtaseme liigitussأ¼steem, mis toetab olemasolevate ruumiandmeallikate rأ¼hmitamist ja valdkonnapأµhist otsingut.
+
+2.Ruumiandmeteenuse liik. See on liigitus, mis toetab olemasolevate ruumiandmeteenuste otsingut. Teatud teenuse saab liigitada ainult أ¼hte kategooriasse.</rdfs:comment>
+        <rdfs:label xml:lang="et">Ruumiandmete ja -teenuste liigitus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed">
+        <rdfs:comment xml:lang="et">Metaandmed on andmed andmete kohta. Metaandmete kaudu on vأµimalik saada أ¼levaade, milliseid ruumiandmeid Eestis kogutakse, kes neid haldab, mida need andmed sisaldavad, kas andmete kasutamisel on piiranguid, milliste teenuste kaudu on need andmed kأ¤ttesaadavad jne.</rdfs:comment>
+        <rdfs:label xml:lang="et">Metaandmed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Piirangud">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:comment xml:lang="et">Iseloomustab piiranguid, mis on kehtestatud andmete (avalikule) kasutamisele, samuti juurdepأ¤أ¤su andmetele ja kasutamise tingimusi.</rdfs:comment>
+        <rdfs:label xml:lang="et">Kasutamise ja juurdepأ¤أ¤su piirangud</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastavus">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <owl:disjointWith rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline"/>
+        <rdfs:comment xml:lang="et">Kirjeldus andmete allika vastavusest direktsioonidele ja spetsifikatsioonidele.</rdfs:comment>
+        <rdfs:label xml:lang="et">Vastavus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline -->
+
+    <owl:Class rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Vastutav_osaline">
+        <rdfs:subClassOf rdf:resource="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Metaandmed"/>
+        <rdfs:comment xml:lang="et">Ruumiandmekogumite ja -teenuste loomise, haldamise, hooldamise ja levitamise eest vastutavad organisatsioonid (teabehaldajad).</rdfs:comment>
+        <rdfs:label xml:lang="et">Vastutav osaline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:label xml:lang="et"></rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Keel"/>
+            <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Loomise_kuupأ¤ev"/>
+            <rdf:Description rdf:about="https://riha.eesti.ee/riha/onto/infoyhiskond.geoportaal/2016/r2/Valdkond"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
