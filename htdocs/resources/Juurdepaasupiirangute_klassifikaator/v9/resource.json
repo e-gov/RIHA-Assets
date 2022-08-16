@@ -1,0 +1,10 @@
+{
+    "name": "Juurdepääsupiirangute klassifikaator",
+    "version": "9",
+    "start_date": "12.08.2022",
+    "end_date": "",
+    "description": "Klassifikaator on lõplik loend dokumentidele juurdepääsupiirangute kehtestamise õiguslikest alustest Eesti seadustes ja otsekohalduvates Euroopa Liidu õigusaktides. Iga alusega on seotud juurdepääsupiirangu ajalise kehtivuse arvutamiseks vajalikud andmed. Piirangu kehtivust alustavad ja lõpetavad sündmused on esitatud alamklassifikaatoris. Klassifikaatori juurde kuulub seletuskiri, mis sisaldab ka teavet klassifikaatori rakendamise ning selle muutmise korra kohta. Klassifikaator on kasutamiseks dokumendihaldussüsteemides. Kus asjakohane, saab klassifikaatorit rakendada ka teistes andmekogudes. Juurdepääsupiirangu kehtestamise aluse AvTS § 35 lg 1 p 19 (seaduses sätestatud muu teave) asemel on klassifikaatoris sellise teabe lõplik loend. Versiooni 9 erinevused versioonist 8 on vastavustabelis. Seletuskiri ja sündmuste alamklassifikaator jäävad kehtima muutmata kujul. Klassifikaatorit uuendatakse õigusaktis uue aluse kehtestamisel või olemasoleva kehtetuks muutmisel, muul juhul vastavalt vajadusele.",
+    "type": "Klassifikaator",
+    "owner": "Majandus- ja kommunikatsiooniministeerium",
+    "status": "Kasutusel"
+}
